@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import Login from '../Login/Login';
 
 const Authenticate = App =>
-  class extends React.Component {
+  class extends Component {
     constructor() {
       super()
       this.state = {
@@ -28,8 +27,6 @@ const Authenticate = App =>
     }
   };
 
-Authenticate.propTypes = {
 
-}
 
 export default Authenticate

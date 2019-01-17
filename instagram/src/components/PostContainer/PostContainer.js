@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import CommentSection from '../CommentSection/CommentSection'
 import './post-container.css'
 const PostContainer = props => {
-  const { username, thumbnailUrl, imageUrl, likes, timestamp, comments } = props.post;
+  const { username, thumbnailUrl, imageUrl, likes, comments } = props.post;
   return (
     <div className="post-container">
       <div className="post-heading">

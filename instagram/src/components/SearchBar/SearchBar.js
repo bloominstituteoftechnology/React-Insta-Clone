@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import './search-bar.css'
 const SearchBar = props => {
   return (
@@ -21,5 +22,9 @@ const SearchBar = props => {
   )
 }
 
-
+SearchBar.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  logout: PropTypes.func,
+}
 export default SearchBar

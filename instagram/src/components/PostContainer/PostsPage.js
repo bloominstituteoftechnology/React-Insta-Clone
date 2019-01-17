@@ -18,7 +18,10 @@ const PostsPage = props => {
 }
 
 PostsPage.propTypes = {
-
+  searchPosts: PropTypes.func,
+  searchValue: PropTypes.string,
+  logout: PropTypes.func,
+  userProfile: PropTypes.string
 }
 
 export default PostsPage
