@@ -1,7 +1,25 @@
 import React from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Comment from './Comment'
 
+const CommentSectionContainer = styled.div`
+    padding: 15px;
+`
+const LikesCommentsIcons = styled.div`
+    margin-bottom: 15px;
+`
+const I = styled.div`
+    margin-right: 20px;
+`
+const LikesCommentsStats = styled.div`
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+`
+const LikesCommentsStatistic = styled.p`
+    margin-bottom: 5px;
+`
 class CommentSection extends React.Component {
   constructor(props) {
     super(props)
@@ -61,16 +79,16 @@ class CommentSection extends React.Component {
 
   render(props) {
     return (
-      <div className="comment-section">
+      <CommentSectionContainer>
         <div className="likes-comments">
-          <div className="likes-comments-icons">
-            <i className="far fa-heart fa-2x" onClick={this.toggleLike}></i>
-            <i className="far fa-comment fa-2x" onClick={this.commentInputFocus}></i>
-          </div>
-          <div className="likes-comments-stats">
-            <p>{this.state.likes} likes</p>
-            <p>{this.state.commentNumber} comments</p>
-          </div>
+          <LikesCommentsIcons>
+            <I className="far fa-heart fa-2x" onClick={this.toggleLike}></I>
+            <I className="far fa-comment fa-2x" onClick={this.commentInputFocus}></I>
+          </LikesCommentsIcons>
+          <LikesCommentsStats>
+            <LikesCommentsStatistic>{this.state.likes} likes</LikesCommentsStatistic>
+            <LikesCommentsStatistic>{this.state.commentNumber} comments</LikesCommentsStatistic>
+          </LikesCommentsStats>
         
         </div>
         {this.state.comments.map(comment => {
@@ -88,7 +106,7 @@ class CommentSection extends React.Component {
           
         </form>
 
-      </div>
+      </CommentSectionContainer>
       
     )
   }
