@@ -131,9 +131,17 @@ const StyledLogin = styled.div`
     margin: 0 auto;
   }
 `
+// Utilities
 
+const StyledImg = styled.img`
+   max-width: 100%;
+   height: auto;
+`
+const IgLogo = styled(StyledImg)`
+  width: 50%
+`
 
 
 // Exports
-export {StyledPostContainer, NavLogos, StyledSearchInput, LogoImage, Header, ActionButtons, StyledLogin}
+export {StyledPostContainer, NavLogos, StyledSearchInput, LogoImage, Header, ActionButtons, StyledLogin, StyledImg, IgLogo}
 

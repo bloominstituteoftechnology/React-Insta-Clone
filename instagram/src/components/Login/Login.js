@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import LoginImg from '../../ig-login-pic.png';
-import IgLogo from '../logo.png'
+import IgLogoImg from '../logo.png'
 import Apple from '../../apple-dwnload.png';
 import Google from '../../google-dwnload.png';
-import {StyledLogin} from '../Styles/Reusables'
+import {StyledLogin, StyledImg, IgLogo} from '../Styles/Reusables'
 
 
 class Login extends Component {
@@ -48,13 +48,11 @@ class Login extends Component {
     return (
       <StyledLogin>
         <div className="w-50">  
-          <div>
-            <img src={LoginImg} alt="Mockup of Instagram on Iphone"/>
-          </div>
+            <StyledImg src={LoginImg} alt="Mockup of Instagram on Iphone"></StyledImg>
         </div>
         <div className="w-50">
           <div className="mt-5 my-3 pb-5 pt-3 card align-items-center">
-            <img className="ig-logo" src={IgLogo} alt="Instagram Logo"/>
+            <IgLogo src={IgLogoImg} alt="Mockup of Instagram on Iphone"></IgLogo>
             <form onSubmit={this.loginSubmit}>
                 Username: <input 
                 type="text"
