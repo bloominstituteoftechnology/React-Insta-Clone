@@ -7,6 +7,9 @@ import authenticate from './components/authentication/authenticate';
 import SearchBar from './components/SearchBar/SearchBar';
 import DummyData from './dummy-data';
 
+
+
+
 class App extends Component {
   constructor(props){
     super(props);

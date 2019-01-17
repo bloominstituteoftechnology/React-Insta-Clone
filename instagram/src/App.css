@@ -57,7 +57,7 @@ p{
   height: auto;
 }
 
-.search-bar{
+/* .search-bar{
   display: flex;
   justify-content: space-between;
   height: 70px;;
@@ -65,7 +65,7 @@ p{
   align-items: center;
   font-size: 1.8rem;
   margin-bottom: 50px;
-}
+} */
 .col{
   /* width: 33%; */
   display: flex;
@@ -73,7 +73,7 @@ p{
   align-items: center;
 }
 
-.main-logo i{
+/* .main-logo i{
   width: 25%;
   text-align: center;
   align-self: center;
@@ -85,7 +85,7 @@ p{
   height: 40px;
   max-width: 75%;
   margin-left: 10px;
-}
+} */
 
 .search-input input{
   font-size: 1rem;
