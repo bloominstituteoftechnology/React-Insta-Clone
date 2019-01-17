@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styled from 'styled-components';
 /*
 Passed as props from CommentSection.js
 
@@ -8,11 +8,18 @@ user={c.username}
 text={c.text}
 
 */
+// Styles using styled-components 
+
+const CommentText = styled.p`
+    margin: 8px 0;
+`
 
 const Comment = props => {
     return (
         <div>
-            <p className="comment-text"><strong>{props.user}</strong> {props.text}</p>
+            <CommentText> 
+                <strong>{props.user}</strong> {props.text}
+                </CommentText>
         </div>
     )
 }

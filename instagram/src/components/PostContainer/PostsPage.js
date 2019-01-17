@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
 import dummyData from '../../dummy-data';
 import PostsContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
+
+// Styles using styled-components 
+const App = styled.div`
+text-align: center;
+width: 60%;
+margin: 0 auto;
+`   
 
 class PostsPage extends Component {
   constructor() {
@@ -24,11 +33,13 @@ class PostsPage extends Component {
     });
     this.setState({ filteredPosts: posts });
   };
+  
+  
   render() {
     return (
-      <div className="App">
+      <App>
         <SearchBar
-          searchTerm={this.state.searchTerm}
+        //   searchTerm={this.state.searchTerm}
           searchPosts={this.searchPostsHandler}
         />
         <PostsContainer
@@ -38,7 +49,7 @@ class PostsPage extends Component {
               : this.state.posts
           }
         />
-      </div>
+      </App>
     );
   }
 }

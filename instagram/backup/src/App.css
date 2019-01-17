@@ -1,3 +1,16 @@
+.mainLogin{
+  text-align: center;
+  width: 60%;
+  margin: 117px auto;
+  border: 2px solid grey;
+  border-radius: 28px;
+  height: 95px;
+}
+
+.boxLogin{
+  margin-top: 20px;
+}
+
 .App {
   text-align: center;
   width: 60%;

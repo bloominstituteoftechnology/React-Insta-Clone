@@ -1,7 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import './UserTitle.css'
+//import heart from '../../data/pics/heart.png'
+//import comment from '../../data/pics/comment.png'
 import CommentSection from '../CommentSection/CommentSection.js'
+//import styled from 'styled-components'
 
+// import UserComments from './UserComments'
+// import LikeSection from './LikeSection'
 
 
 class UserPost extends React.Component {
@@ -18,11 +24,34 @@ class UserPost extends React.Component {
 	};
 
 	render() {
+
+	
+
+	
+
+	
+
+	
+
 		return(
-		    <div>
-				<div>
-				 	  <img src={this.props.user.imageUrl} alt="User"/>
-				</div>
+				<div className ="user_title">
+					{/* <MainTitle>
+						<UserThumbnail src ={ this.props.user.thumbnailUrl }></UserThumbnail>
+						<Username>{this.props.user.username}</Username>
+					</MainTitle> */}
+
+
+
+					<div>
+						<img src={this.props.user.imageUrl} alt="User"/>
+					</div>
+
+
+					{/* <div>
+			  			<LikeIcon src= {heart} onClick={this.incrementLike}></LikeIcon>
+			  		
+
+					</div> */}
 
 					<div>
 						<h3>{this.state.likes} Likes</h3>
