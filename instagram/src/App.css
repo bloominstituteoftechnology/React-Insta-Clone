@@ -111,5 +111,31 @@ p{
   right: 0;
   top: 70px;
   text-align: center;
+}
+
+.log-in{
+  display: flex;
+  width: 70%;
+  margin: 150px auto;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
   
+}
+.log-in img{
+  height: auto;
+  max-width: 100%;
+}
+
+.log-in form{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+}
+.ig-logo{
+  width: 50%;
+}
+.w-30{
+  width: 30%;
 }

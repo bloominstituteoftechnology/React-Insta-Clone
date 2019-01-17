@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-
+import LoginImg from '../../ig-login-pic.png';
+import IgLogo from '../logo.png'
+import Apple from '../../apple-dwnload.png';
+import Google from '../../google-dwnload.png';
 
 class Login extends Component {
   constructor(props){
@@ -23,19 +26,42 @@ class Login extends Component {
      }
   render() {
     return (
-      <div className="App">
-        <form onSubmit={this.loginSubmit}>
-            Username: <input 
-            type="text"
-            onChange={this.handleChanges}
-            name="username"
-            />
-            Password: <input
-            type="text"
-            onChange={this.handleChanges}
-            name="password"/>
-            <button onClick={this.props.loginSubmit}>Login</button>
-        </form>
+      <div className="log-in">
+        <div className="w-50">  
+          <div>
+            <img src={LoginImg} alt="Mockup of Instagram on Iphone"/>
+          </div>
+        </div>
+        <div className="w-50">
+          <div className="mt-5 my-3 pb-5 pt-3 card align-items-center">
+            <img className="ig-logo" src={IgLogo} alt="Instagram Logo"/>
+            <form onSubmit={this.loginSubmit}>
+                Username: <input 
+                type="text"
+                onChange={this.handleChanges}
+                name="username"
+                />
+                Password: <input
+                type="text"
+                onChange={this.handleChanges}
+                name="password"/>
+                <button className="btn btn-primary mt-3" onClick={this.props.loginSubmit}>Log In</button>
+            </form>
+          </div>
+          <div className="text-center">
+            <p>Get the App</p>
+          <div className="d-flex mt-3 mx-auto justify-content-center">
+            <a className="w-30"
+              href={'https://itunes.apple.com/app/instagram/id389801252?mt=8&vt=lo'}>
+              <img src={Apple} alt="Download on Apple"/>
+            </a>
+            <a className="w-30"
+              href={'https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DW3H22AAEAAHVii6DFMXDE4Vj_M6H%26utm_content%3Dlo%26utm_medium%3Dbadge'}>
+              <img src={Google} alt="Download on Google"/>
+            </a>
+          </div>
+          </div>
+        </div>
       </div>
     );
   }
