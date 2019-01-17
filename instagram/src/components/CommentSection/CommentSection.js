@@ -16,10 +16,25 @@ const Comment = styled.div`
   text-decoration:none;
   display:flex;
   align-items:center;
-  
+
 
 `;
 
+const CommentText = styled.div`
+  margin: 5px 0 5px 1%;
+
+`;
+
+const CommentBox = styled.input`
+  width:100%;
+  height:50px;
+
+`;
+
+const CommentSubmit = styled.input`
+  display:none;
+
+`;
 class CommentSection extends Component{
 
   constructor(props){
@@ -100,7 +115,7 @@ class CommentSection extends Component{
 
           return <Comment>
 
-                  <strong>{comment.username}</strong> <p>{comment.text}</p>
+                  <strong>{comment.username}</strong> <CommentText>{comment.text}</CommentText>
 
                  </Comment>})}
 
@@ -108,9 +123,9 @@ class CommentSection extends Component{
 
         <form onSubmit = {this.addNewComment}>
 
-          <input onChange = {this.getNewComment} type = "text" name = "comment" value = {this.state.currentComment} />
+          <CommentBox placeholder = "Add Comment..." onChange = {this.getNewComment} type = "text" name = "comment" value = {this.state.currentComment} />
 
-          <input type = "submit" value = "Submit " />
+          <CommentSubmit type = "submit" value = "Submit " />
 
         </form>
 
