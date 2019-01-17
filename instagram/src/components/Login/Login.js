@@ -11,6 +11,7 @@ class Login extends Component {
         username: '',
         password: '',   
         loggedIn: props.loggedIn,
+        hidePW: true
     }
   }
    handleChanges = ev => {
@@ -23,6 +24,15 @@ class Login extends Component {
             localStorage.setItem("password", `${this.state.password}`);
         }
 
+     }
+     showPW = () =>{
+       console.log(this.state.hidePW)
+      if(this.state.hidePW === false){
+        this.setState({hidePW: true});
+      } 
+      if(this.state.hidePW === true){
+        this.setState({hidePW: false});
+      }
      }
   render() {
     return (
@@ -41,21 +51,35 @@ class Login extends Component {
                 onChange={this.handleChanges}
                 name="username"
                 />
-                Password: <input
-                type="text"
-                onChange={this.handleChanges}
-                name="password"/>
+                <div >
+                <p>Password:</p>
+                  <div className="border">
+                  <input
+                  type={this.state.hidePW === true 
+                  ? 'password' 
+                  : 'text'
+                  }
+                  onChange={this.handleChanges}
+                  name="password"
+                  className="pw-input border-0 w-90"/>
+                  <i onClick={this.showPW}
+                  class="fas fa-eye"></i>
+                  </div>
+                </div>
                 <button className="btn btn-primary mt-3" onClick={this.props.loginSubmit}>Log In</button>
+                
             </form>
           </div>
           <div className="text-center">
             <p>Get the App</p>
           <div className="d-flex mt-3 mx-auto justify-content-center">
-            <a className="w-30"
+            <a target="_blank"
+              className="w-30"
               href={'https://itunes.apple.com/app/instagram/id389801252?mt=8&vt=lo'}>
               <img src={Apple} alt="Download on Apple"/>
             </a>
-            <a className="w-30"
+            <a target="_blank"
+              className="w-30"
               href={'https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DW3H22AAEAAHVii6DFMXDE4Vj_M6H%26utm_content%3Dlo%26utm_medium%3Dbadge'}>
               <img src={Google} alt="Download on Google"/>
             </a>
