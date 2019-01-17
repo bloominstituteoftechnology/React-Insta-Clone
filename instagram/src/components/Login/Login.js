@@ -1,25 +1,35 @@
 import React from "react";
-
+import "../PostContainer/PostContainer.css";
 const Login = props => {
   return (
-    <form onSubmit={props.handleSubmit} name="loginForm">
-      username:
-      <input
-        type="text"
-        name="inputUsername"
-        value={props.inputUsername}
-        onChange={props.handleChange}
-      />
-      <br />
-      password:
-      <input
-        type="text"
-        name="inputPassword"
-        value={props.inputPassword}
-        onChange={props.handleChange}
-      />
-      <button type="submit">teken aan</button>
-    </form>
+    <div className="login-form-wrapper">
+      <form
+        onSubmit={props.handleSubmit}
+        name="loginForm"
+        className="login-form"
+      >
+        username:
+        <input
+          className="login-input"
+          type="text"
+          name="inputUsername"
+          value={props.inputUsername}
+          onChange={props.handleChange}
+        />
+        <br />
+        password:
+        <input
+          className="login-input"
+          type="text"
+          name="inputPassword"
+          value={props.inputPassword}
+          onChange={props.handleChange}
+        />
+        <button className="login-button" type="submit">
+          Login
+        </button>
+      </form>
+    </div>
   );
 };
 

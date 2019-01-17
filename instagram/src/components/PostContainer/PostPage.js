@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-constructor */
 import React, { Component } from "react";
 import SearchBarContainer from "../SearchBar/SearchBarContainer";
 import "../../App.css";
@@ -11,9 +12,12 @@ class PostPage extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBarContainer />
+        <SearchBarContainer
+          handleChange={this.props.handleChange}
+          inputSearch={this.props.inputSearch}
+        />
         <div className="post-container-container">
-          {this.props.data.map(dataOnMap => {
+          {this.props.searchData.map((dataOnMap, index) => {
             return (
               <PostContainer
                 comments={dataOnMap.comments}
@@ -22,7 +26,9 @@ class PostPage extends Component {
                 addComment={this.props.addComment}
                 inputText={this.props.inputText}
                 handleChange={this.props.handleChange}
-                addLike={this.props.addLike}
+                addLike={this.props.addLike[index]}
+                searchData={this.props.searchData}
+                handleClick={this.props.handleClick}
               />
             );
           })}

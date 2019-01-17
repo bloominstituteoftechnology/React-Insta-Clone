@@ -10,7 +10,9 @@ const PostIcons = props => {
             src={require(`../SearchBar/Images/largeHeart.png`)}
             alt=""
             className="post-icons"
-            onClick={e => props.addLike(e, props.data.username)}
+            data-username={props.username}
+            data-button="toggleHeart"
+            onClick={props.handleClick}
           />
           <img
             src={require(`../SearchBar/Images/bubble.png`)}
@@ -20,7 +22,7 @@ const PostIcons = props => {
         </div>
 
         <a href="#" className="likes">
-          {props.data.likes} likes
+          {props.addLike ? props.data.likes + 1 : props.data.likes} likes
         </a>
       </div>
     </div>

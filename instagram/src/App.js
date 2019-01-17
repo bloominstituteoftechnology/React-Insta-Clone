@@ -11,35 +11,27 @@ class App extends Component {
     super(props);
   }
 
-  addComment = (e, username) => {
-    e.preventDefault();
-
-    let data = this.props.data.map(post => {
-      if (post.username === username) {
-        post.comments.push({ username: username, text: this.props.inputText });
-      }
-      return post;
-    });
-    this.setState({ data: data, inputText: "" });
-  };
-
-  addLike = (e, username) => {
-    let count = this.props.data.map(post => {
-      if (post.username === username) {
-        post.likes.push({ likes: this.props.count + 1 });
-      }
-      return count;
-    });
-    this.setState({ count: count });
-  };
+  // addLike = (e, username) => {
+  //   let count = this.props.data.map(post => {
+  //     if (post.username === username) {
+  //       post.likes.push({ likes: this.props.count + 1 });
+  //     }
+  //     return count;
+  //   });
+  //   this.setState({ count: count });
+  // };
 
   render() {
     return (
       <PostPage
         data={this.props.data}
         inputText={this.props.inputText}
-        addComment={this.addComment}
-        handleChange={this.handleChange}
+        addComment={this.props.addComment}
+        handleChange={this.props.handleChange}
+        inputSearch={this.props.inputSearch}
+        searchData={this.props.searchData}
+        addLike={this.props.addLike}
+        handleClick={this.props.handleClick}
       />
     );
   }

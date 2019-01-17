@@ -12,7 +12,10 @@ export const authenticate = App => Login =>
         inputText: "",
         inputUsername: "",
         inputPassword: "",
-        currentUser: ""
+        currentUser: "",
+        inputSearch: "",
+        searchData: [],
+        addLike: []
       };
     }
     componentDidMount() {
@@ -20,8 +23,10 @@ export const authenticate = App => Login =>
       const currentUser = JSON.parse(localStorage.getItem("currentUser")) || "";
       this.setState(
         {
-          data,
-          currentUser
+          data: [...data],
+          searchData: [...data],
+          currentUser,
+          addLike: Array(data.length).fill(false)
         },
         () => {
           localStorage.setItem("data", JSON.stringify(this.state.data));
@@ -42,13 +47,65 @@ export const authenticate = App => Login =>
     };
 
     handleChange = e => {
-      this.setState({
-        [e.target.name]: e.target.value
-      });
+      if (e.target.name === "inputSearch") {
+        this.searchPosts(e.target.value);
+      } else {
+        this.setState({
+          [e.target.name]: e.target.value
+        });
+      }
     };
+
     loginUser = () => {
       this.setState({
         currentUser: this.state.inputUsername
+      });
+    };
+
+    addComment = (e, username) => {
+      e.preventDefault();
+
+      let searchData = this.state.searchData.map(post => {
+        if (post.username === username) {
+          post.comments.push({
+            username: username,
+            text: this.state.inputText
+          });
+        }
+        return post;
+      });
+
+      this.setState({ searchData, inputText: "" });
+    };
+
+    searchPosts = query => {
+      const results = query
+        ? this.state.data.filter(post => post.username.startsWith(query))
+        : [...this.state.data];
+
+      this.setState({
+        searchData: results,
+        inputSearch: query
+      });
+    };
+
+    handleClick = e => {
+      switch (e.target.dataset.button) {
+        case "toggleHeart":
+          this.toggleHeart(e);
+          break;
+      }
+    };
+
+    toggleHeart = e => {
+      const index = this.state.data.findIndex(
+        post => post.username === e.target.dataset.username
+      );
+
+      const addLike = [...this.state.addLike];
+      addLike.splice(index, 1, !addLike[index]);
+      this.setState({
+        addLike
       });
     };
 
@@ -62,6 +119,7 @@ export const authenticate = App => Login =>
         />
       ) : (
         <App
+          addComment={this.addComment}
           inputUsername={this.state.inputUsername}
           inputPassword={this.state.inputPassword}
           handleChange={this.handleChange}
@@ -69,6 +127,10 @@ export const authenticate = App => Login =>
           data={this.state.data}
           currentUser={this.state.currentUser}
           inputText={this.state.inputText}
+          inputSearch={this.state.inputSearch}
+          searchData={this.state.searchData}
+          addLike={this.state.addLike}
+          handleClick={this.handleClick}
         />
       );
     }

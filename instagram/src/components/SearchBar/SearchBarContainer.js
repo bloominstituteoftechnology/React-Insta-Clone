@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import "./Search.css";
-function SearchBarContainer() {
+function SearchBarContainer(props) {
   return (
     <div className="header-container">
       <div className="search-container1">
@@ -16,7 +16,10 @@ function SearchBarContainer() {
           className="largeInstagram"
         />
       </div>
-      <SearchBar />
+      <SearchBar
+        inputSearch={props.inputSearch}
+        handleChange={props.handleChange}
+      />
       <div className="search-container2">
         <img
           src={require(`./Images/largeCompass.png`)}
