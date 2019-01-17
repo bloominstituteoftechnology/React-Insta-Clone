@@ -3,6 +3,8 @@ import LoginImg from '../../ig-login-pic.png';
 import IgLogo from '../logo.png'
 import Apple from '../../apple-dwnload.png';
 import Google from '../../google-dwnload.png';
+import {StyledLogin} from '../Styles/Reusables'
+
 
 class Login extends Component {
   constructor(props){
@@ -44,7 +46,7 @@ class Login extends Component {
      }
   render() {
     return (
-      <div className="log-in">
+      <StyledLogin>
         <div className="w-50">  
           <div>
             <img src={LoginImg} alt="Mockup of Instagram on Iphone"/>
@@ -94,7 +96,7 @@ class Login extends Component {
           </div>
           </div>
         </div>
-      </div>
+      </StyledLogin>
     );
   }
 }

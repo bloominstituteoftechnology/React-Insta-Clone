@@ -3,10 +3,13 @@ import CommentSection from '../CommentSection/CommentSection';
 import '../../App.css'
 import PropTypes from 'prop-types';
 import Post from './Post'
+import {StyledPostContainer} from '../Styles/Reusables'
+
+
 
 const PostContainer = props =>{
     return ( 
-      <div className="post-container card">
+        <StyledPostContainer className="card">
             <Post username={props.post.username} thumbnailUrl={props.post.thumbnailUrl} imageUrl={props.post.imageUrl}/>
             {console.log(props.post)}
             <CommentSection 
@@ -16,7 +19,7 @@ const PostContainer = props =>{
             comments={props.post.comments}
             username={props.username}
             /> 
-      </div>
+      </StyledPostContainer>
     );
 }
 

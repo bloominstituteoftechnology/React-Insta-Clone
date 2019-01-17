@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {ActionButtons} from '../Styles/Reusables';
+
 
 
 class ActionHeader extends Component {
@@ -31,11 +33,11 @@ addLike = ev => {
 render(){
     return(
         <div>
-        <div className="d-flex action-btns">
+        <ActionButtons>
               <i onClick={this.addLike} className="far fa-heart"/>
               <i className="far fa-comment"/> 
-        </div>
-        <p className="font-weight-bold">{this.state.totalLikes} likes</p>
+        </ActionButtons>
+            <p className="font-weight-bold">{this.state.totalLikes} likes</p>
         </div>
     )
 }
