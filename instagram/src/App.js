@@ -1,27 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchBar from './components/SearchBar/SearchBar'
-import PostContainer from './components/PostContainer/PostContainer'
 import dummyData from './dummy-data';
-
+import LoginPage from './components/Login/Login'
+import PostsPage from './components/PostContainer/PostsPage'
+import authenticate from './components/Authentication/Authenticate'
 
 class App extends Component {
   constructor() {
     super();
-    this.state ={
-      socialdata: dummyData,
-    }
+    this.state = {};
   }
   render() {
     return (
       <div className="App">
-        <SearchBar />
         
-        <PostContainer posts= {this.state.socialdata} />
+        <ConditionalView />
         
       </div>
     );
   }
 }
 
-export default App;
+const ConditionalView = authenticate(PostsPage)(LoginPage);
+export default App

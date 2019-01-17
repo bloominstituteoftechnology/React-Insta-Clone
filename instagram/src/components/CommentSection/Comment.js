@@ -10,9 +10,9 @@ const Comment = props => {
           <p className = "comm-text">{props.comment.text}</p>
         </li>
         </ul>
+        
     )
 }
-
 
 export default Comment
 

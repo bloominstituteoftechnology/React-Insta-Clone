@@ -18,31 +18,25 @@ class Post extends React.Component {
     let likes = this.state.likes + 1;
     this.setState({ likes });
   };
+
   render() {
     return (
       <div>
         <div className="post-wrap">
-          
+          <PostHeader username= {this.props.post.username}
+          thumbnailURL= {this.props.post.thumbnailURL} />
 
           <div className="main-img">
-            <img src={this.props.post.imageUrl} alt="main post image" />
+            <img src={this.props.post.imageUrl} 
+            alt="main post image" />
           </div>
+          <Likes addLikes={this.addLikes} likes={this.state.likes} />
 
-          <CommentSection comments={this.props.post.comments} />
-          <p className="date">
-            {moment(this.props.post.timestamp, "MMMM Do YYYY, h:mm:ss a").fromNow()}
-          </p>
-
-          <form className="comm-form">
-            <input
-              className="comm-input"
-              type="text"
-              name="titlevalue"
-              placeholder="Add a comment..."
-            />
-          </form>
-
-         
+          
+          <CommentSection comments={this.props.post.comments}
+                           postId={this.props.post.imageUrl} />
+          
+          
         </div>
       </div>
     );

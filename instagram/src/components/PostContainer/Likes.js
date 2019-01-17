@@ -3,18 +3,18 @@ import Post from './Post'
 import './PostContainer.css'
 
 const Likes = (props) => {
-  return (
+  return [
     <div className = "like-container"
-        key={props.index}
+        key="likes-icons-container"
         onClick={props.addLikes}>
 
        <div className="like-icons">
-            <i class="far fa-heart"></i>
-            <i class="far fa-comment"></i>
+            <i className="far fa-heart"></i>
+            <i className="far fa-comment"></i>
          </div>
-           <p className = "num-likes"> {props.like} likes</p>
+           <p className = "num-likes"> {props.likes} likes</p>
     </div>
-  )
+  ];
 }
 
 export default Likes

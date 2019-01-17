@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Comment from './Comment'
 import CommentInput from './CommentInput'
+import moment from 'moment'
 import './CommentSection.css'
 
 
@@ -9,7 +10,7 @@ class CommentSection extends React.Component  {
     constructor(props) {
       super(props);
       this.state ={
-        comments: props.comments,
+        comments: [],
         comment: ''
       }
     }
@@ -18,7 +19,8 @@ class CommentSection extends React.Component  {
       const id = this.props.postID;
       if (localStorage.getItem(id)) {
         this.setState({
-          comments: JSON.parse(localStorage.getItem(this.props.postID))
+          comments: this.props.post.comments,
+          // comments: JSON.parse(localStorage.getItem(this.props.postID))
         })
       } else {
         this.setComments();
@@ -50,9 +52,12 @@ class CommentSection extends React.Component  {
     }
     render() {
       return (
+        
         <div>
+          
           {this.state.comments.map((comment, index) => 
           <Comment key={index} comment={comment}/>)}
+          
           <CommentInput comment={this.state.comment}
           submitComment={this.handleCommentSubmit}
           changeComment={this.commentHandler} />
@@ -60,15 +65,7 @@ class CommentSection extends React.Component  {
       )
     }
 }
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   
   
 

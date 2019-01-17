@@ -12,7 +12,9 @@ const SearchBar = (props) => {
             </div>
             <div className= "input-wrap">
             
-            <input className = "input-box" type="text" placeholder = "       🔍 Search"/>
+            <input className = "input-box"
+             onKeyDown={props.searchPosts} type="text"
+              placeholder = "       🔍 Search"/>
             
             </div>
             <div className="search-icons">
