@@ -3,11 +3,21 @@ import PostHeader from "./PostHeader";
 import PostPicture from "./PostPicture";
 import PostIcons from "./PostIcons";
 import CommentContainer from "../CommentSection/CommentContainer";
-import "./PostContainer.css";
+import styled from "@emotion/styled/macro";
+
+const StyledPostContainer = styled("div")`
+  display: grid;
+  width: 550px;
+`;
+
+const StyledCommentContainer = styled("div")`
+  display: grid;
+  justify-content: flex-start;
+`;
 
 const PostContainer = props => {
   return (
-    <div className="post-container-wrapper">
+    <StyledPostContainer>
       <PostHeader data={props.data} />
       <PostPicture data={props.data} />
       <PostIcons
@@ -16,7 +26,7 @@ const PostContainer = props => {
         username={props.username}
         handleClick={props.handleClick}
       />
-      <div className="comment-container">
+      <StyledCommentContainer>
         <CommentContainer
           comments={props.comments}
           data={props.data}
@@ -25,8 +35,8 @@ const PostContainer = props => {
           handleChange={props.handleChange}
           username={props.username}
         />
-      </div>
-    </div>
+      </StyledCommentContainer>
+    </StyledPostContainer>
   );
 };
 

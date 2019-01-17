@@ -1,8 +1,16 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-useless-constructor */
+/**@jsx jsx */
 import React, { Component } from "react";
 import SearchBarContainer from "../SearchBar/SearchBarContainer";
-import "../../App.css";
 import PostContainer from "./PostContainer";
+import { jsx, css } from "@emotion/core";
+
+const parentPostContainer = css`
+  display: grid;
+  grid-row-gap: 50px;
+  justify-content: center;
+`;
 
 class PostPage extends Component {
   constructor(props) {
@@ -11,12 +19,12 @@ class PostPage extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <SearchBarContainer
           handleChange={this.props.handleChange}
           inputSearch={this.props.inputSearch}
         />
-        <div className="post-container-container">
+        <div css={parentPostContainer}>
           {this.props.searchData.map((dataOnMap, index) => {
             return (
               <PostContainer

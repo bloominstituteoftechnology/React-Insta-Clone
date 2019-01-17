@@ -49,34 +49,11 @@ img {
   padding-right: 20px;
 }
 
-::-webkit-input-placeholder {
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-:-moz-placeholder {
-  /* Firefox 18- */
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-::-moz-placeholder {
-  /* Firefox 19+ */
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-:-ms-input-placeholder {
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
 .mytext {
   width: 220px;
   height: 20px;
   border-radius: 5px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
 }

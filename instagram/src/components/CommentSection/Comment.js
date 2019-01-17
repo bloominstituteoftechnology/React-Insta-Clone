@@ -1,13 +1,18 @@
+/* eslint-disable no-unused-vars */
+/**@jsx jsx */
 import React from "react";
+import { jsx, css } from "@emotion/core";
+
+const usernameOnComment = css`
+  color: #040e5c;
+  font-weight: 600;
+`;
 
 const Comment = props => {
   return (
-    <div className="comment-item-wrapper">
-      <p>
-        <span className="comment-username">@{props.username}</span>{" "}
-        <span className="comment-text">{props.text}</span>
-      </p>
-    </div>
+    <p>
+      <span css={usernameOnComment}>@{props.username}</span> {props.text}
+    </p>
   );
 };
 

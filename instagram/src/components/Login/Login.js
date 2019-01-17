@@ -1,5 +1,5 @@
 import React from "react";
-import "../PostContainer/PostContainer.css";
+
 const Login = props => {
   return (
     <div className="login-form-wrapper">
