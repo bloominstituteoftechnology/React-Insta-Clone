@@ -65,7 +65,11 @@ class Login extends Component {
                 <a href="https://help.instagram.com/519522125107875">
                   Data Policy
                 </a>{" "}
-                and <a href="/legal/cookies/">Cookies Policy</a>.
+                and{" "}
+                <a href="https://help.instagram.com/legal/cookies/">
+                  Cookies Policy
+                </a>
+                .
               </p>
               <p className="terms">
                 Don't Have an account? <a href="/">Sign Up</a>

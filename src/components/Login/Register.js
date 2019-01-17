@@ -24,7 +24,11 @@ class Register extends Component {
     } else {
       await this.props.addUser(email, fullName, username, password);
       await this.setState({ data: this.props.user });
-      window.location.href = "/login";
+      //   window.location.href = "/login";
+    }
+
+    if (this.props.user) {
+      alert("You Signed Up! You can now login ");
     }
   };
   render() {

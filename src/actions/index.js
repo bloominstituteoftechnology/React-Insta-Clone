@@ -15,15 +15,15 @@ export const addComment = (username, user, text) => {
 };
 
 export const newUser = (email, fullName, username, password) => dispatch => {
-  dispatch({
-    type: "NEW_USER",
-    data: {
-      email,
-      fullName,
-      username,
-      password
-    }
-  });
+  // dispatch({
+  //   type: "NEW_USER",
+  //   data: {
+  //     email,
+  //     fullName,
+  //     username,
+  //     password
+  //   }
+  // });
   fetch("https://comptagroup.com/api/instagram/register", {
     method: "POST",
     headers: {
@@ -38,7 +38,17 @@ export const newUser = (email, fullName, username, password) => dispatch => {
     })
   })
     .then(res => res.json())
-    .then(data => data)
+    .then(data => {
+      return dispatch({
+        type: "NEW_USER",
+        data: {
+          email: data.email,
+          fullName: data.fullName,
+          username: data.username,
+          password: data.password
+        }
+      });
+    })
     .catch(err => err);
 };
 
