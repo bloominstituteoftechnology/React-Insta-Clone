@@ -93,7 +93,10 @@ class Register extends Component {
                 and <a href="/legal/cookies/">Cookies Policy</a>.
               </p>
               <p className="terms">
-                Already Have An Account? <a href="/login">Login</a>
+                Already Have An Account?{" "}
+                <a style={{ color: "blue" }} href="/login">
+                  Login
+                </a>
               </p>
             </form>
           </div>
