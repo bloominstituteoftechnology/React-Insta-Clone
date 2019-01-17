@@ -18,7 +18,7 @@ const PostContainer = props => {
       
 
       
-      <CommentSection comments={comments} likes={likes}/>
+      <CommentSection comments={comments} likes={likes} userProfile={props.userProfile}/>
     </div>
   )
 }

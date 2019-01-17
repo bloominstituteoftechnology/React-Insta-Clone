@@ -11,6 +11,7 @@ class CommentSection extends React.Component {
       commentNumber: 0,
       likes: 0,
       notLiked: false,
+      userProfile: props.userProfile
     }
   }
   componentDidMount = () => {
@@ -50,7 +51,7 @@ class CommentSection extends React.Component {
   }
   addComment = (event) => {
     event.preventDefault()
-    const newCommentList = [...this.state.comments, {username: 'DEFAULT', text: this.state.currentComment}]
+    const newCommentList = [...this.state.comments, {username: this.state.userProfile, text: this.state.currentComment}]
     this.setState({
       comments: newCommentList,
       currentComment: '',

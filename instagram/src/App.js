@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import SearchBar from './components/SearchBar/SearchBar'
 import './components/Authentication/Authenticate'
 import PostsPage from './components/PostContainer/PostsPage'
 import './App.css';
@@ -47,6 +46,7 @@ class App extends Component {
       searchValue={this.state.searchValue}
       searchPosts={this.searchPosts}
       displayedPosts={this.state.displayedPosts}
+      userProfile={localStorage.getItem('username')}
       />
     );
   }

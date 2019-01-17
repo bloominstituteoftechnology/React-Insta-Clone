@@ -10,7 +10,7 @@ const PostsPage = props => {
         <SearchBar onChange={props.searchPosts} value={props.searchValue}/>
         <div className="main-content-container">
             {props.displayedPosts.map(post => {
-            return <PostContainer post={post} />
+            return <PostContainer post={post} userProfile={props.userProfile}/>
         })}        
     </div>
   </div>
