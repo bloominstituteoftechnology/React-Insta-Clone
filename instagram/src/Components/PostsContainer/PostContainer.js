@@ -5,7 +5,8 @@ const PostContainer = (props) => {
 		<div>
 			{props.instaData.map((item) => (
 				<div key={item.timestamp} item={item}>
-					{item.username}
+					{item.username} {item.likes} <img src={item.thumbnailUrl} alt="#" />{' '}
+					<img src={item.imageUrl} alt="#" />
 				</div>
 			))}
 		</div>

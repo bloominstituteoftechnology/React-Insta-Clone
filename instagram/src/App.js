@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import PostContainer from './Components/PostsContainer/PostContainer';
+import CommentSection from './Components/CommentSection /CommentSection';
 console.log(dummyData);
 // import './App.css';
 
@@ -12,7 +13,12 @@ class App extends Component {
 		};
 	}
 	render() {
-		return <PostContainer instaData={this.state.instaData} />;
+		return (
+			<div>
+				<PostContainer instaData={this.state.instaData} />
+				<CommentSection comments={this.props.comments} />
+			</div>
+		);
 	}
 	// 	// return <PostContainer dummyData={this.state.dummyData} />;
 	// }
