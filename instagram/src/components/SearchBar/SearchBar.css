@@ -1,0 +1,21 @@
+
+.insta-logo {
+    width: 23%;
+    margin: 10px 5px 0 15px;
+    padding-top: 10px;
+}
+
+.insta-text {
+    width: 68%;
+    border-left: 1px solid lightgray;
+    padding: 15px 15px 0 15px;
+    margin: 10px 15px 0 15px;
+}
+
+.icon {
+    width: 26%;
+}
+
+.user-icon {
+    width: 24%;
+}
