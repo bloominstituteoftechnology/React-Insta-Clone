@@ -24,6 +24,7 @@ const authenticate = App => LoginContainer => class extends Component {
     this.setState({
       usernameInput: "",
       passwordInput: "",
+      currentUser: JSON.parse(localStorage.getItem("currentUser")) || "",
       posts: [...posts],
       postQueryResults: [...posts],
       postQueryInput: "",
@@ -38,7 +39,7 @@ const authenticate = App => LoginContainer => class extends Component {
   loginUser() {
     this.setState({
       currentUser: this.state.usernameInput
-    });
+    }, () => localStorage.setItem("currentUser", JSON.stringify(this.state.currentUser)));
   }
 
   searchPosts(postQueryInput) {

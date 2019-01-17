@@ -10,11 +10,13 @@ const LoginContainer = props => {
       onSubmit={props.handleSubmit}>
       <input
         type="text"
+        placeholder="Enter your username"
         value={props.usernameInput}
         name="usernameInput"
         onChange={props.handleChange} />
       <input
         type="password"
+        placeholder="Enter your password"
         value={props.passwordInput}
         name="passwordInput"
         onChange={props.handleChange} />
