@@ -14,6 +14,10 @@ const Post = styled.div`
 
 `;
 
+const PostGroup = styled.div``;
+
+const PostImg = styled.img``;
+
 const PostTop = styled.div`
 
   display:flex;
@@ -58,7 +62,7 @@ const PostContainer = props =>{
 
               </PostTop>
 
-              <img src = {post.imageUrl} />
+              <PostImg src = {post.imageUrl} />
 
               <CommentSection comments = {post.comments} />
 
@@ -68,7 +72,7 @@ const PostContainer = props =>{
 
   });
 
-  return(<div>{posts}</div>);
+  return(<PostGroup>{posts}</PostGroup>);
 
 }
 

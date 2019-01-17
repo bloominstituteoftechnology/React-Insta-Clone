@@ -12,11 +12,34 @@ let newComment;
 
 let count = 0;
 
+const CommentSectionContainer = styled.div``;
+
 const Comment = styled.div`
   text-decoration:none;
   display:flex;
   align-items:center;
 
+
+
+`;
+
+const Heart = styled.i`
+  margin-left: 6%;
+`;
+
+
+const Count = styled.div`
+  margin-left:6%;
+  margin-top:7px;
+  font-weight:bold;
+
+`;
+const PostReactions = styled.div`
+  margin-right:0;
+  padding-right:0;
+  display:flex;
+  flex-direction: column;
+  align-items:flex-start;
 
 `;
 
@@ -25,9 +48,14 @@ const CommentText = styled.div`
 
 `;
 
+const UserName = styled.strong``;
+
 const CommentBox = styled.input`
-  width:100%;
+  width:93%;
   height:50px;
+  padding-left:6%;
+  font-size:15px;
+  font-weight:heavier;
 
 `;
 
@@ -105,9 +133,19 @@ class CommentSection extends Component{
 
     return(
 
-      <div className = "comment-section">
+      <CommentSectionContainer>
 
-      <div className = "post-reactions"><i  onClick = {()=>{this.addLike()}} className="heart-size fa">&#xf08a;<span>{this.state.count}</span></i></div>
+      <PostReactions>
+
+        <Heart onClick = {()=>{this.addLike()}} className="heart-size fa">
+
+          &#xf08a;
+
+        </Heart>
+        <Count>{this.state.count} likes</Count>
+
+
+      </PostReactions>
 
         <ul>
 
@@ -115,7 +153,7 @@ class CommentSection extends Component{
 
           return <Comment>
 
-                  <strong>{comment.username}</strong> <CommentText>{comment.text}</CommentText>
+                  <UserName>{comment.username}</UserName> <CommentText>{comment.text}</CommentText>
 
                  </Comment>})}
 
@@ -129,7 +167,7 @@ class CommentSection extends Component{
 
         </form>
 
-      </div>
+      </CommentSectionContainer>
 
     );
 
