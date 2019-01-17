@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import './CommentSection.css';
 
+import styled from 'styled-components';
+
 //newComment holds comment that is made to one of the instagram posts; count is the numbrer of likes
 
 //for a given post
@@ -9,6 +11,14 @@ import './CommentSection.css';
 let newComment;
 
 let count = 0;
+
+const Comment = styled.div`
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  
+
+`;
 
 class CommentSection extends Component{
 
@@ -34,10 +44,6 @@ class CommentSection extends Component{
 
     newComment = event.target.value;
 
-    console.log(newComment)
-
-    console.log(this.state.comments)
-
     this.setState(prevState => ({currentComment: newComment}))
 
 
@@ -47,13 +53,12 @@ class CommentSection extends Component{
 
     e.preventDefault();
 
-    console.log('new comment is ' + newComment)
-
     this.setState(prevState =>({
 
       comments: [{username: 'User', text: newComment},...prevState.comments]
 
     }), ()=>{this.setState(prevState =>({currentComment: ""}))})
+    localStorage.setItem("comments", this.state.comments);
 
   }
 
@@ -93,11 +98,11 @@ class CommentSection extends Component{
 
         {this.state.comments.map(comment =>{
 
-          return <li>
+          return <Comment>
 
                   <strong>{comment.username}</strong> <p>{comment.text}</p>
 
-                 </li>})}
+                 </Comment>})}
 
         </ul>
 

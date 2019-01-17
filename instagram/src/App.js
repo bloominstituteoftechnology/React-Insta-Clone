@@ -30,7 +30,7 @@ class App extends Component {
 
     this.state = {
 
-      data:displayData,
+      data:[],
 
       fieldValue: name
 
@@ -73,8 +73,9 @@ class App extends Component {
     return (
 
       <div className="App">
+          <SearchBar submitFunction = {this.findPosts} handleChange = {this.searchName} fieldValue = {this.state.fieldValue}/>
 
-          <PostsPage submitFunction = {this.findPosts} handleChange = {this.searchName} fieldValue = {this.state.fieldValue} data = {this.state.data}/>
+          <PostsPage data = {this.state.data}/>
 
       </div>
 

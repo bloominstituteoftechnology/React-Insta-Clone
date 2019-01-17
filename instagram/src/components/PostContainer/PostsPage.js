@@ -9,9 +9,6 @@ const PostsPage = props =>{
   return(
 
     <div className = 'posts-page'>
-
-        <SearchBar submitFunction = {props.submitFunction} handleChange = {props.handleChange} fieldValue = {props.fieldValue}/>
-
         <PostContainer posts = {props.data} />
 
     </div>
