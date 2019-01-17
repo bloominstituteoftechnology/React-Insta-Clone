@@ -88,6 +88,9 @@ class Register extends Component {
                 </a>{" "}
                 and <a href="/legal/cookies/">Cookies Policy</a>.
               </p>
+              <p className="terms">
+                Already Have An Account? <a href="/login">Login</a>
+              </p>
             </form>
           </div>
         </div>
