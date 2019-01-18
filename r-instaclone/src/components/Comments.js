@@ -18,7 +18,7 @@ newComment = e => {
 
 
 
-
+    console.log(e)
     e.preventDefault();
     const newCommentAdded = {username: 'Fake', text:this.state.comment}
     const selectComment = this.state.comments.slice();

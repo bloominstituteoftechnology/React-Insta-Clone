@@ -1,4 +1,16 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
+
+
+const LoginPage = styled.div`
+margin: 200px 500px;
+
+`;
+ const Header = styled.h1`
+ font-family: sans;
+ `;
+
+
 
 class Login extends Component {
     constructor (props) {
@@ -27,7 +39,10 @@ handleLoginInput = e => {
 render(){
     return (
 
-        <div>
+       <LoginPage>
+           <Header>
+           <h1>Instagram</h1>
+           </Header>
             <form onSubmit={this.handleLoginInput}>
 
                 <input type='text' placeholder='username'  name='username' value={this.state.username} onChange={this.handleInputChange}/>
@@ -37,7 +52,7 @@ render(){
 
             </form>
 
-        </div>
+        </LoginPage>
         )
     }
     
