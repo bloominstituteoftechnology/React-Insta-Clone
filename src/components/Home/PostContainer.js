@@ -5,10 +5,11 @@ import Comments from "./Comments";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addLike, addComment, getData } from "../../actions";
-
+import axios from "axios";
 class PostContainer extends Component {
   state = {
-    commentField: ""
+    commentField: "",
+    image: ""
   };
 
   componentDidMount = () => {
@@ -33,13 +34,48 @@ class PostContainer extends Component {
     this.setState({ commentField: "" });
   };
 
+  onUploadSubmit = e => {
+    e.preventDefault();
+    axios
+      .post("https://comptagroup.com/api/instagram/posts", {
+        uasername: window.localStorage.username,
+        image: this.state.inage
+      })
+      .then(res => {
+        console.log(res.data);
+      });
+  };
+
   render() {
     const { Insta, data } = this.props;
     console.log(this.props.data);
     return (
       <>
+        <form
+          className="upload"
+          action="https://comptagroup.com/api/instagram/posts"
+          method="post"
+          encType="multipart/form-data"
+          target="_self"
+        >
+          <div className="upload-btn-wrapper">
+            <input
+              type="hidden"
+              name="username"
+              value={window.localStorage.username}
+            />
+            <input type="file" name="image" />
+            <button className="btn">Upload New Post</button>
+          </div>
+          <div className="submit-btn">
+            <button className="btn" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+
         {data.map(post => (
-          <div key={post.username} className="post-container">
+          <div key={post._id} className="post-container">
             <PostHeader
               thumbnailUrl={post.thumbnailUrl}
               username={post.username}

@@ -4,6 +4,44 @@
   display: flex;
   justify-content: space-between;
   padding-top: 130px;
+  .submit-btn {
+    display: flex;
+    justify-content: center;
+    .btn {
+      border: 2px solid gray;
+      color: gray;
+      background-color: white;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: bold;
+      display: block;
+      margin: 10px 0;
+    }
+  }
+
+  .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    .btn {
+      border: 2px solid gray;
+      color: gray;
+      background-color: white;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    input[type="file"] {
+      font-size: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+  }
   .side-bar {
     position: fixed;
     right: 140px;
@@ -70,7 +108,7 @@
       }
     }
 
-    @media #{'(max-width: 650px)'} {
+    @media #{'(max-width: 750px)'} {
       display: none;
     }
   }
