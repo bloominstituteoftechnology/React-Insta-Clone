@@ -21,16 +21,23 @@ class App extends Component {
     }
   }
  searchName = (event) =>{
-   name = event.target.value;
+   if(event.target.value ===""){
+     name = ""
+   }else{
+   name = event.target.value;}
    this.setState({fieldValue: name})
  }
  findPosts = (event) =>{
   event.preventDefault();
+  if(name!=""){
   dataContainer = displayData.filter(post => {
+
       return(post.username === name)
   })
   displayData = dataContainer;
-  this.setState((prevState, props) => ({data: displayData}))
+  }else{
+      displayData = dummyData;
+  }this.setState((prevState, props) => ({data: displayData}))
  }
  componentDidMount(){
    this.setState({data: displayData});
