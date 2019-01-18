@@ -24,7 +24,7 @@ class App extends Component {
     event.preventDefault();
     console.log(event.target)
     this.setState({
-      [event.target.value]: event.target.value,
+      [event.target.name]: event.target.value,
     })
     console.log("handleInput setState: ", this.state.search)
   }
@@ -54,10 +54,13 @@ class App extends Component {
           data={this.state.data} 
           handleInput={this.handleInput}
           filterUsernames={this.filterUsernames}
-          input={this.state.input}
+          search={this.state.search}
           />
         {this.state.data.map(dataItem => (
-          <PostContainer data={dataItem} key={dataItem.timestamp}/>
+          <PostContainer data={dataItem} 
+            key={dataItem.timestamp}
+            search={this.state.search}
+            />
         ))}
         {/* <PostContainer data={this.state.data}/> */}
       </div>

@@ -54,16 +54,13 @@ const SearchBar = props => {
                     <form type='submit'>
                         <input
                         name="search"
-
                         type="text" 
                         placeholder="Search" 
                         className="input-search"   
                         // onChange={(event)=> props.filterUsernames(event)}
                         onChange={props.handleInput}
-                        onKeyDown={props.filterUsernames}
+                        onSubmit={props.filterUsernames}
                         // onChange={()=> props.filterDummy(event)}
-                        // onClick={() => selectTabHandler(tab)}
-                        // onKeyDown={this.changeComment}
                         value={props.search}
                     />
                     </form>

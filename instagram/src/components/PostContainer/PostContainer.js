@@ -6,15 +6,20 @@ import './PostContainer.css'
 
 const PostContainer = props => {
     // console.log(props.data.comments)
-    return (
-        <div className='post-style'> 
-            <div className='post-header'>
-                <img src={props.data.thumbnailUrl} alt="thumbnail"/>
-                <p>{props.data.username}</p>
+    if(props.data.username.includes(props.search)){
+        return (
+            <div className='post-style'> 
+                <div className='post-header'>
+                    <img src={props.data.thumbnailUrl} alt="thumbnail"/>
+                    <p>{props.data.username}</p>
+                </div>
+                <CommentSection comments={props.data.comments} data={props.data}/>
             </div>
-            <CommentSection comments={props.data.comments} data={props.data}/>
-        </div>
-    )
+    
+        )
+    }
+    else{return null}
+  
 }
 
 // class PostContainer extends Component {
