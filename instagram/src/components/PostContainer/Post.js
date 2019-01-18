@@ -34,7 +34,9 @@ class Post extends React.Component {
 
           
           <CommentSection comments={this.props.post.comments}
-                           postId={this.props.post.imageUrl} />
+                           postId={this.props.post.imageUrl}
+                            timestamp={this.props.post.timestamp}   
+                        />
           
           
         </div>

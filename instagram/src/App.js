@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data';
-import LoginPage from './components/Login/Login'
+// import Login from './components/Login/Login'
 import PostsPage from './components/PostContainer/PostsPage'
-import authenticate from './components/Authentication/Authenticate'
+// import authenticate from './components/Authentication/authenticate'
 
 class App extends Component {
   constructor() {
@@ -14,12 +13,14 @@ class App extends Component {
     return (
       <div className="App">
         
-        <ConditionalView />
+        <PostsPage />
         
       </div>
     );
   }
 }
 
-const ConditionalView = authenticate(PostsPage)(LoginPage);
-export default App
+
+// export default authenticate(App)(Login);
+
+export default App;

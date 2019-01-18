@@ -2,6 +2,7 @@ import React from 'react'
 import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from './PostContainer'
+import Post from './Post'
 
 class PostsPage extends React.Component {
     constructor(){
@@ -17,9 +18,9 @@ class PostsPage extends React.Component {
     }
 
     searchPostsHandler = e => {
-        const posts = this.state.posts.filter(p => {
-            if (p.username.includes(e.target.value)) {
-                return p;
+        const posts = this.state.posts.filter(post => {
+            if (post.username.includes(e.target.value)) {
+                return post;
             }
         });
 
@@ -33,7 +34,7 @@ class PostsPage extends React.Component {
       searchPosts={this.searchPostsHandler} />
        { this.state.posts.map(post => {
             return (
-            <PostContainer     
+            <Post     
                 post = {post} 
        /> 
        )})}

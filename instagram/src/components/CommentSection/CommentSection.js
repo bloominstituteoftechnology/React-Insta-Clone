@@ -11,7 +11,8 @@ class CommentSection extends React.Component  {
       super(props);
       this.state ={
         comments: [],
-        comment: ''
+        comment: '',
+        timestamp: ''
       }
     }
 
@@ -19,8 +20,9 @@ class CommentSection extends React.Component  {
       const id = this.props.postID;
       if (localStorage.getItem(id)) {
         this.setState({
-          comments: this.props.post.comments,
+          comments: this.props.comments,
           // comments: JSON.parse(localStorage.getItem(this.props.postID))
+          timestamp: this.props.timestamp
         })
       } else {
         this.setComments();
@@ -60,7 +62,9 @@ class CommentSection extends React.Component  {
           
           <CommentInput comment={this.state.comment}
           submitComment={this.handleCommentSubmit}
-          changeComment={this.commentHandler} />
+          changeComment={this.commentHandler} 
+          timestamp= {this.state.timestamp}
+          />
         </div>
       )
     }

@@ -1,5 +1,5 @@
 
-.search-bar {
+/* .search-bar {
     margin-top: 0;
     display: flex;
     justify-content: space-around;
@@ -11,14 +11,14 @@
     border-bottom: 1px solid #E6E6E6;
     padding-bottom: 2rem;
     padding-top: 1rem;
-}
-.left-side i{
+} */
+i {
     padding: 0 1%;
     font-size: 2.5rem;
     font-weight: 100;
 
 }
-.line{
+/* .line{
     background-color: #262626;
     height: 30px;
     margin: 0 16px;
@@ -29,13 +29,13 @@
     height: 3.8rem;
     width: 10.3rem;
 
-}
-.left-side {
+} */
+/* .left-side {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0 6%;
-}
+} */
 
 .search-icons{
     display: flex;
