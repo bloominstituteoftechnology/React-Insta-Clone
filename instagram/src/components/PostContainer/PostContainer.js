@@ -4,7 +4,7 @@ import CommentSection from '../CommentSection/CommentSection';
 import styled from 'styled-components';
 
 const Post = styled.div`{
-    border: solid gray 3px;
+    border: solid gray 1px;
     width: 640px;
     margin-top: 20px;
     margin-left: 25%;
@@ -15,7 +15,6 @@ const PostHead = styled.div`{
     width: 200px;
     display: flex;
     justify-content: space-evenly;
-    border: solid red 2px;
 }`;
 
 const PostImg = styled.div`{
