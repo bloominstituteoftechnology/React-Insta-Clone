@@ -65,7 +65,7 @@ class CommentSection extends Component {
       <div className='comment-section'> 
         <img src={this.state.data.imageUrl} alt='post image' />
         <div className="heart-icon">
-          <img src={this.state.likeStatus ? redHeart: heart} alt="IG heart" onClick={this.clickedImg}/>
+          <img src={this.state.likeStatus ? redHeart : heart} alt="IG heart" onClick={this.clickedImg}/>
         </div>
         <p className='likes'>{this.state.likes} likes</p>
         {this.state.comments.map((comment, index) => (

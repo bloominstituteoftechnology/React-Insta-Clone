@@ -8,31 +8,36 @@ import profile_icon from './profile-icon.png'
 import searchbar from './search-icon.png'
 import './SearchBar.css';
 
-class SearchBar extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            input: "",
-            data: props,
-            usernames: [],
-        }
-    }
+// class SearchBar extends Component {
+//     constructor(props){
+//         super(props);
+//         this.state = {
+//             input: "",
+//             data: props,
+//             // usernames: [],
+//         }
+//     }
 
-    searchInput = (event) => {
-        console.log("input: ", this.state.input)
-        this.setState({
-            input: event.target.value,
-        })
-        console.log("input after setState: ", this.state.input)
+    // filterUsernames = (event) => {
+    //     this.setState({
+    //         input: event.target.value,
+    //     })
+    //     console.log("input after setState: ", this.state.input)
 
-        // const result = (this.props.data).filter(
-        //                 data.username => data.username.includes(this.state.input))
-        // console.log(result)
+    //     const result = (this.props.data).filter(data => data.username.includes(this.state.input))
+    //     console.log("Filtered usernames: ", result)
         
-    }
+    // }
 
-    render() {
+    // filterDummy = (event) => {
+    //     console.log("event: ", event)
+    // }
+
+
+const SearchBar = props => {
+
         // console.log("usernames: ", (this.props.data).length)
+        console.log(props)
         return(
             <div className="searchBar">
                 <div className="wrapped-ig">
@@ -46,15 +51,23 @@ class SearchBar extends Component {
                 
                 <div className="search-div">
                     <img src={searchbar} alt="searchbar icon" className="searchbar-icon"/>
-                    <input
+                    <form type='submit'>
+                        <input
                         name="search"
+
                         type="text" 
                         placeholder="Search" 
                         className="input-search"   
-                        onChange={this.searchInput}
+                        // onChange={(event)=> props.filterUsernames(event)}
+                        onChange={props.handleInput}
+                        onKeyDown={props.filterUsernames}
+                        // onChange={()=> props.filterDummy(event)}
+                        // onClick={() => selectTabHandler(tab)}
                         // onKeyDown={this.changeComment}
-                        value={this.state.input}
+                        value={props.search}
                     />
+                    </form>
+                    
                 </div>
 
                 <div className="profile-div">
@@ -65,6 +78,7 @@ class SearchBar extends Component {
             </div>
         )
     }
-}
+
+
 
 export default SearchBar;
