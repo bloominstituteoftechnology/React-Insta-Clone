@@ -23,8 +23,7 @@ class PostsPage extends Component {
 
 componentDidMount() {
   console.log ('im working!')
-  this.setState = ({
-    dataSet: dummyData})
+  this.setState = ({dataSet: dummyData})
   
 }
 
