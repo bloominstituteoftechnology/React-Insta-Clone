@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './CommentSection.css';
 import styled from 'styled-components';
-
+import PropTypes from "prop-types";
 //newComment holds comment that is made to one of the instagram posts; count is the numbrer of likes
 //for a given post
 let newComment;
@@ -102,5 +102,11 @@ class CommentSection extends Component{
     );
   };
 }
+
+Comment.propTypes = {
+  username: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired
+
+};
 
 export default CommentSection;
