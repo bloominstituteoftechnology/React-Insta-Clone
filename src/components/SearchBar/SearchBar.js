@@ -1,5 +1,6 @@
 import React from 'react';
-import './SearchBar.css';
+import styled from 'styled-components';
+
 
 import InstagramLogo from '../../Images/instagram-logo.jpeg';
 import InstagramScript from '../../Images/instagram-script.png';
@@ -7,27 +8,83 @@ import NavigationIcon from '../../Images/navigation-icon.png';
 import UserIcon from '../../Images/user-icon.jpeg';
 import HeartIcon from '../../Images/heart-icon.png';
 import MagnifyingGlass from '../../Images/magnifying-glass.png';
-import PropTypes from 'prop-types';
+
+
+const Container = styled.header`
+  border-bottom: 1px solid #3333;
+  height: 80px;
+  line-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+`;
+
+const LogoDiv = styled.div`
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  line-height: 75px;
+`;
+
+const LogoImg = styled.img`
+  height: 40%;
+  margin-top: 25px;
+  padding: 0px 15px;
+`;
+
+const Search = styled.div`
+  width: 300px;
+  margin: auto;
+  display: flex;
+`;
+
+const SearchInput = styled.input`
+  height: 30px;
+  width: 100%;
+  border-radius: 3px;
+  text-indent: 28px;
+  
+`;
+
+const MagImg = styled.img`
+position: relative;
+  top: 8px;
+  left: -91%;
+        height: 20px;
+`;
+
+const RightIcons = styled.div`
+  display: flex;
+  width: 30%;
+`;
+
+const Icons = styled.div`
+  width: 10%;
+`;
+
 
 
 export const SearchBar = (props) =>
+    <Container>
+        <LogoDiv>
+            <LogoImg alt="instagram logo" src={InstagramLogo} />
+            |
 
-    <div className = "header">
-        <section className = "logo">
-          <img src={InstagramLogo} alt="instagram logo" className="instagram-logo" />
-          <img src={InstagramScript} alt="instagram script" className="instagram-script" />
-          </section>
-          <section className="search">
-          <img src={MagnifyingGlass} alt="magnifying glass" className="searchbar" />
-          </section>
-          <section className="icons">
-          <img src={NavigationIcon} alt="Navigation Icon" className="icon" />
-          <img src={HeartIcon} alt="Heart Icon" className="icon"  />
-          <img src={UserIcon} alt="User Icon" className="icon"  />
-          </section>
-       </div>;
-
-
-SearchBar.propTypes = {
-    input: PropTypes.string
-};
+          <LogoImg alt="instagram script" src={InstagramScript} />
+        </LogoDiv>
+        <Search>
+            <SearchInput type="text" placeholder="Search" onKeyDown={props.searchHandler} />
+            <MagImg alt="Magnifying Glass" src={MagnifyingGlass} />
+        </Search>
+        <RightIcons>
+            <Icons>
+                <LogoImg alt="Navigation Icon" src={NavigationIcon} />
+            </Icons>
+            <Icons>
+                <LogoImg alt="Heart Icon" src={HeartIcon} />
+            </Icons>
+            <Icons>
+                <LogoImg alt="User Icon" src={UserIcon} />
+            </Icons>
+        </RightIcons>
+    </Container>

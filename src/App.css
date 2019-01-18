@@ -1,3 +1,7 @@
 .app {
-    max-width: 1000px;
+    width: 1000px;
+}
+
+body {
+    width: 1500px;
 }
