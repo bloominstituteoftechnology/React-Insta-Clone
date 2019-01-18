@@ -38,7 +38,8 @@ export const newUser = (email, fullName, username, password) => dispatch => {
     })
     .then(res => {
       if (res.data.err) {
-        dispatch({ type: "ERROR", error: res.data.err });
+        dispatch({ type: "ERROR", data: res.data });
+        dispatch({ type: "LOADING", isLoading: false });
       } else {
         dispatch({ type: "REGISTERING" });
         dispatch({ type: "LOADING", isLoading: false });

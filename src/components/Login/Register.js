@@ -105,6 +105,9 @@ class Register extends Component {
               >
                 Sign Up
               </button>
+              {this.props.error ? (
+                <small style={{ color: "red" }}>{this.props.error.err}</small>
+              ) : null}
               <p className="terms">
                 By signing up, you agree to our{" "}
                 <a href="https://help.instagram.com/581066165581870">Terms</a>,{" "}
@@ -130,7 +133,8 @@ class Register extends Component {
 const mapStateToProps = state => ({
   user: state.Insta.user,
   isRegistered: state.Insta.isRegistered,
-  isLoading: state.Insta.isLoading
+  isLoading: state.Insta.isLoading,
+  error: state.Insta.error
 });
 
 const mapActionsToProps = {
