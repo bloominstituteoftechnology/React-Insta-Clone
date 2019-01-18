@@ -16,8 +16,10 @@ const searchHeaderContainer = css`
   height: 70px;
   justify-content: space-between;
   align-content: center;
-  margin-left: 5%;
-  margin-right: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 100px;
+  border-bottom: 1.2px solid black;
 `;
 
 const leftSearchContainer = css`

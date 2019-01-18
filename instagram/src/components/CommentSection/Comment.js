@@ -8,11 +8,24 @@ const usernameOnComment = css`
   font-weight: 600;
 `;
 
+const textOnComment = css`
+  color: black;
+  font-weight: normal;
+`;
+const styledContainer = css`
+  line-height: 2rem;
+`;
 const Comment = props => {
   return (
-    <p>
-      <span css={usernameOnComment}>@{props.username}</span> {props.text}
-    </p>
+    <div css={styledContainer}>
+      <span css={usernameOnComment}>
+        @{props.username}
+        <span css={textOnComment}>
+          {"       "}
+          {props.text}
+        </span>
+      </span>
+    </div>
   );
 };
 

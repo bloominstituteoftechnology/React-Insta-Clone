@@ -20,6 +20,7 @@ const likesOnPost = css`
   font-size: 0.9rem;
   justify-self: flex-start;
   margin-left: 10px;
+  margin-bottom: 2%;
 `;
 
 const PostIcons = props => {

@@ -8,6 +8,7 @@ import styled from "@emotion/styled/macro";
 const StyledPostContainer = styled("div")`
   display: grid;
   width: 550px;
+  border: 1px solid black;
 `;
 
 const StyledCommentContainer = styled("div")`
