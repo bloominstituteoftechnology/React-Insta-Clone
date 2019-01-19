@@ -52,8 +52,8 @@ render() {
 CommentSection.propTypes = {
   comm: PropTypes.arrayOf(PropTypes.shape(
     {
-    username: PropTypes.string,
-    text: PropTypes.string    
+    username: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired    
     }
   ))
   }

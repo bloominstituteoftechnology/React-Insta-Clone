@@ -7,7 +7,8 @@ class SearchBar extends React.Component{
     onFormSubmit = (e) => {
         e.preventDefault();
         this.props.onSubmit(this.state.term);
-        //some action to search state for term
+            //jsonn
+          
     }
 
     render(){

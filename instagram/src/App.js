@@ -19,9 +19,7 @@ class App extends Component {
   componentDidMount() {
     this.setState({dummyData});
   }
-onSearchSubmit= (term) => {
-  //jsonn
-}
+
 
   render() {
     return (
