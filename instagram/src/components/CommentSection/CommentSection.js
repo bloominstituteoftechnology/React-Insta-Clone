@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 class CommentSection extends React.Component{
   constructor(props){
     super();
+<<<<<<< HEAD
  this.state = {
    comment:'',
    comments:props.comm
@@ -16,6 +17,12 @@ class CommentSection extends React.Component{
     this.setState.comment = {username: this.newinfo.username, text: this.newninfo.text}
     console.log (newinfo);
   
+=======
+ this.state = {comment:''}
+ this.onFormSubmit = (e) =>  {
+  e.preventDefault();
+  // this.setState.value
+>>>>>>> 2cfa852af673265e1d824cba5c2b7a0bf182fbe7
   //some action to render comment to screen ???????????
 }
   }
