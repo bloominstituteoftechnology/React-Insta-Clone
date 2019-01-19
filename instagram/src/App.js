@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from './dummy-data';
 import PostContainer from './Components/PostsContainer/PostContainer';
-console.log(dummyData);
+import Header from './Components/SearchBar /Header';
 // import './App.css';
 
 class App extends Component {
@@ -14,6 +14,9 @@ class App extends Component {
 	render() {
 		return (
 			<div>
+				<header>
+					<Header />
+				</header>
 				<PostContainer instaData={this.state.instaData} />
 			</div>
 		);
