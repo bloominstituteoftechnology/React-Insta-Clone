@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import '../App.css';
 import PropTypes from 'prop-types';
 
-const comment = (props) => {
-    return {
+const Comment = (props) => {
+    return (
         <div>
                     <p>
                         <span className="comment_username">{this.props.username}</span>
@@ -11,7 +11,7 @@ const comment = (props) => {
                         <span>{this.state.comment.text}</span> 
                     </p>
         </div>
-    }
+    )
 }
 
 export default Comment

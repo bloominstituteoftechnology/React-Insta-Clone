@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Comment from './Comment.js'
-import PropTypes from 'prop-types';
+/*import PropTypes from 'prop-types';*/
 
 class CommentSection extends Component {
     constructor (props) {
@@ -14,23 +14,12 @@ class CommentSection extends Component {
 
     addNewComment = (event, indNumber) => {
         return(this.setState({event: this.event,
-                                indNumber: this.indNumber  }))
+                                            indNumber: this.indNumber  }))
     }
 
-    render = () => {
-        console.log("Check: ", this.props )
-            return (
-<<<<<<< HEAD
+    render(){
+        return(        
                 <Comment />
-=======
-                <div>
-                    <p>
-                        <span className="comment_username">{this.props.username}</span>
-                        <span className="comUser">{this.state.comment.username} </span>
-                        <span>{this.state.comment.text}</span> 
-                    </p>
-        </div>
->>>>>>> 32fad02b8667cc49a861f3f1271c137e77a4cb9c
         )
     }
 }
@@ -39,4 +28,4 @@ class CommentSection extends Component {
     comment: PropTypes.objectOf(PropTypes.string).isRequired,
   }*/
 
-export default CommentSection
+export default CommentSection;
