@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import dummyData from './dummy-data.js';
-import PostContainer from './components/PostContainer/PostContainer.js';
-import SearchBar from './components/SearchBar/SearchBar.js';
 import PostsPage from './components/PostContainer/PostsPage.js';
 import Authenticate from './components/Authentication/Authenticate.js';
 
@@ -45,22 +43,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PostsPage filterPost={this.filterPost}
-          inputFilteredUserName={this.inputFilteredUserName}
-          dummy={this.state.dummy} />
-          {/* <AuthenticateApp /> */}
-        {/* <SearchBar filterPost={this.filterPost} inputFilteredUserName={this.inputFilteredUserName} />
-        {this.state.dummy.length === 0 ? (
-          <h1>Loading</h1>
-        ) : (
-            this.state.dummy.map(post => {
-              return <PostContainer post={post} key={post.timestamp} />
-            }))} */}
+        <PostsPage filterPost={this.filterPost} inputFilteredUserName={this.inputFilteredUserName} dummy={this.state.dummy} />
       </div>
     );
   }
 }
 
-// const AuthenticateApp = Authenticate(App);
 
-export default App;
+export default Authenticate(App);
