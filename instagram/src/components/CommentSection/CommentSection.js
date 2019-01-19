@@ -6,26 +6,35 @@ import PropTypes from 'prop-types';
 class CommentSection extends React.Component{
   constructor(props){
     super();
- this.state = {comment:''}
- this.onFormSubmit = (e) =>  {
-  e.preventDefault();
-  this.setState.value
+ this.state = {
+   comment:'',
+   comments:props.comm
+  }
+  this.onFormSubmit = (e) =>  {
+    e.preventDefault();
+    let newinfo = {... this.state.comments, username: this.state.comment.username, text: this.state.comment};
+    this.setState.comment = {username: this.newinfo.username, text: this.newninfo.text}
+    console.log (newinfo);
+  
   //some action to render comment to screen ???????????
 }
   }
 render() {
   return (
    
-    <div >
-      {this.props.comm.map( comm => {
-        return( <div key={`${comm.username}${comm.text}`}><div>{comm.username}</div>
-          <div>{comm.text}</div></div>
+    <div>
+      {this.state.comment.map( (e) => {
+        return( <div key={`${e.username}${e.text}`}><div>{e.username}</div>
+          <div>{e.text}</div></div>
           )
+          
       })}
+     
          <div className="commentForm">
          <form onSubmit={this.onFormSubmit}>
          <input id="" type="text" placeholder="Add a comment" style = {{border: 'none'}} onChange={e=>this.setState({comment: e.target.value})} />
          </form>
+         
       </div>
     </div>
    

@@ -19,13 +19,15 @@ class App extends Component {
   componentDidMount() {
     this.setState({dummyData});
   }
-
+onSearchSubmit= (term) => {
+  //jsonn
+}
 
   render() {
     return (
       <div className="App">
         <div>
-        <SearchBar/>
+        <SearchBar onSubmit={this.onSearchSubmit}/>
         <PostContainer post = {this.state.dummyData}/>
         </div>
       </div>
