@@ -45,7 +45,7 @@ const Stories = props => {
                   <h4>{post.username}</h4>
                 </span>
                 <span>
-                  <a href="#">Follow</a>
+                  <a href="https://hamzaelk.com">Follow</a>
                 </span>
               </div>
             );
