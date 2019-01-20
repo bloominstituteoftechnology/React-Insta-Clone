@@ -55,7 +55,7 @@
       span {
         p {
           font-size: 12px;
-          color: #262626;
+          color: rgb(142, 142, 142);
           padding: 5px 0;
         }
         a {
@@ -86,6 +86,7 @@
       padding: 10px;
       border: 1px solid rgba(0, 0, 0, 0.125);
       .suggestions-header {
+        color: rgb(142, 142, 142);
         display: flex;
         justify-content: space-between;
         padding-bottom: 4px;
@@ -105,6 +106,7 @@
       padding: 10px;
       border: 1px solid rgba(0, 0, 0, 0.125);
       .stories-header {
+        color: rgb(142, 142, 142);
         display: flex;
         justify-content: space-between;
         padding-bottom: 4px;
