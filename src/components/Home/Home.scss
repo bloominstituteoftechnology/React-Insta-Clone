@@ -1,11 +1,17 @@
 .home-container {
   max-width: 1000px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: row-reverse;
   padding-top: 130px;
-  position: relative;
+
+  .flex-box {
+    position: relative;
+    display: flex;
+  }
+
+  .right-bar {
+    position: absolute;
+    left: 68%;
+  }
 
   .submit-btn {
     display: flex;
@@ -152,7 +158,6 @@
   }
   .post-container {
     background-color: #fff;
-
     border: 1px solid rgba(0, 0, 0, 0.125);
     margin-left: 20px;
     margin-bottom: 40px;

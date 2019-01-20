@@ -6,11 +6,13 @@ import "./Home.scss";
 const HomeContainer = props => {
   return (
     <div className="home-container">
-      <div className="right-bar">
-        <SideBarContainer />
-      </div>
-      <div className="right-bar">
-        <PostContainer />
+      <div className="flex-box">
+        <div className="right-bar">
+          <SideBarContainer />
+        </div>
+        <div className="left-bar">
+          <PostContainer />
+        </div>
       </div>
     </div>
   );
