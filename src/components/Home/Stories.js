@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 
 const Stories = props => {
-  console.log(props.posts);
   return (
     <>
       <div className="stories">
