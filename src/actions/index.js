@@ -4,7 +4,7 @@ export const addLike = id => dispatch => {
   dispatch({ type: "LOADING", isLoading: true });
 
   return axios
-    .post(`https://comptagroup.com/api/instagram/posts/${id}/likes`)
+    .post(`https://hamzaelkhoudiri.me/api/instagram/posts/${id}/likes`)
     .then(res => {
       if (res.data.err) {
         dispatch({ type: "ERROR", error: res.data.err });
@@ -17,7 +17,7 @@ export const addLike = id => dispatch => {
 export const addComment = (id, user, text) => dispatch => {
   dispatch({ type: "LOADING", isLoading: true });
   return axios
-    .post(`https://comptagroup.com/api/instagram/${id}/comments`, {
+    .post(`https://hamzaelkhoudiri.me/api/instagram/${id}/comments`, {
       username: user,
       comment: text
     })
@@ -30,7 +30,7 @@ export const addComment = (id, user, text) => dispatch => {
 export const newUser = (email, fullName, username, password) => dispatch => {
   dispatch({ type: "LOADING", isLoading: true });
   return axios
-    .post("https://comptagroup.com/api/instagram/register", {
+    .post("https://hamzaelkhoudiri.me/api/instagram/register", {
       email,
       fullName,
       username,
@@ -50,7 +50,7 @@ export const newUser = (email, fullName, username, password) => dispatch => {
 export const login = (email, password) => dispatch => {
   dispatch({ type: "LOADING", isLoading: true });
   return axios
-    .post("https://comptagroup.com/api/instagram/login", {
+    .post("https://hamzaelkhoudiri.me/api/instagram/login", {
       email,
       password
     })
@@ -74,9 +74,11 @@ export const login = (email, password) => dispatch => {
 
 export const getData = () => dispatch => {
   dispatch({ type: "LOADING", isLoading: true });
-  return axios.get("https://comptagroup.com/api/instagram/posts").then(res => {
-    console.log(res.data);
-    dispatch({ type: "GET_DATA", data: res.data });
-    dispatch({ type: "LOADING", isLoading: false });
-  });
+  return axios
+    .get("https://hamzaelkhoudiri.me/api/instagram/posts")
+    .then(res => {
+      console.log(res.data);
+      dispatch({ type: "GET_DATA", data: res.data });
+      dispatch({ type: "LOADING", isLoading: false });
+    });
 };
