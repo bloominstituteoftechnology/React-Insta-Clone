@@ -37,7 +37,7 @@ class PostContainer extends Component {
   onUploadSubmit = e => {
     e.preventDefault();
     axios
-      .post("https://comptagroup.com/api/instagram/posts", {
+      .post("https://hamzaelkhoudiri.me/api/instagram/posts", {
         uasername: window.localStorage.username,
         image: this.state.inage
       })
