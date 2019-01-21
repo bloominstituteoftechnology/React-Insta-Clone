@@ -55,6 +55,7 @@ class Login extends Component {
                 placeholder="Email"
                 required
                 autoComplete="off"
+                type="email"
               />
               <input
                 onChange={this.handleChange}
