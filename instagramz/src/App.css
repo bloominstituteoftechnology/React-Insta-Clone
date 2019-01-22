@@ -1,32 +1,134 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+  
+  width: 1000px;
+  margin: 0 auto;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.searchbar {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchbarA {
+  width:22%;
+}
+
+.searchbarCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+ 
+}
+
+.postmain {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  width: 900px;
+  margin: 0 auto;
+}
+
+
+
+.container2 {
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  
+  padding: 5px;
+}
+
+.athing {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  
+  width: 11%;
+  height: 70px;
+}
+
+.bthing {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  
+  width: 40%;
+  height: 70px;
+}
+
+.cthing {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.nonlink {
+  text-decoration: none;
+}
+
+.image2 {
+  display: flex;
+  width: 98%;
+  margin-bottom: 7px;
+}
+
+.image1 {
+  display: flex;
+  padding: 3px;
+  width:70%;
+}
+
+.contspacing {
+  margin-bottom: 14px;
+  border: solid lightgrey 1px;
+}
+
+.comments {
+  padding:10px;
+  
+}
+
+.comments h1 {
+  font-size: 1.2rem;
+
+}
+
+.comments h2 {
+  font-size: 0.9rem;
+
+}
+
+.addcomment {
+  padding:10px;
+  
+}
+
+
+.imageThing {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+   
+  padding: none;
+ 
+}
+
+.imageThing p {
+  padding: none;
+  margin: none;
+  
 }
