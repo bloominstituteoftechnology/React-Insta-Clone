@@ -6,12 +6,16 @@ import SearchBar from './components/SearchBar/SearchBar';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 
+
+
+const content = dummyData;
+
 class App extends Component {
   render() {
     return (
       <div className="App">
       <SearchBar />
-      <PostContainer />
+      <PostContainer content={content} />
       
         <h1>Hello React Thingy</h1>
       </div>
