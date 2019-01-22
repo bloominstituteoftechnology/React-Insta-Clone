@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
+import Likes from './../Functionals/Likes'
 import CommentSection from './../CommentSection/CommentSection'
 import PropTypes from 'prop-types';
 const PostContainer = (props) => {
@@ -14,7 +15,7 @@ const PostContainer = (props) => {
            <div>{post.username}</div>
            <div><img src ={post.thumbnailUrl} alt = "icon" ></img></div>
            <div><img src ={post.imageUrl} alt= "Something"></img> </div>
-           <div>{post.likes}</div>
+           <div><Likes/></div>
            <div>{post.timestamp}</div>
            <CommentSection 
             comm = {post.comments}/>
