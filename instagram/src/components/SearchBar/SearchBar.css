@@ -1,0 +1,50 @@
+/* .search-bar{
+    padding: 5px 0; 
+    border-bottom: 1px solid #6b6b83;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#f2eaeb;
+}
+.search-bar .logos{
+    display: flex;
+    align-items: center;
+}
+.search-bar .logos .home-button{
+    margin: 0 10px;
+}
+.search-bar .logos span{
+    margin-right: 10px;
+    margin-top: -5px;
+    font-size: 25px;
+    font-weight: 100;
+}
+.search-bar .logos .logo{
+    text-decoration: none;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 25px;
+}
+.search input{
+    padding: 5px;
+    border: 1px solid #6b6b83; 
+    color: #f2eaeb;
+    border-radius: 2px;
+    background: #02267b75;
+    text-align: center;
+}
+.search input:focus{
+    outline: none;
+}
+
+.nav-buttons{
+    display: flex;
+    
+}
+.nav-buttons .menu-button{
+    margin: 0 5px;
+}
+.nav-buttons :last-child{
+    margin: 0 10px 0 5px;
+} */
