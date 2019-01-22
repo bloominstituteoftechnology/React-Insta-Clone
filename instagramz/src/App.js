@@ -23,10 +23,9 @@ class App extends Component {
 
   componentDidMount() {
     
-    this.setState = (
+    this.setState (
       {
         content: dummyData,
-        
       }
     )
 
