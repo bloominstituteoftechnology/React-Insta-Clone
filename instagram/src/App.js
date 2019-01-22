@@ -24,6 +24,9 @@ class App extends Component {
           <PostContainer key={dummyData.username} dummyData={dummyData} />
         ))}
         </section>
+        <section className="logOff">
+          <a href="www.google.com">Log Off</a>
+        </section>
       </div>
     );
   }

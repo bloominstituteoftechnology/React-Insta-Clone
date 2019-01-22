@@ -1,7 +1,8 @@
 import React from "react";
 import CommentSection from "./CommentSection";
+import PropTypes from 'prop-types';
 
-function PostContainer(props) {
+const PostContainer = props => {
     return (
       <section className="postContainer">
         <div className="postUser">
@@ -11,10 +12,20 @@ function PostContainer(props) {
         <div className="image">
           <img src={props.dummyData.imageUrl} alt="postImg"/>
         </div>
-        <CommentSection key={props.username} dummyData={props.dummyData} />
+        <CommentSection key={props.likes} dummyData={props.dummyData} />
       </section>
     );
 }
+
+PostContainer.propTypes = {
+  username: PropTypes.string,
+  thumbnailUrl: PropTypes.string,
+  imageUrl: PropTypes.string,
+  likes: PropTypes.PropTypes.number,
+  timestamp: PropTypes.string,
+  comments: PropTypes.object
+
+};
 
 export default PostContainer;
 

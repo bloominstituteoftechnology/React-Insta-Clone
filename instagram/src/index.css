@@ -73,20 +73,16 @@ code {
   border: 2px solid lavender;
   color: black;
   height: 100%; 
-  flex-direction: column;
   margin: 5px;
-
 }
 
 .comment {
   display: flex;
+  justify-content: center;
   border: 1px solid purple;
   height: 40px;
-  margin-bottom: 10px;
   margin: 5px;
 }
-
-
 
 .addComment {
   display: flex;
@@ -94,4 +90,8 @@ code {
   padding-top: 15px;
   height: 40px;
   width: 90%;
+}
+
+.logOff {
+  padding-bottom: 10px;
 }
