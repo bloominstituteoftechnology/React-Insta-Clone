@@ -8,18 +8,43 @@ import PostContainer from './components/PostContainer/PostContainer';
 
 
 
-const content = dummyData;
+const contentStuff = dummyData;
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+        content: []
+      }
+    
+
+  }
+
+  componentDidMount() {
+    
+    this.setState = (
+      {
+        content: dummyData,
+        
+      }
+    )
+
+    console.log(this.state.content)
+  }
+
   render() {
     return (
       <div className="App">
       <SearchBar />
-      <PostContainer content={content} />
+      <PostContainer content={this.state.content} />
+
       
-        <h1>Hello React Thingy</h1>
+      <h1>Hello React Thingy</h1>
+      
       </div>
     );
+    
   }
 }
 
