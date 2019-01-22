@@ -1,0 +1,47 @@
+.comment-container {
+    border: 1px solid #E6E6E6;
+    background-color: #FFFFFF;
+    /* width: 640px; */
+    padding-left: 20px;
+}
+
+.like-bar { 
+    margin-right: 550px;
+    padding-top: 10px;
+}
+
+.comment-text {
+    padding: 3px;
+    display: flex;
+  }
+  
+  .comment {
+    font-size: 13px;
+  }
+  
+  .user {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  form {
+      display: flex;
+      padding-top: 10px;
+      margin-top: 5px;
+      width: 600px;
+      padding-bottom: 10px;
+      border-top: 1px solid #E6E6E6;
+  }
+
+  form input {
+      border: 1px solid #FFFFFF;
+      outline: none;
+  }
+
+  #ig-heart {
+      cursor: pointer;
+  }
+
+  #ig-comment {
+      padding-left: 10px;
+  }

@@ -77,6 +77,29 @@ const dummyData = [
         text: "I like how Half Dome looks so old and useless"
       }
     ]
+  },
+  {
+    username: 'hiccupsteahouse',
+    thumbnailUrl:
+    'https://scontent-lax3-1.cdninstagram.com/vp/4873dcda137524294c84f52ded98deb2/5C8BED43/t51.2885-19/s150x150/16465756_243635012713514_3751121524615020544_a.jpg',
+    imageUrl:
+    'https://i.gyazo.com/675d9987e41935b1388038a1dc5082b5.jpg',
+    likes: 23243,
+    timestamp: 'July 16th 2017, 12:05:21 pm',
+    comments: [
+      {
+        username: 'hiccupsteahouse',
+        text: 'A warm bowl of pho on a rainy day, keeps the blues away!'
+      },
+      {
+        username: 'yahooo501',
+        text: 'dope!!'
+      },
+      {
+        username: 'taylorkristine__',
+        text: 'just going to order the whole menu, that\'s all'
+      }
+    ]
   }
 ];
 

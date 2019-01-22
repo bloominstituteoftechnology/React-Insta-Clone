@@ -1,0 +1,38 @@
+.search-bar {
+    border-bottom: 1px solid #E6E6E6;
+    height: 80px;
+    line-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+  }
+
+  .search-bar input {
+    border: 1px solid #DBDBDB;
+    background-color: #FAFAFA;
+    outline: none;
+    border-radius: 5%;
+    width: 200px;
+    height: 25px;
+    text-align: center;
+  }
+  
+  .search-img {
+    height: 50px;
+  }
+
+  .logo-image {
+    height: 70%;
+    margin-top: 20px;
+  }
+
+  #ig-camera {
+  }
+  
+  .social-wrapper {
+    display: flex;
+  }
+  
+  .social {
+    width: 30px;
+  }
