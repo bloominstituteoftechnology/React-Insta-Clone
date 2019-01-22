@@ -2,41 +2,47 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import dummyData from './components/dummy-data'
-import PostContainer from './components/PostContainer'
-import SearchBar from './components/SearchBar'
+import PostContainer from './components/PostContainer/PostContainer'
+import SearchBar from './components/SearchBar/SearchBar'
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      posts: ''
+      posts: [],  //placeholder for posts
+      filteredPosts: []  //placeholder for posts filtered by SearchBar
     }
   }
 
   componentDidMount() {
     this.setState({
       posts: dummyData,
-    })
+    })  
   }
 
-  render() {
-    if  (!this.state.posts){
-      return <div>Loading. . .</div>
+//searchHandler takes argumemt and filters posts the search parameters
+searchHandler = ev => {
+  const posts = this.state.posts.filter(p => {
+    if (p.username.includes(ev.target.value)){
+      return p;
     }
+})
+this.setState({ filteredPosts: posts })
+}
+
+  
+  render() {
     return (
       <div className="App">
-        <SearchBar />
-        {this.state.posts.map((post, index) => {
-          return (
-            <div>
-              <PostContainer index={index} post={post} />
-              {console.log(post + " " + index)}
-            </div>
-          
-          )
-        }
-        )
-      }
+        <SearchBar 
+            searchTerm={this.state.searchTerm}
+            searchPosts={this.searchHandler}
+            />
+        <PostContainer posts={this.state.filteredPosts.length > 0
+            ? this.state.filteredPosts
+            : this.state.posts
+          }
+        />
       </div>
     )
   }

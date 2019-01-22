@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+import '../../App.css';
 import PropTypes from 'prop-types';
 
 const Comment = (props) => {
