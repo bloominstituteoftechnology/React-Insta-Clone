@@ -1,24 +1,3 @@
-// import React from 'react';
-// import PropTypes from 'prop-types';
-// const CommentSection = (props) => {
-// 	return (
-// 		<div>
-// 			{props.comments.map((comment, i) => (
-// 				<div key={i}>
-// 					{comment.username} {comment.text}
-// 				</div>
-// 			))}
-// 		</div>
-// 	);
-// };
-// CommentSection.PropTypes = {
-// 	comment: PropTypes.shape({
-// 		username: PropTypes.string,
-// 		text: PropTypes.string
-// 	})
-// };
-// export default CommentSection;
-
 import React from 'react';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
@@ -42,7 +21,8 @@ class CommentSection extends React.Component {
 	commentSubmit = (event) => {
 		event.preventDefault();
 		const newComment = { text: this.state.comment };
-		const comments = { ...this.state.comments, newComment };
+		const comments = this.state.comments.slice();
+		comments.push(newComment);
 		this.setState({ comments, comment: '' });
 	};
 	commentHandler = (event) => {

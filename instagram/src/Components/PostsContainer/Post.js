@@ -11,7 +11,7 @@ class Post extends React.Component {
 			likes: props.post.likes
 		};
 	}
-	LikeCounter = () => {
+	likeCounter = () => {
 		let likes = this.state.likes + 1;
 		this.setState({ likes });
 	};
@@ -28,7 +28,7 @@ class Post extends React.Component {
 		);
 	}
 }
-Post.PropTypes = {
+Post.propTypes = {
 	post: PropTypes.shape({
 		username: PropTypes.string,
 		thumbnailUrl: PropTypes.string,
