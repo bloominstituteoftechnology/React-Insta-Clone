@@ -1,0 +1,44 @@
+.search-component-container{
+  display: flex;
+  justify-content:space-between;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: .5px solid #D3D3D3;
+}
+.search-component-instagram-logo{
+  display: flex;
+  justify-content: flex-start;
+
+}
+.icons{
+  height: 32px;
+  width: 32px;
+  margin-right: 35px;
+}
+
+.instagram_icon{
+  margin-right: 20px;
+}
+
+.instagram_logo{
+  height: 40px;
+  margin-left: 20px;
+}
+
+.vertical_line{
+  border-left: 2px solid black;
+  height: 35px;
+}
+
+.search-input {
+  color: #D3D3D3;
+  height: 30px;
+  width: 250px;
+  padding: 2px;
+  background-color: #FAFAFA;
+  background-image: url('./search.png');
+  background-repeat: no-repeat;
+  background-position: 70px center;
+  text-align: center;
+  font-size: 1.3rem;
+}

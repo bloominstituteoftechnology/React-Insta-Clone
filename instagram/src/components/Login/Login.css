@@ -1,0 +1,23 @@
+.login-container{
+  width: 400px;
+  height: 600px;
+  padding-top: 120px;
+  text-align: center;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.login-label{
+  font-weight: bold;
+  line-height: 50px;
+}
+
+.login-input{
+  width: 200px;
+}
+
+.login-submit{
+  font-size: 1rem;
+  border: 1px solid black;
+  margin-top: 10px;
+}
