@@ -3,13 +3,14 @@ import CommentSection from '../CommentsSection/CommentSection';
 import PropTypes from 'prop-types'
 
 const PostContainer = (props) => {
+        console.log("props.posts on PostContainer: ", props.posts)
         
         return(
                 <div>
                 
-                <h2>{props.post.username}</h2>
-                <img src={props.post.imageUrl} alt={props.alt}/>
-                        {props.post.comments.map((comment, index) => (
+                <h2>{props.posts.username}</h2>
+                <img src={props.posts.imageUrl} alt={props.alt}/>
+                        {props.posts.comments.map((comment, index) => (
                                 <CommentSection comment={comment} key={index} />
                         ))}
                         <div className="commentLine">
