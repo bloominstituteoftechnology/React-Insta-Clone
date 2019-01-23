@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
-import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer/PostContainer';
 
-import FilterTest from './FilterTest';
+import dummyData from './dummy-data';
 import PostPage from './components/PostContainer/PostsPage';
 
+import authenticate from './Authentication/Authenticate';
+import Login from './components/Login/Login';
 
-
-const contentStuff = dummyData;
 
 class App extends Component {
   constructor() {
@@ -41,4 +38,5 @@ dummyData.propTypes = {
   dummyData: PropTypes.array
 };
 
-export default App;
+export default authenticate(App)(Login);
+
