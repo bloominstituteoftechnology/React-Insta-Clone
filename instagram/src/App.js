@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <div>
-        <SearchBar onSubmit={this.onSearchSubmit}/>
+        <SearchBar content = {this.state.dummyData}/>
         <PostContainer post = {this.state.dummyData}/>
         </div>
       </div>
