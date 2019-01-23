@@ -6,8 +6,8 @@ import image4 from './Image4.jpg';
 
 
 class SearchBar extends React.Component {
-    constructor () {
-        super();
+    constructor (props) {
+        super(props);
 
         this.state ={
             search: "",
@@ -22,10 +22,7 @@ class SearchBar extends React.Component {
         });
       };
 
-      componentDidMount() {
-        
-      }
-
+   
     
     render() {
         return (
@@ -38,7 +35,7 @@ class SearchBar extends React.Component {
 
                 <div className="searchbarCenter">
                 
-                    <form className='addcomment' onSubmit={this.addComment}>
+                    <form className='addcomment' onSubmit={(event) => this.props.searching(event, this.state.search)}>
                         <input
                         type="text"
                         name="search"

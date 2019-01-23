@@ -35,9 +35,29 @@ class App extends Component {
     console.log(this.state.content)
   }
 
+
+  searching = (event, thing) => {
+    console.log(thing)
+    event.preventDefault();
+    this.setState (
+      {
+        search: thing
+      }
+    )
+   
+  }
+
+
   filter = info => {
-    if (this.state.search = 'everything'){
-      return this.state.content;
+    const data = this.state.content;
+    //const result = data.filter(search => search.username === this.state.search);
+    const result = data.filter(search => search.username.includes(this.state.search));
+
+    if (this.state.search == 'everything'){
+      return data;
+    }
+    else {
+      return result;
     }
 
   } 
@@ -45,12 +65,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <SearchBar />
-      <PostContainer content={this.state.content} />
+      <SearchBar searching={this.searching}/>
+      <PostContainer content={this.filter()} />
             
       <h1>Hello React Thingy</h1>
       
-      <FilterTest />
+     
 
       </div>
     );
