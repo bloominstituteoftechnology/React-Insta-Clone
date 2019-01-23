@@ -12,9 +12,9 @@ class App extends Component {
 		};
 	}
 	searchHandler = (event) => {
-		const p = this.state.posts.filter((mustafa) => {
-			if (mustafa.username.includes(event.target.value)) {
-				return mustafa;
+		let p = this.state.posts.filter((post) => {
+			if (post.username.includes(event.target.value)) {
+				return post;
 			}
 		});
 		this.setState({ postsFilter: p });

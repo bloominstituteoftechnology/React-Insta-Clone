@@ -36,7 +36,7 @@ class CommentSection extends React.Component {
 	setComments = () => {
 		localStorage.setItem(this.props.postId, JSON.stringify(this.state.comments));
 	};
-	componentWillMount() {
+	componentWillUnMount() {
 		this.setComments();
 	}
 	commentSubmit = (event) => {
