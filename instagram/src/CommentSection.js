@@ -1,17 +1,23 @@
 import React from "react";
 import Comment from "./Comment";
+import PropTypes from 'prop-types';
 
-function CommentSection(props) {
+const CommentSection = props => {
     return (
       <div className="commentSection">
-        <input class="input" type="text" placeholder="Write a comment"/>
+        <input className="input" type="text" placeholder="Write a comment"/>
           {props.dummyData.comments.map(commenters => {
             return (
-              <Comment key={commenters.username} commentData={commenters}/>
+              <Comment key={commenters.text.length} commentData={commenters}/>
             );
           })}
       </div>
     );
 }
+
+CommentSection.propTypes = {
+  username: PropTypes.string,
+  text: PropTypes.string
+};
 
 export default CommentSection;
