@@ -7,6 +7,14 @@ import CommentSection from '../CommentSection/CommentSection';
 import CardContent from './CardContent';
 
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const Athing = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   
+`;
 
 function CardTop(props) {
     

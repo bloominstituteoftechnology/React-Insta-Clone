@@ -1,4 +1,5 @@
 const dummyData = [
+  
   {
     username: "philzcoffee",
     thumbnailUrl:
@@ -77,7 +78,30 @@ const dummyData = [
         text: "I like how Half Dome looks so old and useless"
       }
     ]
-  }
+  },
+  {
+    username: "lindabelcher",
+    thumbnailUrl:
+      "https://vignette.wikia.nocookie.net/bobsburgerpedia/images/e/e6/Badge-edit-4.png",
+    imageUrl:
+      "https://kenpire.files.wordpress.com/2014/11/linda-alright-sweater.jpg",
+    likes: 2,
+    timestamp: "Julvember 9th 2017, 10:04:08 am",
+    comments: [
+      {
+        username: "GeneTheQueen",
+        text: "Good job Mom."
+      },
+      {
+        username: "TinaHorses4LIFE",
+        text: "Maybe a few more magical horses... maybe... only if you want to"
+      },
+      {
+        username: "bunnygirl",
+        text: "It's like your trying, and I accept that you're trying."
+      }
+    ]
+  },
 ];
 
 export default dummyData;

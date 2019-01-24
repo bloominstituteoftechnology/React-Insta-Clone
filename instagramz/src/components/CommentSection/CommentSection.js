@@ -1,6 +1,19 @@
 import React from 'react';
 import Comments from './Comments';
 
+import styled from 'styled-components';
+
+const Input = styled.input`
+    
+    margin: 1px;
+    border: 1px solid black;
+    border-radius: 8px;
+    color: black;
+    padding: 2px;
+    font-size: 1.6rem;
+   
+`;
+
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -53,7 +66,7 @@ class CommentSection extends React.Component {
 
       <div className="comment">
         <form className='addcomment' onSubmit={this.addComment}>
-            <input
+            <Input
             type="text"
             name="text"
             placeholder="Add New Comment"

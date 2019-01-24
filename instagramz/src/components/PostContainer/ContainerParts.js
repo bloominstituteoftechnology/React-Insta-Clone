@@ -4,11 +4,20 @@ import CardTop from './CardTop';
 
 import PropTypes from 'prop-types';
 
+import styled from 'styled-components';
+
+const Divvy = styled.div`
+    margin-bottom: 14px;
+    border: solid lightgrey 1px;
+    border-radius: 6px;
+`;
+
+
 function ContainerParts (props) {
 
     
     return(
-        <div className="contspacing">
+        <Divvy>
             <CardTop
             name = {props.stuff.username} 
             thumb={props.stuff.thumbnailUrl}
@@ -22,7 +31,7 @@ function ContainerParts (props) {
             />
             
             
-        </div>
+        </Divvy>
     )
     
 }

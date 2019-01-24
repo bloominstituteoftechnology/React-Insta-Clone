@@ -68,7 +68,7 @@ class PostPage extends Component {
       <SearchBar searching={this.searching}/>
       <PostContainer content={this.filter()} />
             
-      <h1>Hello React Thingy</h1>
+      <h1></h1>
       
      
 
