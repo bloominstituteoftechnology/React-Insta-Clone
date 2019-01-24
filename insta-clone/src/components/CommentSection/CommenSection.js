@@ -1,6 +1,6 @@
 import React from 'react'
-import Comment from "./Comment";
 import moment from 'moment';
+import Comment from "./Comment.js";
 
 
 class CommenSection extends React.Component {
@@ -26,18 +26,17 @@ class CommenSection extends React.Component {
             comments.push(newComment);
             this.setState({comments, comment: ''})
         }
-    }
+    };
+    
 
     render() {
         const time = moment(this.props.time, "MMM Do YYYY, h:mm:ss a");
         const newTime = time.fromNow().toUpperCase();
         return (
             <div className='comments-container'>
-                
-                {/*THIS PART IS CREATING AN ERROR -----------------------------*/}
-                {/*{this.state.comments.map((comment) => {*/}
-                    {/*return <Comment key={index} comment={comment}/>*/}
-                {/*})}*/}
+                {this.state.comments.map((comment) => {
+                    return (<Comment comment={comment}/>)
+                })}
                 <p>{newTime}</p>
                 <div className='comment-input'>
                     <form onSubmit={this.addNewComment}>

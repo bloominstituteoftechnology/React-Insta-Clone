@@ -1,11 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
-const Comment = () => {
-    return (
-        <div>
-            <p>{props.comment.username} {props.comment.text}</p>
-        </div>
-    )
+
+const Comment = (props) => {
+    return (<div>{props.comment.username} {props.comment.text}</div>)
 }
 
 Comment.propTypes = {
@@ -13,6 +11,5 @@ Comment.propTypes = {
         text: PropTypes.string,
         username: PropTypes.string
     })
-}
-
+};
 export default Comment
