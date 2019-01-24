@@ -1,0 +1,18 @@
+import React from 'react'
+
+const Comment = () => {
+    return (
+        <div>
+            <p>{props.comment.username} {props.comment.text}</p>
+        </div>
+    )
+}
+
+Comment.propTypes = {
+    comment: PropTypes.shape({
+        text: PropTypes.string,
+        username: PropTypes.string
+    })
+}
+
+export default Comment
