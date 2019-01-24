@@ -53,7 +53,7 @@ class PostContainer extends Component {
       <>
         <form
           className="upload"
-          action="https://hamzaelkhoudiri.com/api/instagram/posts"
+          action="https://hamzaelkhoudiri.me/api/instagram/posts"
           method="post"
           encType="multipart/form-data"
           target="_self"
