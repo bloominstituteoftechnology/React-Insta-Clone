@@ -19,8 +19,8 @@ const Midsearch = styled.div`
     justify-content: center;
 `
 const Rightsearch = styled.div`
-display: flex;
-justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 `
 const Title = styled.h1`
     padding-left: 15px;
@@ -46,18 +46,15 @@ const SearchBar = props => {
                 <img src="https://img.icons8.com/ios/50/000000/instagram-new.png" alt="instagram logo" id="insta-logo"/>
                 <Title>Instagram</Title>
             </Leftsearch>
-
             <Midsearch>
                 <Input type="text" placeholder="Search" onKeyDown={props.searchPosts}  />
             </Midsearch>
-
             <Rightsearch>
                 <img src="https://img.icons8.com/ios/50/000000/adventures.png" alt="explore icon"/>
                 <img src="https://img.icons8.com/ios/50/000000/like.png" alt="like icon"/>
                 <img src="https://img.icons8.com/ios/50/000000/user.png" alt="profile icon"/>
             </Rightsearch>
-
-        </Searchheader>
+            </Searchheader>
     )
 }
 

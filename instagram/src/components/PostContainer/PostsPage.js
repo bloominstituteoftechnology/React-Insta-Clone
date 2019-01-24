@@ -7,9 +7,9 @@ import SearchBar from '../SearchBar/SearchBar';
 
 // Styles using styled-components 
 const App = styled.div`
-text-align: center;
-width: 60%;
-margin: 0 auto;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
 `   
 
 class PostsPage extends Component {

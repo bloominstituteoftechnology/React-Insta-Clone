@@ -27,8 +27,6 @@ const LikeSection = props => {
                 <img onClick={props.incrementLikes} src="https://img.icons8.com/ios/50/000000/like.png" alt="like post"/>
                 <img src="https://img.icons8.com/ios/50/000000/speech-bubble.png" alt = "comment on post"/>
             </Icons>
-                    
-
             <Likes>
                 <strong>{props.likes} likes</strong>
             </Likes>
