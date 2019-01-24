@@ -2,6 +2,8 @@ import React from 'react';
 
 import CardTop from './CardTop';
 
+import PropTypes from 'prop-types';
+
 function ContainerParts (props) {
 
     
@@ -25,6 +27,12 @@ function ContainerParts (props) {
     
 }
 
+ContainerParts.propTypes = {
+    stuff: PropTypes.object,
+    textadd: PropTypes.string,
+    changeIt: PropTypes.func,
+    addComment: PropTypes.func
+  }
 
 
 export default ContainerParts;

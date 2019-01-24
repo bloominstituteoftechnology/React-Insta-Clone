@@ -6,6 +6,8 @@ import ImageThumb from './ImageThumbnail';
 import CommentSection from '../CommentSection/CommentSection';
 import CardContent from './CardContent';
 
+import PropTypes from 'prop-types';
+
 function CardTop(props) {
     
     return (
@@ -48,6 +50,19 @@ function CardTop(props) {
 
       </div>
     );
+  }
+
+  CardTop.propTypes = {
+    thumb: PropTypes.string,
+    name: PropTypes.string,
+    contenty: PropTypes.string,
+    likes: PropTypes.number,
+    comments: PropTypes.array,
+    textadd: PropTypes.func,
+    changeIt: PropTypes.func,
+    addComment: PropTypes.func
+
+
   }
   
   export default CardTop;

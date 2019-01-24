@@ -1,7 +1,7 @@
 import React from 'react';
 import ContainerParts from './ContainerParts';
 
-
+import PropTypes from 'prop-types';
 
 function PostContainer (props) {
     
@@ -30,5 +30,10 @@ function PostContainer (props) {
         )
     
 }
+
+PostContainer.propTypes = {
+    content: PropTypes.array
+  }
+
 
 export default PostContainer;

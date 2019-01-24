@@ -4,6 +4,8 @@ import image2 from './Image2.jpg';
 import image3 from './Image3.jpg';
 import image4 from './Image4.jpg';
 
+import PropTypes from 'prop-types';
+
 
 class SearchBar extends React.Component {
     constructor (props) {
@@ -59,5 +61,9 @@ class SearchBar extends React.Component {
         )
     }
 }
+
+SearchBar.propTypes = {
+    searching: PropTypes.func
+  };
 
 export default SearchBar;
