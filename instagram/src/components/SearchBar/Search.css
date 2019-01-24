@@ -1,0 +1,56 @@
+
+  nav a {
+    display: flex;
+  }
+  
+  .searchbar-wrapper h3 {
+    border-left: 1px solid black;
+    padding-left: 15px;
+    font-family: 'Cookie', sans-serif;
+    font-size: 1.6rem;
+    font-weight: lighter;
+  }
+  .navs {
+    width: 33.33%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .navs.search {
+    justify-content: center;
+  }
+  .navs.icons {
+    justify-content: flex-end;
+  }
+  .navs .icons {
+    padding: 0px 10px;
+  }
+  .navs.icons .fa {
+    font-size: 25px;
+  }
+  .icons:last-child {
+    padding-right: 0px;
+  }
+
+  .searchbar-wrapper form {
+    display: flex;
+
+  }
+  .searchbar-wrapper input {
+    border: 1px solid black;
+    border-right: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding-left: 7px;
+  }
+  .fa {
+    padding-right: 0px;
+  }
+  .searchbar-wrapper .fa {
+    margin-right: 0px;
+  }
+  button .fa {
+    font-size: 16px;
+    padding: 7px 12px;
+    margin-right: 0px;
+  }

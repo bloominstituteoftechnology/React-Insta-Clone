@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@import url('https://fonts.googleapis.com/css?family=Cookie');
+
+.App {
+  width: 100%;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loading img {
+  width: 300px;
+  height: 233px;
+}
+.error-404 {
+  background-image: url('./img/404.jpg') ;
+  height: 300px;
+  background-size: cover;
+  display: none;
+  justify-content: center;
+  align-self: flex-start;
+}
+h1 {
+  background-color: rgba(255,255,255, .93);
+  align-self: center;
+  padding: 30px;
+}
+.error-404 img {
+  height: 400px;
+}
+.searching {
+  display: none;
+}

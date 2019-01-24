@@ -1,0 +1,29 @@
+.post-container {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    flex-flow: flex-start;
+    align-items: center;
+    height: 80px;
+    text-transform: lowercase;
+}
+.post-image img {
+    width: 100%;
+    max-height: 600px;
+}
+.likes {
+    text-align: left;
+    margin: 20px auto;
+}
+.fa {
+    font-size: 30px;
+    margin-right: 10px;
+}
+.count {
+    margin: 15px 0px;
+    font-weight: bold;
+}
