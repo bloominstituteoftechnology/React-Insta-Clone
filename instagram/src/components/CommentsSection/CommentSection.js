@@ -39,6 +39,17 @@ commentHandler = ev => {
     this.setState({ comment: ev.target.value })
 }
 
+handleCommentSubmit = ev => {
+    ev.preventDefault();
+    const  newComment = { text: this.state.comment, username: 'pauldeyonghe' }
+    const comments = this.state.comments.slice()
+    comments.push(newComment)
+    this.setState({ comments, comment: '' })
+    setTimeout(() => {
+        this.setComments()
+    }, 500 )
+}
+
 
     addNewComment = (event, indNumber) => {
         return(this.setState({event: this.event,
@@ -47,7 +58,11 @@ commentHandler = ev => {
 
     render(){
         return(        
-                <Comment />
+                <CommentInput
+                    comment={this.state.comment}
+                    submitComment={this.handleCommentSubmit}
+                    changeComment={this.commentHandler}
+                />
         )
     }
 }
