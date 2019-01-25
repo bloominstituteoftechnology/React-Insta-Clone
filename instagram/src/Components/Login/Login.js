@@ -15,9 +15,11 @@ class Login extends React.Component {
 	};
 	logingHandler = (event) => {
 		this.setState({
-			login: event.target.value
+			login: event.target.value,
+			password: event.target.value
 		});
 	};
+
 	render() {
 		return (
 			<div>
@@ -30,7 +32,12 @@ class Login extends React.Component {
 							placeholder=" username"
 							onChange={this.logingHandler}
 						/>
-						<input type="text" value={this.state.password} placeholder="Passwprd" />
+						<input
+							type="text"
+							value={this.state.password}
+							placeholder="Passwprd"
+							onChange={this.logingHandler}
+						/>
 						<button type="submit" onClick={this.loging}>
 							Log in{' '}
 						</button>

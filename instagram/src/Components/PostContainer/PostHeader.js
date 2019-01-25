@@ -3,7 +3,8 @@ import React from 'react';
 const PostHeader = (props) => {
 	return (
 		<div>
-			<img src={props.thumbaniUrl} alt="#" />
+			<img src={props.thumbnailUrl} alt="#" />
+			<div>{props.username}</div>
 		</div>
 	);
 };
