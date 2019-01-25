@@ -8,32 +8,6 @@ import profile_icon from './profile-icon.png'
 import searchbar from './search-icon.png'
 import './SearchBar.css';
 
-// class SearchBar extends Component {
-//     constructor(props){
-//         super(props);
-//         this.state = {
-//             input: "",
-//             data: props,
-//             // usernames: [],
-//         }
-//     }
-
-    // filterUsernames = (event) => {
-    //     this.setState({
-    //         input: event.target.value,
-    //     })
-    //     console.log("input after setState: ", this.state.input)
-
-    //     const result = (this.props.data).filter(data => data.username.includes(this.state.input))
-    //     console.log("Filtered usernames: ", result)
-        
-    // }
-
-    // filterDummy = (event) => {
-    //     console.log("event: ", event)
-    // }
-
-
 const SearchBar = props => {
 
         // console.log("usernames: ", (this.props.data).length)
