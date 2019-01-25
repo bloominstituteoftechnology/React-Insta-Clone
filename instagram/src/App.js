@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Authenticate from './Components/Authentication/Authentication';
-// import PostPage from './Components/PostContainer/PostPage';
+import PostPage from './Components/PostContainer/PostPage';
 // import PostContainer from './Components/PostsContainer/PostContainer';
 import Header from './Components/SearchBar /Header';
 
@@ -30,7 +30,7 @@ class App extends Component {
 				<header>
 					<Header searchPosts={this.searchHandler} />
 				</header>
-				{/* <PostPage /> */}
+				<PostPage />
 				{/* <PostContainer posts={this.state.postsFilter.length > 0 ? this.state.postsFilter : this.state.posts} /> */}
 			</div>
 		);
