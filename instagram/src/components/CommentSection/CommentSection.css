@@ -1,0 +1,25 @@
+.commentSection{
+    display: flex;
+    border: 1px solid green;
+    flex-direction: column;
+    width: 80%;
+    align-items: flex-start;
+}
+
+.commentContainer{
+    display: flex;
+    align-self: center;
+    border: 1px solid blue;
+    align-items: center;
+    width: 97%;
+}
+
+
+.commentContainer h3, p{
+    margin: 0;
+    padding: 0;
+} 
+
+.commentContainer h3{
+    padding-right: 1.5%;
+}
