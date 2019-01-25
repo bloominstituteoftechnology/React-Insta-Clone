@@ -1,5 +1,5 @@
 import React from "react";
-import CommentSection from "./CommentSection";
+import Post from "./Post";
 import PropTypes from 'prop-types';
 
 const PostContainer = props => {
@@ -9,10 +9,7 @@ const PostContainer = props => {
           <img src={props.dummyData.thumbnailUrl} alt="userImg"/>
           <h3>{props.dummyData.username}</h3>
         </div>
-        <div className="image">
-          <img src={props.dummyData.imageUrl} alt="postImg"/>
-        </div>
-        <CommentSection key={props.likes} dummyData={props.dummyData} />
+        <Post key={(props.likes*2)} dummyData={props.dummyData} />
       </section>
     );
 }
@@ -24,7 +21,6 @@ PostContainer.propTypes = {
   likes: PropTypes.PropTypes.number,
   timestamp: PropTypes.string,
   comments: PropTypes.object
-
 };
 
 export default PostContainer;

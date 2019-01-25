@@ -3,6 +3,11 @@
   margin: 0 auto;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -38,8 +43,9 @@ code {
 .postContainer {
   display: flex;
   flex-direction: column;
+  width: 100%;
   border: 1px solid gray;
-  margin: 10px;
+  margin-bottom: 10px;
 }
 
 .postUser {
@@ -62,9 +68,10 @@ code {
   width: 91%;
 }
 
-.image {
+section .image {
   display: flex;
   align-self: center;
+  width: 100%;
 }
 
 .commentSection {
@@ -78,9 +85,12 @@ code {
 
 .comment {
   display: flex;
-  justify-content: center;
-  border: 1px solid purple;
-  height: 40px;
+  justify-content: flex-start;
+  text-align: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  align-self: flex-start;
+  height: 25px;
   margin: 5px;
 }
 
