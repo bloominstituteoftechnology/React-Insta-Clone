@@ -1,4 +1,5 @@
 import React from 'react';
+import PasswordMask from 'react-password-mask';
 
 class Login extends React.Component {
 	constructor(props) {
@@ -38,7 +39,7 @@ class Login extends React.Component {
 							placeholder=" username"
 							onChange={this.logingHandler}
 						/>
-						<input
+						<PasswordMask
 							type="text"
 							value={this.state.password}
 							placeholder="Password"
