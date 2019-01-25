@@ -1,30 +1,28 @@
 import React, { Component } from 'react'
-/*import logo from '../../src/logo.svg'
-import '@fortawesome/fontawesome-free/css/all.css'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGhost, faSearch } from '@fortawesome/free-solid-svg-icons'
-import  '../../App.css'
-library.add(faGhost, faSearch)*/
+import IGLogo from './iglogo.png'
+import './SearchBar.css'
 
 const SearchBar = (props) => {
         return(
-        <div className="App">
-                <header className="App-header">
-                <div className="grp1">
-                        <i className="fab fa-instagram item"></i>
-                        <p className="fab item"> | </p>
-                        <span className="cursive item">Instaclone</span>
+                <div className="search-bar-wrapper">
+                        <div className="image-wrapper">
+                                <img alt="instagram logo" src={IGLogo} className="logo-image" />
+                        </div>
+                        <div>
+                                <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
+                        </div>
+                        <div className="social-wrapper">
+                                <div className="social">
+                                        <i className="far fa-compass" />
+                                </div>
+                                <div className="social">
+                                        <i className="far fa-heart" />
+                                </div>
+                                <div className="social">
+                                        <i className="far fa-user-circle" />
+                                </div>
+                        </div>
                 </div>
-                <div className="grp2">                
-                <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
-                </div>
-                <div className="grp3">
-                        {/*<FontAwesomeIcon icon="search" className="fab" />*/}
-                </div>
-                
-                </header>
-        </div>
         )
 }
 
