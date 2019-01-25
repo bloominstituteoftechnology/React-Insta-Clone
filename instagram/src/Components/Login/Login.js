@@ -1,5 +1,13 @@
 import React from 'react';
 import PasswordMask from 'react-password-mask';
+import styled from 'styled-components';
+
+const userInput = styled.section`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 800px;
+`;
 
 class Login extends React.Component {
 	constructor(props) {
@@ -33,21 +41,23 @@ class Login extends React.Component {
 				<div>
 					<h1>Log In</h1>
 					<form>
-						<input
-							type="text"
-							value={this.state.login}
-							placeholder=" username"
-							onChange={this.logingHandler}
-						/>
-						<PasswordMask
-							type="text"
-							value={this.state.password}
-							placeholder="Password"
-							onChange={this.passwordHandler}
-						/>
-						<button type="submit" onClick={this.loging}>
-							Log in{' '}
-						</button>
+						<userInput>
+							<input
+								type="text"
+								value={this.state.login}
+								placeholder=" username"
+								onChange={this.logingHandler}
+							/>
+							<PasswordMask
+								type="text"
+								value={this.state.password}
+								placeholder="Password"
+								onChange={this.passwordHandler}
+							/>
+							<button type="submit" onClick={this.loging}>
+								Log in{' '}
+							</button>
+						</userInput>
 					</form>
 				</div>
 			</div>
