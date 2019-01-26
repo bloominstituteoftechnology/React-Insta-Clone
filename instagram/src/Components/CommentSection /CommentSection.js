@@ -21,9 +21,8 @@ class CommentSection extends React.Component {
 	commentSubmit = (event) => {
 		event.preventDefault();
 		const newComment = { text: this.state.comment };
-		const comments = this.state.comments.slice();
-		comments.push(newComment);
-		this.setState({ comments, comment: '' });
+		const comments = [ ...this.state.comments, newComment ];
+		this.setState({ comments });
 	};
 	commentHandler = (event) => {
 		this.setState({ comment: event.target.value });
