@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from '../../dummy-data';
 import PostContainer from './PostContainer';
+
 // import Header from './Components/SearchBar /Header';
 
 class PostPage extends Component {
@@ -39,6 +40,7 @@ class PostPage extends Component {
 				{/* <header>
 					<Header searchPosts={this.searchHandler} />
 				</header> */}
+
 				<PostContainer posts={this.state.postsFilter.length > 0 ? this.state.postsFilter : this.state.posts} />
 			</div>
 		);

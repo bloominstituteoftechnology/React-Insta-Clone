@@ -14,6 +14,7 @@ class Post extends React.Component {
 	likeCounter = () => {
 		let likes = this.state.likes + 1;
 		this.setState({ likes });
+		console.log('likeCounter');
 	};
 	render() {
 		return (
@@ -23,7 +24,7 @@ class Post extends React.Component {
 					<img src={this.props.post.imageUrl} alt="#" />
 				</div>
 				<CommentSection postId={this.props.post.imageUrl} comments={this.props.post.comments} />
-				<Like LikeCounter={this.LikeCounter} likes={this.state.likes} />
+				<Like likeCounter={this.likeCounter} likes={this.state.likes} />
 			</div>
 		);
 	}
