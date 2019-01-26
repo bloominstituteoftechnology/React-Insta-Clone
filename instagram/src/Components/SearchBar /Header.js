@@ -7,13 +7,15 @@ import './Header.css';
 const Header = (props) => {
 	return (
 		<div className="header">
-			<div>
+			<div className="input">
 				<input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
 			</div>
-			<img src={instaLogo3} alt="#" />
-			<img src={instaLogo2} alt="#" />
-			<img src={instaLogo1} alt="#" />
-			<img src={instaLogo4} alt="#" />
+			<div className="profile">
+				<img src={instaLogo3} alt="#" />
+				<img src={instaLogo2} alt="#" />
+				<img src={instaLogo1} alt="#" />
+			</div>
+			<img className="logo" src={instaLogo4} alt="#" />
 		</div>
 	);
 };

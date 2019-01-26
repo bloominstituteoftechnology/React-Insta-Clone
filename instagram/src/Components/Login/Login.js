@@ -2,7 +2,7 @@ import React from 'react';
 import PasswordMask from 'react-password-mask';
 import styled from 'styled-components';
 
-const userInput = styled.section`
+const UserInput = styled.section`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -41,7 +41,7 @@ class Login extends React.Component {
 				<div>
 					<h1>Log In</h1>
 					<form>
-						<userInput>
+						<UserInput>
 							<input
 								type="text"
 								value={this.state.login}
@@ -57,7 +57,7 @@ class Login extends React.Component {
 							<button type="submit" onClick={this.loging}>
 								Log in{' '}
 							</button>
-						</userInput>
+						</UserInput>
 					</form>
 				</div>
 			</div>

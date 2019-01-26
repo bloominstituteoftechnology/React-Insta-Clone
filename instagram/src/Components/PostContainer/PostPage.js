@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import dummyData from '../../dummy-data';
 import PostContainer from './PostContainer';
-
+import './PostPage.css';
 // import Header from './Components/SearchBar /Header';
 
 class PostPage extends Component {
@@ -32,11 +32,10 @@ class PostPage extends Component {
 	render() {
 		return (
 			<div>
-				<logoChild>
-					<button type="logout" onClick={this.logOut}>
-						Log Out
-					</button>
-				</logoChild>
+				<button type="logout" onClick={this.logOut}>
+					Log Out
+				</button>
+
 				{/* <header>
 					<Header searchPosts={this.searchHandler} />
 				</header> */}
