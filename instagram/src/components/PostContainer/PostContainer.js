@@ -11,7 +11,7 @@ const PostContainer = props => {
         {props.postItems.map(post => {
           
           return (  
-        <div>   
+        <div key={post.timestamp}>   
             <div className="postContainerDiv">
                 <div className="userHeading">
                     <img className="userImage" src={post.thumbnailUrl} alt="userLogo"/> 

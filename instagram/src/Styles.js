@@ -23,7 +23,7 @@ export const LogoContainer = styled.div`
 
 export const IGWidget = styled.div `
     background-image: url(${IGWidgetFile});
-    width: 19%;
+    width: 50px;
     height: 50px;
     background-position: center;
     background-size: cover;

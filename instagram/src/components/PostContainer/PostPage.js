@@ -24,11 +24,11 @@ class PostPage extends React.Component {
 
 
   filter = (event) => {
-    this.changeHandler(event);
+  this.changeHandler(event);
    this.setState(prevState => { 
-    const filteredPosts = this.state.postData.filter(
+    const filteredPosts = prevState.postData.filter(
       post => {
-        return post.username.includes(this.state.filterTarget)
+        return post.username.includes(prevState.filterTarget)
       });
     return {filteredPosts: filteredPosts}
   });

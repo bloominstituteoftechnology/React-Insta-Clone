@@ -14,7 +14,7 @@ class CommentSection extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
-  addNewComment = (event, index) => {
+  addNewComment = (event) => {
     event.preventDefault();
     if (this.state.commentInput === "") {
       return null;
@@ -37,7 +37,7 @@ class CommentSection extends React.Component {
       <div className="commentDiv">
         {this.state.commentArray.map((item, index) => {
           return (
-            <div className="postedCommentContainer">
+            <div className="postedCommentContainer" key={index}>
               <h1 className="userName">{item.username}</h1>
               <p className="commentText">{item.text}</p>
             </div>
