@@ -1,3 +1,12 @@
+.postwrapper {
+    width: 60%;
+    margin: 50px;
+}
+
+.postwrapper .card {
+    margin: 50px 0px;
+}
+
 .profilePic{
     border-radius: 50%;
     margin:2px;

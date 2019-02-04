@@ -1,8 +1,17 @@
 .App {
- max-width: 880px;
- width:100%;
- margin: 0 auto;
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   background-color: #fafafa;
 
+}
+
+.main-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
 }
 
 

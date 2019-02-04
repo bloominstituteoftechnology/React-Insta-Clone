@@ -4,40 +4,43 @@ import './PostContainer.css';
 import OpenHeart from '../../assets/like.png';
 import OpenComment from '../../assets/comment.png';
 const PostContainer = (props) => {
-    console.log("PROPS: ", props.data[0]);
+    
     return (
-        
-        props.data[0].map((obj) => {
+        <div className="postwrapper">
+        {props.data[0].map(obj => {
             return (
-                <div className = "postwrapper" key={obj.username}>
-                    <Card>
-                        <div className = "profileAndUsername">
+                <Card className="card">
+                    <div className = "profileAndUsername">
                         <img className = "profilePic" src ={obj.thumbnailUrl} alt = "tmbnl"/>
                         <p className = "userhandle">{obj.username}</p>
                         </div>
                        
-                        <CardImg top width="100%" src={obj.imageUrl} alt ="postImg"/>
-                        <div className = "reactionIcons">
+                    <CardImg top width="100%" src={obj.imageUrl} alt ="postImg"/>
+                    <div className = "reactionIcons">
                             <img className = "like" src = {OpenHeart} alt ="like"/>
                             <img className = "comment" src = {OpenComment} alt = "comment"/>
                         </div>
-                        <p className = "numberOfLikes">{obj.likes} likes</p>
-                        <CardBody>
-                            {obj.comments.map(comment => {
-                                return (
-                                    <div className="comment">
-                                        <div><strong>{comment.username + "  "}</strong>
-                                        {comment.text}</div>
-                                        
+                    <p className = "numberOfLikes">{obj.likes} likes</p>
+                    <CardBody>
+                        {obj.comments.map(comment => {
+                            return (
+                                <div className="comment">
+                                    <div>
+                                        <strong>{comment.username + "  "}</strong>
+                                        {comment.text}
                                     </div>
+                                        
+                                </div>
                                 )
                             })}
-                        </CardBody>
-                        <div className = 'timestamp'>{obj.timestamp}</div>
-                    </Card>      
-                </div>
-            );
-        })
+                    </CardBody>
+                    <div className = 'timestamp'>
+                        {obj.timestamp}
+                    </div>
+                </Card>   
+            )   
+        })};
+        </div>
     );        
 }
 export default PostContainer;
