@@ -1,0 +1,58 @@
+/* .postContainer {
+  margin-bottom: 20px;
+}
+
+.userDetails {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.profileImgContainer img {
+  border-radius: 50%;
+  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.postImage {
+  width: 100%;
+  height: 700px;
+  margin-bottom: 10px;
+}
+
+.postImage img {
+  width: 100%;
+  height: 100%;
+}
+
+.likesSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: start;
+  height: 70px;
+}
+
+.likesSection p {
+  font-weight: bold;
+}
+
+.actionIcons {
+  display: flex;
+}
+
+.likeIcon {
+  margin-right: 10px ;
+}
+
+.timeStamp {
+  text-align: start;
+}
+
+.addComment {
+  width: 100%;
+  height: 50px;
+} */
