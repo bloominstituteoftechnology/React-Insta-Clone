@@ -6,6 +6,8 @@ import {
   Button 
 } from 'reactstrap';
 
+import './login.css';
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +30,8 @@ class Login extends Component {
   render() {
     return (
       <Form>
-        <h3>Welcome to React Insta Clone</h3>
+        <h3>Welcome to</h3>
+        <h1>InstaClone</h1>
         <div>Please Login</div>
         <FormGroup>
           <Input
