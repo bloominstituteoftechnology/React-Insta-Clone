@@ -2,18 +2,18 @@ import React from 'react';
 
 import {
     Navbar,
-    NavbarToggler,
     NavbarBrand,
     Nav,
     NavItem,
     NavLink,
 } from 'reactstrap';
 
+import './SearchBar.css';
+
 const SearchBar = props => {
     return(
-        <Navbar color="light" light expand="md">
+        <Navbar>
           <NavbarBrand><i className="fab fa-instagram"> | Instaclone</i></NavbarBrand>
-        <NavbarToggler />
             <input 
                 type='text'
                 name='searchText'
@@ -21,7 +21,7 @@ const SearchBar = props => {
                 value={props.searchText}
                 onChange={props.handleChange}
             />
-            <Nav className="ml-auto" navbar>
+            <Nav navbar>
                 <NavItem>
                     <NavLink ><i className="far fa-compass"></i></NavLink>
                 </NavItem>

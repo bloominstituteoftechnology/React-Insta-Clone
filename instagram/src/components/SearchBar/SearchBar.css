@@ -1,0 +1,29 @@
+nav.navbar {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    background-color: #2A1E2F;
+}
+
+nav input {
+    width: 30%;
+}
+
+a.navbar-brand i {
+    color: #9A8FA9;
+    font-size: 2rem;
+}
+
+ul.navbar-nav {
+    flex-direction: row;
+    width: 25%;
+    justify-content: space-around;
+}
+
+a.nav-link i {
+    color: #627965;
+    font-size: 1.75rem;
+}
