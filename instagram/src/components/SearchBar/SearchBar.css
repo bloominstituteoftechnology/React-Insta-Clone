@@ -1,0 +1,51 @@
+.searchbar{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background: lightgray;
+}
+
+input.search {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.instaword{
+    height: auto;
+    width: 100px;
+    padding: 0 5px;
+    position: relative;
+    top: 5px;
+}
+
+.instalogo{
+    height: auto;
+    width: 40px;
+}
+
+.logo-div img {
+    padding: 0 20px 0 20px;
+}
+
+.logo-div{
+    display: flex;
+    align-items: center;
+}
+
+.icon-div{
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+}
+
+.fa-w-16{
+    padding: 0 10px 0 10px;
+    height: auto;
+    cursor: pointer;
+    width: 40px;
+}

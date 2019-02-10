@@ -1,0 +1,14 @@
+.comment-cont{
+    border-bottom: 1px solid lightgray;
+    
+
+}
+
+.comment-input{
+    height: 50px;
+    width: 100%;
+}
+
+span {
+    user-select: none;
+}

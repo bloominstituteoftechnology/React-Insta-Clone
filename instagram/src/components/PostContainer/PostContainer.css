@@ -1,0 +1,47 @@
+.post-container{
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    border: 1px gray solid;
+}
+.like-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+img.post-profile-img{
+    width: 40px;
+    height: auto;
+    border-radius: 50px;
+    
+}
+
+.post-header{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    
+}
+img {
+    padding: unset; }
+
+.bold-txt{
+    font-weight: bold;
+    user-select: none;
+}
+
+.icon-cont{
+    user-select: none;
+}
+
+.post-container.hidden{
+    display: none;
+}
+
+/* let filteredList = document.querySelectorAll('.post-container');
+    console.log(Array.from(filteredList));
+    filteredList = Array.from(filteredList).map(profile => profile.classList.remove('hidden'));
+    console.log(filteredList);
+ */
