@@ -68,8 +68,10 @@ class Post extends Component {
                         </CardBody>
                         <CardFooter>
                             Posted: {this.post.timestamp}
-                            <Button color="danger" onClick={this.toggleComments}><i className="far fa-comment"> {this.state.comments.length}</i></Button>{' '}
-                            <Button color="danger" onClick={this.likePost}><i className="far fa-heart"> {this.state.likes}</i></Button> 
+                            <div>
+                                <Button onClick={this.toggleComments}><i className="far fa-comment"> {this.state.comments.length}</i></Button>{' '}
+                                <Button onClick={this.likePost}><i className="far fa-heart"> {this.state.likes}</i></Button> 
+                            </div>
                         </CardFooter>
                     </Card>
     
@@ -84,13 +86,13 @@ class Post extends Component {
                                 <input 
                                     type='text'
                                     name='commentText'
-                                    placeholder='Add comment...'
+                                    placeholder='Start typing here...'
                                     value={this.commentText}
                                     onChange={this.handleChange}
                                 />
                                 <Button color="primary" type='submit'>Add comment</Button>{' '}
+                                <Button color="secondary" onClick={this.toggleComments}>Close</Button>
                             </form>
-                            <Button color="secondary" onClick={this.toggleComments}>Close</Button>
                         </ModalFooter>
                     </Modal>
                 </>

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './Posts.css';
+
 // Components
 import Post from './Post'
 

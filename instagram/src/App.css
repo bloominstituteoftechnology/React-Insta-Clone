@@ -134,9 +134,7 @@ table {
   border-spacing: 0;
 }
 
-#root {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
+#root.container {
+  width: 98%;
+  margin: 0 auto;
 }
