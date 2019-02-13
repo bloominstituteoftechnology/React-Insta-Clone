@@ -41,18 +41,13 @@ div.card-footer {
 div.card-footer button {
     color: #C18C5B;
     background-color: white;
-}
-
-div.card-footer button {
-    color: #627965;
-    background-color: #2A1E2F;
-    border: #627965;
+    border-color: #C18C5B;
 }
 
 div.card-footer button:hover {
-    background-color: #627965;
-    color: #2A1E2F;
-    border: #2A1E2F;
+    background-color: #C18C5B;
+    color: white;
+    border-color: white;
 }
 
 div.modal-content {
