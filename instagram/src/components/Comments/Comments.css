@@ -1,0 +1,22 @@
+.comment {
+    margin-bottom:1.0%;
+}
+
+.icon {
+    margin-right:2.5%;
+}
+
+.comment-form {
+    margin-left: 2.5%;
+    margin-bottom: 2.5%;
+    margin-right:2.5%;
+}
+.comment-input {
+    width:95%;
+    height:50px;
+    border-style:none;
+}
+
+.comment-line {
+    margin:2.5% 2.5%;
+}
