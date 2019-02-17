@@ -2,7 +2,8 @@
 LIVE = https://instagram-clone-lilsgxfc1.now.sh/ 😊
 
 
- `https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZzj23o9GF9TzGTRisCi-cvyUvKBzVR8LnN_2LdU65pG_1Fuj3
+ 
+![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZzj23o9GF9TzGTRisCi-cvyUvKBzVR8LnN_2LdU65pG_1Fuj3)
 
 
 
