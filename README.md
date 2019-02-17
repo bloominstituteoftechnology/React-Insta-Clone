@@ -2,12 +2,7 @@
 LIVE = https://instagram-clone-lilsgxfc1.now.sh/ 😊
 
 
-![search bar](/assets/ig_search_bar.png)
-
----
-
-
-![insta post](/assets/ig_post.png)
+ [React](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZzj23o9GF9TzGTRisCi-cvyUvKBzVR8LnN_2LdU65pG_1Fuj3)
 
 
 
