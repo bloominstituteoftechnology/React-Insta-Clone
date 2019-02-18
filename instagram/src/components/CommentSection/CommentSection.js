@@ -3,14 +3,10 @@ import Comment from './Comment';
 import PropTypes from 'prop-types';
 
 const CommentSection = props => (
-  <div>
+  <div className="comments">
     {props.comments.map((c, i) => (
       <Comment {...c} key={i}/>
     ))}
-    <input
-      type="text"
-      placeholder="Add a comment..."
-    />
   </div>
 );
 

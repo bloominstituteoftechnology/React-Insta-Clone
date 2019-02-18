@@ -1,0 +1,40 @@
+.post-container {
+  width: 600px;
+
+  .user-thumbnail {
+    border-radius: 50%;
+    width: 30px;
+  }
+
+  .post-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    .username {
+      padding-left: 10px;
+    }
+  }
+
+  .post-body {
+    font-size: 1.5rem;
+  }
+
+  .post-icons {
+    display: flex;
+    flex-direction: row;
+    .icon-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}

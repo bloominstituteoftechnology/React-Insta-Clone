@@ -6,19 +6,25 @@ import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
   static defaultProps = {
-    posts: []
-  }
+    posts: [],
+    newComment: {
+      username: 'testUser',
+      comment: ''
+    }
+  };
 
   state = {
     posts: dummyData
   };
 
   render() {
-    const { posts } = this.state;
+    const { posts, newComment } = this.state;
     return (
       <div className="App">
         <Header />
-        <PostContainer posts={posts} />
+        {posts.map((p, i) => (
+          <PostContainer key={i} post={p} newComment={newComment} />
+        ))}
       </div>
     );
   }

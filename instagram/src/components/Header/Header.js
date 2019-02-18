@@ -1,18 +1,21 @@
 import React from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 import logo from '../../images/insta-header.png';
+import { Compass, Heart, User } from 'react-feather';
+import { Navbar } from 'reactstrap';
+import './Header.scss';
 
 const Header = () => {
   return (
-    <header className="header">
+    <Navbar className="header">
       <a href="/"><img src={logo} alt="Instagram Logo"/></a>
       <SearchBar />
       <div className="header-icons">
-        <a href="#">location</a>
-        <a href="#">heart</a>
-        <a href="#">profile</a>
+        <a href="#"><Compass /></a>
+        <a href="#"><Heart /></a>
+        <a href="#"><User /></a>
       </div>
-    </header>
+    </Navbar>
   );
 };
 
