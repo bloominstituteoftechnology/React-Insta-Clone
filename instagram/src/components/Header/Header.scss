@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .header-icons {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+}
