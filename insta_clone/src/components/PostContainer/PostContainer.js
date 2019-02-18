@@ -1,5 +1,7 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import Post from '../Post/Post';
+import User from '../User/User';
 
 function PostContainer({ posts }) {
   return (
@@ -7,7 +9,9 @@ function PostContainer({ posts }) {
       {posts.map((post, index) => (
         <div key={index}>
           {' '}
-          {post.username} <CommentSection comments={post.comments} />
+          <User img={post.thumbnailUrl} name={post.username} />
+          <Post img={post.imageUrl} />
+          <CommentSection comments={post.comments} />
         </div>
       ))}
     </>
