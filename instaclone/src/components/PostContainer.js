@@ -1,6 +1,6 @@
 import React from "react"
 import "./head.css"
-
+import PropTypes from 'prop-types';
 const PostContainer = (props)=>{
     return (
         <div>
@@ -32,4 +32,16 @@ const PostContainer = (props)=>{
     )
 }
 
+
+
+
 export default PostContainer
+
+
+
+PostContainer.propTypes = {
+    data : PropTypes.array,
+    username :PropTypes.string,
+    timestamp :PropTypes.string.isRequired,
+    likes:PropTypes.number.isRequired,
+}

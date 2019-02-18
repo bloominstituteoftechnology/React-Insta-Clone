@@ -28,3 +28,8 @@ const SearchBar = (props)=>{
 }
 
 export default SearchBar;
+
+
+SearchBar.defaultProps = {
+        title : "Instagram"
+}
