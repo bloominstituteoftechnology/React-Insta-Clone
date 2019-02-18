@@ -1,0 +1,29 @@
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+.postHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.postHeader img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+   
+}
+
+.postHeader h2 {
+    font-size: 12px;
+    margin-left: 10px;
+
+}
+
+.postImage img {
+    max-width: 400px;
+}
