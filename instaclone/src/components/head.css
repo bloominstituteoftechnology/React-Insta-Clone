@@ -4,7 +4,7 @@
     margin-top:6%;
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 70%;
     color:blue;
 }
@@ -22,6 +22,18 @@ input {
 
 .thumb{
     border-radius: 90%;
-    width:25%;
+    width:35%;
     height:auto;
+}
+
+.imageurl {
+    width:84%;
+    height:auto;
+}
+
+
+.compo-image {
+    margin-left: 14%;
+    display: block;
+
 }
