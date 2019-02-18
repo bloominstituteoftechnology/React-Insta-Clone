@@ -1,7 +1,10 @@
 import React from 'react';
 
-const Comment = (props) => (
-  <div>{props.comment}</div>
+const Comment = ({ text, username }) => (
+  <div>
+    <span className="username">{username}</span>
+    {' ' + text}
+  </div>
 );
 
 export default Comment;
