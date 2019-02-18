@@ -128,25 +128,60 @@ table {
 }
 body {
   font-size: 62.5%;
-  max-width: 600px;
-  font-family: "B612", sans-serif;
 }
 .container {
   border-radius: 8px;
-  margin: 20px;
-  padding: 20px;
+  margin: 0 auto;
   border: 7px dashed #ffd380;
-  background-color: #80ffcc;
-  color: #ff9380;
-  width: 100%;
+  width: 1000px;
   user-select: none;
 }
-h1 {
-  color: #a680ff;
-  font-size: 3.9em;
-  font-weight: 400;
-  margin-bottom: 10px;
+.header {
+  width: 100%;
 }
-p {
-  font-size: 3em;
+.search-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+}
+.logo-set {
+  display: flex;
+  width: 300px;
+  height: 100px;
+  align-items: center;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  padding-right: 25px;
+  border-right: 1px solid grey;
+}
+.wordmark {
+  margin-left: 25px;
+  padding-top: 10px;
+  width: 200px;
+  height: 50px;
+}
+.search {
+  border-radius: 6px;
+  border: 1px solid #dfdfdf;
+  background: #f3f3f3;
+  width: 250px;
+  height: 30px;
+}
+input {
+  padding: 3px;
+  text-align: center;
+  font-size: 1.8em;
+}
+.icon-set {
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+}
+.like-icon {
+  width: 30px;
+  height: 30px;
 }

@@ -17,20 +17,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="container">
         <header className="header">
-          <SearchBar
-            changeHandler={this.changeHandler}
-            className="search-bar"
-          />
+          <SearchBar changeHandler={this.changeHandler} />
         </header>
         <section className="posts">
           {this.state.data.map(post => (
-            <PostContainer
-              key={post.timestamp}
-              post={post}
-              className="post-container"
-            />
+            <PostContainer key={post.timestamp} post={post} />
           ))}
         </section>
       </div>
