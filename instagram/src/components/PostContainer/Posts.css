@@ -1,0 +1,39 @@
+.posts-container-wrapper {
+  /* PostsContainer*/
+    height: 500px;
+    width: 50%;
+    margin: 5px auto;
+    background: magenta;
+  }
+
+  .post-border{
+    /* Posts*/
+    border: 3px dashed red;
+  }
+
+  .post-image-wrapper{
+    /* Posts*/
+    border: 5px dashed pink;
+  }
+
+  .post-image{
+    /* Posts*/
+    border: 5px dashed purple;
+  }
+
+  .post-header {
+    /* PostHeader*/
+    background: plum;
+  }
+
+  .post-thumbnail-wrapper{
+    /* PostHeader*/
+    background: purple;
+  }
+
+  .post-thumbnail{
+    /* PostHeader*/
+    border: 3px dashed blue; 
+  }
+
+ 
