@@ -12,3 +12,16 @@
 input {
     border-radius : 16%
 }
+
+.picture {
+        display:flex;
+        width:20%;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+}
+
+.thumb{
+    border-radius: 90%;
+    width:25%;
+    height:auto;
+}
