@@ -1,9 +1,12 @@
 import React from "react"
 import "./head.css"
 import PropTypes from 'prop-types';
+import Comment from "./Comment";
 const PostContainer = (props)=>{
+        
     return (
-        <div>
+        
+        <div  >
                 <div className="compo-image">
                 {props.data.map(data=>
                     
@@ -19,12 +22,15 @@ const PostContainer = (props)=>{
                         <img className="imageurl"src={data.imageUrl} alt="rdm" />
                         
                         <h6>{data.likes} Likes</h6>
+                        <Comment comments={data.comments} />
+                        
+                        
                     </div>
                 )}
                 </div>
 
             <div>
-           
+                    
             </div>
 
         </div>
@@ -43,5 +49,5 @@ PostContainer.propTypes = {
     data : PropTypes.array,
     username :PropTypes.string,
     timestamp :PropTypes.string.isRequired,
-    likes:PropTypes.number.isRequired,
+    likes:PropTypes.number,
 }

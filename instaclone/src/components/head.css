@@ -6,7 +6,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 70%;
-    color:blue;
+    color:black;
 }
 
 input {
@@ -33,7 +33,11 @@ input {
 
 
 .compo-image {
-    margin-left: 14%;
+     margin-left: 14%;
     display: block;
 
+}
+
+.commentaire {
+    color:red;
 }
