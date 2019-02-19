@@ -1,5 +1,5 @@
 import React from 'react';
-import CommentSection from "./components/CommentSection/CommentSection.jsx";
+import CommentSection from "../CommentSection/CommentSection";
 import "./PostContainer.css";
 
 const PostContainer = () => {
@@ -10,9 +10,8 @@ const PostContainer = () => {
                 <h2 className="post-user-name">Instagram Username</h2>
             </div>
             <div className="post-image-container">
-                <img className="post-image" src="#" alt=""/>
+                <img className="post-image" src="#"  alt=""/>
             </div>
-            <CommentSection />
         </div>
     );
 };

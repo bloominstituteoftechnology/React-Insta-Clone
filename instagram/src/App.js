@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
-import dummyData from './dummyData';
+import dummyData from './components/dummyData';
 import './App.css';
-
+import InstaFeed from './components/InstaFeed/InstaFeed';
 
 class App extends Component {
   constructor() {
@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer />
+        <InstaFeed dummyData={this.state.dummyData} />
       </div>
     );
   }

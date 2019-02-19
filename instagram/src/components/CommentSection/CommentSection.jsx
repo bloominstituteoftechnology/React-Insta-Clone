@@ -4,7 +4,7 @@ import "./CommentSection.css";
 const CommentSection = () => {
     return (
         <div className="comment-section">
-            <h2>Comment section, Dude!</h2>
+            <h2>This is The Comment Section!</h2>
         </div>
     );
 };

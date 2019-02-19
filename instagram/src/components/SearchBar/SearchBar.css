@@ -1,10 +1,15 @@
 .search-bar {
+    position: fixed;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
-    height: 55px;
+    border-bottom: 1px solid black;
+    height: 57px;
+    width: 800px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
 }
 
 .search-bar-container-left {
@@ -23,7 +28,7 @@
 .search-bar-heading {
     font-family: 'Cookie', cursive;
     font-size: 33px;
-    margin-bottom: 0px;
+    margin-bottom: 14px;
     padding-left: 20px;
     border-left: 1px solid gray;
 }
@@ -38,6 +43,8 @@
     border-radius: 3px;
     padding-left: 5px;
     text-align: center;
+    height: 30px;
+    width: 200px;
 }
 
 .search-bar-container-right {
