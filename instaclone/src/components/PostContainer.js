@@ -7,7 +7,7 @@ const PostContainer = (props)=>{
     return (
         
         <div  >
-                <div className="compo-image">
+                <div className="compo-image img">
                 {props.data.map(data=>
                     
                     <div key={new Date()}>

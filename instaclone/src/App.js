@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar';
 import PostContainer from "./components/PostContainer"
-import Form from "./components/Form"
 import dummydata from "./components/dumyData";
 
 import "./App.css"
@@ -10,23 +9,28 @@ class App extends Component {
     super(props);
     this.state ={
         data : dummydata,
+        message : ""
     }
-
-
     this.title = "Instagram"
   }
 
-  
+
   render() {
-    console.log(this.state.data)
+    if(this.state.data.length <=0) {
+      this.setState({
+        message : <h3>Content is loading ....</h3>
+      })
+    }
+    
     return (
       <div className="App">
-        <header className="App-header">
+      {this.state.message}
+        <header>
             <SearchBar title={this.title}/>
             <PostContainer className="container"data={this.state.data} 
             comments={this.state.data.comments}
              />
-             <Form />
+           
 
         </header>
 

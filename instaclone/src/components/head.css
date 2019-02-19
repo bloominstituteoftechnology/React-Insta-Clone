@@ -31,13 +31,16 @@ input {
 .picture {
         display:flex;
         width:20%;
-        justify-content: space-around;
+        justify-content: flex-start;
         flex-direction: row-reverse;
 }
 
+.picture > h4 {
+    margin-top:4%;
+}
 .thumb{
     border-radius: 90%;
-    width:35%;
+    width:60%;
     height:auto;
 }
 
@@ -48,9 +51,13 @@ input {
 
 
 .compo-image {
-     margin-left: 0 auto;
+    margin-left: 0 auto;
     display: block;
 
+}
+
+.img{
+    border:1px solid black;
 }
 
 .commentaire {
@@ -79,4 +86,5 @@ input {
 
 .form-input {
     width:100%;
+    margin-bottom: 10%;
 }

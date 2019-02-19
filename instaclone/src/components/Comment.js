@@ -1,6 +1,7 @@
 import React from "react"
 import "./head.css"
 import Form from "./Form"
+import PropTypes from "prop-types";
 const Comment = (props)=>{
     return (
         <div className="commentaire">
@@ -23,3 +24,13 @@ const Comment = (props)=>{
 }
 
 export default Comment;
+
+Comment.propTypes = {
+    username : PropTypes.string,
+    text:PropTypes.string.isRequired
+}
+
+Comment.defaultProps = {
+    text : "This text Will be generated if no text is given",
+    username :"An anonymous username"
+}
