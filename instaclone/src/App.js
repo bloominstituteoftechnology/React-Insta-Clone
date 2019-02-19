@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import dummyData from './dummy-data';
+import dummyData from './dummy-data.js';
 
 import SearchBar from './components/SearchBar/SearchBar.js';
 import PostContainer from './components/PostContainer/PostContainer.js';
@@ -24,8 +24,8 @@ class App extends Component {
         </header>
         <PostContainer dummy={this.state.dummy} />
       </div>
-    );
-  }
-};
+            );
+            }
+                                                      };
                
 export default App;

@@ -14,9 +14,9 @@ class CommentSection extends React.Component {
         return(
             <div className="comments">
                 {this.state.comments.map(x => (
-                    <div className="comment">
-                        <p><strong>{x.username}</strong></p> <p className="text"> {x.text}</p>  
-                    </div>
+                <div className="comment">
+                    <p><strong>{x.username}</strong></p> <p className="text"> {x.text}</p>  
+                </div>
                 ))}
                 <div>
                     <input type="text" placeholder="Add a comment..."/>
@@ -28,6 +28,5 @@ CommentSection.propTypes = {
     comments: PropTypes.arrayOf(PropTypes.shape({
        username: PropTypes.string,
        text: PropTypes.string,
-    }))
-}
+                            }))}
 export default CommentSection;
