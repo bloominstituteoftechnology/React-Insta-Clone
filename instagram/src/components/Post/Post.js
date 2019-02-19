@@ -33,7 +33,7 @@ Post.propTypes = {
     thumbnailUrl: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired,
     likes: PropTypes.number.isRequired,
-    timestamp: PropTypes.string.isRequired,
+    timestamp: PropTypes.number.isRequired,
     comments: PropTypes.array.isRequired
   }).isRequired
 };

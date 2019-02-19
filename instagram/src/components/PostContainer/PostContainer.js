@@ -5,11 +5,9 @@ import PropTypes from "prop-types";
 const PostContainer = ({ posts }) => {
   return (
     <section className="post-container">
-      <div className="inner-post-container">
-        {posts.map(post => (
-          <Post key={post.timestamp} post={post} />
-        ))}
-      </div>
+      {posts.map(post => (
+        <Post key={post.timestamp} post={post} />
+      ))}
     </section>
   );
 };

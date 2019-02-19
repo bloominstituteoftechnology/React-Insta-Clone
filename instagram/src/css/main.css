@@ -192,15 +192,13 @@ body {
 }
 .post-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-.inner-post-container {
-  display: inline-block;
-  border: 1px solid lightgrey;
+  padding-top: 20px;
 }
 .post {
   width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   border: 1px solid lightgrey;
 }
 .post-header {
