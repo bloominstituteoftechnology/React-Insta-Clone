@@ -18,7 +18,7 @@ class CommentSection extends React.Component {
                     <p><strong>{x.username}</strong></p> <p className="text"> {x.text}</p>  
                 </div>
                 ))}
-                <div>
+                <div className="inputer">
                     <input type="text" placeholder="Add a comment..."/>
                 </div>
             </div>
