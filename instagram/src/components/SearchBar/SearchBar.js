@@ -10,7 +10,7 @@ const SearchBar = props => {
         <img src={igLogo} alt="instagram logo" className="logo" />
         <img src={igWordmark} alt="instagram wordmark" className="wordmark" />
       </div>
-      <input type="text" placeholder="Search" className="search" />
+      <input type="text" placeholder="🔍 Search" className="search" />
       <div className="icon-set">
         <img src={igLikeIcon} alt="instagram like icon" className="like-icon" />
         <img src={igLikeIcon} alt="instagram like icon" className="like-icon" />

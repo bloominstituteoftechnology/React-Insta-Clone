@@ -21,11 +21,7 @@ class App extends Component {
         <header className="header">
           <SearchBar changeHandler={this.changeHandler} />
         </header>
-        <section className="posts">
-          {this.state.data.map(post => (
-            <PostContainer key={post.timestamp} post={post} />
-          ))}
-        </section>
+        <PostContainer posts={this.state.data} />
       </div>
     );
   }
