@@ -3,7 +3,7 @@ import "./head.css"
 import PropTypes from 'prop-types';
 import Comment from "./Comment";
 const PostContainer = (props)=>{
-        
+        console.log(props.data.comments)
     return (
         
         <div>
@@ -20,7 +20,10 @@ const PostContainer = (props)=>{
                         </div>
                         <img className="imageurl"src={data.imageUrl} alt="rdm" />
                         <h6>{props.countLikes} </h6>
-                        <Comment comments={data.comments} />
+                        <Comment comments={data.comments}
+                                 likes={data.likes}
+                                 />
+                    
                         <h6>{data.timestamp}</h6>
 
                     </div>

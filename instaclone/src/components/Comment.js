@@ -1,4 +1,5 @@
 import React from "react"
+import SingleComment from "./SingleComment"
 import "./head.css"
 import Form from "./Form"
 import PropTypes from "prop-types";
@@ -6,7 +7,9 @@ class Comment extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            count : 0
+            count : props.likes,
+            comments : props.comments,
+            commentInput : " "
         }
     }
 
@@ -18,6 +21,25 @@ class Comment extends React.Component{
         })
     }
 
+    changeHandler = e =>{
+        this.setState({
+            [e.target.name] : e.target.value
+        })
+    }
+
+    addCommentHandler = e =>{
+        e.preventDefault();
+        
+        const newComments ={
+            username : "Jay",
+            text : this.state.commentInput
+        }
+        this.setState({
+            comments : [...this.state.comments,newComments],
+            commentInput : " "
+        })
+        
+    }
   
     render (){
     return (
@@ -25,15 +47,17 @@ class Comment extends React.Component{
         <h4>{this.state.count} Likes</h4>
         <div className="icon">
             <i onClick={this.addCountHandler} className="heart outline icon"></i>
-            <i  class="comments outline icon"></i>
+            <i  className="comments outline icon"></i>
          </div>
-            {this.props.comments.map(elem=>
+            {this.state.comments.map(elem=>
                 <div className="user-section">
-                <h5>{elem.username}</h5>
-                <p className="text">{elem.text}</p>
-                </div>)}
-
-                <Form />
+                <SingleComment username={elem.username} text={elem.text} />
+                </div>)
+            }
+            <Form  changeHandler={this.changeHandler} 
+            commentInput={this.state.commentInput} 
+            addCommentHandler = {this.addCommentHandler}
+            />
         </div>
        
 
