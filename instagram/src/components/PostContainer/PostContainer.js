@@ -4,14 +4,17 @@ import PropTypes from "prop-types";
 
 const PostContainer = ({ posts }) => {
   return (
-    <section className="posts">
-      {posts.map(post => (
-        <Post key={post.timestamp} post={post} />
-      ))}
+    <section className="post-container">
+      <div className="inner-post-container">
+        {posts.map(post => (
+          <Post key={post.timestamp} post={post} />
+        ))}
+      </div>
     </section>
   );
 };
 
+// Since I check the array contents in Post.js, no need to check here:
 PostContainer.propTypes = {
   posts: PropTypes.array.isRequired
 };

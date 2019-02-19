@@ -13,6 +13,7 @@ const CommentSection = ({ comments }) => {
   );
 };
 
+// Since I check the array contents in Comment.js, no need to check here:
 CommentSection.propTypes = {
   comments: PropTypes.array.isRequired
 };

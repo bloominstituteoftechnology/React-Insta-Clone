@@ -10,6 +10,7 @@ const Comment = ({ comment }) => {
   );
 };
 
+// Checks each comment object's contents:
 Comment.propTypes = {
   comment: PropTypes.shape({
     username: PropTypes.string.isRequired,

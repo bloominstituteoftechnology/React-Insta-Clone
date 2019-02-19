@@ -3,7 +3,6 @@ import CommentSection from "../CommentSection/CommentSection";
 import PropTypes from "prop-types";
 
 const Post = ({ post }) => {
-  console.log(post);
   return (
     <section className="post">
       <div className="post-header">
@@ -14,12 +13,16 @@ const Post = ({ post }) => {
         />
         <h3>{post.username}</h3>
       </div>
-      <img src={post.imageUrl} alt={post.imageUrl} />
+      <img src={post.imageUrl} alt={post.imageUrl} className="post-image" />
+      <i className="icon-post far fa-heart" />
+      <i className="icon-post far fa-comment" />
+      <h3>{post.likes} likes</h3>
       <CommentSection comments={post.comments} className="comment-section" />
     </section>
   );
 };
 
+// Checks each post object's contents:
 Post.propTypes = {
   post: PropTypes.shape({
     username: PropTypes.string.isRequired,
