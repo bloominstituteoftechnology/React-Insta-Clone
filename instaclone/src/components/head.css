@@ -16,12 +16,14 @@
 .header-name{
     display:flex;
     justify-content: space-between;
-    width:20%;
+    width:30%;
 }
 
 .title{
     margin:0px 2px 0px 0px;
     font-size:1.3rem;
+    font-family: 'Rock Salt', cursive;
+
 }
 
 input {

@@ -7,7 +7,6 @@ const SearchBar = (props)=>{
         display:"flex",
         width:"50%",
         justifyContent:"space-around",
-
     }
     return (
         <div className="head">
@@ -21,7 +20,7 @@ const SearchBar = (props)=>{
         <div>
             <i className="add icon"></i>
             <i className="heart outline icon"></i>
-            <i className="ok circle icon"></i>
+            <i className="user outline icon"></i>
 
 
         </div>
