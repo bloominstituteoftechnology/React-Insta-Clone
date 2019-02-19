@@ -2,7 +2,7 @@ import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
 import PropTypes from "prop-types";
 
-const Post = ({ post }) => {
+const Post = ({ post, newCommentText, changeHandler, addNewComment }) => {
   return (
     <section className="post">
       <div className="post-header">
@@ -20,6 +20,9 @@ const Post = ({ post }) => {
       <CommentSection
         comments={post.comments}
         timestamp={post.timestamp}
+        newCommentText={newCommentText}
+        changeHandler={changeHandler}
+        addNewComment={addNewComment}
         className="comment-section"
       />
     </section>

@@ -3,7 +3,13 @@ import Comment from "../Comment/Comment";
 import PropTypes from "prop-types";
 import moment from "moment";
 
-const CommentSection = ({ comments, timestamp }) => {
+const CommentSection = ({
+  comments,
+  timestamp,
+  newCommentText,
+  changeHandler,
+  addNewComment
+}) => {
   return (
     <section className="comments">
       {comments.map((comment, index) => (
@@ -13,11 +19,16 @@ const CommentSection = ({ comments, timestamp }) => {
       <h5 className="timestamp">
         {moment.duration(Date.now() - timestamp).humanize()}
       </h5>
-      <input
-        type="text"
-        placeholder="Add a comment..."
-        className="comment-input"
-      />
+      <form onSubmit={e => addNewComment(e, timestamp)}>
+        <input
+          name="newCommentText"
+          value={newCommentText}
+          type="text"
+          placeholder="Add a comment..."
+          onChange={changeHandler}
+          className="comment-input"
+        />
+      </form>
     </section>
   );
 };

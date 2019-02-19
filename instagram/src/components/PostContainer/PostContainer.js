@@ -2,11 +2,22 @@ import React from "react";
 import Post from "../Post/Post";
 import PropTypes from "prop-types";
 
-const PostContainer = ({ posts }) => {
+const PostContainer = ({
+  posts,
+  newCommentText,
+  changeHandler,
+  addNewComment
+}) => {
   return (
     <section className="post-container">
       {posts.map(post => (
-        <Post key={post.timestamp} post={post} />
+        <Post
+          key={post.timestamp}
+          post={post}
+          newCommentText={newCommentText}
+          changeHandler={changeHandler}
+          addNewComment={addNewComment}
+        />
       ))}
     </section>
   );
