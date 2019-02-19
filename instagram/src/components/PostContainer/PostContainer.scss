@@ -1,5 +1,6 @@
 .post-container {
   width: 600px;
+  margin: 10px 0;
 
   .user-thumbnail {
     border-radius: 50%;
@@ -36,5 +37,15 @@
         margin-right: 10px;
       }
     }
+  }
+
+  .add-comment {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid lightgrey;
+    width: 100%;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
   }
 }

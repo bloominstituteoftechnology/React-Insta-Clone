@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Comment.scss';
 
 const Comment = ({ text, username }) => (
-  <div>
+  <div className="comment">
     <span className="username">{username}</span>
     {' ' + text}
   </div>

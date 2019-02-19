@@ -3,6 +3,7 @@ import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 import { Card, CardImg, CardBody } from 'reactstrap';
 import { Heart, MessageCircle } from 'react-feather';
+import moment from 'moment';
 import './PostContainer.scss';
 
 const PostContainer = ({ post, newComment }) => {
@@ -29,8 +30,8 @@ const PostContainer = ({ post, newComment }) => {
           </div>
         </div>
         <CommentSection comments={post.comments} />
-        {post.timestamp}
-        <input type="text" placeholder="Add a comment..." />
+        <div className="timestamp">{post.timestamp}</div>
+        <input type="text" placeholder="Add a comment..." className="add-comment" />
       </CardBody>
     </Card>
   );
