@@ -7,9 +7,9 @@ import SearchBar from '../SearchBar/SearchBar';
 function Header() {
   return (
     <header className="header">
-      <img src={Logo} alt="" />
+      <img className="Logo" src={Logo} alt="" />
       <SearchBar />
-      <img src={Profile} alt="" />
+      <img className="Profile" src={Profile} alt="" />
     </header>
   );
 }
