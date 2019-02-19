@@ -1,6 +1,5 @@
 import React from 'react';
 import Logo from '../../img/image.png';
-import icons from '../../img/icons.png';
 
 const SearchBar = () => {
   return (
@@ -14,17 +13,17 @@ const SearchBar = () => {
         />
       </div>
       <div>
-        <input style={ico} type="text" placeholder="search" />
+        <input style={ico} type="text" placeholder="&#x1f50e" />
       </div>
       <div style={social_wrapper}>
         <div style={social}>
-          <i class="far fa-compass" />
+          <i className="far fa-compass" />
         </div>
         <div style={social}>
-          <i class="far fa-heart" />
+          <i className="far fa-heart" />
         </div>
         <div style={social}>
-          <i class="far fa-user" />
+          <i className="far fa-user" />
         </div>
       </div>
     </div>
