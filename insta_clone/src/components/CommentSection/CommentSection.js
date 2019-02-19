@@ -16,11 +16,12 @@ class CommentSection extends React.Component {
     e.preventDefault();
     const NewComment = [
       ...this.state.comments,
-      { text: this.state.commentInput }
+      { text: this.state.commentInput, username: 'Troll' }
     ];
 
     this.setState({
       comments: NewComment,
+
       commentInput: ''
     });
   };
@@ -47,6 +48,7 @@ class CommentSection extends React.Component {
         <CommentInput
           handleAddComment={this.addComment}
           handleInput={this.handleInput}
+          value={this.state.commentInput}
         />
         <div />
       </div>

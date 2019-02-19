@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CommentInput({ handleInput, handleAddComment }) {
+function CommentInput({ value, handleInput, handleAddComment }) {
   return (
     <form onSubmit={handleAddComment}>
       <input
@@ -8,6 +8,7 @@ function CommentInput({ handleInput, handleAddComment }) {
         style={addComment}
         placeholder="Add a comment"
         type="text"
+        value={value}
       />
       <i style={float} className="fas fa-ellipsis-h" />
     </form>
