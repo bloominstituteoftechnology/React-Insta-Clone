@@ -185,3 +185,17 @@ input {
   width: 30px;
   height: 30px;
 }
+.post {
+  width: 600px;
+}
+.post-header {
+  display: flex;
+}
+.user-thumbnail {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+}
+h3 {
+  font-size: 3em;
+}
