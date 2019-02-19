@@ -1,7 +1,7 @@
-import React from "react";
-import propTypes from "prop-types";
-import Comment from "./Comment";
-import CommentInput from "./CommentInput";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Comment from './Comment';
+import CommentInput from './CommentInput';
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -13,9 +13,7 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div>
-        {this.state.comments.map((c, i) => (
-          <Comment key={i} comment={c} />
-        ))}
+        {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
         <CommentInput />
       </div>
     );
@@ -23,8 +21,8 @@ class CommentSection extends React.Component {
 }
 
 CommentSection.propTypes = {
-  comments: propTypes.arrayOf(
-    propTypes.shape({ text: propTypes.string, username: propTypes.string })
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
   )
 };
 
