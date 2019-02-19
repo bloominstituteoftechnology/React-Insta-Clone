@@ -1,9 +1,10 @@
 import React from 'react';
 import Comment from './Comment'
 
+
 const CommentSection = (props) => {
     return (
-<div>
+<div >
 
     
    
@@ -12,7 +13,8 @@ const CommentSection = (props) => {
         return <Comment comment={item} />
     }) }
 
-    <input />
+    <input className="commentsBar" placeholder='Add a comment...'/>
+    {props.times.timestamp}
 </div>)
 }
 

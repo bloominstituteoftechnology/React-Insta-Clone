@@ -31,3 +31,80 @@
     transform: rotate(360deg);
   }
 }
+
+.instaPost {
+  max-width: 640px;
+  border: 1px solid lightgrey;
+}
+
+.instaHeader {
+  display: flex;
+  align-items: center;
+}
+
+.instaHeader img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30x;
+  margin: 15px;
+}
+
+.instaHeader p {
+  font-weight: bold;
+}
+
+.instaIcons {
+  display: flex;
+  flex-direction: flex;
+}
+
+.instaIcons i {
+  margin: 5px 10px;
+}
+
+.likes {
+  font-weight: bold;
+  margin: 10px 3px;
+}
+
+.instaFooter {
+  display: flex;
+  flex-direction: flex;
+  margin: 0px 10px;
+}
+
+.comments {
+  display: flex;
+  flex-direction: flex;
+  margin: 5px 10px;
+}
+
+.commentsBar {
+  width: 610px;
+  padding: 15px 5px;
+  display: flex;
+  flex-direction: flex;
+  margin: 10px;
+  border: 1px solid white;
+  border-top: 1px solid lightgrey;
+  font-size: 1rem;
+}
+
+.asd {
+  border: 1px solid red;
+}
+
+#root1 {
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar img {
+  width: 150px;
+  height: 40px;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: space-between;
+}
