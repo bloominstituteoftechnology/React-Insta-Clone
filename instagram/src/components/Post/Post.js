@@ -17,7 +17,11 @@ const Post = ({ post }) => {
       <i className="icon-post far fa-heart" />
       <i className="icon-post far fa-comment" />
       <h3>{post.likes} likes</h3>
-      <CommentSection comments={post.comments} className="comment-section" />
+      <CommentSection
+        comments={post.comments}
+        timestamp={post.timestamp}
+        className="comment-section"
+      />
     </section>
   );
 };

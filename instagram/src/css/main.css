@@ -176,7 +176,7 @@ body {
   height: 30px;
   margin-right: 100px;
 }
-input {
+.search-input {
   padding: 3px;
   text-align: center;
   font-size: 1.8em;
@@ -201,6 +201,7 @@ input {
 .post {
   width: 600px;
   margin: 0 auto;
+  border: 1px solid lightgrey;
 }
 .post-header {
   height: 60px;
@@ -224,4 +225,33 @@ h3 {
 .icon-post {
   font-size: 2.4em;
   padding: 10px 0 10px 15px;
+}
+.comments {
+  margin: 12px 12px 0 12px;
+}
+h5 {
+  color: darkgrey;
+  font-size: 1.2em;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+.comment-input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  font-size: 1.5em;
+}
+.comment {
+  display: flex;
+  margin-top: 8px;
+}
+p {
+  font-size: 1.5em;
+  margin-left: 7px;
+}
+.username {
+  font-size: 1.5em;
+  margin-left: 0;
+  font-weight: bold;
 }

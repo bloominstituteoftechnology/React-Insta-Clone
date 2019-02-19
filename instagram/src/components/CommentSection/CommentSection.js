@@ -2,13 +2,19 @@ import React from "react";
 import Comment from "../Comment/Comment";
 import PropTypes from "prop-types";
 
-const CommentSection = ({ comments }) => {
+const CommentSection = ({ comments, timestamp }) => {
   return (
     <section className="comments">
       {comments.map((comment, index) => (
         // Used index for key for now - Date.now() wasn't working for some reason:
         <Comment comment={comment} key={index} />
       ))}
+      <h5 className="timestamp">{timestamp}</h5>
+      <input
+        type="text"
+        placeholder="Add a comment..."
+        className="comment-input"
+      />
     </section>
   );
 };
