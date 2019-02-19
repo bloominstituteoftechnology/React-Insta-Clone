@@ -10,7 +10,6 @@ const PostContainer = (props) => {
             
             {props.dummyData.map((item) => {
                 return (<div>
-                    <SearchBar />
                     <InstaPost instaPost={item}/> 
                     <CommentSection commentList={item.comments} times={item}/>
                 </div>)

@@ -7,10 +7,12 @@ const SearchBar = () => {
         <div className='searchbar'>
             <img src='https://i2.wp.com/www.sleepapnea.org/wp-content/uploads/2017/04/instagram-logo.png?ssl=1'/>
 
-            <input />
+            <input  placeholder='Search'/>
 
             <div>
-                more stuff
+                <i class="far fa-compass"></i>
+                <i class="far fa-heart"></i>
+                <i class="far fa-user"></i>
             </div>
 
         </div> 

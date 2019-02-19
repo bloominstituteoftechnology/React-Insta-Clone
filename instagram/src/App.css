@@ -33,8 +33,10 @@
 }
 
 .instaPost {
-  max-width: 640px;
+  max-width: 1000px;
   border: 1px solid lightgrey;
+
+
 }
 
 .instaHeader {
@@ -107,4 +109,14 @@
 .searchbar {
   display: flex;
   justify-content: space-between;
+  margin: 5px 0px;
+}
+
+.searchbar div i {
+  margin: 10px;
+}
+
+.searchbar input {
+  text-align: center;
+  font-size: 1rem;
 }

@@ -4,7 +4,7 @@ import Comment from './Comment'
 
 const CommentSection = (props) => {
     return (
-<div >
+<div className="timestamp">
 
     
    
@@ -14,7 +14,7 @@ const CommentSection = (props) => {
     }) }
 
     <input className="commentsBar" placeholder='Add a comment...'/>
-    {props.times.timestamp}
+    <p>{props.times.timestamp}</p>
 </div>)
 }
 
