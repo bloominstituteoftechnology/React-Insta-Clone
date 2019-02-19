@@ -1,0 +1,38 @@
+.searchbar {
+    background-color: white;
+    border-bottom: 1px solid rgb(187, 187, 187);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+.search {
+    width: 250px;
+    height: 28px;
+    margin-right: 200px;
+    border-radius: 5px;
+    border: 1px solid rgb(211, 211, 211);
+    background-color: #fafafa;
+}
+
+input::placeholder {
+    padding-left: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(173, 173, 173);
+}
+
+.ig-logo {
+    width: auto;
+    height: 40px;
+}
+
+.profile {
+    width: auto;
+    height: 40px;
+}

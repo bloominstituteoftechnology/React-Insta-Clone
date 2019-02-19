@@ -1,0 +1,28 @@
+.post {
+    border: 1px solid rgb(230, 230, 230);
+    width: 640px;
+    margin: 100px auto;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.profile-pic {
+    border-radius: 100px;
+    width: auto;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.main-username {
+    font-size: 1rem;
+}
+
+.likes {
+    text-align: left;
+    margin-left: 20px;
+    font-weight: bold;
+}

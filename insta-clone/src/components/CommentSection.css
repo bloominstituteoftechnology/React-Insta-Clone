@@ -1,0 +1,31 @@
+.comments {
+    display: flex;
+    line-height: 0px;
+}
+
+.username {
+    font-weight: bold;
+    font-size: .8rem;
+    margin-right: 6px;
+    margin-left: 20px;
+}
+
+.comment {
+    font-size: .8rem;
+}
+
+.add-comment {
+    width: 94%;
+    height: 50px;
+    margin: 20px 10px;
+    border: none;
+    border-top: 1px solid rgb(187, 187, 187);
+}
+
+input::placeholder {
+    text-align: left;
+}
+
+input {
+    margin-left: 10px;
+}
