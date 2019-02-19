@@ -1,27 +1,18 @@
 .search-bar-wrapper {
-  display: flex;
-  justify-content: space-evenly;
   border-bottom: 1px solid #3333;
   height: 80px;
   line-height: 70px;
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  background: #ffffff;
 }
 
 .image-wrapper {
-  display: flex; 
-  justify-content: center;
-  align-content: center;
+  height: 50px;
 }
 
 .logo-image {
-  display: inline-block;
-  margin: 10px 10px
-}
-
-.logo-image-text {
-  height: 50px;
+  height: 100%;
 }
 
 .social-wrapper {
@@ -29,6 +20,5 @@
 }
 
 .social {
-  margin: 10px 10px;
-  height: 20px;
+  width: 50px;
 }

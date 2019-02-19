@@ -1,9 +1,6 @@
 import React from 'react';
 import Logo from '../../assets/logo.png';
 import IGLogo from '../../assets/iglogo.png';
-import Safari from '../../assets/safari.png';
-import Heart from '../../assets/heart.png';
-import Friend from '../../assets/friend.png';
 import './SearchBar.css';
 
 const SearchBar = () => {
@@ -18,13 +15,13 @@ const SearchBar = () => {
       </div>
       <div className="social-wrapper">
         <div className="social">
-          <img alt="instagram logo" src={Safari}  className="fa fa-compass" />
+          <i className="far fa-compass" />
         </div>
         <div className="social">
-          <img alt="instagram logo" src={Heart} className="fa fa-heart" />
+          <i className="far fa-heart" />
         </div>
         <div className="social">
-          <img alt="instagram logo" src={Friend} className="fa fa-user-circle" />
+          <i className="far fa-user-circle" />
         </div>
       </div>
     </div>
