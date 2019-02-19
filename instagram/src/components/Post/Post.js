@@ -2,7 +2,13 @@ import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
 import PropTypes from "prop-types";
 
-const Post = ({ post, newCommentText, changeHandler, addNewComment }) => {
+const Post = ({
+  post,
+  addNewLike,
+  newCommentText,
+  changeHandler,
+  addNewComment
+}) => {
   return (
     <section className="post">
       <div className="post-header">
@@ -14,7 +20,10 @@ const Post = ({ post, newCommentText, changeHandler, addNewComment }) => {
         <h3>{post.username}</h3>
       </div>
       <img src={post.imageUrl} alt={post.imageUrl} className="post-image" />
-      <i className="icon-post far fa-heart" />
+      <i
+        onClick={e => addNewLike(e, post.timestamp)}
+        className="icon-post far fa-heart"
+      />
       <i className="icon-post far fa-comment" />
       <h3>{post.likes} likes</h3>
       <CommentSection

@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 
 const PostContainer = ({
   posts,
+  addNewLike,
   newCommentText,
   changeHandler,
   addNewComment
@@ -14,6 +15,7 @@ const PostContainer = ({
         <Post
           key={post.timestamp}
           post={post}
+          addNewLike={addNewLike}
           newCommentText={newCommentText}
           changeHandler={changeHandler}
           addNewComment={addNewComment}

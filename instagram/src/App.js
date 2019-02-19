@@ -7,7 +7,7 @@ import "./css/main.css";
 class App extends Component {
   constructor() {
     super();
-    this.state = { data: [], newCommentText: "" };
+    this.state = { data: [], newCommentText: "", liked: {} };
   }
 
   componentDidMount() {
@@ -42,6 +42,33 @@ class App extends Component {
     });
   };
 
+  addNewLike = (e, timestamp) => {
+    e.preventDefault();
+    // Finds index of the post that was liked:
+    const postIndex = this.state.data.findIndex(
+      post => post.timestamp === timestamp
+    );
+
+    // Sets up tempData to update nested state:
+    let tempData = { ...this.state.data };
+
+    if (!this.state.liked.timestamp) {
+      // Increments likes by 1:
+      tempData[postIndex].likes += 1;
+      // Updates state to include new like total and marks the post as already liked:
+      this.setState({
+        tempData
+      });
+    } else if (this.state[postIndex].liked) {
+      // Dencrements likes by 1:
+      tempData[postIndex].likes -= 1;
+      // Updates state to include new like total and marks the post as already liked:
+      this.setState({
+        tempData
+      });
+    }
+  };
+
   render() {
     return (
       <div className="container">
@@ -50,6 +77,7 @@ class App extends Component {
         </header>
         <PostContainer
           posts={this.state.data}
+          addNewLike={this.addNewLike}
           newCommentText={this.state.newCommentText}
           changeHandler={this.changeHandler}
           addNewComment={this.addNewComment}
