@@ -1,229 +1,68 @@
-# React-Insta-Clone-1  
-LIVE = https://instagram-clone-lilsgxfc1.now.sh/ 😊
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
- 
-![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZzj23o9GF9TzGTRisCi-cvyUvKBzVR8LnN_2LdU65pG_1Fuj3)
+In the project directory, you can run:
 
+### `npm start`
 
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Author
-John Benedict Miranda
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
+### `npm test`
 
-# [React](https://reactjs.org/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![Coverage Status](https://img.shields.io/coveralls/facebook/react/master.svg?style=flat)](https://coveralls.io/github/facebook/react?branch=master) [![CircleCI Status](https://circleci.com/gh/facebook/react.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/facebook/react) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-React is a JavaScript library for building user interfaces.
+### `npm run build`
 
-* **Declarative:** React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
-* **Component-Based:** Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the DOM.
-* **Learn Once, Write Anywhere:** We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using Node and power mobile apps using [React Native](https://facebook.github.io/react-native/).
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-[Learn how to use React in your own project](https://reactjs.org/docs/getting-started.html).
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-## Installation
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-React has been designed for gradual adoption from the start, and **you can use as little or as much React as you need**:
+### `npm run eject`
 
-* Use [Online Playgrounds](https://reactjs.org/docs/getting-started.html#online-playgrounds) to get a taste of React.
-* [Add React to a Website](https://reactjs.org/docs/add-react-to-a-website.html) as a `<script>` tag in one minute.
-* [Create a New React App](https://reactjs.org/docs/create-a-new-react-app.html) if you're looking for a powerful JavaScript toolchain.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-You can use React as a `<script>` tag from a [CDN](https://reactjs.org/docs/cdn-links.html), or as a `react` package on [npm](https://www.npmjs.com/).
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## Documentation
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You can find the React documentation [on the website](https://reactjs.org/docs).  
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-Check out the [Getting Started](https://reactjs.org/docs/getting-started.html) page for a quick overview.
+## Learn More
 
-The documentation is divided into several sections:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-* [Tutorial](https://reactjs.org/tutorial/tutorial.html)
-* [Main Concepts](https://reactjs.org/docs/hello-world.html)
-* [Advanced Guides](https://reactjs.org/docs/jsx-in-depth.html)
-* [API Reference](https://reactjs.org/docs/react-api.html)
-* [Where to Get Support](https://reactjs.org/community/support.html)
-* [Contributing Guide](https://reactjs.org/docs/how-to-contribute.html)
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-You can improve it by sending pull requests to [this repository](https://github.com/reactjs/reactjs.org).
+### Code Splitting
 
-## Examples
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-We have several examples [on the website](https://reactjs.org/). Here is the first one to get you started:
+### Analyzing the Bundle Size
 
-```jsx
-class HelloMessage extends React.Component {
-  render() {
-    return <div>Hello {this.props.name}</div>;
-  }
-}
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-ReactDOM.render(
-  <HelloMessage name="Taylor" />,
-  document.getElementById('container')
-);
-```
+### Making a Progressive Web App
 
-This example will render "Hello Taylor" into a container on the page.
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-You'll notice that we used an HTML-like syntax; [we call it JSX](https://reactjs.org/docs/introducing-jsx.html). JSX is not required to use React, but it makes code more readable, and writing it feels like writing HTML. If you're using React as a `<script>` tag, read [this section](https://reactjs.org/docs/add-react-to-a-website.html#optional-try-react-with-jsx) on integrating JSX; otherwise, the [recommended JavaScript toolchains](https://reactjs.org/docs/create-a-new-react-app.html) handle it automatically.
+### Advanced Configuration
 
-## Contributing
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-The main purpose of this repository is to continue to evolve React core, making it faster and easier to use. Development of React happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving React.
+### Deployment
 
-### [Code of Conduct](https://code.fb.com/codeofconduct)
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-Facebook has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](https://code.fb.com/codeofconduct) so that you can understand what actions will and will not be tolerated.
+### `npm run build` fails to minify
 
-### [Contributing Guide](https://reactjs.org/contributing/how-to-contribute.html)
-
-Read our [contributing guide](https://reactjs.org/contributing/how-to-contribute.html) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to React.
-
-### Good First Issues
-
-To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/facebook/react/labels/good%20first%20issue) that contain bugs which have a relatively limited scope. This is a great place to get started.
-
-### License
-
-React is [MIT licensed](./LICENSE).
-
-[![React-Bootstrap-with-Material-Design](https://mdbootstrap.com/wp-content/uploads/2018/11/mdb-react-free.jpg)](https://mdbootstrap.com/docs/react/)
-
-# React Bootstrap with Material Design
-
-[![npm version](https://badge.fury.io/js/mdbreact.svg)](https://badge.fury.io/js/mdbreact)
-
-Built with React and Bootstrap 4. Absolutely no jQuery.
-
-400+ material UI elements, 600+ material icons, 74 CSS animations, SASS files and many more.
-
-All fully responsive. All compatible with different browsers.
-
----
-
-# Demo:
-
-**Main demo**: https://mdbootstrap.com/docs/react/components/demo/
-
-# Live Preview
-
-[![Material Design for Bootstrap](https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20%2888%29.jpg)](https://mdbootstrap.com/docs/react/)
-[![Material Design for Bootstrap](https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20%2876%29.jpg)](https://mdbootstrap.com/docs/react/)
-[![Material Design for Bootstrap](https://mdbootstrap.com/img/Mockups/Lightbox/Original/img%20%2873%29.jpg)](https://mdbootstrap.com/docs/react/)
-
-# Version:
-
-- MDBReact 4.10.0
-- React 16.7.0
-
-# Quick start
-
-- Clone following repo:
-
-```javascript
-git clone https://github.com/mdbootstrap/react-bootstrap-with-material-design .
-```
-
-note "." at the end. It will clone files directly into current folder.
-
-- Run `npm i`
-- Run `npm start`
-- Voilà! Open browser and visit http://localhost:3000
-
-Now you can navigate to our documentation (http://mdbootstrap.com/docs/react/), pick any component and place within your project.
-
-# Available commands
-
-- npm start - runs the app in development mode.
-- npm run remove-demo - remove demo directory from your project and generate a boilerplate for your app
-- npm run build - builds the app for production to the build folder.
-- npm test - runs the test watcher in an interactive mode.
-
-# How to install MDB via npm:
-
-- create new project `create-react-app myApp`
-- `cd myApp`
-- `npm install --save mdbreact`
-- Import style files into the src/index.js before the App.js file:
-
-```javascript
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import "bootstrap-css-only/css/bootstrap.min.css";
-import "mdbreact/dist/css/mdb.css";
-```
-
-### Run server
-
-```bash
-npm start
-```
-
-# PRO version:
-
-**React Bootstrap with Material Design PRO (from $79)**: https://mdbootstrap.com/products/react-ui-kit/
-
-## Documentation:
-
-**Huge, detailed documentation avilable online on**: http://mdbootstrap.com/docs/react/
-
-# Highlights:
-
-**Bootstrap 4**
-Up-to-date with the latest standards of Bootstrap 4 and all the best it has to offer.
-
-**Detailed documentation**
-Intuitive and user-friendly documentation, created with a copy-paste approach.
-
-**No jQuery**
-Writing you code with pure React is now quicker, easier, and cleaner.
-
-**Cross-browser compatibility**
-Works perfectly with Chrome, Firefox, Safari, Opera and Microsoft Edge.
-
-**Frequent updates**
-Expect any bugs being fixed in a matter of days.
-
-**Active community**
-MDB is broadly used by professionals on multiple levels, who are ready to aid you.
-
-**Useful helpers**
-Reduce the frequency of highly repetitive declarations in your CSS.
-
-**Technical support**
-Every day we help our users with their issues and problems.
-
-**SASS files**
-Thought-out .scss files come in a compile-ready form.
-
-**Flexbox**
-Full support of Flexbox layout system lets you forget about alignment issues.
-
-A big **thank you to all our users** who are working with us to improve the software. We wouldn't be where we are without you.
-
-# Useful Links:
-
-Getting started: https://mdbootstrap.com/docs/react/getting-started/download/
-
-5 min quick start: https://mdbootstrap.com/docs/react/getting-started/quick-start/
-
-Changelog: https://mdbootstrap.com/docs/react/changelog/
-
-# Social Media:
-
-Twitter: https://twitter.com/MDBootstrap
-
-Facebook: https://www.facebook.com/mdbootstrap
-
-Pinterest: https://pl.pinterest.com/mdbootstrap
-
-Google+: https://plus.google.com/u/0/b/107863090883699620484/+Mdbootstrap/posts
-
-Dribbble: https://dribbble.com/mdbootstrap
-
-LinkedIn: https://www.linkedin.com/company/material-design-for-bootstrap
-
-## Contact:
-
-office@mdbootstrap.com
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
