@@ -1,0 +1,25 @@
+.App {
+  margin: 0 auto;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.App .search-bar{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 800px;
+
+}
+
+.App .post-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.App .post-container .user-header {
+  display: flex;
+  flex-direction: column;
+}
