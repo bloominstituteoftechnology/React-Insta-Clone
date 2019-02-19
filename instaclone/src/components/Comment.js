@@ -2,14 +2,32 @@ import React from "react"
 import "./head.css"
 import Form from "./Form"
 import PropTypes from "prop-types";
-const Comment = (props)=>{
+class Comment extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            count : 0
+        }
+    }
+
+    addCountHandler = ()=>{
+        this.setState(prevState=>{
+            return {
+                count : prevState.count+1
+            }
+        })
+    }
+
+  
+    render (){
     return (
         <div className="commentaire">
+        <h4>{this.state.count} Likes</h4>
         <div className="icon">
-            <i className="heart outline icon"></i>
-            <i class="comments outline icon"></i>
+            <i onClick={this.addCountHandler} className="heart outline icon"></i>
+            <i  class="comments outline icon"></i>
          </div>
-            {props.comments.map(elem=>
+            {this.props.comments.map(elem=>
                 <div className="user-section">
                 <h5>{elem.username}</h5>
                 <p className="text">{elem.text}</p>
@@ -20,7 +38,7 @@ const Comment = (props)=>{
        
 
     )
-    
+            }
 }
 
 export default Comment;

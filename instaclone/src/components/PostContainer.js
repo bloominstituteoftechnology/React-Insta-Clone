@@ -6,7 +6,7 @@ const PostContainer = (props)=>{
         
     return (
         
-        <div  >
+        <div>
                 <div className="compo-image img">
                 {props.data.map(data=>
                     
@@ -19,19 +19,13 @@ const PostContainer = (props)=>{
                             </div>
                         </div>
                         <img className="imageurl"src={data.imageUrl} alt="rdm" />
-                        <h6>{data.likes} Likes</h6>
+                        <h6>{props.countLikes} </h6>
                         <Comment comments={data.comments} />
                         <h6>{data.timestamp}</h6>
 
-                        
                     </div>
                 )}
                 </div>
-
-            <div>
-                    
-            </div>
-
         </div>
 
     )
