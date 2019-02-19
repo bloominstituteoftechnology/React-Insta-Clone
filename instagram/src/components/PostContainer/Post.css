@@ -1,0 +1,28 @@
+.postContainer {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+	margin: 20px auto;
+	border: 2px solid #EBEBEB;
+	background-color: white;
+}
+
+.postHeader {
+	display: flex;
+	width: 90%;
+	height: 60px;
+	align-items: center;
+	font-size: 1.0rem;
+}
+
+.headerImg {
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	margin: 0 2% 0 3%;
+}
+
+.postImg {
+	height: 650px;
+	width: 100%;
+}

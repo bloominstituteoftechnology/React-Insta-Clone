@@ -1,0 +1,50 @@
+.searchBar {
+	margin: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 10px;
+	border-bottom: 1px solid whitesmoke;
+	background-color: white;
+}
+
+.logo {
+	height: 35px;
+}
+
+.left-items {
+	align-items: center;
+	display: flex;
+	width: 15%;
+	margin: 0 0 0 2%;
+}
+
+.vertical {
+	margin: 10px 10% 10px 10%;
+	border-left: 1px solid grey;
+	height: 35px;
+}
+
+.inputBarForm {
+	width: 14%;
+}
+
+.inputBar {
+	text-align: center;
+	background: url(./search-solid.svg) no-repeat left;
+	background-size: 150px 10px;
+	background-color: whitesmoke;
+	border-radius: 2px;
+	width: 100%;
+	height: 20px;
+	font-size: 1.0rem;
+
+}
+
+.right-items {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 10px 0 0;
+	width: 10%;
+	margin: 0 2% 0 0;
+}
