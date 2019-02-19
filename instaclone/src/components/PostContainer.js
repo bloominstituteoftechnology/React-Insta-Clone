@@ -11,7 +11,6 @@ const PostContainer = (props)=>{
                 {props.data.map(data=>
                     
                     <div key={new Date()}>
-                    <h6>{data.timestamp}</h6>
 
                         <div className="picture">
                             <h4>{data.username}</h4>
@@ -20,10 +19,10 @@ const PostContainer = (props)=>{
                             </div>
                         </div>
                         <img className="imageurl"src={data.imageUrl} alt="rdm" />
-                        
                         <h6>{data.likes} Likes</h6>
                         <Comment comments={data.comments} />
-                        
+                        <h6>{data.timestamp}</h6>
+
                         
                     </div>
                 )}

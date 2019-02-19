@@ -1,5 +1,5 @@
 .App {
-  max-width:800px;
+  max-width:700px;
   margin :0 auto;
   display:block;
   width:70%;
@@ -9,3 +9,6 @@
   border: 1px solid black;
 }
 
+.App-header{
+  border:1px solid black;
+}

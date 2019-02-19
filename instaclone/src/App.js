@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import SearchBar from './components/SearchBar';
 import PostContainer from "./components/PostContainer"
+import Form from "./components/Form"
 import dummydata from "./components/dumyData";
+
 import "./App.css"
 class App extends Component {
   constructor (props){
@@ -24,6 +26,7 @@ class App extends Component {
             <PostContainer className="container"data={this.state.data} 
             comments={this.state.data.comments}
              />
+             <Form />
 
         </header>
 
