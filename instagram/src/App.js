@@ -3,6 +3,8 @@ import './App.css';
 import './DummyData/dummy-data';
 import dummyData from './DummyData/dummy-data';
 import PostContainer from './components/PostContainer/PostContatiner';
+import SearchBar from './components/SearchBar/SearchBar';
+
 
 class App extends Component {
   constructor(){
@@ -14,6 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <SearchBar />
         <PostContainer dataProps = {this.state.data} />
       </div>
     );
