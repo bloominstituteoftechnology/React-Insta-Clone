@@ -17,7 +17,7 @@ const CommentSection = ({
         <Comment comment={comment} key={index} />
       ))}
       <h5 className="timestamp">
-        {moment.duration(Date.now() - timestamp).humanize()}
+        {moment.duration(Date.now() - timestamp).humanize()} ago
       </h5>
       <form onSubmit={e => addNewComment(e, timestamp)}>
         <input

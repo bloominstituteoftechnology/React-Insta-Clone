@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import moment from "moment";
 import dummyData from "./dummy-data";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
@@ -10,16 +11,26 @@ class App extends Component {
     this.state = {
       data: [],
       newCommentText: "",
-      liked: {
-        // "1500295360000": false,
-        // "1500131529000": false,
-        // "1500026648000": false
-      }
+      liked: {}
     };
   }
 
   componentDidMount() {
-    this.setState({ data: dummyData });
+    // There might be a more succinct way to do this, but the following turns the timestamp string from dummyData into Unix Epoch Time (while leaving the other data alone). Earlier I had just edited dummy-data.js, so this is more elegant.
+    const data = dummyData.map(post => {
+      return (post = {
+        username: post.username,
+        thumbnailUrl: post.thumbnailUrl,
+        imageUrl: post.imageUrl,
+        likes: post.likes,
+        timestamp: moment(post.timestamp, "MMMM Do YYYY, h:mm:ss a").valueOf(),
+        comments: post.comments
+      });
+    });
+
+    this.setState({
+      data: data
+    });
   }
 
   changeHandler = e => {
