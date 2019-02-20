@@ -1,6 +1,6 @@
 import React from 'react';
 
-const authenticate = App => LoginPage =>
+const withAuthenticate = App => LoginPage =>
   class extends React.Component {
     constructor(props) {
       super(props);
@@ -21,4 +21,4 @@ const authenticate = App => LoginPage =>
     }
   };
 
-export default Authenticate;
+export default withAuthenticate;
