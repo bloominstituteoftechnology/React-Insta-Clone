@@ -3,6 +3,8 @@ import CommentSection from './CommentSection'
 import InstaPost from './InstaPost'
 import SearchBar from './SearchBar'
 
+
+
 const PostContainer = (props) => {
     
     return (
@@ -11,7 +13,7 @@ const PostContainer = (props) => {
             {props.dummyData.map((item) => {
                 return (<div>
                     <InstaPost instaPost={item}/> 
-                    <CommentSection commentList={item.comments} times={item}/>
+                    <CommentSection  commentList={item.comments} obj={item}/>
                 </div>)
             })}
         </div>

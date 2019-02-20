@@ -14,8 +14,8 @@ const InstaPost = (props) => {
             <img src={props.instaPost.imageUrl}/>
 
             <div className='instaIcons'>
-            <i id='icon' class="far fa-heart"></i>
-            <i id='icon' class="far fa-comment"></i>
+            <i id='icon' className="far fa-heart"></i>
+            <i id='icon' className="far fa-comment"></i>
             </div>
 
             <div className='instaFooter'>

@@ -14,6 +14,7 @@ class App extends Component {
   }
 
 
+
   render() {
     return (
       <div className='instaPost'>
@@ -32,7 +33,7 @@ class App extends Component {
           </a>
         </header> */}
         <SearchBar />
-        <PostContainer dummyData={this.state.dummyData}/>
+        <PostContainer dummyData={this.state.dummyData} addComment={this.addComment} Change={this.Change}/>
 
 
       </div>
