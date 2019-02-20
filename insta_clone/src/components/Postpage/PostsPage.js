@@ -32,9 +32,9 @@ class PostsPage extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        searchPost={this.searchPost}
-        searchHandler={this.searchHandler}
+        <SearchBar
+          searchPost={this.searchPost}
+          searchHandler={this.searchHandler}
         />
         <PostContainer posts={this.state.post} />
       </div>
