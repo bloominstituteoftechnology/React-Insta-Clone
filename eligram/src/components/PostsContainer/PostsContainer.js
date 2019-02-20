@@ -17,30 +17,3 @@ const PostsContainer = props => {
 
 
 export default PostsContainer;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export default PostsContainer;

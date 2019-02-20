@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import dummyData from './dummy-data';
 import PostsContainer from './components/PostsContainer/PostsContainer';
-import SearchBar from './components/SearchBar/SearchBar';  
+import SearchBar from './components/SearchBar/SearchBar';
+
 
 
 class App extends Component {
  constructor(){
    super();
    this.state = {
-     posts: dummy-data
+     posts: dummyData
  };
 }
 
@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer posts = {this.state.posts} />
+        <PostsContainer posts = {this.state.posts} />
       
         
       </div>
