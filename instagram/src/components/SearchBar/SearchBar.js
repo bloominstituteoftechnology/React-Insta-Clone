@@ -19,9 +19,12 @@ const SearchBar = (props) => {
          <SearchInput 
          placeholder="Search"
          type="text"
-         name="filterTarget"
-         value={props.filterTarget}
-         onChange={props.filter}
+         // Add a name for this input
+         name="searchInput"
+         // add a value
+         value={props.searchInput}
+         // add our onChange handler
+         onChange={props.searchHandler}
          ></SearchInput>
 
             <IconContainer>
