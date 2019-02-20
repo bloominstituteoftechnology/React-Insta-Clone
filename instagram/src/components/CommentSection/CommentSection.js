@@ -3,8 +3,8 @@ import Comment from './Comment'
 
 const CommentSection = props => {
     console.log(props.comments);
-    return <div>{props.comments.map(c =>
-         <Comment username={c.username} key={Date.now} text={c.text} />
+    return <div>{props.comments.map((c, i) =>
+         <Comment username={c.username} key={i} text={c.text} />
     )}</div>;
 
 
