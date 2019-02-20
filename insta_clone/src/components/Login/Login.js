@@ -39,6 +39,7 @@ class Login extends Component {
   render() {
     return (
       <div style={loginBox}>
+        <h1>Login</h1>
         <input
           style={inputs}
           placeholder={'UserName'}
@@ -65,9 +66,10 @@ class Login extends Component {
 }
 
 const button = {
-  width: '50%',
+  width: '75%',
   fontSize: '30px',
-  borderStyles: 'none'
+  borderStyle: 'none',
+  backgroundColor: 'white'
 };
 
 const inputs = {
@@ -77,13 +79,13 @@ const inputs = {
 };
 
 const loginBox = {
-  margin: '0 auto',
+  margin: '50px auto',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   flexWrap: 'wrap',
   width: '500px',
-  height: '500px',
+  height: '300px',
   backgroundColor: 'black',
   color: 'white'
 };
