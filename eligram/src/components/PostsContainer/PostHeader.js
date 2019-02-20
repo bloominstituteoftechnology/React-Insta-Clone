@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const PostHeader = props {
+const PostHeader = props => {
     return (
          <div className = "post-header">
             <div className= "tiny-image">
