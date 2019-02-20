@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import Login from '../Login/Login';
-import App from '../../App.js';
 
-const Authenticate = App =>{
-  class auth extends Component {
+
+const Authenticate = App => Login =>{
+  return class extends Component {
       constructor(){
           super();
           this.state ={loggedIn: false};
@@ -18,7 +17,7 @@ const Authenticate = App =>{
     render() {
     if(this.state.loggedIn) { return <App /> }
     else {
-      return <App />
+      return <Login />
     }
     }
   };
