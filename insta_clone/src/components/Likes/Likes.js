@@ -3,7 +3,7 @@ import React from 'react';
 function Likes({ increaseLike, likes }) {
   return (
     <div>
-      <strong>{likes}</strong>
+      <div style={numbers}>{likes}</div>
 
       <i onClick={increaseLike} style={space} className="far fa-heart" />
 
@@ -12,8 +12,15 @@ function Likes({ increaseLike, likes }) {
   );
 }
 
+const numbers = {
+  margin: '0 10px',
+  fontWeight: 'bold'
+};
+
 const space = {
-  paddingRight: '20px'
+  margin: '5px 10px',
+
+  fontSize: ' 25px'
 };
 // const ico = {
 //   fontSize: '25px'
