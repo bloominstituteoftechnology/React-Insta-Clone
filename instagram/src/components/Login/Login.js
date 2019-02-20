@@ -30,7 +30,7 @@ class Login extends React.Component {
           value={this.state.userInput}
         />
         <br />
-        <input placeholder="password" />
+        <input placeholder="password" type="password" />
         <button onClick={this.loginFunction}>Login</button>
       </div>
     );
