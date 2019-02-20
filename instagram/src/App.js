@@ -11,6 +11,7 @@ class App extends Component {
     this.state = {
       data: [],
       newCommentText: "",
+      searchText: "",
       liked: {}
     };
   }
@@ -20,6 +21,7 @@ class App extends Component {
     const data = dummyData.map(post => {
       return (post = {
         username: post.username,
+        visible: true,
         thumbnailUrl: post.thumbnailUrl,
         imageUrl: post.imageUrl,
         likes: post.likes,
@@ -34,32 +36,29 @@ class App extends Component {
   }
 
   changeHandler = e => {
+    e.preventDefault();
     this.setState({
       [e.target.name]: e.target.value
     });
   };
 
-  addNewComment = (e, timestamp) => {
-    e.preventDefault();
-    const newComment = {
-      // We haven't really worked out the username of the commenter, so I hardcoded this one for now:
-      username: "catslanderer",
-      text: this.state.newCommentText
-    };
-    // Finds index of the post that was commented on:
-    const postIndex = this.state.data.findIndex(
-      post => post.timestamp === timestamp
-    );
-    // Sets up tempData to update nested state:
-    const tempData = { ...this.state.data };
-    // Pushes new comment to comment array:
-    tempData[postIndex].comments.push(newComment);
-    // Updates state to include new comment and clears the comment form:
-    this.setState({
-      tempData,
-      newCommentText: ""
-    });
-  };
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.searchText !== prevState.searchText) {
+      let tempData = [...this.state.data];
+
+      tempData.forEach(post => {
+        if (!post.username.includes(this.state.searchText)) {
+          post.visible = false;
+        } else if (post.username.includes(this.state.searchText)) {
+          post.visible = true;
+        }
+      });
+
+      this.setState({
+        data: tempData
+      });
+    }
+  }
 
   addNewLike = (e, timestamp) => {
     e.preventDefault();
@@ -68,7 +67,7 @@ class App extends Component {
       post => post.timestamp === timestamp
     );
     // Sets up tempData to update nested state:
-    let tempData = { ...this.state.data };
+    let tempData = [...this.state.data];
     let tempLiked = this.state.liked;
     // If post not already liked, then a like is added:
     if (!this.state.liked[timestamp]) {
@@ -93,12 +92,36 @@ class App extends Component {
     }
   };
 
+  addNewComment = (e, timestamp) => {
+    e.preventDefault();
+    const newComment = {
+      // We haven't really worked out the username of the commenter, so I hardcoded this one for now:
+      username: "catslanderer",
+      text: this.state.newCommentText
+    };
+    // Finds index of the post that was commented on:
+    const postIndex = this.state.data.findIndex(
+      post => post.timestamp === timestamp
+    );
+    // Sets up tempData to update nested state:
+    const tempData = [...this.state.data];
+    // Pushes new comment to comment array:
+    tempData[postIndex].comments.push(newComment);
+    // Updates state to include new comment and clears the comment form:
+    this.setState({
+      tempData,
+      newCommentText: ""
+    });
+  };
+
   render() {
-    console.log(this.state.liked);
     return (
       <div className="container">
         <header className="header">
-          <SearchBar changeHandler={this.changeHandler} />
+          <SearchBar
+            changeHandler={this.changeHandler}
+            searchText={this.searchText}
+          />
         </header>
         <PostContainer
           posts={this.state.data}

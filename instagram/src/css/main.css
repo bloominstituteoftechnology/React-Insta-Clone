@@ -201,6 +201,12 @@ body {
   margin: 0 auto 20px auto;
   border: 1px solid lightgrey;
 }
+.visible-false {
+  display: none;
+}
+.visible-true {
+  display: inline;
+}
 .post-header {
   height: 60px;
   display: flex;

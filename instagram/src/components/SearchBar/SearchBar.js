@@ -2,15 +2,21 @@ import React from "react";
 // import igLogo from "./igLogo.svg";
 import igWordmark from "./igWordmark.png";
 
-const SearchBar = props => {
+const SearchBar = ({ changeHandler, searchText }) => {
   return (
     <div className="search-bar">
       <div className="logo-set">
         <i className="logo fab fa-instagram" />
-        {/* <img src={igLogo} alt="instagram logo" className="logo" /> */}
         <img src={igWordmark} alt="instagram wordmark" className="wordmark" />
       </div>
-      <input type="text" placeholder="🔍 Search" className="search-input" />
+      <input
+        name="searchText"
+        value={searchText}
+        type="text"
+        placeholder="🔍 Search Usernames"
+        onChange={changeHandler}
+        className="search-input"
+      />
       <div className="icon-set">
         <i className="icon-searchbar far fa-heart" />
         <i className="icon-searchbar far fa-compass" />

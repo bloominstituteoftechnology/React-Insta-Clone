@@ -10,7 +10,7 @@ const Post = ({
   addNewComment
 }) => {
   return (
-    <section className="post">
+    <section className={`post visible-${post.visible}`}>
       <div className="post-header">
         <img
           src={post.thumbnailUrl}
