@@ -28,6 +28,11 @@ class App extends Component {
   
   }
 
+  incrementLike = () => {
+    let likes = this.state.likes + 1;
+    this.setState({ likes });
+};
+
   render() {
     return (
       <div className="app">
