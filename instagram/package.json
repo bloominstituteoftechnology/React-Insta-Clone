@@ -1,0 +1,31 @@
+{
+  "name": "instagram",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "fuse.js": "^3.3.0",
+    "moment": "^2.22.2",
+    "node-sass": "^4.10.0",
+    "prop-types": "^15.6.2",
+    "react": "*",
+    "react-dom": "*",
+    "react-scripts": "*",
+    "styled-components": "^4.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
