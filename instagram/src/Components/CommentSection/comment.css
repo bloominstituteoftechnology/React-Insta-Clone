@@ -1,0 +1,26 @@
+.user{
+    
+    font-weight: 500;
+    padding-right:3%;
+    padding-bottom: 5px;
+}
+
+.text{
+    margin-left:-7px;
+    text-align:left;
+    
+}
+
+.comment{
+    display: flex;
+    margin-top: 0%;
+ 
+
+}
+
+input{
+
+display:flex;
+border: 0px solid white;
+padding-bottom: 25px;
+}

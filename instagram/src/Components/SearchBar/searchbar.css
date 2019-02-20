@@ -1,0 +1,43 @@
+.search-bar-container{
+display:flex;
+justify-content: space-around;
+width: 865px;
+margin: auto 0;
+}
+
+h2{
+    font-family: 'Grand Hotel', cursive;
+}
+
+.search{
+    width: 200px;
+	height: 20px;
+    margin-left: 50px;
+    margin-top: 20px;
+    
+	
+    
+}
+
+.social-wrapper{
+    display:flex;
+    justify-content: space-between;
+    margin-top:20px;
+}
+
+.lilpics{
+    padding-left:25%;
+}
+
+.logo{
+    display:flex;
+}
+
+.fa-instagram{
+    height:30px;
+    width:40px;
+}
+
+.fab{
+    line-height: 5;
+}

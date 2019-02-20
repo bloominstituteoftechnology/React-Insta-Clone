@@ -1,0 +1,16 @@
+.social{
+    height:50px;
+    width:50px;
+
+}
+
+.like-container {
+    display:flex;
+    justify-content: flex-start;
+    padding-bottom: 0%;
+}
+
+h2{
+    margin-left: -13%;
+    margin-top: 8%;
+}
