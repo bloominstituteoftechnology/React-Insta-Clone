@@ -12,17 +12,29 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummy: dummyData,
+      dummy: []
     };
   };
 
+  componentDidMount(){
+    console.log('mounted')
+    this.setState({ dummy: dummyData})
+  };
+
+  addComment = (comment,id) =>{ console.log(comment)
+  ; this.setState(prevState => {
+    return prevState.data[id].comments.push(comment);
+})
+  
+  }
+
   render() {
     return (
-      <div className="App">
+      <div className="app">
         <header>
         <SearchBar />
         </header>
-        <PostContainer dummy={this.state.dummy} />
+        <PostContainer dummy={this.state.dummy} addComment={this.addComment} />
       </div>
             );
             }
