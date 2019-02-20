@@ -35,4 +35,13 @@ p{
     padding: 20px;
 }
 
-.icons{}
+.icons{ 
+ display: flex;
+ flex-direction: row;
+ margin: 10px;
+}
+
+i{
+    margin: 0px 20px;
+    font-size:23px;
+}

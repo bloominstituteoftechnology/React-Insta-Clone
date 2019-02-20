@@ -2,7 +2,7 @@ import  React from 'react';
 import './post-container.css';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommetSection.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const PostContainer = props => {
     console.log(props);
@@ -16,8 +16,9 @@ const PostContainer = props => {
                 </div>
                     <img className="post-img" src={element.imageUrl}/>
                 <div className="icons">
-               {/* font awesome heart*/}
-               {/* font awesome comment */}
+                <i className="far fa-comment"/>
+                <i className="far fa-heart" />
+                {/* add likes */}
                 </div>
                 <CommentSection 
                 element={element}
