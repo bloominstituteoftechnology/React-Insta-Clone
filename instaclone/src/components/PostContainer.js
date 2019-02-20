@@ -18,7 +18,7 @@ const PostContainer = (props)=>{
                                 <img className="thumb"  src={data.thumbnailUrl} alt="tumbnail"/>
                             </div>
                         </div>
-                        <img className="imageurl"src={data.imageUrl} alt="rdm" />
+                        <img className="imageurl"src={data.imageUrl} alt={data.username} />
                         <h6>{props.countLikes} </h6>
                         <Comment comments={data.comments}
                                  likes={data.likes}

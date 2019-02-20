@@ -11,7 +11,7 @@ const SearchBar = (props)=>{
     return (
         <div className="head">
             <div className="header-name">
-                    <i className="instagram icon"></i> |
+                    <i  className="instagram icon"></i> |
                     <h4 className="title" style={style} >{props.title}</h4> 
             </div>
             <div style={style}>
