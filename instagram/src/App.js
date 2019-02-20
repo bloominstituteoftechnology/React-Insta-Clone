@@ -7,7 +7,15 @@ import "./css/main.css";
 class App extends Component {
   constructor() {
     super();
-    this.state = { data: [], newCommentText: "", liked: {} };
+    this.state = {
+      data: [],
+      newCommentText: "",
+      liked: {
+        // "1500295360000": false,
+        // "1500131529000": false,
+        // "1500026648000": false
+      }
+    };
   }
 
   componentDidMount() {
@@ -48,28 +56,34 @@ class App extends Component {
     const postIndex = this.state.data.findIndex(
       post => post.timestamp === timestamp
     );
-
     // Sets up tempData to update nested state:
     let tempData = { ...this.state.data };
-
-    if (!this.state.liked.timestamp) {
+    let tempLiked = this.state.liked;
+    // If post not already liked, then a like is added:
+    if (!this.state.liked[timestamp]) {
       // Increments likes by 1:
       tempData[postIndex].likes += 1;
+      tempLiked[timestamp] = true;
       // Updates state to include new like total and marks the post as already liked:
       this.setState({
-        tempData
+        tempData,
+        tempLiked
       });
-    } else if (this.state[postIndex].liked) {
+      // If post already liked, then a like is taken away:
+    } else if (this.state.liked[timestamp]) {
       // Dencrements likes by 1:
       tempData[postIndex].likes -= 1;
+      tempLiked[timestamp] = false;
       // Updates state to include new like total and marks the post as already liked:
       this.setState({
-        tempData
+        tempData,
+        tempLiked
       });
     }
   };
 
   render() {
+    console.log(this.state.liked);
     return (
       <div className="container">
         <header className="header">
