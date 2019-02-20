@@ -3,7 +3,6 @@ import React from 'react';
 import Post from '../Post/Post';
 
 import './postcontainer.css';
-import SearchBar from '../SearchBar/SearchBar';
 
 function PostContainer({ search, posts }) {
   return (
