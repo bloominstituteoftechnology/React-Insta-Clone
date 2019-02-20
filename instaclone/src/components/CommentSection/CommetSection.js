@@ -9,7 +9,27 @@ class CommentSection extends React.Component {
         this.state={
             comments: this.props.element.comments
         }
-    }
+                        }
+
+       handleChanges = e => {
+        this.setState({
+          [e.target.name]: e.target.value
+        })
+      }
+    
+      addComment = e => { 
+        e.preventDefault();
+        const newComment = {
+          username: "null",
+          text: this.state.text,
+        }
+        this.setState({
+          comments: [...this.state.comments, newComment],
+          text: "",
+        })
+}
+                    
+
     render(){
         return(
             <div className="comments">
@@ -18,9 +38,9 @@ class CommentSection extends React.Component {
                     <p><strong>{x.username}</strong></p> <p className="text"> {x.text}</p>  
                 </div>
                 ))}
-                <div className="inputer">
-                    <input type="text" placeholder="Add a comment..."/>
-                </div>
+                <form className="inputer" onSubmit={this.addComment}>
+                    <input type="text" placeholder="Add a comment..." value={this.props.text} name="text" onChange={this.handleChanges}/>
+                </form>
             </div>
                                                 )}}
 
