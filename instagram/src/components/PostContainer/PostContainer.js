@@ -2,15 +2,16 @@ import React from "react";
 import Post from './Post';
 import './Posts.css';
 
-// const PostContainer = () => {
-//     return (
-//       <div>
-//         {dummyData.map(dummy => {
-//           return <div>{dummy.imageUrl}</div>;
-//         })}
-//       </div>
-//     );
-//   };
+/** const PostContainer = () => {
+    return (
+      <div>
+        {dummyData.map(dummy => {
+          return <div>{dummy.imageUrl}</div>;
+        })}
+      </div>
+    );
+  };
+  */
 
 const PostContainer = props => {
   return (
