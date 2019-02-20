@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommetSection.js';
 import Likes from './Likes.js';
 
+
+
+
 const PostContainer = props => {
     console.log(props);
     return(
@@ -16,7 +19,7 @@ const PostContainer = props => {
                 </div>
                     <img className="post-img" src={element.imageUrl}/>
                 <div className="icons">
-                <Likes />
+                <Likes  />
                 </div>
                 <CommentSection 
                 element={element}
