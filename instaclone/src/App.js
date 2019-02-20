@@ -7,12 +7,17 @@ class App extends Component {
   constructor (props){
     super(props);
     this.state ={
-        data : dummydata,
+        data : [],
         message : "",
     }
     this.title = "Instagram"
   }
 
+  componentDidMount (){
+    this.setState({
+      data : dummydata
+    })
+  }
 
 
   handleIncrementCount = ()=>{
@@ -22,25 +27,19 @@ class App extends Component {
       }
     })
   }
-
-
   render() {
-    if(!this.state.data.length) {
-      this.setState({
-        message : <h3>Content is loading ....</h3>
-      })
-    }
-    
     return (
       <div className="App">
       {this.state.message}
         <header>
             <SearchBar title={this.title}/>
-            <PostContainer 
-            incrementCount ={this.handleIncrementCount}
-            className="container"
-            data={this.state.data} 
-              />
+            <div className="container-second">
+              <PostContainer 
+              incrementCount ={this.handleIncrementCount}
+              className="container"
+              data={this.state.data} 
+                />
+              </div>
 
         </header>
 

@@ -3,7 +3,6 @@ import "./head.css"
 import PropTypes from 'prop-types';
 import Comment from "./Comment";
 const PostContainer = (props)=>{
-        console.log(props.data.comments)
     return (
         
         <div>

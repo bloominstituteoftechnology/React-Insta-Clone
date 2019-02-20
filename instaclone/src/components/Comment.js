@@ -8,9 +8,15 @@ class Comment extends React.Component{
         super(props);
         this.state = {
             count : props.likes,
-            comments : props.comments,
+            comments : [],
             commentInput : " "
         }
+    }
+
+    componentDidMount () {
+        this.setState({
+            comments : this.props.comments
+        })
     }
 
     addCountHandler = ()=>{
@@ -41,7 +47,7 @@ class Comment extends React.Component{
         
     }
 
-    
+ 
   
     render (){
     return (
@@ -53,12 +59,13 @@ class Comment extends React.Component{
          </div>
             {this.state.comments.map(elem=>
                 <div className="user-section">
-                <SingleComment username={elem.username} text={elem.text} />
+                <SingleComment key={elem.text}username={elem.username} text={elem.text} />
                 </div>)
             }
             <Form  changeHandler={this.changeHandler} 
             commentInput={this.state.commentInput} 
             addCommentHandler = {this.addCommentHandler}
+           
             />
         </div>
        

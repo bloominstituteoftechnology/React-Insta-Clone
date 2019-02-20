@@ -1,7 +1,13 @@
 .App {
-  max-width:600px;
+  max-width:1200px;
   margin :0 auto;
   display:block;
-  width:70%;
+  width:100%;
 }
 
+
+.container-second{
+  max-width:600px;
+  margin:0 auto;
+  display: block;
+}
