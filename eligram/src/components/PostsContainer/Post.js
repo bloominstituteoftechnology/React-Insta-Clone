@@ -13,7 +13,7 @@ class Post extends React.Component {
         };
     }
 
-
+        //--forgot syntax look up
     // enter function to increase likes by 1 ie this.state.likes ++
    render() {
     return(
