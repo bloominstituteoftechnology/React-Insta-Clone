@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 99.99%;
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+  /* border: 5px solid orange; */
+  background-color: #FBFBFB;
+}
