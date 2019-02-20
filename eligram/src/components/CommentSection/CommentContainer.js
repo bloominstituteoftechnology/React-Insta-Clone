@@ -1,10 +1,10 @@
 import React from 'react';
 import Comment from './Comment';
-import CommentContainer from './CommentContainer';
+
 import CommentInput from './CommentInput';
 
 
-class CommentSection extends React.Component{
+class CommentContainer extends React.Component{
     constructor(props){
         super(props);
         this.state {
