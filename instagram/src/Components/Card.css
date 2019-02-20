@@ -1,0 +1,127 @@
+.Card {
+  border: 1px solid #cdcdcd;
+  max-width: 58rem;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.Card:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.Card__header {
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.Card__thumbnail {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.Card__username {
+  font-weight: 700;
+}
+
+.Card__banner-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Card__icons {
+  padding: 1.5rem;
+}
+
+.Card__icons i {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.Card__icons i:hover {
+  color: #007fff;
+}
+
+.Card__icons--liked {
+  color: #f44336;
+}
+
+
+.Card__icons i:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.Card__likes {
+  padding: 0  1.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.Card__comments {
+  padding: 1.5rem 1.5rem 0;
+}
+
+.Card__comment:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.Card__comment {
+  font-size: 1.4rem;
+  position: relative;
+}
+
+
+.Card__comment-user {
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+.Card__last-comment {
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid #eee;
+  color: #aaa;
+}
+
+.Card__input-wrapper {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.Card__input {
+  display: block;
+  flex-grow: 1;
+  border: none;
+  font-size: inherit;
+}
+
+.Card__input:focus {
+  outline: none;
+}
+
+.Card__input::placeholder {
+  color: #999;
+}
+
+.Card__comment-close {
+  color: #999;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+}
+
+.Card__comment:hover .Card__comment-close {
+  opacity: 1;
+  visibility: visible;
+}
