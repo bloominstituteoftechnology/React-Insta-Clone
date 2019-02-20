@@ -1,11 +1,14 @@
 import React from 'react';
+import Comment from './Comment'
 
 const CommentSection = props => {
-    return(
-        <div className='commentSection'>
-            <div className='comment'>Testing CommentSection</div>
-        </div>
-    )
+    console.log(props.comments);
+    return <div>{props.comments.map(c =>
+         <Comment username={c.username} key={Date.now} text={c.text} />
+    )}</div>;
+
+
+    
 }
 
 export default CommentSection;
