@@ -15,7 +15,7 @@ const dummyData = [
           "We've got more than just delicious coffees to offer at our shops!"
       },
       {
-        username: "biancasaurus",
+        username: "biancasaurus_",
         text: "Looks delicious!"
       },
       {
