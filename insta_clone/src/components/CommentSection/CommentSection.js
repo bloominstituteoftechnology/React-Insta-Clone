@@ -16,7 +16,7 @@ class CommentSection extends React.Component {
     e.preventDefault();
     const NewComment = [
       ...this.state.comments,
-      { text: this.state.commentInput, username: 'Troll' }
+      { text: this.state.commentInput, username: 'TheyCallmetheHotStepper' }
     ];
 
     this.setState({
@@ -35,12 +35,6 @@ class CommentSection extends React.Component {
     return (
       <div>
         <div style={comment1}>
-          <div style={ico}>
-            <i style={space} className="far fa-heart" />
-
-            <i style={space} className="far fa-comment" />
-          </div>
-
           {this.state.comments.map((c, index) => (
             <Comment text={c.text} username={c.username} key={index} />
           ))}
@@ -60,13 +54,6 @@ CommentSection.propTypes = {
   comments: PropTypes.arrayOf(
     PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
   )
-};
-
-const space = {
-  paddingRight: '10px'
-};
-const ico = {
-  fontSize: '25px'
 };
 
 const comment1 = {

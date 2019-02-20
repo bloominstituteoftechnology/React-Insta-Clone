@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../img/image.png';
 
-const SearchBar = () => {
+const SearchBar = ({ searchHandler, searchPost }) => {
   return (
     <div style={searchBar_container}>
       <div>
@@ -13,7 +13,14 @@ const SearchBar = () => {
         />
       </div>
       <div>
-        <input style={ico} type="text" placeholder="&#x1f50e" />
+        <form onSubmit={searchPost}>
+          <input
+            onKeyDown={searchHandler}
+            style={ico}
+            type="text"
+            placeholder="Search"
+          />
+        </form>
       </div>
       <div style={social_wrapper}>
         <div style={social}>
