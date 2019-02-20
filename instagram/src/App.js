@@ -42,10 +42,14 @@ class App extends Component {
     });
   };
 
+  // I put the search function inside CDU so I could be sure that this.state.searchText is current before setting the visible property accordingly.
+  // Note: I think I have to call prevProps in order to call prevState, even though I don't use prevProps.
   componentDidUpdate(prevProps, prevState) {
+    // Required conditional to avoid an infinite loop since I have CDU calling setState():
     if (this.state.searchText !== prevState.searchText) {
+      // Once again, to get at the data nested in this.state, I need a spread operator:
       let tempData = [...this.state.data];
-
+      // Nice to use the humble forEach to solve a problem. Here forEach() checks whether post.username includes the current searchText, and updates post.visible as true or false accordingly:
       tempData.forEach(post => {
         if (!post.username.includes(this.state.searchText)) {
           post.visible = false;
