@@ -1,0 +1,15 @@
+.comment-container {
+    padding: 1% 0;
+}
+.comm-flex {
+    display: flex;
+    padding: 1%;
+}
+.comm-name {
+    font-size: 1.6rem;
+    padding: 0 1%; 
+}
+
+.comm-text {
+    font-size: 1.6rem;
+}

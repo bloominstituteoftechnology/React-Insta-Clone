@@ -1,0 +1,67 @@
+
+.post-container {
+    max-width: 800px;
+  margin: 0 auto;
+}
+    
+    .post-wrap {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 0;
+        border: 1px solid #E6E6E6;
+        margin-top: 3rem;
+        width: 80%;
+        background-color: white;
+    }
+    
+    
+    .thumb-name {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    }
+    
+    .thumb-img {
+        width: 5rem;
+        margin: 0 3%;
+        border-radius: 50%;
+        height: 5rem;
+
+    }
+    
+    .username {
+    font-weight: bold;
+    font-size: 1.4rem;
+    }
+    
+    
+    .date {
+        color: grey;
+        font-size: 1.6rem;
+        font-weight: 500;
+        padding: 2%;
+    }
+    
+    .num-likes{
+        font-size: 1.5rem;
+        padding-bottom: 2%;
+        padding-left: 2%;
+        font-weight: bold;
+    }
+    
+    .like-icons {
+        font-size: 3rem;
+    }
+    .like-icons i {
+        padding: 2%;
+    }
+    .comm-form {
+        margin-top: 10px;
+    }
+    
+    .comm-input {
+        width: 80%;
+        height: 50px;
+        padding: 2%;
+        margin-left: 2%;
+    } 
