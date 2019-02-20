@@ -1,0 +1,41 @@
+.searchBarContainer {
+    height: 80px;
+    line-height: 40px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid grey;
+    
+}
+
+.searchBar {
+    align-self: center;
+}
+
+.logo-wrapper {
+    display:flex;
+    width: 200px;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid purple;
+}
+.logo-img {
+    margin-top: 20px;
+    height: 40px;
+}
+
+.logo-camera {
+    height: 40px;
+} 
+
+.social-icon {
+    width: 50px;
+}
+
+.social-icons-wrapper {
+    display:flex;
+    width: 200px;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid purple;
+}
