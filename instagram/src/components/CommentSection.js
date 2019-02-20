@@ -34,16 +34,32 @@ addComment = e => {
     })
   }
 
-
   
+
+  addLike = () => {
+    return this.props.obj.likes + 1
+  }
+  
+
+
   render() {
     return (
 <div className="timestamp">
+
+<div className='instaIcons'>
+            <i id='icon' onClick={this.addLike()} className="far fa-heart"></i>
+            <i id='icon' className="far fa-comment"></i>
+            </div>
+
+            <div className='instaFooter'>
+           <p className='likes'>{`${this.props.obj.likes} likes`}</p>
+            </div>
 
    { this.state.commentList.map(item => {
          return <Comment key={item.text} comment={item} />
     }) }
 
+    <p>{this.props.obj.timestamp}</p>
 
     <form onSubmit={this.addComment}>
 
@@ -53,7 +69,7 @@ addComment = e => {
         onChange={this.change}
         name="commentText"          />
 
-        <p>{this.props.obj.timestamp}</p>
+        
     </form>
 
 </div>)

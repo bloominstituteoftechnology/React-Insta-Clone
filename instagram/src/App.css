@@ -33,8 +33,8 @@
 }
 
 .instaPost {
-  max-width: 1000px;
-  border: 1px solid lightgrey;
+  max-width: 640px;
+  
 
 
 }
@@ -53,6 +53,7 @@
 
 .instaHeader p {
   font-weight: bold;
+  width: 640px;
 }
 
 .instaIcons {
@@ -72,7 +73,7 @@
 .instaFooter {
   display: flex;
   flex-direction: flex;
-  margin: 0px 10px;
+  
 }
 
 .comments {
@@ -110,7 +111,9 @@
   display: flex;
   justify-content: space-between;
   margin: 5px 0px;
- 
+  width: 100%;
+  border: 1px solid lightgrey;
+  padding: 5px;
 }
 
 .searchbar div i {
@@ -120,4 +123,17 @@
 .searchbar input {
   text-align: center;
   font-size: 1rem;
+}
+
+.postt {
+  border: 1px solid lightgrey;
+  margin: 5px 0px;
+  width: 640px;
+}
+
+.container {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

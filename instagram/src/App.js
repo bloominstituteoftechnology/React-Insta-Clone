@@ -6,39 +6,42 @@ import PostContainer from './components/PostContainer';
 import SearchBar from './components/SearchBar';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      dummyData: dummyData
+
+        postData: [],
+        filteredPosts: [],
+        SearchInput: ''
     };
   }
 
-
-
-  render() {
-    return (
-      <div className='instaPost'>
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header> */}
-        <SearchBar />
-        <PostContainer dummyData={this.state.dummyData} addComment={this.addComment} Change={this.Change}/>
-
-
-      </div>
-    );
+  componentDidMount() {
+      this.setState({ postData: dummyData});
   }
+
+  changeHandler = event => {
+      this.setState({ [event.target.name]: event.target.value });
+  };
+
+  searchHandler = e => {
+      this.changeHandler(e)
+      this.setState((prevState) => {
+          const filteredPostArray = prevState.postData.filter(post => post.username.includes(prevState.searchInput))
+          return {filteredPosts: filteredPostArray}
+      })
+  }
+
+
+render() {
+
+  return (
+<div className="container">
+      <SearchBar searchInput={this.state.searchInput} searchHandler={this.searchHandler}/>
+      <PostContainer dummyData={this.state.postData}
+      postData={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.postData} />
+</div>)
+}
 }
 
 
