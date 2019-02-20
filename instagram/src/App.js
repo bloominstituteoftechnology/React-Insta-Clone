@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import PostsPage from './components/PostsContainer/PostsPage';
-import LoginPage from './components/Login/Login';
-import authenticate from './components/Authentication/authenticate';
+import LoginPage from './components/Login/LoginPage';
+import withAuthenticate from './components/Authentication/withAuthenticate';
 
 class App extends Component {
   constructor() {
@@ -13,10 +13,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PostsPage />
+        <ComponentFromWithAuthenticate />
       </div>
     );
   }
 }
 
-export default authenticate(App)(LoginPage);
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(LoginPage);
+
+export default App;
