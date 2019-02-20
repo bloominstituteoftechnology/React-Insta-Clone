@@ -1,11 +1,10 @@
 .SearchBar {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 15px 15px 10px;
     width: 100%;
-    flex-wrap: wrap;
-    text-align: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     margin-bottom: 5px;
 }
