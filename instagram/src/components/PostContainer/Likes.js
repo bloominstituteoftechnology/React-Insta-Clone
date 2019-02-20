@@ -1,10 +1,10 @@
 import React from "react";
 
 class Likes extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      likes: Math.floor(Math.random() * 5000)
+      likes: props.post.likes
     };
   }
 
