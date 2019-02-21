@@ -1,30 +1,30 @@
 import React from 'react';
+import styled from 'styled-components';
 
 function CommentInput({ value, handleInput, handleAddComment }) {
   return (
     <form onSubmit={handleAddComment}>
-      <input
+      <Input
         onChange={handleInput}
-        style={addComment}
         placeholder="Add a comment"
         type="text"
         value={value}
       />
-      <i style={float} className="fas fa-ellipsis-h" />
+      <I className="fas fa-ellipsis-h" />
     </form>
   );
 }
 
-const addComment = {
-  borderStyle: 'none',
-  padding: '20px',
-  fontSize: '20px'
-};
+const Input = styled.input`
+  border-style: none;
+  padding: 20px;
+  font-size: 20px;
+`;
 
-const float = {
-  float: 'right',
-  margin: '25px 0',
-  marginRight: '10px'
-};
+const I = styled.input`
+  float: right;
+  margin: 25px 0;
+  margin-right: 10px;
+`;
 
 export default CommentInput;

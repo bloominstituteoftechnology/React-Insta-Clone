@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 class Login extends Component {
   constructor() {
@@ -37,10 +38,9 @@ class Login extends Component {
   };
   render() {
     return (
-      <div style={loginBox}>
+      <LoginBox>
         <h1>Login</h1>
-        <input
-          style={inputs}
+        <Inputs
           placeholder={'UserName'}
           onChange={this.handleUsername}
           value={this.state.username}
@@ -48,45 +48,42 @@ class Login extends Component {
           type="text"
         />
 
-        <input
-          style={inputs}
+        <Inputs
           placeholder={'Password'}
           onChange={this.handlePassword}
           value={this.state.password}
           name="password"
           type="text"
         />
-        <button style={button} onClick={this.signIn}>
-          Login
-        </button>
-      </div>
+        <Button onClick={this.signIn}>Login</Button>
+      </LoginBox>
     );
   }
 }
 
-const button = {
-  width: '75%',
-  fontSize: '30px',
-  borderStyle: 'none',
-  backgroundColor: 'white'
-};
+const Button = styled.button`
+  width: 75%;
+  font-size: 30px;
+  border-style: none;
+  background-color: white;
+`;
 
-const inputs = {
-  width: '70%',
-  padding: '10px',
-  margin: '10px'
-};
+const Inputs = styled.input`
+  width: 70%;
+  padding: 10px;
+  margin: 10px;
+`;
 
-const loginBox = {
-  margin: '50px auto',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  flexWrap: 'wrap',
-  width: '500px',
-  height: '300px',
-  backgroundColor: 'black',
-  color: 'white'
-};
+const LoginBox = styled.div`
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 300px;
+  background-color: black;
+  color: white;
+`;
 
 export default Login;

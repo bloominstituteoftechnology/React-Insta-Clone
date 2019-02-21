@@ -1,25 +1,29 @@
 import React from 'react';
+import styled from 'styled-components';
 
 function Comment({ username, text }) {
   return (
-    <div style={border}>
+    <Border>
       {' '}
-      <p style={padding}>
+      <Padding>
         {' '}
-        <span style={bold}>{username}</span> {text}
-      </p>
-    </div>
+        <Bold>{username}</Bold> {text}
+      </Padding>
+    </Border>
   );
 }
 
-const border = {
-  padding: '0 10px'
-};
-const padding = {
-  margin: '0'
-};
-const bold = {
-  fontWeight: 'bold',
-  color: '#333'
-};
+const Border = styled.div`
+  padding: 0 10px;
+`;
+
+const Padding = styled.p`
+  margin: 0;
+`;
+
+const Bold = styled.span`
+  font-weight: bold;
+  color: #333;
+`;
+
 export default Comment;

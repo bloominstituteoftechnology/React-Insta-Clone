@@ -2,16 +2,22 @@ import React from 'react';
 
 import Post from '../Post/Post';
 
-import './postcontainer.css';
+import styled from 'styled-components';
 
 function PostContainer({ search, posts }) {
   return (
-    <div className=" postcontainer">
+    <PostContainer1>
       {posts.map((post, index) => (
         <Post search={search} key={index} post={post} />
       ))}
-    </div>
+    </PostContainer1>
   );
 }
+
+const PostContainer1 = styled.div`
+  width: 60%;
+
+  margin: 30px auto;
+`;
 
 export default PostContainer;

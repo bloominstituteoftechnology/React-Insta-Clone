@@ -1,27 +1,28 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const SLikes = styled.div`
+  margin: 0 10px;
+  font-weight: bold;
+`;
+
+const I = styled.i`
+  margin: 5px 10px;
+  font-size: 25px;
+`;
 
 function Likes({ increaseLike, likes }) {
   return (
     <div>
-      <div style={numbers}>{likes}</div>
+      <SLikes>{likes}</SLikes>
 
-      <i onClick={increaseLike} style={space} className="far fa-heart" />
+      <I onClick={increaseLike} className="far fa-heart" />
 
-      <i style={space} className="far fa-comment" />
+      <I className="far fa-comment" />
     </div>
   );
 }
 
-const numbers = {
-  margin: '0 10px',
-  fontWeight: 'bold'
-};
-
-const space = {
-  margin: '5px 10px',
-
-  fontSize: ' 25px'
-};
 // const ico = {
 //   fontSize: '25px'
 // };
