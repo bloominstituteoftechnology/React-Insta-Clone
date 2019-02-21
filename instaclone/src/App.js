@@ -1,30 +1,22 @@
 import React, { Component } from 'react';
 import PostPage from "./components/PostPage"
-import authenticate from "./autentification/authenticate"
-import login from "./login/Login"
+import Login from "./../src/login/Login"
+import withAuthenticate from "./autentification/withAuthenticate"
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    this.state={
-      loggedIn : true,
-      display : " "
-    }
+  constructor(){
+    super()
+    this.setState = { }
   }
-
-
   render(){
     return (
-      <div>
-     
-        <authenticate />
-        <PostPage />
-        <login />
 
-        
+      <div>
+        <PostPage />
       </div>
     )
   }
 }
 
-export default App
+
+export default withAuthenticate(App)(Login)

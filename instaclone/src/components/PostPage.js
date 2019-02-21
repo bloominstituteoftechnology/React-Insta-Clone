@@ -19,7 +19,6 @@ class PostPage extends Component {
     })
   }
 
-
   handleIncrementCount = ()=>{
     this.setState (prevState=>{
       return {
