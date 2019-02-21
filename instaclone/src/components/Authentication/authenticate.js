@@ -7,15 +7,18 @@ const Authenticate = App => Login =>{
           super();
           this.state ={loggedIn: false};
       } 
-        // componentDidMount(){
-        // if (!localStorage.getItem('user')){this.setState(
-        //     {loggedIn: false}
-        // );
-        // }else{ this.setState({loggedIn: true})};
-    
+     componentDidMount(){
+     if (!localStorage.getItem('user')){
+       this.setState(
+       {loggedIn: false}
+    );
+     }else{ 
+       this.setState({loggedIn: true})
+      };
+    }
     
     render() {
-    if(this.state.loggedIn) { return <App /> }
+    if(this.state.loggedIn)  return <App /> 
     else {
       return <Login />
     }

@@ -10,6 +10,7 @@ class PostsPage extends React.Component{
     constructor() {
         super();
         this.state = {
+          search:'',
           dummy: []
         };
       };
