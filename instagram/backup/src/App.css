@@ -1,0 +1,194 @@
+.mainLogin{
+  text-align: center;
+  width: 60%;
+  margin: 117px auto;
+  border: 2px solid grey;
+  border-radius: 28px;
+  height: 95px;
+}
+
+.boxLogin{
+  margin-top: 20px;
+}
+
+.App {
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
+
+.search-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    
+}
+
+.left-search {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.title {
+    padding-left: 15px;
+    font-family: 'Grand Hotel', cursive;
+    font-size: 35px;
+}
+
+.mid-search {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.right-search{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#search-bar {
+    align-self: center;
+    text-align: center;
+    width: 200px;
+    height: 25px;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+    background-color: #fafafa;
+    outline: none;
+}
+
+#insta-logo {
+    padding-right: 15px;
+    border-right: 1px solid grey;
+}
+
+::placeholder {
+    padding: 5px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    padding-right: 20px;
+}
+
+
+.post-container {
+  width: 60%;   
+  margin: 0 auto;
+  text-align: center;
+}
+
+.post-header {
+  display: flex;
+  border: 1.5px solid #e6e6e6;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.thumbnail-img {   
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+h3 {
+  padding-left: 10px;
+}
+
+.post-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0;
+}
+
+
+
+
+.comment-text {
+  margin: 8px 0;
+}
+
+.comment-section-wrapper {
+  border: 1.5px solid #e6e6e6;
+  margin-top: -5px;
+  text-align: left;
+  padding: 10px 20px 5px;
+}
+
+.icons {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.likes {
+  padding-bottom: 10px;
+}
+
+.time-stamp {
+  font-size: 12px;
+  color: #9999AD;
+  font-weight: bold;
+}
+
+.comment-input {
+  width: 100%;
+  border-top: 1px solid #e6e6e6;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-comment {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  font-size: 14px;
+}
+
+.comment-dots {
+  width:  22px;
+}
