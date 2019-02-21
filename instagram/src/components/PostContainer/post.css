@@ -1,0 +1,108 @@
+.app-header{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center; */
+    /* margin-left: 25%; */
+    width: 100%;
+    max-width: 600px;
+    border: solid 1px silver;
+    background: lavender;
+    margin-bottom: 5%;
+}
+
+.userNameAndImage{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    justify-items: flex-start;
+    margin-right: 20px;
+    padding: 2%;
+}
+
+.thumbnail{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.username{
+    padding: 0 1.5%;
+    font-weight: bold;
+}
+
+.postedImage{
+    height: 550px;
+    width: 100%;
+}
+
+.reactions{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5%;
+}
+
+.heartContainer{
+    padding: 10px 0;
+}
+
+.heart {
+    background: url('../../instagramSprite/instagram-sprite.png') no-repeat -539px -423px;
+    width: 36px;
+    height: 34px;
+}
+
+.likes{
+    font-weight: bold;
+}
+
+.commentOnPost{
+    display: flex;  
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    /* justify-content: flex-start; */
+    /* justify-items: flex-start; */
+}
+
+.commentPostUl{
+  margin-left: -7%;
+  margin-top: 2%;
+  margin-bottom: 0;
+  padding-bottom: 3px;
+}
+
+
+.commentImg {
+	background: url('../../instagramSprite/instagram-sprite.png') no-repeat -538px -381px;
+	width: 38px;
+	height: 36px;
+}
+
+.timeStamp{
+    font-weight: 200;
+    color: gray;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+logo{
+    background-image: url('../../images/instagramPost.png');
+    /* width: 100px;
+    display: flex;
+    flex-direction: column; */
+  }
+/* 
+.banner{
+    background-image: url('../../images/instagramPost.png')
+} */

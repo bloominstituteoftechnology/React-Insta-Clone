@@ -1,0 +1,16 @@
+
+.searchBarContainer{
+    /* display: flex;
+    align-items: center; */
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid silver;
+    margin-bottom: 30px;
+}
+
+.searchInput{
+    /* padding: 5px;
+    width: 800px; */
+    /* display: flex;
+    align-items: center; */
+}
