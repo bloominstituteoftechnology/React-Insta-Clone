@@ -50,16 +50,16 @@ addComment = e => {
     return (
 <div className="timestamp">
 
-            <Likes likes={this.state.likes} />
+    <Likes likes={this.state.likes} />
 
            { this.state.commentList.map(item => {
              return <Comment key={item.text} comment={item} />
             }) }
 
-        <p>{moment(this.props.obj.timestamp, 'MMMM Do YYYY, LTS').format('M/e/gg')}</p>
+      <p>{moment(this.props.obj.timestamp, 'MMMM Do YYYY, LTS').format('M/e/gg')}</p>
          {/* {moment(this.props.timestamp, ‘MMMM Do YYYY, LTS’).format(‘dddd’)} */}
 
-      <form onSubmit={this.addComment}>
+    <form onSubmit={this.addComment}>
 
         <input className="commentsBar" 
         placeholder='Add a comment...'
@@ -68,7 +68,7 @@ addComment = e => {
         name="commentText"          />
 
         
-      </form>
+    </form>
 
 </div>
 )

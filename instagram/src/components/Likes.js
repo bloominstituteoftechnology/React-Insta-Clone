@@ -20,6 +20,7 @@ class Likes extends React.Component {
   render() {
   
     return (
+
         <div>
             <div className='instaIcons'>
               <i id='icon' onClick={this.addLike} className="far fa-heart"></i>
@@ -30,6 +31,7 @@ class Likes extends React.Component {
               <p className='likes'>{`${this.state.likes} likes`}</p>
             </div>
         </div>)
+        
   }
   }
   

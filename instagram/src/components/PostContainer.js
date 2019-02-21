@@ -9,19 +9,13 @@ const PostContainer = (props) => {
     
     return (
         <div >
-            
-            
-
+        
             {props.postData.map((item) => {
                 return (<div className='postt'>
                     <InstaPost instaPost={item}/> 
                     <CommentSection  commentList={item.comments} obj={item}/>
                 </div>)
             })}
-
-
-
-
 
         </div>
 
