@@ -29,3 +29,10 @@ export const Wrapper = styled.div`
 `
 
 
+export const TitleH = styled.h4`
+    font-family: 'Pacifico', cursive;
+    font-size:2rem;
+    width:80%;
+   text-align:center;
+    margin:0 auto;
+`

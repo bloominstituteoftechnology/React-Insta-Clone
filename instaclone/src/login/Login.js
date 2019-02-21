@@ -1,5 +1,5 @@
 import React from "react"
-import {LoginForm,InputStyle,Wrapper} from "./../reusableComp/styles."
+import {LoginForm,InputStyle,Wrapper,TitleH} from "./../reusableComp/styles."
 import {Button} from"reactstrap"
 class Login extends React.Component{
     constructor(props){
@@ -28,7 +28,7 @@ class Login extends React.Component{
         return(
 <Wrapper>
           <LoginForm>
-                <h5>Login Page</h5>
+                <TitleH>Instagram</TitleH>
                 <InputStyle
                 type="text"
                 name="userInput"
@@ -41,9 +41,9 @@ class Login extends React.Component{
                  value={this.state.passwordInput}
                  onChange={this.changeHandler}
                  placeholder="password"/>
-                <Button color="info" size="lg" block onClick={this.loginHandler}
+               <TitleH><Button color="info" size="lg" block onClick={this.loginHandler}
                 
-                > Login </Button>
+                > Login </Button></TitleH>
             </LoginForm>
 </Wrapper>
         )
