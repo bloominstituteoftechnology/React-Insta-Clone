@@ -1,0 +1,28 @@
+.login{
+    width: 80%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    width: 20%;
+    margin-top: 20px;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+.instagram-text {
+    width: 40%;
+}
+
+.alert {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
