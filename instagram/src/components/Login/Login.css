@@ -1,0 +1,186 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+/* .login a {
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+} */
+
+.login p {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 14px;
+}
+
+.login {
+  max-width: 935px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.box {
+  width: 335px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-card {
+  height: 370px;
+  margin: 110px auto 15px;
+}
+
+.login-card img {
+  width: 175px;
+  height: 61px;
+  margin: 22px auto 12px;
+}
+
+.login-card form {
+  margin: 0 auto;
+  padding-left: 42px;
+}
+
+.login-card input {
+  width: 250px;
+  height: 36px;
+  padding: 10px 4px 2px 8px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.login button {
+  width: 250px;
+  padding: 5px 9px;
+  text-align: center;
+  background: #3b96f0;
+  border: 1px solid rgb(46, 136, 226);
+  border-radius: 7px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+.login h4 {
+  margin: 0;
+  color: #999;
+}
+
+.login-fb {
+  font-size: 16px;
+  font-weight: bold;
+  color: #777;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+.fa-facebook {
+  font-size: 18px;
+  color: #3b5284;
+  margin-right: 5px;
+}
+
+.cta-signup {
+  margin: 0 auto;
+  font-size: 14px;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+/* .cta-signup a {
+  color: #5fa9f3;
+} */
+
+.cta-download {
+  display: flex;
+  justify-content: space-between;
+  width: 370px;
+  margin: 0 auto;
+}
+
+.cta-download img {
+  width: 32%;
+  height: 40px;
+}
+
+.footer-nav {
+  margin-top: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 38px 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #999;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 750px;
+}
+
+/* .footer-links a {
+  text-decoration: none;
+  color: #567b9b;
+  font-weight: bold;
+} */
+
+@media (max-width: 900px) {
+  .footer-nav {
+    width: 90%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .footer-links {
+    margin-bottom: 8px;
+    width: 90%;
+  }
+
+  .footer-links a {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 835px) {
+  .footer-links {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .login-card {
+    margin-top: 55px;
+  }
+
+  .login {
+    width: 95%;
+  }
+
+  .cta-download {
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cta-download img {
+    height: auto;
+    width: 85%;
+    margin: 0 auto 10px;
+  }
+
+  .footer-nav {
+    margin-top: 60px;
+  }
+}
