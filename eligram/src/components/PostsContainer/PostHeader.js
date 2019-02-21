@@ -6,7 +6,7 @@ const PostHeader = props => {
     return (
          <div className = "post-header">
             <div className= "tiny-image">
-                <img className="thumbnail" src = {props.thumbnailURL} alt="">
+                <img className="thumbnail" src = {props.thumbnailURL} alt="Thumbnail">
 
                 </img>
             </div>

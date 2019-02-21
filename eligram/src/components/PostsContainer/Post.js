@@ -8,30 +8,35 @@ import LikeSection from './LikeSection';
 class Post extends React.Component {
     constructor(props){
         super(props);
-        this.state ={
-            //likes: props.post.lies will go here
+        this.state = {
+           // likes: props.post.likes will go here
         };
     }
 
         //--forgot syntax look up
     // enter function to increase likes by 1 ie this.state.likes ++
    render() {
-    return(
-        // <div classname = "post">
-        //     {/* /*<PostHeader  //username={this.props.post.username} thumbnailUrl= /> */}
+        return(
+         <div className = "post">
+            <PostHeader username={this.props.post.username}
+             thumbnailUrl = {this.props.post.thumbnailUrl}  /> 
             
-        // </div>
 
-        // <div className = "image">
-        //     {/* //<img alt, classname, src{this.props.post.imgURL} */}
-        // </div>
+          <div className = "image">
+              <img alt = "Post Image" classname ="image" src={this.props.post.imageUrl} />
+              
+        
 
-        // {/* <LikeSection />
-        // <CommentSection
-        //     postId = {this.props.post.imageUrl}
-        //     comments =  */}
-    );
-}
+            </div>
+        
+
+       <LikeSection />
+        <CommentContainer
+            postId = {this.props.post.imageUrl}
+            comments = {this.props.post.comments} />
+          
+     );
+    }
 
 }
 
