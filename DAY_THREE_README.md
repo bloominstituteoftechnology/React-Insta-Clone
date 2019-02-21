@@ -7,7 +7,7 @@
 ### Daily Setup (Day III)
 
 - To start off today, your application should still be structured like yesterday, but now it should have a working search bar, comment input, and like icon.
-- Those aren't necessary, however, for what you will be doing today. You can still work on today's part of this project even if you aren't completely done with yesterday's portion.
+- Those aren't necessary, however, for what you will be doing today. You can stillork on t woday's part of this project even if you aren't completely done with yesterday's portion.
 
 ### Description (Day III)
 
