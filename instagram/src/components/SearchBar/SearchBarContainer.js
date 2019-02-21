@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../assets/logo.png';
+import Logo from '../../assets/newlogo.svg';
 import IGLogo from '../../assets/iglogo.png';
 import './SearchBar.css';
 

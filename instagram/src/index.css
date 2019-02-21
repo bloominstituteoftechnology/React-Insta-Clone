@@ -7,27 +7,27 @@ body {
 
 .comment-text {
   font-family: 'Courier New', Courier, monospace;
-    text-align: left;
-    padding: 2px;
-    margin-left: 4px;
+  text-align: left;
+  padding: 2px;
+  margin-left: 4px;
+}
+
+.comment-bar {
+  border-top: 4px solid #efefef;
+  width: 100%;
 }
 
 .comment {
-    font-weight: 300;
-    font-size: 14px;
+  font-weight: 300;
+  font-size: 14px;
 }
 
 .user {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
 }
 
 .App-header {
@@ -49,6 +49,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -59,11 +60,13 @@ body {
   width: 30%;
   margin: 5px auto;
 }
+
 .post-border {
   border: 1px solid #d3d3d3;
   margin: 15px 0;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
+
 .post-image-wrapper {
   height: 100%;
   width: 100%;
@@ -81,10 +84,12 @@ body {
   height: 50px;
   width: 50px;
 }
+
 .post-thumb {
   height: 100%;
   border-radius: 50%;
 }
+
 .like-section {
   display: flex;
   color: #000000;
@@ -110,13 +115,12 @@ body {
 }
 
 .image-wrapper {
-  display: lex; 
   align-content: center;
   height: 50px;
 }
 
 .logo-image {
-  height: 100%;
+  display: none;
 }
 
 .logo-image-text {
@@ -129,4 +133,41 @@ body {
 
 .social {
   width: 50px;
+}
+
+.form-group {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.login-form {
+  width: 500px;
+  background: #ffffff;
+  border-radius: 6px;
+  margin: 10px auto;
+  padding: 10px 25px;
+  border: 2px solid #e6e6e6;
+  align-content: center;
+}
+
+.loginbtn {
+  background: #3897f0;
+  color: #ffffff;
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  font-weight: "bold";
+  align-self: flex-end;
+}
+
+.login-text {
+  margin: 10px 10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.login-form img {
+  height: 100px;
 }
