@@ -1,6 +1,6 @@
 import React from 'react';
 import './login.css';
-
+import { Button } from 'reactstrap';
 
 class Login extends React.Component {
     constructor(props) {
@@ -31,7 +31,7 @@ class Login extends React.Component {
             value={this.state.password} onChange={this.handleInputChange}
                                                                                 />
           <br />
-          <button onClick={this.handleLoginSubmit}>Log In</button>
+          <Button color="primary" onClick={this.handleLoginSubmit}>Log In</Button>
          </form>
                     );}
                             };

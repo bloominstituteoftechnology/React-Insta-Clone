@@ -20,7 +20,7 @@ class CommentSection extends React.Component {
       addComment = e => { 
         e.preventDefault();
         const newComment = {
-          username: "null",
+          username: "",
           text: this.state.text,
         }
         this.setState({
