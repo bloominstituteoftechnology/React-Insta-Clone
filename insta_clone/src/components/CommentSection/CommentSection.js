@@ -34,11 +34,11 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div>
-        <div style={comment1}>
+        <Comment1>
           {this.state.comments.map((c, index) => (
             <Comment text={c.text} username={c.username} key={index} />
           ))}
-        </div>
+        </Comment1>
         <CommentInput
           handleAddComment={this.addComment}
           handleInput={this.handleInput}
@@ -56,11 +56,11 @@ CommentSection.propTypes = {
   )
 };
 
-const comment1 = {
-  borderBottom: '1px solid lightGray',
+const Comment1 = styled.div`
+  border-bottom: 1px solid lightGray;
 
-  margin: '0px 10px',
-  marginTop: '10px'
-};
+  margin: 0px 10px;
+  margin-top: 10px;
+`;
 
 export default CommentSection;

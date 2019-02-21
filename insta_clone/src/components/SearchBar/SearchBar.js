@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const SearchBar = ({ clear, searchHandler, searchPost }) => {
   return (
-    <SearchBar_container>
+    <SearchBarContainer>
       <div>
         <Img
           alt="instagram logo"
@@ -15,10 +15,10 @@ const SearchBar = ({ clear, searchHandler, searchPost }) => {
       </div>
       <div>
         <form onSubmit={searchPost}>
-          <Input onKeyDown={searchHandler} type="text" placeholder="Search" />
+          <Input onKeyDown={searchHandler} type="text" placeholder="🔍Search" />
         </form>
       </div>
-      <Social_wrapper>
+      <SocialWrapper>
         <Social>
           <i className="far fa-compass" />
         </Social>
@@ -28,8 +28,8 @@ const SearchBar = ({ clear, searchHandler, searchPost }) => {
         <Social>
           <i className="far fa-user" />
         </Social>
-      </Social_wrapper>
-    </SearchBar_container>
+      </SocialWrapper>
+    </SearchBarContainer>
   );
 };
 
@@ -49,7 +49,7 @@ const Social = styled.div`
   margin-right: 20px;
 `;
 
-const SearchBar_container = styled.div`
+const SearchBarContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -57,7 +57,7 @@ const SearchBar_container = styled.div`
   border: 2px solid lightgray;
 `;
 
-const Social_wrapper = styled.div`
+const SocialWrapper = styled.div`
   display: flex;
   font-size: 25px;
 `;

@@ -6,12 +6,24 @@ import SearchBar from '../SearchBar/SearchBar';
 
 function Header() {
   return (
-    <header className="header">
-      <img className="Logo" src={Logo} alt="" />
+    <Header>
+      <ImgLogo src={Logo} alt="" />
       <SearchBar />
-      <img className="Profile" src={Profile} alt="" />
-    </header>
+      <ImgLogo src={Profile} alt="" />
+    </Header>
   );
 }
+
+const Header = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 200px;
+`;
+
+const ImgLogo = styled.img`
+  width: 200px;
+  height: 50px;
+`;
 
 export default Header;
