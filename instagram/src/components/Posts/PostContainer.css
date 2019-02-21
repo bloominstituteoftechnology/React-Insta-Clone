@@ -1,0 +1,32 @@
+.post {
+    margin:6% auto 0 auto;
+    max-width:600px;
+    border:1px solid #D3D3D3;
+}
+
+.thumbnail {
+    max-width:40px;
+    max-height:40px;
+    border-radius:50%;
+}
+.post-header {
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    margin:2.5%;
+}
+
+.post-header span {
+    margin-left:2.5%;
+}
+
+.user-interaction {
+    margin:2.5% 2.5%;
+}
+
+.user-interaction * {
+    margin-bottom:1%;
+}
+
+
+
