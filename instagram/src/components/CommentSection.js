@@ -1,5 +1,7 @@
 import React from 'react';
 import Comment from './Comment'
+import moment from 'moment'
+import Likes from './Likes'
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -7,7 +9,7 @@ class CommentSection extends React.Component {
       this.state = {
         commentList: props.commentList,
         commentText: "", 
-
+        likes: props.obj.likes
         
       };
     }
@@ -18,7 +20,7 @@ addComment = e => {
     console.log(e.target)
   
     const newComment = {
-      username: 'sdgdfg',
+      username: 'UserName',
       text: this.state.commentText 
     }
     this.setState({
@@ -36,9 +38,11 @@ addComment = e => {
 
   
 
-  addLike = () => {
-    return this.props.obj.likes + 1
-  }
+//   addLike = () => {
+//     this.setState({
+//         likes: this.state.likes +1
+//     })
+//   }
   
 
 
@@ -46,22 +50,16 @@ addComment = e => {
     return (
 <div className="timestamp">
 
-<div className='instaIcons'>
-            <i id='icon' onClick={this.addLike()} className="far fa-heart"></i>
-            <i id='icon' className="far fa-comment"></i>
-            </div>
+            <Likes likes={this.state.likes} />
 
-            <div className='instaFooter'>
-           <p className='likes'>{`${this.props.obj.likes} likes`}</p>
-            </div>
+           { this.state.commentList.map(item => {
+             return <Comment key={item.text} comment={item} />
+            }) }
 
-   { this.state.commentList.map(item => {
-         return <Comment key={item.text} comment={item} />
-    }) }
+        <p>{moment(this.props.obj.timestamp, 'MMMM Do YYYY, LTS').format('M/e/gg')}</p>
+         {/* {moment(this.props.timestamp, ‘MMMM Do YYYY, LTS’).format(‘dddd’)} */}
 
-    <p>{this.props.obj.timestamp}</p>
-
-    <form onSubmit={this.addComment}>
+      <form onSubmit={this.addComment}>
 
         <input className="commentsBar" 
         placeholder='Add a comment...'
@@ -70,9 +68,10 @@ addComment = e => {
         name="commentText"          />
 
         
-    </form>
+      </form>
 
-</div>)
+</div>
+)
 }
 
 }
