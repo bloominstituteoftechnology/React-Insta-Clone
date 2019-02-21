@@ -21,6 +21,11 @@ class PostsPage extends Component {
     });
   }
 
+  clear() {
+    window.localStorage.clear();
+    window.location.reload();
+  }
+
   searchHandler = e => {
     console.log(this.state.searchPost);
 
@@ -33,6 +38,7 @@ class PostsPage extends Component {
     return (
       <div className="App">
         <SearchBar
+          clear={this.clear}
           searchPost={this.searchPost}
           searchHandler={this.searchHandler}
         />

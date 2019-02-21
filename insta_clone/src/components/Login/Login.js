@@ -14,7 +14,6 @@ class Login extends Component {
     if (localStorage.getItem('loggedIn') === 'true') {
       this.setState({ loggedIn: this.setState.loggedIn });
     }
-    localStorage.setItem('loggedIn', this.setState.loggedIn);
   }
 
   handleUsername = e => {

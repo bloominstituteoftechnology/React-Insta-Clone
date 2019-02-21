@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '../../img/image.png';
 
-const SearchBar = ({ searchHandler, searchPost }) => {
+const SearchBar = ({ clear, searchHandler, searchPost }) => {
   return (
     <div style={searchBar_container}>
       <div>
@@ -10,6 +10,7 @@ const SearchBar = ({ searchHandler, searchPost }) => {
           alt="instagram logo"
           src={Logo}
           className="logo-image"
+          onClick={clear}
         />
       </div>
       <div>
