@@ -29,10 +29,40 @@ export const Wrapper = styled.div`
 `
 
 
-export const TitleH = styled.h4`
+export const TitleH = styled.h1`
     font-family: 'Pacifico', cursive;
     font-size:2rem;
     width:80%;
-   text-align:center;
+    text-align:center;
     margin:0 auto;
+`
+
+//search bar styling 
+
+export const SearchBarDiv = styled.div`
+    display: block;
+    margin:0 auto;
+    margin-left:0%;
+    margin-top:4%;
+    margin-bottom: -5%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    color:black;
+
+`
+export const IconDiv = styled.div`
+    width:10%;
+    display:flex;
+    justify-content : space-between;
+
+`
+export const Horizontal = styled.hr`
+
+    color:black;
+    border:1px solid black;
+    width:100%;
+    margin-top:-6%;
+
 `
