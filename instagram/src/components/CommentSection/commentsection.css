@@ -1,0 +1,34 @@
+/* .commentSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 1.6rem;
+} */
+
+.commentSection p {
+  width: 97%;
+}
+
+.commentAdd {
+  outline: none;
+  border: none;
+  /* border: 1px solid red; */
+  width: 90%;
+  padding: 10px 0;
+}
+
+.commentForm {
+  margin: 0 auto;
+  border-top: 1px solid gray;
+  width: 97%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tripleDot {
+  margin-right: 3px;
+  cursor: pointer;
+}

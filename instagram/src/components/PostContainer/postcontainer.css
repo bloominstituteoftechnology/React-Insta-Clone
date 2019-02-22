@@ -1,0 +1,12 @@
+.post {
+  max-width: 600px;
+  margin: 10px auto;
+}
+
+.customCard {
+  border-radius: 0;
+}
+
+.cardImg {
+  border-radius: 0;
+}
