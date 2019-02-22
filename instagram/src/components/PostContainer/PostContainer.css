@@ -1,0 +1,44 @@
+.post-container{
+    width: 604px;
+    height: 904px;
+    border: 1px solid rgb(230,230,230);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px; 
+    background-color: white;
+}
+
+.header{
+    width: 100%;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.profile-picture{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-left: 17px;
+}
+
+.username{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 11px;
+}
+
+.post-picture-container{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+
+
