@@ -1,0 +1,23 @@
+/* PostContainer CSS Styles */
+
+
+
+
+
+
+/* Likes Container */
+.likesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+}
+
+.likesIcons {
+    padding-bottom: 10px;
+}
+
+.likesIconImage {
+    padding-right: 20px;
+}
