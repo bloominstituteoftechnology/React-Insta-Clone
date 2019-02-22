@@ -40,9 +40,6 @@ export const TitleH = styled.h1`
 //search bar styling 
 
 export const SearchBarDiv = styled.div`
-    display: block;
-    margin:0 auto;
-    margin-left:0%;
     margin-top:4%;
     margin-bottom: -5%;
     display:flex;
@@ -55,7 +52,8 @@ export const SearchBarDiv = styled.div`
 export const IconDiv = styled.div`
     width:10%;
     display:flex;
-    justify-content : space-between;
+    justify-content : space-around;
+    margin-right : 4%;
 
 `
 export const Horizontal = styled.hr`

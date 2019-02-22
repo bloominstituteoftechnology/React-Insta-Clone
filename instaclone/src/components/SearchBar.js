@@ -5,8 +5,9 @@ const SearchBar = (props)=>{
     const style={
         marginBottom:"7%",
         display:"flex",
-        width:"37%",
         justifyContent:"space-around",
+        fontSize :"1rem",
+        fontWeight : "bold"
     }
     return (
     <div>
@@ -20,7 +21,7 @@ const SearchBar = (props)=>{
                     // onChange={props.searchHandler}
                     // value={props.searchInput}
                     // name="searchInput"
-                    style={style} type="text" 
+                     type="text" 
                     placeholder="Search" />
             </div>
             <IconDiv>

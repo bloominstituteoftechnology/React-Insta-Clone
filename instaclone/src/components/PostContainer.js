@@ -12,7 +12,7 @@ const PostContainer = (props)=>{
                     <div key={new Date()}>
 
                         <div className="picture">
-                            <h4>{data.username}</h4>
+                            <h5>{data.username}</h5>
                             <div>
                                 <img className="thumb"  src={data.thumbnailUrl} alt="tumbnail"/>
                             </div>
@@ -23,7 +23,7 @@ const PostContainer = (props)=>{
                                  likes={data.likes}
                                  />
                     
-                        <h6>{data.timestamp}</h6>
+                        <h6 className="date">{data.timestamp}</h6>
 
                     </div>
                 )}
