@@ -1,31 +1,31 @@
-import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import React, { Component } from "react";
+import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
-      password: ''
+      username: "",
+      password: "",
     };
   }
 
   onChangeHandler = event => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   };
 
   login = event => {
     event.preventDefault();
-    localStorage.setItem('username', this.state.username);
+    localStorage.setItem("username", this.state.username);
     window.location.reload();
   };
 
   render() {
     return (
       <div>
-        <Form>
+        <Form onSubmit={this.login}>
           <FormGroup>
             <Label for="username">Username</Label>
             <Input
@@ -46,7 +46,7 @@ class Login extends Component {
               onChange={this.onChangeHandler}
             />
           </FormGroup>
-          <Button color="primary" onClick={this.login}>
+          <Button color="primary" type="submit">
             Log In
           </Button>
         </Form>

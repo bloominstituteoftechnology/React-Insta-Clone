@@ -1,72 +1,58 @@
-import React, { Component } from 'react';
-import Comment from '../CommentSection/Comment';
-import PostInteraction from '../PostInteraction/PostInteraction';
-import propTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { StyledCommentSection } from '../Styles/Styles';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import useInput from "../Hooks/useInput";
 
-import '../CommentSection/commentsection.css';
+import Comment from "../CommentSection/Comment";
+import PostInteraction from "../PostInteraction/PostInteraction";
 
-class CommentSection extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      comments: props.comments,
-      newComment: '',
-      likes: this.props.likes
-    };
-  }
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { StyledCommentSection } from "../Styles/Styles";
 
-  addNewComment = event => {
+import "../CommentSection/commentsection.css";
+
+const CommentSection = ({ likes: numOfLikes, comments: arrOfComments }) => {
+  const { value: newComment, changeHandler, clear } = useInput("");
+  const [comments, setComments] = useState(arrOfComments);
+  const [likes, setLikes] = useState(numOfLikes);
+
+  const addNewCommentHelper = event => {
     event.preventDefault();
-    this.setState({
-      comments: [
-        ...this.state.comments,
-        {
-          text: this.state.newComment,
-          username: localStorage.getItem('username')
-        }
-      ],
-      newComment: ''
-    });
+    const commentToAdd = {
+      text: newComment,
+      username: localStorage.getItem("username"),
+    };
+
+    setComments([...comments, commentToAdd]);
+    clear();
   };
 
-  onChangeHandler = event => {
-    this.setState({ [event.target.name]: event.target.value });
-  };
-
-  addLikes = () => {
-    this.setState({ likes: this.state.likes + 1 });
-  };
-
-  render() {
-    return (
-      <StyledCommentSection className="commentSection">
-        <PostInteraction likes={this.state.likes} addLikes={this.addLikes} />
-        {this.state.comments.map((comment, index) => {
-          return <Comment key={index} comment={comment} />;
-        })}
-        <form
-          onSubmit={event => this.addNewComment(event)}
-          className="commentForm">
-          <input
-            type="text"
-            className="commentAdd"
-            placeholder="Add a Comment..."
-            onChange={this.onChangeHandler}
-            name="newComment"
-            value={this.state.newComment}
-            autoComplete="off"
-          />
-          <FontAwesomeIcon icon="ellipsis-h" className="tripleDot" />
-        </form>
-      </StyledCommentSection>
-    );
-  }
-}
+  return (
+    <StyledCommentSection className="commentSection">
+      <PostInteraction likes={likes} setLikes={setLikes} />
+      {comments.map((comment, index) => {
+        return <Comment key={index} comment={comment} />;
+      })}
+      <form
+        onSubmit={event => addNewCommentHelper(event)}
+        className="commentForm">
+        <input
+          type="text"
+          className="commentAdd"
+          placeholder="Add a Comment..."
+          onChange={changeHandler}
+          name="newComment"
+          value={newComment}
+          autoComplete="off"
+        />
+        <FontAwesomeIcon icon="ellipsis-h" className="tripleDot" />
+      </form>
+    </StyledCommentSection>
+  );
+};
 
 CommentSection.propTypes = {
-  comments: propTypes.array.isRequired
+  comments: PropTypes.array.isRequired,
+  likes: PropTypes.number.isRequired,
 };
 
 export default CommentSection;

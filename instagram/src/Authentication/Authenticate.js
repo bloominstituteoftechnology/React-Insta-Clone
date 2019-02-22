@@ -1,25 +1,18 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from "react";
 
-const Authenticate = App =>
-  class extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        loggedIn: false
-      };
-    }
+const Authenticate = App => Login => () => {
+  const [loginStatus, setLoginStatus] = useState(false);
 
-    componentDidMount() {
-      if (localStorage.getItem('username')) {
-        this.setState({
-          loggedIn: true
-        });
-      }
+  useEffect(() => {
+    if (localStorage.getItem("username")) {
+      setLoginStatus(true);
     }
+  }, []);
 
-    render() {
-      return <App loggedIn={this.state.loggedIn} />;
-    }
-  };
+  if (loginStatus) {
+    return <App />;
+  }
+  return <Login />;
+};
 
 export default Authenticate;

@@ -1,24 +1,32 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import '../PostInteraction/postinteraction.css';
+import "../PostInteraction/postinteraction.css";
 
-const PostInteraction = props => {
-  // const { likes } = props;
+const PostInteraction = ({ setLikes, likes }) => {
+  const [liked, setIfLiked] = useState(false);
+
+  const AddLike = () => {
+    if (!liked) {
+      setLikes(prevLikes => prevLikes + 1);
+      setIfLiked(true);
+    }
+  };
+
   return (
     <div className="postInteractions">
       <FontAwesomeIcon
-        icon={['far', 'heart']}
+        icon={["far", "heart"]}
         size="2x"
         className="interactionIcons"
-        onClick={props.addLikes}
+        onClick={AddLike}
       />
       <FontAwesomeIcon
-        icon={['far', 'comment']}
+        icon={["far", "comment"]}
         size="2x"
         className="interactionIcons"
       />
-      <p className="likes">{props.likes} likes</p>
+      <p className="likes">{likes} likes</p>
     </div>
   );
 };

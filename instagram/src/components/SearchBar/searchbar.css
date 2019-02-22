@@ -6,6 +6,10 @@
   width: 100%;
 }
 
+.search-form {
+  width: 35%;
+}
+
 .searchBarInput {
   padding: 7px;
   border-radius: 5px;

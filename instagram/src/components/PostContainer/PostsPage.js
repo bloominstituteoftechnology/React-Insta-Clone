@@ -1,50 +1,42 @@
-import React, { Component } from 'react';
-import dummyData from '../../dummy-data';
-import PostContainer from '../PostContainer/PostContainer';
-import SearchBar from '../SearchBar/SearchBar';
+import React, { useEffect, useState } from "react";
+import useInput from "../Hooks/useInput";
 
-class PostsPage extends Component {
-  constructor() {
-    super();
-    this.state = {
-      postData: [],
-      search: ''
-    };
-  }
+import dummyData from "../../dummy-data";
 
-  componentDidMount() {
+import PostContainer from "../PostContainer/PostContainer";
+import SearchBar from "../SearchBar/SearchBar";
+
+const storage = JSON.parse(localStorage.getItem("posts"));
+const initalState = !storage ? [] : storage;
+
+const PostsPage = () => {
+  const [postData, setPostData] = useState(initalState);
+  const { value, changeHandler } = useInput("");
+
+  useEffect(() => {
     setTimeout(() => {
-      this.setState({
-        postData: dummyData
-      });
-    }, 800);
-  }
+      localStorage.setItem("posts", JSON.stringify(dummyData));
+      setPostData(JSON.parse(localStorage.getItem("posts")));
+    }, 500);
+  }, []);
 
-  search = event => {
-    this.setState({
-      search: event.target.value
-    });
-  };
+  // Filter posts based on search term
+  let filterSearch = postData.filter(
+    post => post.username.indexOf(value) !== -1,
+  );
+  // Creates posts
+  const posts = filterSearch.map((postInfo, index) => {
+    return <PostContainer postInfo={postInfo} key={postInfo.timestamp} />;
+  });
 
-  render() {
-    let filterSearch = this.state.postData.filter(post => {
-      return post.username.indexOf(this.state.search) !== -1;
-    });
-    return (
-      <div className="appContainer">
-        {!this.state.postData.length ? (
-          <h1 className="loadingScreen">Loading...</h1>
-        ) : (
-          <div>
-            <SearchBar stateSearch={this.state.search} search={this.search} />
-            {filterSearch.map(postInfo => (
-              <PostContainer postInfo={postInfo} key={postInfo.timestamp} />
-            ))}
-          </div>
-        )}
-      </div>
-    );
-  }
-}
+  if (!postData.length) return <h1 className="loadingScreen">Loading...</h1>;
+
+  return (
+    <div className="appContainer">
+      <SearchBar search={value} searchHandler={changeHandler} />
+      {posts}
+    </div>
+  );
+};
 
 export default PostsPage;
