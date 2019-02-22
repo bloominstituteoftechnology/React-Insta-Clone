@@ -1,5 +1,30 @@
 const dummyData = [
   {
+    username: "tomtarpey",
+    thumbnailUrl:
+      "https://images-na.ssl-images-amazon.com/images/I/7176SRs4%2BsL.png",
+
+    imageUrl:
+      "https://i.imgur.com/gSvLLhB.jpg",
+    likes: 9000,
+    timestamp: "July 17th 2018, 12:42:40 pm",
+    comments: [
+      {
+        username: "tomtarpey",
+        text:
+          "UNIX FTW!!"
+      },
+      {
+        username: "biancasaurus",
+        text: "Looks AMAZING!"
+      },
+      {
+        username: "martinseludo",
+        text: "Can't wait to try UNIX!"
+      }
+    ]
+  },
+  {
     username: "philzcoffee",
     thumbnailUrl:
       "https://tk-assets.lambdaschool.com/ecd33d34-c124-4b75-92d2-e5c52c171ed8_11201517_887808411287357_1307163552_a.jpg",
@@ -10,15 +35,18 @@ const dummyData = [
     timestamp: "July 17th 2017, 12:42:40 pm",
     comments: [
       {
+        index: 0,
         username: "philzcoffee",
         text:
           "We've got more than just delicious coffees to offer at our shops!"
       },
       {
+        index: 1,
         username: "biancasaurus",
         text: "Looks delicious!"
       },
       {
+        index: 2,
         username: "martinseludo",
         text: "Can't wait to try it!"
       }
