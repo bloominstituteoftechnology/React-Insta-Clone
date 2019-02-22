@@ -1,0 +1,18 @@
+.search-bar-container {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
+
+.camera-logo {
+    width: 40px;   
+}
+
+.camera-logo img {
+    width: 100%;
+}
