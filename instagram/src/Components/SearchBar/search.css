@@ -1,0 +1,30 @@
+/* old styling in comments */
+
+.app-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    max-width: 604px;
+    width: 100%;
+}
+.header-img {
+    height: 30px;
+    margin-right: 10px;
+}
+i{
+    margin: 0 5px;
+}
+.vertical-line{
+    border-left: 1px solid grey;
+}
+
+.middle{
+    max-width: 400px;
+    width: 31%;
+}
+
+.search-box{
+    width: 100%;
+    border-radius: 3px;
+}
