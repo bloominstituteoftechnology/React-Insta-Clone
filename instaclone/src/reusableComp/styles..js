@@ -53,7 +53,7 @@ export const IconDiv = styled.div`
     width:10%;
     display:flex;
     justify-content : space-around;
-    margin-right : 4%;
+    margin-right :
 
 `
 export const Horizontal = styled.hr`

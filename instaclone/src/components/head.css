@@ -39,17 +39,18 @@ input {
 .picture > h5{
     font-size: 1.3rem;
     color:black;
-    margin-top:9%;
+    margin-top:10%;
     
 }
 
 .picture , .picture >h5 {
     margin-bottom : 4%;
 }
+
 .thumb{
-    margin-top:5%;
+    margin-top:2%;
     border-radius: 50%;
-    width:60%;
+    width:50%;
     height:auto;
 }
 
