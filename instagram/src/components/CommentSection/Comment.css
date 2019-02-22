@@ -1,0 +1,11 @@
+.user-comment-container {
+    margin-bottom: 5px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.comment-text {
+    padding-left: 1%;
+}

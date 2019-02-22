@@ -1,0 +1,77 @@
+.header-container {
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+}
+
+.search-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1080px;
+    height: 76px;
+}
+
+.search-bar-container form {
+    width: 40%
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 175px;
+}
+
+.logo-container:hover {
+    cursor: pointer;
+}
+
+.logo-container img {
+    height: 40px;
+    width: 40px;
+}
+
+.logo-text {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.logo-divider {
+    font-size: 3.5rem;
+    padding-bottom: 5px;
+}
+
+.search {
+    border: 1px solid white;
+    background-image: url(https://png.icons8.com/ios-glyphs/48/000000/search.png);
+    background-repeat: no-repeat;
+    background-size: 14px;
+    background-position: 33%;
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 35%;
+}
+
+.search-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 12%;
+    min-width: 100px;
+}
+
+.search-icon-container img {
+    height: 30px;
+    width: 30px;
+}
+
+.search-icon-container img:hover {
+    cursor: pointer;
+}

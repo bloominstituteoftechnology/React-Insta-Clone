@@ -1,0 +1,55 @@
+.comment-container {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    padding: 0 2.5%;
+}
+
+.comment-container form {
+    height: 56px;
+}
+
+.comment-container form input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.comment-icon-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-icon-container img {
+    height: 28px;
+    width: 28px;
+}
+
+.comment-icon-container img:hover {
+    cursor: pointer;
+}
+
+.heart-speech-upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 46px;
+    width: 20%;
+}
+
+.likes-count {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.time-stamp {
+    color: gray;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.comment-speech-bubble {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
