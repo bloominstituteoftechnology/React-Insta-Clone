@@ -1,0 +1,80 @@
+/* .content-container{
+    width: 64.4%;
+    border: 1px solid lightgrey;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    padding:2rem;
+    background-color: white;
+}
+
+.user-thumbnail img{
+    border-radius: 50%;
+    width: 4rem;
+    height: auto;
+}
+
+.user-name{
+    font-size: 1.2rem;
+    margin-left: 1rem;
+} */
+
+/* .comments-container{
+    padding-top: 1rem;
+    width:94%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.buttons{
+    width: 8rem;
+
+    display:flex;
+    justify-content: space-between;
+} */
+
+/* .buttons i{
+    font-size: 3rem;
+} */
+
+/* .likes{
+    margin-top: 1rem;
+} */
+
+.add-comment{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+
+}
+
+.add-comment{
+    padding: 2rem 0rem;
+    border-top: 1px solid lightgrey;
+    margin-top: 1rem;
+}
+
+/* .add-comment input{
+    width:95%;
+    border: none;
+    font-size: 2rem;
+} */
+
+.add-comment .settings{
+    color: black;
+}
+
+.time{
+    margin-top: 1rem;
+}
+
+/* button.heart{
+    border: none;
+    background: none;
+    color: grey;
+    cursor: pointer;
+} */
