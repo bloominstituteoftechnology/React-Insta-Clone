@@ -1,0 +1,84 @@
+.post {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem auto;
+  width: 600px;
+}
+
+.post__header {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #efefef;
+  border-bottom: none;
+  display: flex;
+  align-content: center;
+  border-radius: 3px;
+}
+
+.post__body {
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid #efefef;
+  border-top: none;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.post__body__buttons {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main--buttons i {
+  margin: 0 0.75rem;
+}
+
+.main--buttons i:first-child {
+  margin: 0 0.75rem 0 0;
+}
+
+.fa-bookmark .far {
+  justify-self: flex-end;
+}
+
+.post__likes {
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.post__timestamp {
+  margin-top: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.post__name {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-content: center;
+  padding: 3px 0.8rem 0;
+}
+
+.post__profile {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.post__image {
+  width: 100%;
+  height: 100%;
+}
