@@ -1,6 +1,9 @@
 import React from 'react' 
+import styled from 'styled-components'
 
-
+const BTN = styled.button`
+background-color: red`
+;
 
 class Login extends React.Component {
   state = {
@@ -24,7 +27,7 @@ class Login extends React.Component {
           value={this.state.inputText}
           onChange={this.handleChanges}
         />
-        <button onClick={this.signIn}>Sign in</button>
+        <BTN onClick={this.signIn}>Sign in</BTN>
       </div>
     );
   }
