@@ -8,7 +8,7 @@ import SearchBar from './SearchBar'
 const PostContainer = (props) => {
     
     return (
-        <div >
+        <div className='postfeed'>
         
             {props.postData.map((item) => {
                 return (<div className='postt'>
