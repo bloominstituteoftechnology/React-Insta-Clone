@@ -1,0 +1,40 @@
+
+.custom-container {
+        margin-top: 30px;
+        padding: 0 !important;
+}
+
+.profile-img {
+        border-radius: 50%;
+        height: 50px;
+}
+
+.flex-start {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border: 1px solid lightgray;
+    }
+
+    .custom-border {
+        border-left: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+    }
+
+
+
+    .post-img {
+       width: 100%;
+}
+
+.custom-icon {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .flex-evenly {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
