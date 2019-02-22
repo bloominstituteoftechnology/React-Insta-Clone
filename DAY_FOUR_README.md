@@ -24,7 +24,7 @@
 - Re-factor your `PostContainer` component use only styled components
 
   - Start with the `UserThumbnail` and `Username`
-  - Note that the `Username` styles could most certainly be used by your `CommentSection` component as well.
+  - Note that the `Username` styles could most certainly be used by your `CommentContainer` component as well.
   - To achieve this, you'll simply just build out your reusable `styled-component` inside of a `Styles/Reusables` directory. This is where you could store all of your reusable styled components and export them out of their respective files to then import them for reuse.
     - Notice that the `Username` on top of the Post is a bit bolder than the `Username`'s found in the comment section. If there is a way to make this reusable styled component accept a prop that will distinguish it from being now is the time to figure that out.
 
