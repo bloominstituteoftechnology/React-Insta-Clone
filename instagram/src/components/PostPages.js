@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-
 import dummyData from '../dummy-data';
 import PostContainer from './PostContainer';
 import SearchBar from './SearchBar';
@@ -32,6 +30,14 @@ class PostPages extends Component {
       })
   }
 
+  // Search = event => {
+  //   const posts = this.state.postData.filter(post => {
+  //     if (post.username.includes(event.target.value)) {
+  //       return post
+  //     }
+  //   })
+  //   this.setState({ filteredPosts: posts })
+  // }
 
 
 render() {

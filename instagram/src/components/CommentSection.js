@@ -10,7 +10,6 @@ class CommentSection extends React.Component {
         commentList: props.commentList,
         commentText: "", 
         likes: props.obj.likes
-        
       };
     }
   
@@ -36,10 +35,6 @@ addComment = e => {
     })
   }
 
-
-  
-
-
   render() {
     return (
 <div className="timestamp">
@@ -54,14 +49,11 @@ addComment = e => {
          {/* {moment(this.props.timestamp, ‘MMMM Do YYYY, LTS’).format(‘dddd’)} */}
 
     <form onSubmit={this.addComment}>
-
         <input className="commentsBar" 
         placeholder='Add a comment...'
         value={this.state.commentText}
         onChange={this.change}
         name="commentText"          />
-
-        
     </form>
 
 </div>
