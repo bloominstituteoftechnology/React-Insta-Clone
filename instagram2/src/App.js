@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import "../Header/Header.css";
+import "../Header/Header.js";
+
 // import dummyData from './dummy-data';
 // import PostsContainer from './components/PostsContainer/PostsContainer';
 // import SearchBar from './components/SearchBar/SearchBarContainer';
@@ -14,8 +17,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <SearchBar /> */}
-        {/* <PostsContainer posts={this.state.posts} /> */}
+                <Header />
+
+        <SearchBar />
+        <PostsContainer posts={this.state.posts} />
       </div>
     );
   }
