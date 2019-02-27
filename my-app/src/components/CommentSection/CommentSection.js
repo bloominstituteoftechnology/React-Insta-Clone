@@ -19,7 +19,7 @@ class CommentSection extends React.Component {
             comments: [
                 ...this.state.comments,
                 {
-                    text: this.state.comments,
+                    text: this.state.comment,
                     username: 'Groucho Marx'
                 }
             ],
@@ -49,11 +49,11 @@ class CommentSection extends React.Component {
                 <Icon.MessageCircle className='icons' />
              </div>
               <p>{this.state.likes} likes</p>
-              {this.state.comments.map((commnet,i) => {
+              {this.state.comments.map((comment,i) => {
                 return (
                  <div className='comment' key={i}>
                      <h3>{comment.username}</h3>
-                     <p>{commnet.text}</p>
+                     <p>{comment.text}</p>
                  </div>
                 )
             })}
