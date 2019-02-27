@@ -1,7 +1,14 @@
+    // src.App.js
 import React, { Component } from 'react';
-import './App.css';
-import "../Header/Header.css";
-import "../Header/Header.js";
+import '../src/App.css';
+import "../src/components/Header/Header.css";
+import "../src/components/Header/Header";
+import ReactDOM from 'react-dom';
+import Header from '../src/components/Header/Header';
+import logo from '../sprite.png';
+
+// import Header from '../components/Header/Header';
+
 
 // import dummyData from './dummy-data';
 // import PostsContainer from './components/PostsContainer/PostsContainer';
@@ -14,19 +21,28 @@ class App extends Component {
       // posts: dummyData
     };
   }
+
   render() {
     return (
       <div className="App">
-                <Header />
+        <Header />
+        <Header />
 
-        <SearchBar />
-        <PostsContainer posts={this.state.posts} />
+        {/* <SearchBar /> */}
+        {/* <PostsContainer posts={this.state.posts} /> */}
+        
       </div>
+      
     );
   }
 }
 
+
+
 export default App;
+
+
+
 
 
 
