@@ -6,13 +6,15 @@ class Likes extends React.Component {
       super(props);
       this.state = {
   
-        likes: props.likes
+        likes: props.likes,
+        isLiked: false
       }
     }
   
     addLike = () => {
         this.setState({
-            likes: this.state.likes +1
+            isLiked: !this.state.isLiked,
+            likes: this.state.isLiked  === false ? this.state.likes + 1 : this.state.likes - 1
         })
     }
 
