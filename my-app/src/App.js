@@ -1,26 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-// import dummyData from './dummy-data';
+import PostContainer from './components/PostContainer/PostContainer';
+import SearchBar from './components/SearchBar/SearchBarContainer';
+import dummyData from './dummy-data';
 
-class App extends Component {
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+     dummyData: [],
+     searchdata: []
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      dummyData: dummyData
+    })
+  }
+
+  searchBarHandler = e => {
+    const post = this.state.dummyData.filter( post => {
+      if (post.username.icludes(e.target.value)) {
+        return post
+      }
+    });
+    this.setState({
+      searchData: post
+    })
+
+      
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+       <SearchBar searchPosts={this.searchBarHandler}/>
+       <PostContainer postData={
+         this.state.searchData.length > 0 ?
+         this.state.searchData :
+         this.state.dummyData} />
       </div>
     );
   }
