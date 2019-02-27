@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import '../src/App.css';
-// import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import SearchBar from '../components/SearchBar/SearchBar';
-import PostsContainer from '../components/SearchBar/PostContainer';
+import PostContainer from '../components/PostContainer/PostContainer';
 
-class App extends Component {
+class App extends React.Component {
   // constructor() {
   //   super();
   //   this.state = {
@@ -15,9 +15,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <SearchBar />
-        <PostsContainer />
+        <PostContainer />
         {/* // posts={this.state.posts}
          /> */}
         

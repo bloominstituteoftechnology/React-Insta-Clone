@@ -2,9 +2,9 @@ import React from 'react';
 
 const PostContainer = props => {
     return (
-        <h1>Search Bar</h1>
+        <h2>Post Container</h2>
     )
 }
 
-export default PostContainer;
+export default PostsPage;
 
