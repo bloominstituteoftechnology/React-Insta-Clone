@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 const PostContainer = (props) => {
     
     return (
-        <div className='postfeed'>
+        <div className='postfeed' key={Date.now()}>
         
             {props.postData.map((item) => {
                 return (<div className='postt'>

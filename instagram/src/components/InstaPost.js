@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 const InstaPost = (props) => {
 
@@ -7,16 +7,20 @@ const InstaPost = (props) => {
         <div>
 
             <div className='instaHeader'>
-            <img src={props.instaPost.thumbnailUrl}/>
+            <img src={props.instaPost.thumbnailUrl} alt=""/>
             <p>{props.instaPost.username}</p>
             </div>
 
-            <img src={props.instaPost.imageUrl}/>
+            <img src={props.instaPost.imageUrl} alt=""/>
 
 
 
         </div>
     )
+}
+
+InstaPost.propTypes = {
+    instaPost: PropTypes.object.isRequired
 }
 
 export default InstaPost

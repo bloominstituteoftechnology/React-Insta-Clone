@@ -2,6 +2,7 @@ import React from 'react';
 import Comment from './Comment'
 import moment from 'moment'
 import Likes from './Likes'
+import PropTypes from 'prop-types';
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class CommentSection extends React.Component {
     }
   
 
-addComment = e => {
+  addComment = e => {
     e.preventDefault();
     console.log(e.target)
   
@@ -60,6 +61,11 @@ addComment = e => {
 )
 }
 
+}
+
+CommentSection.propTypes = {
+  commentList: PropTypes.array.isRequired,
+  obj: PropTypes.object.isRequired
 }
 
 export default CommentSection
