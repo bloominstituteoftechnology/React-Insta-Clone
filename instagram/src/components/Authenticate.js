@@ -7,7 +7,7 @@ const authenticate = App => (Login) =>
         super(props);
         this.state={
             user:'',
-            pass:'',
+            
             loggedin: false,
         }
 }
