@@ -2,7 +2,7 @@ import React from 'react';
 import CommentSection from './CommentSection'
 import InstaPost from './InstaPost'
 import SearchBar from './SearchBar'
-
+import PropTypes from 'prop-types';
 
 
 const PostContainer = (props) => {
@@ -22,6 +22,12 @@ const PostContainer = (props) => {
         
     )
 }
+
+PostContainer.propTypes = {
+    postData: PropTypes.array.isRequired,
+    dummyData: PropTypes.array.isRequired,
+    
+};
 
 export default PostContainer
 
