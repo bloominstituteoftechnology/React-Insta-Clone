@@ -1,11 +1,22 @@
 import React from 'react';
 
 
-const CommentSection = props => {
+class CommentSection extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: props.comments,
+            likes: props.likes
+        };
+      }
+    
+render() {
     return (
-        <p>Comment Section</p>
-
+        <div className='commentSection'>
+        <div className='likeAndComment'></div>
+        </div>
     )
+}
 }
 
 export default CommentSection;
