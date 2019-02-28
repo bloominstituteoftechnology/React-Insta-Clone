@@ -1,0 +1,35 @@
+.searchBar{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .searchBarLeft {
+    margin: 25px;
+  }
+  
+  .instaIcon {
+    margin-right: 12px;
+  }
+  
+  .instaCursive {
+    border-left: 1px solid black;
+    width: 120px;
+    height: 42px;
+  }
+  
+  .form-group {
+    margin: 25px;
+  }
+  
+  .searchBarRight {
+    margin: 25px;
+    display: flex;
+  }
+  
+  .navIcons {
+    margin: 15px;
+  }
+  
+  #exampleSearch {
+    text-align: center;
+  }
