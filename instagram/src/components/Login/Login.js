@@ -1,6 +1,6 @@
 import React from 'react' 
-import BTN from '../Styled Components/StyledComp'
-
+import {BTN} from '../Styled Components/StyledComp'
+import {LoginBar} from "../Styled Components/StyledComp"
 
 
 
@@ -25,8 +25,7 @@ class Login extends React.Component {
       <img className="loginlogo" src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png'/>
 
         <p>Username:</p>
-        <input
-          className="loginbar"
+        <LoginBar
           type="text"
           value={this.state.inputText}
           onChange={this.handleChanges}
@@ -44,3 +43,5 @@ class Login extends React.Component {
 
 
 export default Login
+
+

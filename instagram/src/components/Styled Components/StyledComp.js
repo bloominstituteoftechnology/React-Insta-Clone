@@ -13,5 +13,11 @@ background-color: #3FAEFF;
 
 ;`
 
+const LoginBar = styled.input`
+width: 250px;
+height: 30px;
+margin-bottom: 30px
+;`
 
-export default BTN
+
+export {BTN, LoginBar};
