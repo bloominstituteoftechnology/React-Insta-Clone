@@ -1,0 +1,174 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.instaPost {
+  max-width: 640px;
+  
+
+
+}
+
+.instaHeader {
+  display: flex;
+  align-items: center;
+}
+
+.instaHeader img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30x;
+  margin: 15px;
+}
+
+.instaHeader p {
+  font-weight: bold;
+  width: 640px;
+}
+
+.instaIcons {
+  display: flex;
+  flex-direction: flex;
+}
+
+.instaIcons i {
+  margin: 5px 10px;
+}
+
+.likes {
+  font-weight: bold;
+  margin: 10px 3px;
+}
+
+.instaFooter {
+  display: flex;
+  flex-direction: flex;
+  
+}
+
+.comments {
+  display: flex;
+  flex-direction: flex;
+  margin: 5px 10px;
+}
+
+.commentsBar {
+  width: 610px;
+  padding: 15px 5px;
+  display: flex;
+  flex-direction: flex;
+  margin: 10px;
+  border: 1px solid white;
+  border-top: 1px solid lightgrey;
+  font-size: 1rem;
+}
+
+.asd {
+  border: 1px solid red;
+}
+
+#root1 {
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar img {
+  width: 150px;
+  height: 40px;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  width: 60%;
+  border: 1px solid lightgrey;
+  padding: 10px 5px;
+  position: fixed;
+  background: white;
+}
+
+.searchbar div i {
+  margin: 10px;
+}
+
+.searchbar input {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.postt {
+  border: 1px solid lightgrey;
+  margin: 5px 0px;
+  width: 640px;
+}
+
+.container {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginlogo {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+.loginbar {
+  width: 250px;
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+.logindiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  border: 1px solid lightgrey;
+  border-radius: 15px;
+  background: #EEEEEE;
+  justify-content: center;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.postfeed {
+  margin-top: 70px;
+}
