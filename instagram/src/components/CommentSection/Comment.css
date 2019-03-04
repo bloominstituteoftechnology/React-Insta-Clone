@@ -1,0 +1,19 @@
+.comment {
+    display: flex;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+
+.comment p {
+    margin: 0;
+}
+
+ .username {
+    padding-right: 1rem;
+    font-weight: bold;
+}
+
+.text-comment {
+    font-weight: normal;    
+}

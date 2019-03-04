@@ -1,0 +1,24 @@
+.post-header img{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.post-header {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post-header p {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.post-style {
+    border: 2px solid lightgrey;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    height: auto;
+    color: black;
+    width: 40%;
+}
