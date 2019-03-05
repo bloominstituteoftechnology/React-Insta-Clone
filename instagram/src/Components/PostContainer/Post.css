@@ -2,6 +2,8 @@
     text-align: center;
 }
 
-.logo {
+.thumb-logo {
     border-radius: 50%;
+    height: 50px;
+    padding: 10px;
 }

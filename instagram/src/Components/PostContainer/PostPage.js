@@ -3,8 +3,11 @@ import dummyData from '../../dummy-data';
 import PostContainer from './PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
 import './Post.css';
+import styled from 'styled-components';
 
+const header = styled.header `
 
+`;
 class PostPage extends Component {
     constructor() {
         super();
@@ -16,7 +19,10 @@ class PostPage extends Component {
     render() {
         return (
             <div className="post-container">
-                <SearchBar />
+            <header>
+            <SearchBar />
+            </header>
+                
                 <PostContainer posts = {this.state.posts} />
             </div>
         );

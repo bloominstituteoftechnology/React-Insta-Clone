@@ -7,7 +7,7 @@ import CommentContainer from '../CommentSection/CommentContainer';
     return (
         <div>
             <h3 className="post-header"> 
-                <img src= {props.post.thumbnailUrl} alt="thumbphoto" className="logo"/>
+                <img src= {props.post.thumbnailUrl} alt="thumbphoto" className="thumb-logo"/>
                 {props.post.username}
             </h3>
             <div>
