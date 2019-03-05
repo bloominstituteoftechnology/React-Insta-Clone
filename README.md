@@ -61,4 +61,4 @@ Your post container should look something like this:
 ### Stretch Problems (Day I)
 
 - Implement the ability to comment on a post with the `Add a comment...` input.
-- Use the [moment.js](https://momentjs.com/) library dynamically format the timestamp into a human-readable format like how it is being displayed in the screenshot.
+- Use the [moment.js](https://momentjs.com/) library dynamically format the timestamp into a human-readable format like how it is being displayed in the screenshot. 
