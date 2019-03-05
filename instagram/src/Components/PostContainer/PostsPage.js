@@ -11,7 +11,7 @@ const PostPage = props => {
           this.state.searchData.length > 0 ?
           this.state.searchData :
           this.state.dummyData} />
-        <DummyData postData={this.state.dummyData} /> 
+        <dummyData /> 
      </div>
  )
 }

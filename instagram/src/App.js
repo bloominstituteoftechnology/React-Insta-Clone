@@ -2,9 +2,10 @@ import React from 'react';
 import './App.css';
 import SearchBar from './Components/SearchBar/SearchBar';
 import PostContainer from './Components/PostContainer/PostContainer';
-import DummyData from './dummy-data';
+import dummyData from './dummy-data';
 import PostPage from './Components/PostContainer/PostsPage';
 import withAuthenticate from './Components/Authentication/withAuthenticate';
+import LoginPage from './Components/Login/LoginPage'; 
 
 class App extends React.Component {
   constructor () {
@@ -32,14 +33,6 @@ searchBarHandler = event => {
   })
 }
 
-const componentFromWithAuthenticate = () => {
-this.state.ComponentFromWithAuthenticate(
-  PostPage => {
-
-  }
-)
-}
-
   render() {
     return (
       <div className="App">
@@ -53,5 +46,7 @@ this.state.ComponentFromWithAuthenticate(
     );
   }
 }
+
+const ComponentFromWithAuthenticate = withAuthenticate(PostPage)(LoginPage);
 
 export default App;
