@@ -1,6 +1,7 @@
 import React from 'react';
 import Post from './Post';
 import './PostContainer.css';
+import PostsPage from './PostsPage';
 
 const PostContainer = props => {
   return (
@@ -9,7 +10,7 @@ const PostContainer = props => {
         return (
           <div className='postContainer' key={i}>
             <Post post={post} />
-            
+            <PostsPage postPage={post} />
           </div>
         )
       })}
