@@ -18,7 +18,7 @@ class SearchBar extends React.Component {
     render () {
         return (
             <div>
-                <div>
+                <div className= 'searchSection'>
                     <img className = 'instaIcon' src = {instaIcon} />
                     <img className = 'instaLogo' src = {instaLogo} />
                 </div>

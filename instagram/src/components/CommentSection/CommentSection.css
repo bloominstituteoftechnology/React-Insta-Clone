@@ -14,3 +14,7 @@
 .commentSection{
     width: 95%;
 }
+
+input {
+    outline: none;
+}
