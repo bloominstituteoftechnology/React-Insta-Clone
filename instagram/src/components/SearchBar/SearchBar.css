@@ -1,0 +1,23 @@
+.instaIcon{
+    height: 50px;
+}
+
+.instaLogo{
+    height: 50px;
+    border-left: 1px solid lightgrey;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid black;
+    margin-top: 25px;
+    width: 25%;
+    outline: none;
+    font-size: 16px;
+}
+
+.searchSection {
+    margin-top: 45px;
+}
