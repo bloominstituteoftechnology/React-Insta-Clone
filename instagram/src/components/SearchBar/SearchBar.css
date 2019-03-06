@@ -1,0 +1,9 @@
+.fa-instagram {
+  filter: invert(20%);
+}
+
+.fa-compass,
+.header-heart,
+.fa-user {
+  filter: invert(40%);
+}
