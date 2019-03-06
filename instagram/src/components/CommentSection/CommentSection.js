@@ -35,7 +35,7 @@ class CommentSection extends React.Component {
                 {this.state.comments.map((comment, index)=>{
                     return (
                         <div className = 'comment'key = {index}>
-                            <p><strong>{comment.username}</strong> {comment.text}</p>
+                            <p><strong>{comment.username}</strong>{comment.text}</p>
                         </div>
                     )
                 })}
@@ -48,16 +48,16 @@ class CommentSection extends React.Component {
                            onChange={this.changeHandler}
                            value={this.state.comment}
                            />
-                        
                 </form>  
             </div> 
                            
           
-            
-        )
-
-    }
-}
+                           
+                        )
+                
+                    }
+                }
+                        
 
 
 
@@ -68,4 +68,5 @@ class CommentSection extends React.Component {
 
  
 export default CommentSection;
+
 

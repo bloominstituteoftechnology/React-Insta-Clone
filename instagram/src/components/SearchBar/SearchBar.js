@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
                     <img className = 'instaLogo' src = {instaLogo} />
                 </div>
                 <form className = 'searchBar'>
-                <input onKeyDown={this.props.search} type="text" placeholder="Search" />
+                <input onChange={this.props.search} type="text" placeholder="Search" />
                 </form>
             </div>
 

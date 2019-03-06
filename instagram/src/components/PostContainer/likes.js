@@ -2,6 +2,7 @@ import React from 'react';
 import './likes.css';
 import dummyData from '../../dummy-data';
 import heartIcon from '../../Images/insta_heart.png';
+import * as Icon from 'react-feather';
 
 
 
@@ -25,7 +26,8 @@ class Likes extends React.Component {
     render() {
         return (
             <div className = 'likeSection'>
-                <img onClick={this.IncrementItem} className = "heartIcon" src = {heartIcon}/><br/>
+                <img onClick={this.IncrementItem} className = "heartIcon" src = {heartIcon}/>
+                <br/> <Icon.MessageCircle/>
                 <p className = 'likeCount'>{ this.state.show ? <p>{ this.state.clicks } likes</p> : '' }</p>
             
             </div>            
@@ -37,10 +39,3 @@ class Likes extends React.Component {
 
 
 export default Likes;
-
-
-
-
-
-
-       
