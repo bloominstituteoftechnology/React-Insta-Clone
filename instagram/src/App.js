@@ -1,52 +1,25 @@
 import React from 'react';
 import './App.css';
-import SearchBar from './Components/SearchBar/SearchBar';
-import PostContainer from './Components/PostContainer/PostContainer';
-import dummyData from './dummy-data';
-import PostPage from './Components/PostContainer/PostsPage';
-import withAuthenticate from './Components/Authentication/withAuthenticate';
-import LoginPage from './Components/Login/LoginPage'; 
+import Login from './Components/Login/Login';
+import PostsPage from './Components/PostContainer/PostsPage';
+import Authenticate from './Components/Authentication/Authenticate';
+
 
 class App extends React.Component {
   constructor () {
     super();
-    this.state = {
-      dummyData: [],
-      searchData: []
-    }
+    this.state = {};
   }
-  
-componentDidMount() {
-  this.setState({
-    dummyData: dummyData
-  })
-}
-
-searchBarHandler = event => {
-  const posts = this.state.dummyData.filter( post => {
-    if (post.username.includes(event.target.value)) {
-      return post
-    }
-  });
-  this.setState({
-    searchData: posts
-  })
-}
 
   render() {
     return (
       <div className="App">
-        <SearchBar searchPosts={this.searchBarHandler}/>
-        <PostContainer postData={
-          this.state.searchData.length > 0 ?
-          this.state.searchData :
-          this.state.dummyData} />
-        <ComponentFromWithAuthenticate />  
+        <ComponentFromAuthenticate />
       </div>
     );
   }
 }
 
-const ComponentFromWithAuthenticate = withAuthenticate(PostPage)(LoginPage);
+const ComponentFromAuthenticate = Authenticate(PostsPage)(Login);
 
 export default App;

@@ -48,7 +48,7 @@ increaseLikes = () => {
                 <Icon.Heart 
                     className='icons' 
                     onClick={this.increaseLikes} />
-                <Icon.MessageCircle className='icon' />
+                <Icon.MessageCircle className='icons' />
             </div>
             <p>{this.state.likes} likes</p>
             {this.state.comments.map((comment, i) => {
