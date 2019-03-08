@@ -8,7 +8,7 @@ const PostContainer = props => {
       {props.post.map((post, i) => {
         return (
           <div className='postContainer' key={i}>
-              <div className='opUserInfo'>
+              <div className='UserInfo'>
                   <img src={post.thumbnailUrl} alt='Avatar' />
                   <h3>{post.username}</h3>
               </div>
