@@ -3,10 +3,6 @@
 
 Screenshots from Project:
 
-![Image of Site](./screenshot1.png)
-![Image of Site](./screenshot2.png)
-
-
 ## Objectives
 
 The purpose of this project is to continue building on your knowledge of React that you have gained thus far. 
