@@ -1,0 +1,49 @@
+.top-bar{
+    width:100%;
+}
+
+header{
+    margin:0 auto;
+    width:90%;
+    display:flex;
+    flex-direction: row;
+    height:50px;
+    align-items: center;
+    
+    justify-content: space-around;
+    border-bottom: 1px solid lightgrey;
+    padding: 10px 0;
+    
+    
+}
+header div{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+header img {
+    width: 30px;
+    height:100%;
+}
+
+.container:first-child {
+    width:25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    width:20%;
+}
+
+.explore {
+    width:40px;
+}
+
+input{
+    width:215px;
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+.main{
+    background-color: #fafafa;
+}
+
+.card {
+    width:60%;
+    margin:50px auto;
+    border:1px solid lightgrey;
+}
+
+.top{
+    padding-left:20px;
+    justify-content: space-between;
+    width:30%;
+    display: flex;
+    align-items: center;
+}
+
+.user-photo {
+    border: 1px black solid;
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+   
+
+}
+
+.bottom{
+    width:90%;
+    margin:0 auto;
+}
