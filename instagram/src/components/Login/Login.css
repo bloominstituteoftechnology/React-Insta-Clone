@@ -1,0 +1,22 @@
+.Login-field{
+    background: lightblue;
+    width: 880px;
+    margin: 0 auto;
+    padding: 100px;
+}
+.Login-field form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-inputs{
+    display:flex;
+    flex-direction: column;
+}
+.login-inputs input{
+    margin: 20px 0;
+}
+.Login-field button{
+    width: 200px;
+    height: 50px;
+}
