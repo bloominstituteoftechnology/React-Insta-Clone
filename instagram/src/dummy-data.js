@@ -19,8 +19,8 @@ const dummyData = [
         text: "Looks delicious!"
       },
       {
-        username: "martinseludo",
-        text: "Can't wait to try it!"
+        username: "spygirl",
+        text: 'Looks cool'
       }
     ]
   },
