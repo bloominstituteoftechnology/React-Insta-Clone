@@ -1,0 +1,35 @@
+.comment-section-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.comment-section-container .time-stamp{
+    font-size: .8rem;
+    margin: .25rem 0rem;
+    color:rgb(182, 182, 182);
+}
+.add-comment-container{
+    display: flex;
+    width:100%;
+}
+.add-comment-container input[type=text]{
+    border: none;
+    width:100%;
+    padding: 1rem 0rem;
+    font-size: 1rem;
+    flex-basis: 95%;
+}
+.add-comment-container .dots{
+    padding: 1rem 0rem; 
+}
+.comments{
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.comment-divider{
+    width: 100%;
+}

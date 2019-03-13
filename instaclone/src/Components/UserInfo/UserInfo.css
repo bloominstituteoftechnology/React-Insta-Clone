@@ -1,0 +1,15 @@
+.user-info{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    margin-left:1.5rem;
+}
+.user-thumbnail{
+    max-width:35px;
+    max-height:35px;
+    border-radius:50%;
+}
+.username{
+    font-weight: bold;
+    margin: 0 .5rem;
+}
