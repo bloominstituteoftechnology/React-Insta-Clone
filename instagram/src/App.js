@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SearchBar from './components/SearchBar/SearchBar';
 
 class App extends Component {
   render() {
@@ -8,6 +9,7 @@ class App extends Component {
           <p>
             Doing work <code>src/App.js</code> and save to reload.
           </p>
+          <SearchBar />
         </header>
       </div>
     );
