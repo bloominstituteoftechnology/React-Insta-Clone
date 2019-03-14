@@ -3,6 +3,7 @@ import dummyData from "./dummy-data"
 import './App.css'
 
 import PostContainer from './components/PostContainer'
+import SearchBar from './components/SearchBar'
 
 class App extends Component {
   constructor() {
@@ -14,7 +15,8 @@ class App extends Component {
   render() {
     console.log(this.state.posts)
     return (
-      <div>
+      <div className="container">
+        <SearchBar />
         <div>
           <PostContainer posts = {this.state.posts} />
 

@@ -13,8 +13,8 @@ function CommentSection(props) {
         </>
       ))}
       <hr />
-      <form>
-              <input type="text" placeholder="Add a comment" />
+      <form className="comment-form">
+              <input className="comment" type="text" placeholder="Add a comment" />
               <button><i className="fas fa-ellipsis-h"></i></button>
         </form>
     </>

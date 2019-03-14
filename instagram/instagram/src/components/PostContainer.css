@@ -1,5 +1,5 @@
 .card {
-    margin: 60px auto;
+   margin-top: 40px;
     width: 640px;
     height: auto;
     border: 1px solid lightgray;
@@ -32,7 +32,7 @@
     font-weight: bold;
 }
 
-.far {
+.card-likes .far {
     font-size: 24px;
     padding-right: 20px;
 }
