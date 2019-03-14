@@ -1,0 +1,43 @@
+.card {
+    margin: 60px auto;
+    width: 640px;
+    height: auto;
+    border: 1px solid lightgray;
+    
+}
+
+.card-profile {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+.card-profile img {
+    border-radius: 50%;
+    width: 35px;
+    margin-right: 10px;
+}
+
+.post-img {
+    margin-bottom: 20px;
+}
+
+.card-likes {
+    margin-left: 15px;
+}
+
+.card-likes p {
+    font-weight: bold;
+}
+
+.far {
+    font-size: 24px;
+    padding-right: 20px;
+}
+
+.comments {
+    margin-left: 15px;
+    margin-right: 15px;
+}
