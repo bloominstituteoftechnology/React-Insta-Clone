@@ -7,14 +7,14 @@ const PostContainer = props => {
         <div >
             {props.usersArray.map(user => {
                 return (
-                    <div class='container'>
-                        <div class='post-header'>
-                            <img class='user-logo' src={user.thumbnailUrl}></img>
-                            <p class='username'>{user.username}</p>
+                    <div className='container' key={user.username + (Math.random() * 1000 * (Math.random() * 100))} >
+                        <div className='post-header'>
+                            <img className='user-logo' src={user.thumbnailUrl}></img>
+                            <p className='username'>{user.username}</p>
                         </div>
-                        <img class='main-image' src={user.imageUrl}></img>
-                        <div class="marginLeftRight">
-                            <CommentSection commentData={user.comments} likesData={user.likes}/>
+                        <img className='main-image' src={user.imageUrl}></img>
+                        <div className="marginLeftRight">
+                            <CommentSection commentData={user.comments} likesData={user.likes} />
                         </div>
                     </div>
                 );

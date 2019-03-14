@@ -32,9 +32,9 @@ export default class Example extends React.Component {
         return (
             <div>
                 <Navbar color="light" light expand="md">
-                    <div class='instagram'>
+                    <div className='instagram'>
                         <NavbarBrand href="#">
-                            <i class="fa fa-instagram"></i>
+                            <i className="fa fa-instagram"></i>
                         </NavbarBrand>
                         <NavbarBrand href="#">
                             <p>Instagram</p>
@@ -53,7 +53,7 @@ export default class Example extends React.Component {
                                 </div>
                             </NavItem>
                             <NavItem>
-                                <NavLink><i class="far fa-heart"></i></NavLink>
+                                <NavLink><i className="far fa-heart"></i></NavLink>
                             </NavItem>
 
                         </Nav>
