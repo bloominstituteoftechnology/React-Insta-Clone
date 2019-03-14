@@ -1,3 +1,32 @@
 .search-bar {
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    position: fixed;
+}
+
+.logo {
+    margin-top: 7px;
+    padding: 5px;
+}
+
+.picture-logo {
+    border-right: 1px solid black;
+    margin: 5px;
+    padding-right: 15px;
+}
+
+.search-form {
+    justify-content: center;
+    margin: 5px 800px;
+}
+
+input {
+    margin: 0;
+    padding: 5px 20px;
+    background-color: #FAFAFA;
+    border: 1px solid lightgray;
+    text-align: center;
+    opacity: 0.5;
 }
