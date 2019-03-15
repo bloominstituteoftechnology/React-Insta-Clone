@@ -5,7 +5,7 @@ class CommentSection extends Component {
     constructor() {
         super();
         this.state = {
-            likes: 0,
+            likes: [],
             newComment: '',
             comments: []
         }
@@ -13,6 +13,7 @@ class CommentSection extends Component {
 
 
     componentDidMount() {
+        console.log(this.props.likesData);
         this.setState({ comments: this.props.commentData, likes: this.props.likesData });
     }
 
@@ -32,31 +33,32 @@ class CommentSection extends Component {
     }
 
     render() {
+        console.log(this.state.likes)
         return (
             <div>
                 <div>
-                    <i class="far fa-heart margin-left-right icon"></i>
-                    <i class="far fa-comment margin-left-right icon"></i>
+                    <i className="far fa-heart margin-left-right icon"></i>
+                    <i className="far fa-comment margin-left-right icon"></i>
                 </div>
-                <p class='margin-left-right'>{this.state.likes} likes</p>
+                <p className='margin-left-right'>{this.state.likes} likes</p>
 
                 {this.state.comments.map(comment => {
                     return (
-                        <div class='margin-left-right'>
+                        <div className='margin-left-right' key={comment.username + (Math.random() * 1000 * (Math.random() * 100))}>
                             <b>{`${comment.username}:`}</b> {`${comment.text}`}
                         </div>
                     );
                 })}
 
-                <form class='form' onSubmit={this.addComment}>
+                <form className='form' onSubmit={this.addComment}>
                     <input
-                        class='comment-input'
+                        className='comment-input'
                         name='newComment'
                         placeholder='Add a comment as SleepyViking...'
                         value={this.state.newComment}
                         onChange={this.commentInput}
                     />
-                    <button class='btn btn-primary comment-button' type="submit">Add Comment</button>
+                    <button className='btn btn-primary comment-button' type="submit">Add Comment</button>
                 </form>
             </div>
         );
