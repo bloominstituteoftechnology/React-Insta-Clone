@@ -1,0 +1,15 @@
+.comments{
+    border-top: 2px solid black;
+}
+
+.comment {
+    display: flex;
+    
+    margin-bottom: -10px;
+    margin-left: 5px;
+    line-height: 1.;
+}
+
+.inputer{
+    margin-left: 20px;   
+}

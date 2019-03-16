@@ -1,0 +1,23 @@
+.SearchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 10px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 5px;
+}
+.lefthandle {
+
+    display: flex;
+    align-items: center;
+    min-width: 120px;
+    margin: 10px 5px;
+}
+
+.righthandle{
+    display: flex;
+    align-items: flex-end;
+}
+

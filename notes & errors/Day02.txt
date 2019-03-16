@@ -1,0 +1,8 @@
+I build anew. I finished what I had left for day 01 after lunch. Understanding Mounting
+was easy and it was simple to refactor the render though a mounting component. Figuiring
+out how to add comments was less easy. It's midnight now and I still need to do the 
+search fuction , add the likes , and the strech probelm. I think I should be done before
+i sleep, but I dont know. At least i got the icons to work. I installed font awesome
+for react instead of just imputing them thought the html.. This caused way too
+much confusiaon and I had another student walk me though the better way. Im hopeful ill
+have a finished product by thursday night...
