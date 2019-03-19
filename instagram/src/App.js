@@ -9,9 +9,18 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData
+      posts: []
     };
   }
+
+  componentDidMount(){
+    setTimeout( () => {
+      this.setState({posts: dummyData});
+    }, 2000)
+  }
+
+  
+
   render() {
     return (
       <div className="App">
