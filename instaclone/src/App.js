@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       posts: [],
+      filteredPosts: [],
       search: ''
     }
   }
@@ -23,11 +24,24 @@ class App extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  searchPosts = e => {
+    e.preventDefault();
+    const posts = this.state.posts.filter(p => {
+      if (p.username.includes(e.target.value)) {
+        return p;
+      }
+    });
+    this.setState({ filteredPosts: posts,
+    search: '' });
+  };
+
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer posts={this.state.posts} />
+        <SearchBar searchPosts={this.searchPosts}/>
+        <PostContainer posts={
+          this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts
+        } />
       </div>
     );
   }

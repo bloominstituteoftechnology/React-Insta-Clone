@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+    "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80px" height="80px" viewBox="0 0 80 80">
+    <title>User Icon</title>
+    <desc>Instagram clone user icon</desc>
+    <rect x="4" y="60" fill="none" stroke="black" stroke-width="4" width="72" height="80" rx="20" ry="20" />
+    <circle cx="40" cy="30" r="20" fill="none" stroke="black" stroke-width="4" />
+</svg>
