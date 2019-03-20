@@ -1,0 +1,22 @@
+.search-container {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-container input {
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.logo-container {
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo {
+    height: 50px;
+}
+

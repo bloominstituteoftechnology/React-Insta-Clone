@@ -1,0 +1,25 @@
+.post {
+    margin-bottom: 10px;
+}
+
+.post-header{
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+}
+
+.profile-pic{
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.post-image {
+    width: 100%;
+}
+
+.like-section img {
+    width: 25px;
+    padding-right: 5px;
+}
