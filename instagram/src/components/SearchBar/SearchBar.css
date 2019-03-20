@@ -3,7 +3,7 @@
   height: 80px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid gray;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 .search-bar_imageContainer {
   height: 80px;

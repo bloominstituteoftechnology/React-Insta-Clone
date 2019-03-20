@@ -1,0 +1,37 @@
+.posts-section_wrapper {
+  width: 100%;
+  margin: 5px auto;
+}
+.posts-section_postContainer {
+  border: 1px solid #d3d3d3;
+  margin: 5px 0;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+.posts-section_postImageContainer {
+  height: 100%;
+  width: 100%;
+}
+
+.posts-section_postImage {
+  width: 100%;
+}
+
+.posts-section_postHeaderContainer {
+  display: flex;
+}
+.posts-section_username {
+  align-self: center;
+  font-size: 18px;
+  margin-left: 20px;
+}
+.posts-section_postThumbnailContainer {
+  height: 40px;
+  width: 40px;
+  margin: 5px 0 5px 20px;
+  padding-right: 20px;
+  border-right: 1px double rgb(177, 177, 177);
+}
+.posts-section_postThumbnail {
+  height: 100%;
+  border-radius: 50%;
+}

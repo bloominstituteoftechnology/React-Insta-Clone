@@ -1,5 +1,4 @@
 .App {
-  height: 100vh;
+  height: 100%;
   width: 750px;
-  border: 1px double #eee;
 }
