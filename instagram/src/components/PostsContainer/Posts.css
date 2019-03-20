@@ -6,7 +6,7 @@
   }
   .post-border {
     border: 1px solid #d3d3d3;
-    margin: 5px 0;
+    margin: 50px 0;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
   .post-image-wrapper {
@@ -20,13 +20,27 @@
   
   .post-header {
     display: flex;
+    align-items: center;
+    padding: 15px;
   }
   
   .post-thumb-wrapper {
+    margin-right: 5px;
     height: 50px;
     width: 50px;
   }
   .post-thumb {
     height: 100%;
     border-radius: 50%;
+  }
+
+  .post-interface {
+    display: flex;
+    padding: 5px;
+  }
+
+  .logo {
+    padding: 5px;
+    width: 24px;
+    height: 24px;
   }

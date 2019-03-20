@@ -6,12 +6,23 @@
     justify-content: space-between;
     background: #ffffff;
   }
+
+  .search-bar {
+    padding: 5px 10px;
+    background: #FAFAFA;
+    border: 1px solid #EEEEEE;
+    text-align: center;
+    opacity: .5;
+  }
   
   .image-wrapper {
-    height: 50px;
+    height: 29px;
   }
   
   .logo-image {
+    margin: 10px 0;
+    padding: 0 10px;
+    border-left: 1px solid #EEEEEE;
     height: 100%;
   }
   
@@ -20,6 +31,7 @@
   }
   
   .social {
-    width: 20px;
-    height: 20px;
+    margin: 10px;
+    width: 24px;
+    height: 24px;
   }
