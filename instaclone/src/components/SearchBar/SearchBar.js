@@ -13,7 +13,7 @@ const SearchBar = props => {
             <div className="logo-container">
                 <img alt="logo" src={logo} className="logo" />
             </div>
-            <form onSubmit={props.searchPosts}>
+            <form onChange={props.searchPosts}>
             <input type="text" placeholder="Search" name="search" value={props.search} onChange={props.inputHandler}/></form>
             
             <div className="search-bar-icons">

@@ -31,8 +31,7 @@ class App extends Component {
         return p;
       }
     });
-    this.setState({ filteredPosts: posts,
-    search: '' });
+    this.setState({ filteredPosts: posts});
   };
 
   render() {
