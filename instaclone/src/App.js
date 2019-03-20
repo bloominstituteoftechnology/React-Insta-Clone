@@ -27,7 +27,7 @@ class App extends Component {
   searchPosts = e => {
     e.preventDefault();
     const posts = this.state.posts.filter(p => {
-      if (p.username.includes(e.target.value)) {
+      if (p.username.includes(this.state.search)) {
         return p;
       }
     });
@@ -38,7 +38,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar searchPosts={this.searchPosts}/>
+        <SearchBar searchPosts={this.searchPosts} search={this.state.search} inputHandler={this.inputHandler}/>
         <PostContainer posts={
           this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts
         } />
