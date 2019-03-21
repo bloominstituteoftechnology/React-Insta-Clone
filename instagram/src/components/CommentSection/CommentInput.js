@@ -4,8 +4,14 @@ const STYLE_BASE = "comment-section_";
 
 const CommentInput = props => {
   return (
-    <form className={`${STYLE_BASE}formContainer`} >
-      <input type="text" placeholder="Add comment... " className={`${STYLE_BASE}formInput`} />
+    <form className={`${STYLE_BASE}formContainer`} onSubmit={props.submitComment} >
+      <input
+        type="text"
+        placeholder="Add comment... "
+        value={props.comment}
+        onChange={props.changeComment}
+        className={`${STYLE_BASE}formInput`}
+      />
     </form>
   );
 };
