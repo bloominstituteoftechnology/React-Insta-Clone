@@ -35,3 +35,12 @@
   height: 100%;
   border-radius: 50%;
 }
+.like-section_likesContainer {
+  display: flex;
+}
+.like-section_wrapper {
+  margin: 10px;
+}
+.like-section_likesRow {
+  margin: 10px;
+}
