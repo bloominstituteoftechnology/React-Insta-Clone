@@ -25,10 +25,10 @@ const SearchBar = () => {
           <i className="fa fa-compass" aria-hidden="true" />
         </div>
         <div className={`${STYLE_BASE}social`}>
-          <i class="fa fa-heart-o" aria-hidden="true" />
+          <i className="fa fa-heart-o" aria-hidden="true" />
         </div>
         <div className={`${STYLE_BASE}social`}>
-          <i class="fa fa-user-o" aria-hidden="true" />
+          <i className="fa fa-user-o" aria-hidden="true" />
         </div>
       </div>
     </div>
