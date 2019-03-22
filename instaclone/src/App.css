@@ -1,5 +1,3 @@
-.App {
-  width: 80%;
-  max-width: 600px;
-  margin: 10px auto;
+body {
+  background-color: #FAFAFA;
 }

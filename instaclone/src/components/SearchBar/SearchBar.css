@@ -1,26 +1,32 @@
-.search-container {
+/* .search-container {
     height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+} */
 
-.search-container input {
+/* .search-container input {
     height: 20px;
     margin-bottom: 5px;
-}
+} */
 
-.logo-container {
+/* .logo-container {
     height: 50px;
     display: flex;
     justify-content: flex-start;
-}
+} */
 
 .logo {
-    height: 50px;
+    height: 40px;
+}
+
+.logo-icon {
+    padding: 5px 8px 0 0;
 }
 
 .search-bar-icon {
-    height: 30px;
+    height: 25px;
+    padding-left: 15px;
+    padding-bottom: 5px;
 }
 

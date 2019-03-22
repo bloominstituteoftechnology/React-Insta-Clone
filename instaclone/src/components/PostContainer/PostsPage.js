@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import dummyData from '../../dummy-data';
 import SearchBar from '../SearchBar/SearchBar';
 import PostContainer from '../PostContainer/PostContainer';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+`
 
 class PostsPage extends Component {
   constructor(){
@@ -36,12 +44,15 @@ class PostsPage extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar searchPosts={this.searchPosts} search={this.state.search} inputHandler={this.inputHandler}/>
+      <SearchBar searchPosts={this.searchPosts} search={this.state.search} inputHandler={this.inputHandler}/>
+      <Container>
+        
         <PostContainer posts={
           this.state.search.length > 0 ?
             (this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts) :
             this.state.posts
         } />
+        </Container>
       </div>
     );
   }
