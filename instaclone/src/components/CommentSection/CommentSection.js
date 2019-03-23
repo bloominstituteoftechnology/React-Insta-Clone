@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './CommentSection.css';
 import Comment from "./Comment";
 import AddComment from "./AddComment";
 

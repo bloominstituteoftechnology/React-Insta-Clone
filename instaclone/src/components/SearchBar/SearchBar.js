@@ -1,5 +1,4 @@
 import React from 'react';
-import "./SearchBar.css";
 import logo from "../../assets/iglogo.png";
 import userIcon from '../../assets/user-icon.svg';
 import compassIcon from '../../assets/compass.svg';
@@ -28,29 +27,52 @@ const SearchInput = styled.input`
     margin-bottom: 5px;
     background-color: #FAFAFA;
     border: 1px solid #E6E6E6;
-    color: #DCDCDD;
+    color: black;
     text-align: center;
+    &::-webkit-input-placeholder {
+        color: #A5A7AA;
 `
 
 const SearchForm = styled.form`
-    margin-left: -5%;
+    margin-left: -8%;
+`
+
+const LogoDiv = styled.img `
+    width: 150px;
+`
+
+const SearchBarIcon = styled.img`
+    height: 25px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+`
+
+const Divider = styled.span`
+    font-size: 30px;
+    padding: 0px 5px 0 2px;
+`
+
+const LogoIcon = styled.img`
+    height: 25px;
+    padding: 5px 8px 0 0;
 `
 
 const SearchBar = props => {
     return(
         <SearchContainer>
             <LogoContainer>
-                <img className="search-bar-icon logo-icon" src={icon} alt="instagram icon" />
-                <img alt="logo" src={logo} className="logo" />
+                <LogoIcon src={icon} alt="instagram icon" /> 
+                <Divider>|</Divider>
+                <LogoDiv src={logo}/>
             </LogoContainer>
             <SearchForm onChange={props.searchPosts}>
             <SearchInput type="text" placeholder="Search" name="search" value={props.search} onChange={props.inputHandler}/></SearchForm>
             
-            <div className="search-bar-icons">
-                    <img className="search-bar-icon" src={compassIcon} alt="compass icon" />
-                    <img className="search-bar-icon heart-icon" src={heartIcon} alt="heart icon" />
-                    <img className="search-bar-icon user-icon" src={userIcon} alt="user icon" />
-                </div>
+            <div>
+                <SearchBarIcon src={compassIcon} alt="compass icon" />
+                <SearchBarIcon src={heartIcon} alt="heart icon" />
+                <SearchBarIcon src={userIcon} alt="user icon" />
+            </div>
             
         </SearchContainer>
     )

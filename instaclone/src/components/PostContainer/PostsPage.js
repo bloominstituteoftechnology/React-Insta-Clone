@@ -38,6 +38,7 @@ class PostsPage extends Component {
         return p;
       }
     });
+    
     this.setState({ filteredPosts: posts});
   };
 
