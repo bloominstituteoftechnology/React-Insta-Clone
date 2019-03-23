@@ -15,9 +15,13 @@ const LikeSectionIcons = styled.div`
     justify-content: space-between;
 `
 
+const LikeSectionContainer = styled.div`
+    margin-left: 10px;
+`
+
 const LikeSection = props => {
     return(
-        <div>
+        <LikeSectionContainer>
             <LikeSectionIcons>
         <div>
         <LikeImg src={heart} onClick={props.incrementLike}/>
@@ -31,7 +35,7 @@ const LikeSection = props => {
         <div>
             <p><strong>{props.likes}</strong> likes</p>
         </div>
-        </div>
+        </LikeSectionContainer>
     )
 }
 
