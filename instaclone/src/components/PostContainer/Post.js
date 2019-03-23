@@ -1,14 +1,32 @@
 import React from 'react';
-import './Post.css';
 import CommentSection from "../CommentSection/CommentSection";
 import LikeSection from "./LikeSection";
 
 import styled from 'styled-components';
 
+import Username from '../Styles/Reusable';
+
 const PostContainerStyle = styled.div`
     background-color: white;
     border: 1px solid #E6E6E6;
     margin-bottom: 50px;
+`
+
+const ProfilePic = styled.img`
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 30px;
+    margin: 0 10px 0 15px;
+`
+
+const PostImage = styled.img`
+    width: 100%;
+`
+
+const PostHeader = styled.div`
+    display: flex;
+    align-items: center;
+    height: 60px;
 `
 
 class Post extends React.Component {
@@ -28,12 +46,12 @@ class Post extends React.Component {
     render(){
         return(
         <PostContainerStyle>
-        <div className="post-header">
-        <img className="profile-pic" src={this.props.post.thumbnailUrl} alt=""/>
-        <h3>{this.props.post.username}</h3>
-        </div>
-        <div className="post-image-container">
-        <img className="post-image" src={this.props.post.imageUrl} alt="" />
+        <PostHeader>
+        <ProfilePic src={this.props.post.thumbnailUrl} alt=""/>
+        <Username>{this.props.post.username}</Username>
+        </PostHeader>
+        <div>
+        <PostImage src={this.props.post.imageUrl} alt="" />
         </div>
         <LikeSection likes={this.state.likes} incrementLike={this.incrementLike}/>
         <CommentSection comments={this.props.post.comments} />
