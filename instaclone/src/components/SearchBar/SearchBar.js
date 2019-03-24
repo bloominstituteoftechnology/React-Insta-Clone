@@ -5,6 +5,7 @@ import compassIcon from '../../assets/compass.svg';
 import heartIcon from '../../assets/heart.svg';
 import icon from '../../assets/icon.svg'
 import styled from 'styled-components';
+import LogOutMenu from './Dropdown';
 
 const SearchContainer = styled.div`
     height: 60px;
@@ -43,7 +44,7 @@ const LogoDiv = styled.img `
 
 const SearchBarIcon = styled.img`
     height: 25px;
-    padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 5px;
 `
 
@@ -72,6 +73,7 @@ const SearchBar = props => {
                 <SearchBarIcon src={compassIcon} alt="compass icon" />
                 <SearchBarIcon src={heartIcon} alt="heart icon" />
                 <SearchBarIcon src={userIcon} alt="user icon" />
+                <LogOutMenu />
             </div>
             
         </SearchContainer>
