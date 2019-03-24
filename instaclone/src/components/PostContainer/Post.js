@@ -33,15 +33,20 @@ class Post extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            likes: props.post.likes
+            likes: props.post.likes,
+            liked: false
         }
     }
-    
 
-    incrementLike = () => {
-        let likes = this.state.likes + 1;
-        this.setState({ likes })
-    }
+   addLike = () => {
+       if (this.state.liked === false) {
+           let likes = this.state.likes + 1;
+           this.setState({likes, liked: true})
+       } else {
+           let likes = this.state.likes - 1;
+           this.setState({likes, liked: false})
+       }
+   }
 
     render(){
         return(
@@ -53,7 +58,7 @@ class Post extends React.Component {
         <div>
         <PostImage src={this.props.post.imageUrl} alt="" />
         </div>
-        <LikeSection likes={this.state.likes} incrementLike={this.incrementLike}/>
+        <LikeSection likes={this.state.likes} addLike={this.addLike} liked={this.state.liked}/>
         <CommentSection comments={this.props.post.comments} />
         </PostContainerStyle>
         )}

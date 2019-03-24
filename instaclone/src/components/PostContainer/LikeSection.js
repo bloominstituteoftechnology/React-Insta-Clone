@@ -8,7 +8,8 @@ import bookmark from '../../assets/bookmark.png';
 
 const LikeImg = styled.img`
     width: 25px;
-    padding: 2px 10px 0 5px;
+    padding: 10px 10px 5px 5px;
+    box-sizing: content-box;
 `
 const LikeSectionIcons = styled.div`
     display: flex;
@@ -24,7 +25,7 @@ const LikeSection = props => {
         <LikeSectionContainer>
             <LikeSectionIcons>
         <div>
-        <LikeImg src={heart} onClick={props.incrementLike}/>
+        {props.liked ? <LikeImg src={redheart} onClick={props.addLike}/> : <LikeImg src={heart} onClick={props.addLike}/>}
         <LikeImg src={comment} />
         <LikeImg src={share} />
         </div>
