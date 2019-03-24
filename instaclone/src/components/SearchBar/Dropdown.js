@@ -24,7 +24,7 @@ export default class LogOutMenu extends React.Component {
 
   render() {
     return (
-      <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} size='sm'>
+      <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} size='sm' direction="right">
         <DropdownToggle caret />
         <DropdownMenu>
           <DropdownItem onClick={this.logOut}>Log Out</DropdownItem>

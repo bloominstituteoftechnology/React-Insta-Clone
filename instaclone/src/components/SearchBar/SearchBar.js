@@ -12,10 +12,18 @@ const SearchContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20% 0 20%;
+    padding: 5px 15% 0 15%;
     background-color: white;
     border-bottom: 1px solid #E6E6E6;
     margin-bottom: 50px;
+
+    @media(max-width: 800px){
+        padding: 5px 10%;
+    }
+
+    @media(max-width: 500px){
+        padding: 5px 2%;
+    }
 `
 const LogoContainer = styled.div`
     height: 50px;
@@ -36,10 +44,21 @@ const SearchInput = styled.input`
 
 const SearchForm = styled.form`
     margin-left: -8%;
+
+    @media (max-width: 800px){
+        margin-left: 8%;
+    }
+
+    @media (max-width: 500px){
+        margin-left: 1%;
+    }
 `
 
 const LogoDiv = styled.img `
     width: 150px;
+    @media(max-width: 800px){
+        display: none;
+    }
 `
 
 const SearchBarIcon = styled.img`
@@ -51,10 +70,15 @@ const SearchBarIcon = styled.img`
 const Divider = styled.span`
     font-size: 30px;
     padding: 0px 5px 0 2px;
+    margin-top: -5px;
+
+    @media(max-width: 800px){
+        display: none;
+    }
 `
 
 const LogoIcon = styled.img`
-    height: 25px;
+    height: 35px;
     padding: 5px 8px 0 0;
 `
 
