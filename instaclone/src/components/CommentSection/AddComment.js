@@ -16,6 +16,7 @@ const AddCommentInput = styled.input`
     height: 50px;
     font-size: 16px;
     padding-left: 5px;
+    color: ##B5B5B5;
 `
 
 const AddComment = props => {

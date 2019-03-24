@@ -59,7 +59,7 @@ class Post extends React.Component {
         <PostImage src={this.props.post.imageUrl} alt="" />
         </div>
         <LikeSection likes={this.state.likes} addLike={this.addLike} liked={this.state.liked}/>
-        <CommentSection comments={this.props.post.comments} />
+        <CommentSection comments={this.props.post.comments} timestamp={this.props.post.timestamp}/>
         </PostContainerStyle>
         )}
 }
