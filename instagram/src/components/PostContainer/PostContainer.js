@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import './postContainer.scss';
 
@@ -34,13 +35,29 @@ const PostContainer = props => {
                 />
             ))}
                 <div className='addComment'>
-                    <input placeholder='Add a comment...' />
+                    <input
+                        placeholder='Add a comment...'
+                        name='comment'
+                        onChange={props.addAComment}
+                    />
                     <i className='fas fa-ellipsis-h' />
                 </div>
             </div>
 
         </article>
     )
+}
+
+PostContainer.propTypes = {
+    post: PropTypes.shape({
+        username: PropTypes.string,
+        thumbnailUrl: PropTypes.string,
+        imageUrl: PropTypes.string,
+        likes: PropTypes.number,
+        timestamp: PropTypes.string
+    }),
+    liked: PropTypes.bool,
+    liker: PropTypes.func
 }
 
 export default PostContainer;

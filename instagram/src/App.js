@@ -17,11 +17,14 @@ class App extends Component {
     this.setState({
       liked: !this.state.liked
     });
+
     let filt = this.state.data.slice().filter(post => post.timestamp === timestamp).pop(),
       negaFilt = this.state.data.slice().filter(post => post.timestamp !== timestamp);
-    console.log(filt)
+
     filt.likes = this.state.liked === false ? filt.likes + 1 : filt.likes - 1;
+
     negaFilt.unshift(filt);
+
     this.setState({
       data: negaFilt
     })
@@ -29,6 +32,10 @@ class App extends Component {
 
   search = e => {
     e.preventDefault();
+  }
+
+  addAComment = e => {
+    console.log(e.target.value)
   }
 
   render() {
@@ -50,6 +57,7 @@ class App extends Component {
             key={post.timestamp}
             liker={this.liker}
             liked={this.state.liked}
+            addAComment={this.addAComment}
           />
         ))}
       </div>
