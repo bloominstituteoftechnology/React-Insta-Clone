@@ -34,8 +34,15 @@ class App extends Component {
     e.preventDefault();
   }
 
-  addAComment = e => {
-    console.log(e.target.value)
+  submitComment = (timestamp, comment) => {
+    const commentMatch = this.state.data.slice().filter(post => post.timestamp === timestamp).pop(),
+      commentUnMatch = this.state.data.slice().filter(post => post.timestamp !== timestamp);
+
+    commentMatch.comments.push(comment);
+
+    commentUnMatch.unshift(commentMatch);
+
+    this.setState({ data: commentUnMatch });
   }
 
   render() {
@@ -57,7 +64,7 @@ class App extends Component {
             key={post.timestamp}
             liker={this.liker}
             liked={this.state.liked}
-            addAComment={this.addAComment}
+            submitComment={this.submitComment}
           />
         ))}
       </div>

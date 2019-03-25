@@ -3,49 +3,75 @@ import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import './postContainer.scss';
 
-const PostContainer = props => {
-    return (
-        <article className='post'>
-            <section className='head'>
-                <img
-                    src={props.post.thumbnailUrl}
-                    alt={props.post.timestamp}
-                />
-                <span>{props.post.username}</span>
-            </section>
-            <img
-                className='postImg'
-                src={props.post.imageUrl}
-                alt={props.post.timestamp}
-            />
-            <section className='cAndL'>
-                <i
-                    onClick={() => props.liker(props.post.timestamp)}
-                    className={props.liked === false ? 'far fa-heart like' : 'fas fa-heart like'} />
+class PostContainer extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            comment: ''
+        }
+    }
 
-                <i className='far fa-comment comment' />
+    handleChanges = e => {
+        this.setState({ [e.target.name]: e.target.value });
+    }
 
-                <span className='likes'>{props.post.likes} likes</span>
-            </section>
+    submitComment = e => {
+        e.preventDefault();
 
-            <div className='comments'>{props.post.comments.map((comment, id) => (
-                <CommentSection
-                    comment={comment}
-                    key={id}
-                />
-            ))}
-                <div className='addComment'>
-                    <input
-                        placeholder='Add a comment...'
-                        name='comment'
-                        onChange={props.addAComment}
+        const newComment = {
+            username: 'random',
+            text: this.state.comment
+        }
+
+        this.props.submitComment(this.props.post.timestamp, newComment);
+    }
+
+    render() {
+        return (
+            <article className='post'>
+                <section className='head'>
+                    <img
+                        src={this.props.post.thumbnailUrl}
+                        alt={this.props.post.timestamp}
                     />
-                    <i className='fas fa-ellipsis-h' />
-                </div>
-            </div>
+                    <span>{this.props.post.username}</span>
+                </section>
+                <img
+                    className='postImg'
+                    src={this.props.post.imageUrl}
+                    alt={this.props.post.timestamp}
+                />
+                <section className='cAndL'>
+                    <i
+                        onClick={() => this.props.liker(this.props.post.timestamp)}
+                        className={this.props.liked === false ? 'far fa-heart like' : 'fas fa-heart like'} />
 
-        </article>
-    )
+                    <i className='far fa-comment comment' />
+
+                    <span className='likes'>{this.props.post.likes} likes</span>
+                </section>
+
+                <div className='comments'>{this.props.post.comments.map((comment, id) => (
+                    <CommentSection
+                        comment={comment}
+                        key={id}
+                    />
+                ))}
+                    <div className='addComment'>
+                        <form onSubmit={this.submitComment}>
+                            <input
+                                placeholder='Add a comment...'
+                                name='comment'
+                                onChange={this.handleChanges}
+                            />
+                        </form>
+                        <i className='fas fa-ellipsis-h' />
+                    </div>
+                </div>
+
+            </article>
+        )
+    }
 }
 
 PostContainer.propTypes = {
