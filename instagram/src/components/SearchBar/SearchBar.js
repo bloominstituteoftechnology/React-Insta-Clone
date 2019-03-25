@@ -15,7 +15,9 @@ const SearchBar = () => {
 			</div>
 
 			<div className='nav'>
-				<h1>holder</h1>
+				<i class='far fa-compass' />
+				<i class='far fa-heart' />
+				<i class='far fa-user' />
 			</div>
 		</div>
 	);

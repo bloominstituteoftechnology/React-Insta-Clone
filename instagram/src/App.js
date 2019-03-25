@@ -15,7 +15,6 @@ class App extends Component {
 		return (
 			<div className='App'>
 				<SearchBar />
-				<h1>Search Bar on top - Holder</h1>
 				<PostContainer post={this.state.post} />
 			</div>
 		);

@@ -3,6 +3,7 @@
 	flex-direction: row;
 	align-items: baseline;
 	width: 100%;
+	border-bottom: 1px solid #e6e6e6;
 }
 
 .logo {

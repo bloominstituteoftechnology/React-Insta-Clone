@@ -1,0 +1,9 @@
+.comment {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+.comment * {
+	font-size: 10px;
+}
