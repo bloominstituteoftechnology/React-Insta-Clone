@@ -13,10 +13,18 @@ class App extends Component {
     };
   }
 
-  liker = () => {
+  liker = timestamp => {
     this.setState({
       liked: !this.state.liked
     });
+    let filt = this.state.data.slice().filter(post => post.timestamp === timestamp).pop(),
+      negaFilt = this.state.data.slice().filter(post => post.timestamp !== timestamp);
+    console.log(filt)
+    filt.likes = this.state.liked === false ? filt.likes + 1 : filt.likes - 1;
+    negaFilt.unshift(filt);
+    this.setState({
+      data: negaFilt
+    })
   }
 
   search = e => {
