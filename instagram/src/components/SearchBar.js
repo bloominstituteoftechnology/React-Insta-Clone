@@ -4,7 +4,7 @@ import React from 'react';
 
 const SearchBar = () => {
   return (
-      <div>
+      <div className="search">
         <i class="fab fa-instagram"></i> Instagram 
         <input 
         type="text" 

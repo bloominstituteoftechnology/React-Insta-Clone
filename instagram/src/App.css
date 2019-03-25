@@ -1,6 +1,43 @@
 .App {
-  text-align: center;
+ 
+  margin: 10px;
+  padding: 10px;
+  
 }
 
+.thumb {
+  border-radius: 50%;
+  height: 50px;
+  float: left;
 
+}
 
+h6 {
+  font-size: 16px;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.bt {
+  display: flex;
+  justify-content: left;
+  padding: 0 10px 0 10px;
+  margin: 5px;
+}
+
+.likes {
+  float: left;
+  margin: 5px;
+}
+
+.commentz {
+  margin: 10px; 
+  line-height: 25px;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 7px;
+}

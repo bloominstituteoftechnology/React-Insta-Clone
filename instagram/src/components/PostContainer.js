@@ -9,11 +9,18 @@ const PostContainer = props => {
         
         {props.posts.map(post => 
             <div key ={post.timestamp}> 
-            <img src={post.thumbnailUrl} alt={post.timestamp}/>
+        
+            <img className="thumb" src={post.thumbnailUrl} alt={post.timestamp}/>
+            <h6>{post.username}</h6>
                 <img src={post.imageUrl} alt={post.timestamp}/>
+                <span className="bt">
+                <i class="far fa-heart"></i>
+                <i class="far fa-comment"></i>
+                </span>
+                <strong><span className="likes">{post.likes} Likes</span></strong>
+                <span className="commentz">
                 <CommentSection 
-                
-                    comments={post.comments} />
+                    comments={post.comments} /></span>
             </div>
         )} 
     </div>)
