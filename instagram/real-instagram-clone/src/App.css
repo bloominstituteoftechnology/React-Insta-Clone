@@ -1,0 +1,56 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 800px;
+}
+
+.header-name{
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
+    margin-top: 10px;
+    border-left: 1px solid black;
+    
+}
+.header{
+    display:flex;
+    justify-content: center;
+    justify-content: space-between;
+    
+    
+}
+.fa-instagram{
+   font-size: 50px;
+}
+input{
+    width: 200px;
+    height: 30px;
+    margin-top: 10px;
+}
+.header-nav{
+    font-size: 50px;
+}
+.postimg{
+    width: 600px;
+}
+.thumbimg{
+border-radius: 100px;
+}
+.comment{
+    display: flex;
+    align-content: center;
+    
+}
+.text{
+    font-size: 16px;
+}
+.post-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+
+
