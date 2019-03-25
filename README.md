@@ -1,3 +1,5 @@
+#Initializing Project, Day I on 03/25/19
+
 # React-Insta-Clone
 
 ## Introduction
