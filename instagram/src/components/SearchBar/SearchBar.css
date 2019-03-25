@@ -1,0 +1,23 @@
+.searchBar {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	width: 100%;
+}
+
+.logo {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	width: 25%;
+	justify-content: space-between;
+	font-size: 30px;
+}
+
+.search {
+	width: 75%;
+}
+
+.nav {
+	width: 25%;
+}
