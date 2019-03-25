@@ -4,7 +4,10 @@ import './commentSection.scss';
 const CommentSection = props => {
     console.log(props)
     return (
-        <p><span>{props.comment.username}</span>{props.comment.text}</p>
+        <p className='commentContent'>
+            <span className='commentUsername'>{props.comment.username}</span>
+            {props.comment.text}
+        </p>
     )
 }
 
