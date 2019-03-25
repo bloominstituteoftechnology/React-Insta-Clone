@@ -33,6 +33,10 @@ const PostContainer = props => {
                     key={id}
                 />
             ))}
+                <div className='addComment'>
+                    <input placeholder='Add a comment...' />
+                    <i className='fas fa-ellipsis-h' />
+                </div>
             </div>
 
         </article>

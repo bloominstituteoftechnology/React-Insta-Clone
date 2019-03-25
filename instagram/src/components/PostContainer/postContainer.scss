@@ -61,5 +61,31 @@
         margin-top: 15px;
         background: #b1b1ff25;
         border-radius: 0 0 5px 5px;
+
+        .addComment {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            color: #a8a8a8;
+            border-top: 1px dotted #b1b1ff;
+            font-size: 1.2rem;
+
+            input {
+                background: none;
+                border: none;
+                padding: 15px;
+                width: 80%;
+            }
+
+            i {
+                padding: 15px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
