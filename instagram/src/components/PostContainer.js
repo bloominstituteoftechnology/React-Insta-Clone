@@ -9,7 +9,6 @@ const PostContainer = props => {
         
         {props.posts.map(post => 
             <div key ={post.timestamp}> 
-        
             <img className="thumb" src={post.thumbnailUrl} alt={post.timestamp}/>
             <h6>{post.username}</h6>
                 <img src={post.imageUrl} alt={post.timestamp}/>

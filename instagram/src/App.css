@@ -1,34 +1,25 @@
-.App {
- 
-  margin: 10px;
-  padding: 10px;
-  
-}
+
 
 .thumb {
   border-radius: 50%;
-  height: 50px;
+  height: 40px;
   float: left;
+  margin-bottom: 10px;
 
 }
 
 h6 {
   font-size: 16px;
-  float: left;
   margin-bottom: 10px;
 }
 
 .bt {
   display: flex;
   justify-content: left;
-  padding: 0 10px 0 10px;
+ 
   margin: 5px;
 }
 
-.likes {
-  float: left;
-  margin: 5px;
-}
 
 .commentz {
   margin: 10px; 
@@ -37,7 +28,20 @@ h6 {
 
 .search {
   display: flex;
-  justify-content: space-between;
-  padding: 5px;
+ justify-content: space-evenly;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   margin: 7px;
+}
+
+.yup {
+  margin: 5px;
+}
+
+.likes {
+  margin: 5px;
+}
+
+.mmm {
+  display: flex;
+  font-size: 50px
 }
