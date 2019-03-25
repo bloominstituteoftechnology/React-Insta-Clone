@@ -1,0 +1,43 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100vh;
+}
+
+body{
+  font-size: 62.5%;
+  line-height: 1.25;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, p {
+  padding: 0;
+  height: 0;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+h2{
+  font-size: 2.5rem;
+}
+
+h3{
+  font-size: 2rem;
+}
+
+input{
+  outline: none;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+.App {
+  text-align: center;
+}
