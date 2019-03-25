@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.css';
 import logoMark from '../assets/glyph-logo_May2016.png';
 import logoType from '../assets/instagram-logo.png';
+import PropTypes from 'prop-types';
 
 const Header = props => {
   return (
@@ -29,6 +30,12 @@ const Header = props => {
       </div>
     </header>
   );
+};
+
+Header.prototype = {
+  submit: PropTypes.func,
+  search: PropTypes.func,
+  onChange: PropTypes.func
 };
 
 export default Header;

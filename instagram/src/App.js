@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
+import PropTypes from 'prop-types';
 
 import dummyData from './dummy-data';
 import Header from './components/Header';
@@ -44,5 +45,29 @@ class App extends Component {
     );
   }
 }
+
+Header.propTypes = {
+  onChange: PropTypes.func
+};
+
+PostContainer.propTypes = {
+  dummyData: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      imageUrl: PropTypes.string,
+      likes: PropTypes.number,
+      thumbnailUrl: PropTypes.string,
+      timestamp: PropTypes.string,
+      username: PropTypes.string,
+      comments: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+          text: PropTypes.string,
+          username: PropTypes.string
+        })
+      )
+    })
+  )
+};
 
 export default App;
