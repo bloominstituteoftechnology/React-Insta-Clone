@@ -1,4 +1,5 @@
 import React from "react";
+import CommentSection from "../CommentSection/CommentSection";
 
 const PostBottomBar = props => {
 	return (
@@ -10,6 +11,9 @@ const PostBottomBar = props => {
 				<div className='likes'>
 					<p>{`${props.post.likes}` + " likes"}</p>
 				</div>
+			</div>
+			<div className='commentSection'>
+				<CommentSection comments={props.post.comments} />
 			</div>
 		</div>
 	);

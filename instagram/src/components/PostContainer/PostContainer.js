@@ -2,7 +2,6 @@ import React from "react";
 import "./PostContainer.css";
 import PostTopBar from "./PostTopBar";
 import PostBottomBar from "./PostBottomBar";
-import CommentSection from "../CommentSection/CommentSection";
 
 const PostContainer = props => {
 	return props.post.map(post => (
