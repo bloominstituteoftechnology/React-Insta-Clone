@@ -1,0 +1,17 @@
+.post {
+	border: 1px solid gray;
+	width: 65%;
+	display: flex;
+	flex-direction: column;
+}
+
+.postTopBar {
+	display: flex;
+	flex-direction: row;
+}
+
+.postImage {
+}
+
+.postBottom {
+}
