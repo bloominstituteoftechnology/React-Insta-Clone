@@ -1,0 +1,14 @@
+.App {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    background: whitesmoke;
+
+    span {
+        font-weight: bold;
+        font-size: 1.7rem;
+    }
+}
