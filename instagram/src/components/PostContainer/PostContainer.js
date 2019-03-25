@@ -24,6 +24,10 @@ class PostContainer extends React.Component {
         }
 
         this.props.submitComment(this.props.post.timestamp, newComment);
+
+        this.setState({
+            comment: ''
+        })
     }
 
     render() {
@@ -62,6 +66,7 @@ class PostContainer extends React.Component {
                             <input
                                 placeholder='Add a comment...'
                                 name='comment'
+                                value={this.state.comment}
                                 onChange={this.handleChanges}
                             />
                         </form>

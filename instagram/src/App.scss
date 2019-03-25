@@ -28,7 +28,16 @@
 
             &.fa-instagram {
                 border-right: 2px solid #6363ff;
+
+                @media (max-width: 650px) {
+                    border-right: none;
+                }
             }
+        }
+
+        @media (max-width: 650px) {
+            flex-direction: column;
+            height: max-content;
         }
     }
 
