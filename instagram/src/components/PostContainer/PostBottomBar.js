@@ -8,7 +8,7 @@ const PostBottomBar = props => {
 					<i>iconshere</i>
 				</div>
 				<div className='likes'>
-					<p>{post.likes}</p>
+					<p>{`${props.post.likes}` + " likes"}</p>
 				</div>
 			</div>
 		</div>
