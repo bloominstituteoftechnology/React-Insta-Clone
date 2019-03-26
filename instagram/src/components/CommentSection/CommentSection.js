@@ -1,13 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import './commentSection.scss';
+import moment from 'moment';
 
 const CommentSection = props => {
     return (
-        <p className='commentContent'>
-            <span className='commentUsername'>{props.comment.username}</span>
-            {props.comment.text}
-        </p>
+        <>
+            <p className='commentContent'>
+                <span className='commentUsername'>{props.comment.username}</span>
+                {props.comment.text}
+            </p>
+            <p
+                className='time'
+                style={{ display: props.comment.timestamp ? 'block' : 'none' }}>
+                {moment(props.comment.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}
+            </p>
+        </>
     )
 }
 

@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       liked: false,
+      searchValue: '',
       data: dummyData
     };
   }
@@ -30,10 +31,6 @@ class App extends Component {
     })
   }
 
-  search = e => {
-    e.preventDefault();
-  }
-
   submitComment = (timestamp, comment) => {
     const commentMatch = this.state.data.slice().filter(post => post.timestamp === timestamp).pop(),
       commentUnMatch = this.state.data.slice().filter(post => post.timestamp !== timestamp);
@@ -45,13 +42,22 @@ class App extends Component {
     this.setState({ data: commentUnMatch });
   }
 
+  search = e => {
+    this.setState({ [e.target.name]: e.target.value });
+    const search = dummyData.slice().filter(post => post.username.includes(e.target.value) || post.comments.map(comm => comm.text).includes(e.target.value));
+    this.setState({ data: search })
+  }
+
   render() {
     return (
       <div className="App">
         <header>
           <i className='fab fa-instagram' />
           <i className='headName'>Instagram</i>
-          <SearchBar />
+          <SearchBar
+            search={this.search}
+            searchValue={this.state.searchValue}
+          />
           <div>
             <i className='far fa-compass' />
             <i className='far fa-heart' />

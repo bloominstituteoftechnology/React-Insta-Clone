@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
+import moment from 'moment';
 import './postContainer.scss';
 
 class PostContainer extends React.Component {
@@ -20,7 +21,8 @@ class PostContainer extends React.Component {
 
         const newComment = {
             username: 'random',
-            text: this.state.comment
+            text: this.state.comment,
+            timestamp: moment().format('MMMM Do YYYY, h:mm:ss a')
         }
 
         this.props.submitComment(this.props.post.timestamp, newComment);
