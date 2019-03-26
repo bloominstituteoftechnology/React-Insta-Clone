@@ -18,7 +18,7 @@ const PostItem = (props)=>{
 				<CommentSection comments={props.comments}/>
 				<time>{moment().startOf('day').fromNow().toUpperCase()}</time>
 			</div>
-			<CommentInput/>
+			<CommentInput onAddComment={props.onAddComment} postId={props.id}/>
 		</div>
 	)
 }
