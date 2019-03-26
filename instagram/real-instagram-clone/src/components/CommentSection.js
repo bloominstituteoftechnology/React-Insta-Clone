@@ -2,7 +2,6 @@ import React from "react";
 import Comment from "./Comment";
 import "../App.css";
 const CommentSection = props => {
-  console.log(props.comments);
   return (
     <div>
       <div className="comment-section">
