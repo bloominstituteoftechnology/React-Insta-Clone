@@ -44,7 +44,7 @@ class App extends Component {
 
   search = e => {
     this.setState({ [e.target.name]: e.target.value });
-    const search = dummyData.slice().filter(post => post.username.includes(e.target.value || (e.target.value).toLowerCase()) || post.comments.map(comm => comm.text.includes(e.target.value || (e.target.value).toLowerCase()) || comm.username.includes(e.target.value || (e.target.value).toLowerCase())).includes(true));
+    const search = dummyData.slice().filter(post => post.username.toLowerCase().includes((e.target.value).toLowerCase()) || post.comments.map(comm => comm.text.toLowerCase().includes((e.target.value).toLowerCase()) || comm.username.toLowerCase().includes((e.target.value).toLowerCase())).includes(true));
     this.setState({ data: search })
   }
 
