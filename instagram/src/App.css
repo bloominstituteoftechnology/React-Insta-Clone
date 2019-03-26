@@ -29,7 +29,8 @@ h6 {
 .search {
   display: flex;
  justify-content: space-evenly;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Lobster Two', cursive;
+  font-size: 30px;
   margin: 7px;
 }
 
@@ -44,4 +45,14 @@ h6 {
 .mmm {
   display: flex;
   font-size: 50px
+}
+
+.comment {
+  width: 100%;
+  height: 30px;
+}
+
+.hour {
+  font-size: 14px;
+  color: grey;
 }
