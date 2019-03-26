@@ -1,7 +1,6 @@
 import React from 'react';
 
 const CommentInput = props => {
-  console.log(props);
   return (
     <div className="post-footer">
       <form onSubmit={props.onSubmit} className="add-a-comment">
