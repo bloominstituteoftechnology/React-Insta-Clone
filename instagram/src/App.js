@@ -4,17 +4,34 @@ import {postList} from './dummyData'
 import SearchBar from './components/SearchBar/SearchBar'
 import PostContainer from "./components/PostContainer/PostContainer";
 
+
 class App extends Component {
+ 
   constructor(){
     super()
     this.state = {
         postList:[],
-        filteredQuery:''
+        filteredQuery:'',
     }
+    this.useCache = false;
+    this.clearCacheFlag = false;
   }
   componentDidMount() {
-    this.setState({postList: postList})
+    if(this.clearCacheFlag){
+        this.clearCache();
+    }
+    
+    let cachedList = this.getFromLocal('postList')
+    if(cachedList === null){
+        this.saveToLocal('postList', postList)
+    }
+    if(this.useCache){
+        this.setState({postList: cachedList})
+    }else{
+        this.setState({postList: postList})
+    }
   }
+  
   
   onSearchPost = (e, val)=>{
     e.preventDefault();
@@ -33,9 +50,11 @@ class App extends Component {
     this.setState({
          postList: copyArr
     })
+    console.log('copyArr',copyArr)
+    this.saveToLocal('postList', copyArr)
   }
   
-  addItem = (e, val, postId)=> {
+  addComment = (e, val, postId)=> {
     e.preventDefault();
     const copyArr = this.state.postList.slice()
     const post = copyArr.find(el => el.id === postId)
@@ -51,8 +70,19 @@ class App extends Component {
     post.comments.push(newComment)
     const newArr = [...copyArr, post]
     this.setState({...postList, newArr})
+    this.saveToLocal('postList', newArr)
   }
   
+  saveToLocal = (key, value)=>{
+      localStorage.setItem(key,  JSON.stringify(value))
+  }
+  
+  getFromLocal = (key) => {
+      return JSON.parse(localStorage.getItem(key))
+  }
+  clearCache = ()=>{
+     localStorage.clear();
+  }
   render() {
       let filteredArr;
       if(this.state.filteredQuery){
@@ -68,7 +98,7 @@ class App extends Component {
               onSearchPost={this.onSearchPost}/>
           <PostContainer
               postList={filteredArr}
-              onAddComment={this.addItem}
+              onAddComment={this.addComment}
               onLikeClick={this.addLike}/>
       </div>
     );

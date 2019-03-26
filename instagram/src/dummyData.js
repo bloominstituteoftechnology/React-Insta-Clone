@@ -2,7 +2,7 @@ export const postList = [
     
     {
         id: "a",
-        username: "philzcoffee",
+        username: "Ellenphilzcoffee",
         // thumbnailUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/31c45306e6ca815b8c59940aed10cedc/5B2D3C88/t51.2885-19/11201517_887808411287357_1307163552_a.jpg',
         // imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/557a29d3526bc7f813c2a784d82de7d3/5B4E3E05/t51.2885-15/e35/26065916_2007800899433580_5879937492399947776_n.jpg',
         thumbnailUrl: 'http://lorempixel.com/400/400',
@@ -67,6 +67,43 @@ export const postList = [
     {
         id: "c",
         username: "playhearthstone",
+        // thumbnailUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/51d5b37438ae3a47df37b7ed3fda141f/5B4ABAA7/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
+        // imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/22618be7ee2a2b676d13e8d70d7d5e08/5B40BF6B/t51.2885-15/e35/25038917_1978298569058775_6081161469041311744_n.jpg',
+        thumbnailUrl: 'http://lorempixel.com/450/400',
+        imageUrl: 'http://lorempixel.com/950/1000',
+        likes: 5306,
+        timestamp: "July 14th 2017, 10:04:08 am",
+        comments: [
+            {
+                id: "9",
+                username: "playhearthstone",
+                text: "Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
+            },
+            {
+                id: "10",
+                username: "tapmelon",
+                text: "Wish that death knight could be added as a new playable class in this expansion."
+            },
+            {
+                id: "11",
+                username: "micpetboudreau",
+                text: "Can't wait"
+            },
+            {
+                id: "12",
+                username: "awaywetravel",
+                text: "I <3 Hearthstone."
+            },
+            {
+                id: "13",
+                username: "awesomebt28",
+                text: "I like how gul'dan looks so old and useless"
+            }
+        ]
+    },
+    {
+        id: "d",
+        username: "ellenweng",
         // thumbnailUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/51d5b37438ae3a47df37b7ed3fda141f/5B4ABAA7/t51.2885-19/s150x150/13398400_140638743023210_310840336_a.jpg',
         // imageUrl: 'https://instagram.fbna1-1.fna.fbcdn.net/vp/22618be7ee2a2b676d13e8d70d7d5e08/5B40BF6B/t51.2885-15/e35/25038917_1978298569058775_6081161469041311744_n.jpg',
         thumbnailUrl: 'http://lorempixel.com/450/400',
