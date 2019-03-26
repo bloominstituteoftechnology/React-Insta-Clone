@@ -1,5 +1,6 @@
 import React from "react";
 import "./SearchBar.css";
+import Search from "./Search";
 
 const SearchBar = () => {
 	return (
@@ -8,11 +9,7 @@ const SearchBar = () => {
 				<i className='fab fa-instagram' /> <h4>Instagram</h4>
 			</div>
 
-			<div className='search'>
-				<form>
-					<input type='text' placeholder='&#xF002; Search' />
-				</form>
-			</div>
+			<Search />
 
 			<div className='nav'>
 				<i className='far fa-compass' />

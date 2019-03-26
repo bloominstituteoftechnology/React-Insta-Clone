@@ -5,6 +5,7 @@
 	width: 95%;
 	border-bottom: 1px solid #e6e6e6;
 	margin: 0 auto;
+	justify-content: space-between;
 }
 
 .logo {
@@ -14,32 +15,29 @@
 	align-items: baseline;
 	width: 25%;
 	font-size: 30px;
-	margin: 0 auto;
 }
 
 .search {
 	width: 40%;
-	margin: 0 auto;
 }
 
 .search form {
 	width: 100%;
-	margin: 0 auto;
 }
 
 .search form input {
 	width: 100%;
-	margin: 0 auto;
 	text-align: center;
+	padding: 5px 0;
 }
 
 .search form input::placeholder {
 	font-family: "FontAwesome";
+	font-size: 13px;
 }
 
 .nav {
 	width: 25%;
-	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
 }

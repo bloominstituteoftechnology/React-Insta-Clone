@@ -6,7 +6,6 @@ import "./CommentSection.css";
 class CommentSection extends React.Component {
 	constructor(props) {
 		super(props);
-		console.log(props);
 		this.state = {
 			comments: props.comments,
 			timestamp: props.timestamp,

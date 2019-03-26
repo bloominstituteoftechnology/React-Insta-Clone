@@ -23,4 +23,34 @@ const PostBottomBar = props => {
 	);
 };
 
+// class PostBottomBar extends React.Component {
+// 	constructor(props) {
+// 		super(props);
+// 		this.state = {
+// 			post: props
+// 		};
+// 	}
+
+// 	render() {
+// 		return (
+// 			<div className='postBottomBar'>
+// 				<div className='iconslikes'>
+// 					<div className='icons'>
+// 						<i className='far fa-heart' />
+// 						<i className='far fa-comment' />
+// 					</div>
+// 					<div className='likes'>
+// 						<p>{`${this.state.post.likes}` + " likes"}</p>
+// 					</div>
+// 				</div>
+
+// 				<CommentSection
+// 					comments={this.state.post.comments}
+// 					timestamp={this.state.post.timestamp}
+// 				/>
+// 			</div>
+// 		);
+// 	}
+// }
+
 export default PostBottomBar;
