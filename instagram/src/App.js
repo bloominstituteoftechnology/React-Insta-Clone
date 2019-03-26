@@ -12,25 +12,27 @@ class App extends Component {
         filteredQuery:''
     }
   }
-  componentWillMount() {
-    // axios.get('/thedata').then(res => {
-    //     this.setState({items: res.data});
-    // });
+  componentDidMount() {
     this.setState({postList: postList})
   }
   
-  onSearchPost = (e, val )=>{
+  onSearchPost = (e, val)=>{
     e.preventDefault();
-    console.log('query changed', e)
-    console.log('val', val)
-    
-    //search all comments
+    this.setState({filteredQuery: val})
   }
   
   onQueryChange = (val )=>{
-    console.log('val', val)
     this.setState({filteredQuery: val})
-    //search all comments
+  }
+  
+  addLike = (e, postId)=> {
+    console.log('postId', postId)
+    const copyArr = [...this.state.postList]
+    copyArr.find(el => el.id === postId).likes++
+    
+    this.setState({
+         postList: copyArr
+    })
   }
   
   addItem = (e, val, postId)=> {
@@ -52,18 +54,13 @@ class App extends Component {
   }
   
   render() {
-       const matcher = RegExp(this.state.filteredQuery, 'i')
-       const filteredArr = this.state.postList.filter(post => {
-        
-        // How do you loop thoughg array inside an array
-        const foundArr =  post.comments.map(comment => {
-            matcher.test(comment.text)
-         })
-         
-         console.log(foundArr)
-        return foundArr
-       })
-      console.log(filteredArr)
+      let filteredArr;
+      if(this.state.filteredQuery){
+           const matcher = new RegExp(this.state.filteredQuery, 'i')
+          filteredArr = this.state.postList.filter(post => matcher.test(post.username))
+       }else{
+          filteredArr = this.state.postList
+       }
     return (
       <div className="App">
           <SearchBar
@@ -71,7 +68,8 @@ class App extends Component {
               onSearchPost={this.onSearchPost}/>
           <PostContainer
               postList={filteredArr}
-              onAddComment={this.addItem}/>
+              onAddComment={this.addItem}
+              onLikeClick={this.addLike}/>
       </div>
     );
   }

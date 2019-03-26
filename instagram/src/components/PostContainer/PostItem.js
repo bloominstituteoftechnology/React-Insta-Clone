@@ -14,7 +14,7 @@ const PostItem = (props)=>{
 			<PostHeader {...props}/>
 			<img className="heroImage" src={props.imageUrl} alt="hero"/>
 			<div className="bottomContentContainer">
-				<PostLikes likes={props.likes}/>
+				<PostLikes onLikeClick={e => props.onLikeClick(e, props.id)} likes={props.likes}/>
 				<CommentSection comments={props.comments}/>
 				<time>{moment().startOf('day').fromNow().toUpperCase()}</time>
 			</div>

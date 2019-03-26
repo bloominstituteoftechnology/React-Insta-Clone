@@ -33,7 +33,7 @@ class SearchBar extends React.Component{
 						/>
 					<button className="searchButton" onClick={e => this.onSearchPost(e)}>
 						<i className="fas fa-search"/>
-					</button>
+					</button>›
 				</div>
 				<div className="right">
 					<button className=""><i className="fab fa-instagram"/></button>

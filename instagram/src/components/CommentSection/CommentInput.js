@@ -8,24 +8,34 @@ class CommentInput extends React.Component{
 			query: ''
 		}
 	}
-	onQueryChanged = (e)=>{
-		const val = e.trim()
+	onQueryChanged = (val)=>{
 		this.setState({query: val})
 	}
 	
+	onKeyDown = (e)=>{
+		if(e.key === "Enter"){
+			this.onAddComment(e)
+		}
+	}
+	
 	onAddComment = (e)=>{
-		this.props.onAddComment(e, this.state.query, this.props.postId)
+		if(this.state.query.length === 0) return
+		const val = this.state.query.trim()
+		this.props.onAddComment(e, val, this.props.postId)
 		this.setState({query: ''})
 	}
 	
 	render(){
 		return (
-			<div className="commentInputContainer">
-				<input type="text" className="commentInput" placeholder="Add a comment..."
+			<form className="commentInputContainer">
+				<input type="text"
+					className="commentInput"
+					placeholder="Add a comment..."
 					onChange={ e => this.onQueryChanged(e.target.value)}
+					onKeyDown={(e)=> this.onKeyDown(e)}
 					value={this.state.query}/>
-				<button onClick={(e)=> this.onAddComment(e)} >...</button>
-			</div>
+				<button onSubmit={(e)=> this.onAddComment(e)} >...</button>
+			</form>
 		)
 	}
 }
