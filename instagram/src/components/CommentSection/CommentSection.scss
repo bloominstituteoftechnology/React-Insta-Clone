@@ -1,0 +1,54 @@
+
+
+/*
+LIKES
+================== */
+.commentSection{
+  margin-top: 6px;
+  text-align:left;
+}
+
+/*
+ Comment Item
+================== */
+.commentItem{
+  margin-bottom: 6px;
+  font-size: 1rem;
+  .author{
+    font-weight:bold;
+    margin-right: 4px;
+  }
+  a{
+    margin-left:8px;
+    color:rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+  }
+  span{
+    color: #222222;
+  }
+}
+
+.commentInputContainer{
+  position: relative;
+  height: 60px;
+  padding-left:1px;
+  input{
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+
+  }
+
+  button{
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    margin-left: 20px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #444;
+  }
+}
+

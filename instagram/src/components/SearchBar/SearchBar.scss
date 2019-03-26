@@ -1,0 +1,47 @@
+.searchBarContainer{
+  padding: 20px 0;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  height: 100px;
+  .logoBox{
+    display: flex;
+    height: 100%;
+    align-items:center;
+  }
+  .logo{
+    max-width: 100%;
+    border-left: 1px solid #444;
+    padding-left:10px;
+    height: 90%;
+  }
+
+  .logoButton {
+    margin-left: 0;
+    & > i{
+      font-size: 3rem;
+    }
+  }
+
+
+  .searchInputContainer{
+    padding: 20px;
+    position: relative;
+    width: 60%;
+    .searchInput{
+      width: 100%;
+    }
+    .searchButton{
+      position: absolute;
+      right: 40px;
+      top: 30px;
+    }
+  }
+  .right  i{
+    margin-left: 14px;
+  }
+}
+
+.searchInput{
+
+}

@@ -1,0 +1,54 @@
+.postContainer{
+  max-width: 1000px;
+  text-align: center;
+  border: 1px solid #888;
+  .heroImage{
+    width: 100%;
+    max-height: 500px;
+  }
+  .bottomContentContainer{
+    text-align:left;
+    time{
+      display: inline-block;
+      margin: 4px 20px 10px 20px;
+      font-size: 0.8rem;
+      color: rgba(0,0,0, 0.4);
+     }
+  }
+}
+
+
+/*
+    HEADER
+================== */
+header{
+  display:flex;
+  align-items: center;
+  text-align: left;
+  padding: 12px 24px;
+  color: #222;
+  .userImage{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  span{
+    font-size: 1.2rem;
+  }
+}
+
+
+/*
+LIKES
+================== */
+ .postLikeContainer{
+   margin-top: 8px;
+   text-align: left;
+   padding: 12px 20px;
+   p{
+     margin-top: 8px;
+     font-size:1.1rem;
+     font-weight: bold;
+   }
+ }

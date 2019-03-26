@@ -3,9 +3,9 @@ import './PostContainers.scss';
 
 const PostLikes = (props)=>{
 	return (
-		<div>
-			<i className="fal fa-heart"/>
-			<i className="fal fa-comment"/>
+		<div className="postLikeContainer">
+			<button><i className=" far fa-heart"/></button>
+			<button><i className="far fa-comment-alt"/></button>
 			<p>373 likes</p>
 		</div>
 	)

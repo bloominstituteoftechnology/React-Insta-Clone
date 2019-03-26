@@ -3,7 +3,7 @@ import './CommentSection.scss';
 
 const CommentInput= ()=>{
 	return (
-		<div>
+		<div className="commentInputContainer">
 			<input type="text" placeholder="Add a comment..."/>
 			<button>...</button>
 		</div>

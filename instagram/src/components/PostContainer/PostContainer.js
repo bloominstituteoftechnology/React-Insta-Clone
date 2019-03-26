@@ -7,13 +7,13 @@ import './PostContainers.scss';
 
 const PostContainer = ()=>{
 	return (
-		<div>
+		<div className="postContainer">
 			<PostHeader/>
 			<img className="heroImage" src="http://lorempixel.com/800/800"/>
-			<div>
+			<div className="bottomContentContainer">
 				<PostLikes />
 				<CommentSection/>
-				<p>2 HOURS AGO</p>
+				<time>2 HOURS AGO</time>
 			</div>
 			<CommentInput/>
 		</div>

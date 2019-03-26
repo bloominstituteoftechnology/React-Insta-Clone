@@ -4,9 +4,13 @@ import './CommentSection.scss';
 
 const CommentSection= (props)=>{
 	return (
-		<ul>
-			<CommentItem/>
-		</ul>
+		<section className="commentSection">
+			<ul>
+				<CommentItem/>
+				<CommentItem/>
+				<CommentItem/>
+			</ul>
+		</section>
 	)
 }
 
