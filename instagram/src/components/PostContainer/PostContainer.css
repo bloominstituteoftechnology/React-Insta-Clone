@@ -35,13 +35,14 @@
 	display: flex;
 	flex-direction: column;
 	margin: 0 2.5%;
+	align-items: baseline;
 }
 
 .iconslikes {
 	display: flex;
 	flex-direction: column;
-	align-items: baseline;
 	justify-content: flex-start;
+	width: fit-content;
 	margin: 1% 0;
 }
 
@@ -49,7 +50,6 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 10%;
 	margin-bottom: 1%;
 }
 .icons i {
@@ -58,25 +58,45 @@
 }
 
 .likes {
-	width: 15%;
 	display: flex;
-	justify-content: flex-start;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: fit-content;
 }
 
 .likes p {
-	font-size: 12px;
+	font-size: 0.8rem;
 	width: fit-content;
 	margin: 3% 0;
+	flex-wrap: nowrap;
 }
 
-.commentSection {
-}
 .timestamp {
 	display: flex;
 	flex-direction: row;
 	align-items: baseline;
+	border-bottom: 1px solid #e6e6e6;
+	width: 100%;
 }
 
 .timestamp * {
 	font-size: 10px;
+}
+
+.inputComment {
+	padding: 2% 0;
+	width: 100%;
+	display: flex;
+}
+
+.inputComment form {
+	width: 100%;
+}
+
+.inputComment form input {
+	margin: 0 0;
+	font-size: 12px;
+	width: 100%;
+	border: none;
+	/* color: #262626; */
 }

@@ -1,9 +1,14 @@
+.commentSection {
+	width: 100%;
+}
+.comment * {
+	font-size: 10px;
+	margin: 0.9% 0.6% 0.9% 0;
+}
+
 .comment {
 	display: flex;
 	flex-direction: row;
 	align-items: baseline;
-}
-
-.comment * {
-	font-size: 10px;
+	margin: 0 0;
 }

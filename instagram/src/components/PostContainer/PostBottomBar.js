@@ -20,6 +20,11 @@ const PostBottomBar = props => {
 			<div className='timestamp'>
 				<p>{props.post.timestamp}</p>
 			</div>
+			<div className='inputComment'>
+				<form>
+					<input type='text' placeholder='Add a comment...' />
+				</form>
+			</div>
 		</div>
 	);
 };
