@@ -1,27 +1,39 @@
 .App{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    width: 800px;
+    /* justify-content: center; */
+    /* align-content: center; */
+    width: 100%;
+    margin: 10px;
 }
 
 .header-name{
     font-family: 'Pacifico', cursive;
     font-size: 25px;
     margin-top: 10px;
-    border-left: 1px solid black;
     
+    
+}
+.insta-header{
+    display: flex;
+    
+}
+h1{
+    margin-left: 15px;
 }
 .header{
     display:flex;
     justify-content: center;
     justify-content: space-between;
+    align-items: center;
+    
     
     
 }
 .fa-instagram{
    font-size: 50px;
+   border-right: 3px solid black;
+   padding: 10px;
 }
 input{
     width: 200px;
@@ -29,28 +41,121 @@ input{
     margin-top: 10px;
 }
 .header-nav{
-    font-size: 50px;
+    display:flex;
+    justify-content: space-between;
+    font-size: 30px;
+    margin-right: 20px;
+    width:200px;
 }
 .postimg{
-    width: 600px;
+    width: 700px;
+}
+.profileName{
+display: flex;
+align-items: center;
+/* border: 1px solid slategray; */
+
+
+}
+.userinfo{
+    display:flex;
+    margin-left: 8px;
+    margin-top: 4px;
 }
 .thumbimg{
+ width:50px;
+ height:50px;
 border-radius: 100px;
 }
 .comment{
     display: flex;
     align-content: center;
+    max-width:600px;
+    box-sizing: border-box;
+    padding:5px;
     
 }
+.comment-container{
+    display: flex;
+    align-items: flex-start;
+   
+}
+.comment-section{
+ display: flex;
+ flex-direction: column;
+ /* align-items: center; */
+}
+.comment-wrapper{
+    padding-left: 8px;
+}
 .text{
-    font-size: 16px;
+    font-size: 15px;
+     
+}
+
+h3{
+    font-size:15px;
+    margin-right: 8px;
 }
 .post-container{
     display:flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
+    align-items: center;
+    margin: 30px;
+    
+    
+}
+.shook{
+    border: 1px solid lightgray;
+    margin-top: 20px;
 
 }
 
-
+.interactions{
+    width: 13%;
+    font-size:30px;
+    display:flex;
+    justify-content: space-between;
+    margin-left: 8px;
+    
+}
+.fa-heart:hover{
+    text-shadow: 2px 2px palevioletred;
+}
+.fa-comment:hover{
+    text-shadow: 2px 2px lightskyblue
+}
+.likes{
+    margin-left:8px;
+}
+.input-wrapper{
+    width:90%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-left:20px;
+    border-top: 1px solid lightgray;
+    
+    
+}
+.comment-input{
+    width: 95%;
+    outline: none;
+    border: none;
+    height: 50px;
+    
+    
+}
+.input-field{
+    width:100%;
+}
+button{
+    background: none;
+    outline: none;
+    border: none;
+}
+.fa-ellipsis-h{
+    outline:none
+    
+}

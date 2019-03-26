@@ -71,7 +71,7 @@ const dummyData = [
       thumbnailUrl:
         "https://tk-assets.lambdaschool.com/c432f179-8bd7-4758-959d-d88a21f96bca_37105899_432228420518610_5035444036064772096_n.jpg",
       imageUrl:
-        "https://tk-assets.lambdaschool.com/43bf01f9-319c-469d-8cf5-0120fe1007f1_yosemite.jpg",
+        "https://gamepedia.cursecdn.com/wowpedia/0/08/Gul%27dan_HoW.jpg",
       likes: 5306,
       timestamp: "July 14th 2017, 10:04:08 am",
       comments: [
