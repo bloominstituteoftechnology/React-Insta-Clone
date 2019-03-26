@@ -13,6 +13,24 @@ class CommentSection extends React.Component {
     };
   }
 
+  componentDidMount() {
+    const json = localStorage.getItem('comments');
+    const comments = JSON.parse(json);
+
+    if (comments) {
+      this.setState(() => ({
+        comments
+      }));
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.comments.length !== this.state.comments.length) {
+      const json = JSON.stringify(this.state.comments);
+      localStorage.setItem('comments', json);
+    }
+  }
+
   onInputChange = e => {
     this.setState({
       [e.target.name]: e.target.value
