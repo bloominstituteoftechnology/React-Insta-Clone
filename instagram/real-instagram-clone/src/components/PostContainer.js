@@ -9,7 +9,7 @@ const PostContainer = (props) =>{
         
           <div className ="shook"key ={post.timestamp}>
             <div className = "profileName">
-          <div className = "userinfo"><img className = "thumbimg"src = {post.thumbnailUrl} alt = 'fuck 12'></img> <h3>{post.username}</h3></div> </div>
+          <div className = "userinfo"><img className = "thumbimg"src = {post.thumbnailUrl} alt = 'fuck 12'></img> <h3 className ="user-name">{post.username}</h3></div> </div>
           <div ><img className ="postimg"src = {post.imageUrl} alt = "fuck 12"></img></div>
           
           <div className =" interactions">
@@ -17,7 +17,7 @@ const PostContainer = (props) =>{
           <i class="far fa-comment"></i>
           </div>
           <div>
-          <div className ="likes"><p>{post.likes}  Likes</p></div>
+          <div ><p  className = "likes">{post.likes} Likes</p></div>
           </div>
           <CommentSection comment = {post.comments}/>
           </div>

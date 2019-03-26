@@ -32,7 +32,7 @@ const dummyData = [
       id: "b",
       username: "twitch",
       thumbnailUrl:
-        "https://tk-assets.lambdaschool.com/ce601fdf-7cb0-4098-83d3-1a1584a72513_30841289_342445456281079_112845064497004544_n.jpg",
+        "https://www.freepnglogos.com/uploads/twitch-logo-transparent-png-20.png",
       imageUrl:
         "https://tk-assets.lambdaschool.com/89d13918-b7a2-4b40-9658-f376ea3f6b59_37131538_213683546146400_1083714364399157248_n.jpg",
       likes: 4307,
@@ -69,7 +69,7 @@ const dummyData = [
       id: "c",
       username: "playhearthstone",
       thumbnailUrl:
-        "https://tk-assets.lambdaschool.com/c432f179-8bd7-4758-959d-d88a21f96bca_37105899_432228420518610_5035444036064772096_n.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/919avEb7fmL.png",
       imageUrl:
         "https://gamepedia.cursecdn.com/wowpedia/0/08/Gul%27dan_HoW.jpg",
       likes: 5306,

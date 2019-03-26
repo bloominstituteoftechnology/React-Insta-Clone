@@ -26,6 +26,7 @@ h1{
     justify-content: center;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid lightgray;
     
     
     
@@ -36,7 +37,7 @@ h1{
    padding: 10px;
 }
 input{
-    width: 200px;
+    width: 400px;
     height: 30px;
     margin-top: 10px;
 }
@@ -63,9 +64,10 @@ align-items: center;
     margin-top: 4px;
 }
 .thumbimg{
- width:50px;
- height:50px;
+ width:55px;
+ height:55px;
 border-radius: 100px;
+margin:5px;
 }
 .comment{
     display: flex;
@@ -97,6 +99,9 @@ h3{
     font-size:15px;
     margin-right: 8px;
 }
+.user-name{
+    margin-left: 8px;
+}
 .post-container{
     display:flex;
     flex-direction: column;
@@ -126,7 +131,7 @@ h3{
     text-shadow: 2px 2px lightskyblue
 }
 .likes{
-    margin-left:8px;
+    padding-left:15px;
 }
 .input-wrapper{
     width:90%;
