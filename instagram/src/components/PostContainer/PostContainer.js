@@ -8,7 +8,8 @@ class PostContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            comment: ''
+            comment: '',
+            liked: false
         }
     }
 
@@ -49,12 +50,12 @@ class PostContainer extends React.Component {
                 />
                 <section className='cAndL'>
                     <i
-                        onClick={() => this.props.liker(this.props.post.timestamp)}
-                        className={this.props.liked === false ? 'far fa-heart like' : 'fas fa-heart like'} />
+                        onClick={() => this.setState({ liked: !this.state.liked })}
+                        className={this.state.liked === false ? 'far fa-heart like' : 'fas fa-heart like'} />
 
                     <i className='far fa-comment comment' />
 
-                    <span className='likes'>{this.props.post.likes} likes</span>
+                    <span className='likes'>{this.state.liked === false ? this.props.post.likes : this.props.post.likes + 1} likes</span>
                 </section>
 
                 <div className='comments'>{this.props.post.comments.map((comment, id) => (
