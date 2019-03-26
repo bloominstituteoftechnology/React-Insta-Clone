@@ -2,6 +2,10 @@ import React from 'react';
 import './Postcontainer.css';
 
 import CommentSection from './CommentSection';
+import heart from '../assets/heart.png';
+import comment from '../assets/comment.png';
+import send from '../assets/send.png';
+
 import PropTypes from 'prop-types';
 
 const PostContainer = props => {
@@ -17,21 +21,13 @@ const PostContainer = props => {
         <div className="post-image">
           <img src={props.img} alt="" />
         </div>
-        <div className="ui-controls">{/* */}</div>
+        <div className="ui-controls">
+          <img src={heart} alt="" className="heart" />
+          <img src={comment} alt="" className="comment" />
+          <img src={send} alt="" className="send" />
+        </div>
         <button className="likes">{props.likes} likes</button>
         <CommentSection comments={props.comments} />
-        <div className="post-footer">
-          <form className="add-a-comment">
-            <input
-              type="text"
-              placeholder="Add a comment..."
-              value={props.newComment}
-              name="addComment"
-              onChange={props.onChange}
-            />
-          </form>
-          <button className="more">more</button>
-        </div>
       </div>
     </div>
   );

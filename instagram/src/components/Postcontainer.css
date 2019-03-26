@@ -1,5 +1,4 @@
 .PostContainer {
-  /* padding: 0 135px; */
   width: 1010px;
   margin: 40px auto;
 }
@@ -7,6 +6,7 @@
 .post {
   width: 642px;
   border: 1px solid #eee;
+  border-radius: 3px;
   background: #fff;
 }
 
@@ -18,7 +18,7 @@
   align-items: center;
   padding: 20px;
   /* padding-left: 30px; */
-  background: #fff;
+  /* background: #fff; */
 }
 
 .thumbnail img {
@@ -37,7 +37,25 @@
 }
 
 .post .ui-controls {
-  margin: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 125px;
+  padding: 10px 20px;
+  /* margin: 20px 10px; */
+}
+
+.post .ui-controls .heart {
+  width: 24px;
+}
+
+.post .ui-controls .comment {
+  width: 24px;
+}
+
+.post .ui-controls .send {
+  width: 24px;
 }
 
 .post .likes {
@@ -57,7 +75,7 @@
   font-size: 1rem;
   font-weight: 500;
   margin-top: -10px;
-  border-bottom: 1px solid #dbdbdb;
+  border-bottom: 1px solid #bfbfbf46;
 }
 
 .post .comments .username {
@@ -87,11 +105,20 @@
   padding: 20px;
   font-size: 1rem;
   outline: none;
+  background: transparent;
+}
+
+.add-a-comment input::placeholder {
+  color: #bfbfbf;
+  font-weight: 500;
 }
 
 .more {
   border: 0;
   background: transparent;
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding-right: 20px;
+  outline: none;
+  cursor: pointer;
+  color: #262626;
 }

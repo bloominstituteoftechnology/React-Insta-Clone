@@ -11,14 +11,13 @@ class App extends Component {
     super();
     this.state = {
       dummyData,
-      search: '',
-      newComments: ''
+      search: ''
     };
   }
 
   onInputChange = e => {
     this.setState({
-      [e.target.name]: e.target.value
+      search: e.target.value
     });
   };
 

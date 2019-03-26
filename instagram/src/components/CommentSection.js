@@ -2,25 +2,64 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Comment from './Comment';
+import CommentInput from './CommentInput';
 
-const CommentSection = props => {
-  return (
-    <div className="comments">
-      {props.comments.map(comment => {
-        return (
-          <Comment
-            key={comment.id}
-            username={comment.username}
-            text={comment.text}
-          />
-        );
-      })}
-      <p className="timeline">{props.date}</p>
-    </div>
-  );
-};
+class CommentSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: this.props.comments,
+      text: ''
+    };
+  }
 
-Comment.proptypes = {
+  onInputChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    });
+  };
+
+  onFormSubmit = e => {
+    e.preventDefault();
+
+    const newComment = {
+      id: Date.now(),
+      text: this.state.text,
+      username: 'philzcoffee'
+    };
+
+    this.setState({
+      comments: [...this.state.comments, newComment],
+      text: ''
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <div className="comments">
+          {this.state.comments.map(comment => {
+            return (
+              <Comment
+                key={comment.id}
+                username={comment.username}
+                text={comment.text}
+              />
+            );
+          })}
+          <p className="timeline">{this.props.date}</p>
+        </div>
+        <CommentInput
+          onChange={this.onInputChange}
+          onSubmit={this.onFormSubmit}
+          text={this.state.text}
+        />
+      </div>
+    );
+  }
+}
+
+CommentSection.propTypes = {
   comments: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
