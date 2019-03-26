@@ -4,6 +4,7 @@ import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer';
 import SearchBar from './components/SearchBar';
 
+
 class App extends Component {
   constructor(){
     super();
@@ -12,8 +13,10 @@ class App extends Component {
     }
   }
 
+
+
   render() {
-    return (
+    return ( 
       <div className="App">
       <SearchBar/>
       <PostContainer posts = {this.state.data} />
@@ -22,6 +25,6 @@ class App extends Component {
       
     );
   }
-}
+  }
 
 export default App;

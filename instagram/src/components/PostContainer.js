@@ -6,7 +6,6 @@ import CommentSection from './CommentSection';
 const PostContainer = props => {
 return( 
 <div>    
-    
     {props.posts.map(post => 
         <div key ={post.timestamp}> 
         <img className="thumb" src={post.thumbnailUrl} alt={post.timestamp}/>
@@ -18,14 +17,9 @@ return(
             </span>
             <strong><span className="likes">{post.likes} Likes</span></strong>
             <span className="commentz">
+            <span className="hour"> 3 hours ago</span>
             <CommentSection 
                 comments={post.comments} /></span>
-                <span className="hour"> 3 hours ago</span>
-            <input 
-            className ="comment"
-                type="text" 
-            placeholder="Add a Comment..."
-            />
         </div>
     )} 
 </div>)
