@@ -12,7 +12,8 @@ const CommentSection = props => {
             </p>
             <p
                 className='time'
-                style={{ display: props.comment.timestamp ? 'block' : 'none' }}>
+                style={{ display: props.comment.timestamp ? 'block' : 'none' }}
+            >
                 {moment(props.comment.timestamp, 'MMMM Do YYYY, h:mm:ss a').fromNow()}
             </p>
         </>

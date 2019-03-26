@@ -45,7 +45,11 @@ class App extends Component {
 
   render() {
     if (this.state.data.length === 0) {
-      return <Loader type="Triangle" color="darkgreen" height={80} width={80} />;
+      return (
+        <div className='load'>
+          <Loader type="Triangle" color="darkgreen" height={80} width={80} />
+        </div>
+      )
     } else {
       return (
         <div className="App">
