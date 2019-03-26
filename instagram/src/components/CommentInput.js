@@ -3,7 +3,10 @@ import React from 'react';
 const CommentInput = props => {
   return (
     <div className="post-footer">
-      <form onSubmit={props.onSubmit} className="add-a-comment">
+      <form
+        onSubmit={e => props.onSubmit(e, props.id)}
+        className="add-a-comment"
+      >
         <input
           required
           type="text"

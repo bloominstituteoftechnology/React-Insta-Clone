@@ -61,6 +61,10 @@ class PostContainer extends React.Component {
           <CommentSection
             comments={this.props.comments}
             date={this.props.date}
+            onChange={this.props.onChange}
+            onSubmit={this.props.onSubmit}
+            id={this.props.id}
+            text={this.props.text}
           />
         </div>
       </div>
