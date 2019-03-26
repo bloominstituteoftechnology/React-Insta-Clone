@@ -6,7 +6,7 @@ const PostLikes = (props)=>{
 		<div className="postLikeContainer">
 			<button><i className=" far fa-heart"/></button>
 			<button><i className="far fa-comment-alt"/></button>
-			<p>373 likes</p>
+			<p>{props.likes} likes</p>
 		</div>
 	)
 }

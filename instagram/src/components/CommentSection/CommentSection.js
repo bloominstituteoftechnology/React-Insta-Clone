@@ -6,9 +6,9 @@ const CommentSection= (props)=>{
 	return (
 		<section className="commentSection">
 			<ul>
-				<CommentItem/>
-				<CommentItem/>
-				<CommentItem/>
+				{props.comments.map(el => {
+					return <CommentItem comment={el} key={el.id}/>
+				})}
 			</ul>
 		</section>
 	)

@@ -1,7 +1,5 @@
 import React from 'react'
 import './SearchBar.scss';
-import { Button } from 'reactstrap';
-
 class SearchBar extends React.Component{
 	constructor(props){
 		super(props)
@@ -18,7 +16,7 @@ class SearchBar extends React.Component{
 					<img className="logo" src={process.env.PUBLIC_URL + '/images/logo.png'} alt="logo"/>
 				</div>
 				<div className="searchInputContainer">
-					<input type="text" className="searchInput" value={this.state.query} placeholder="Search"/>
+					<input type="text" className="searchInput"  placeholder="Search"/>
 					<button className="searchButton"><i className="fas fa-search"/></button>
 				</div>
 				<div className="right">

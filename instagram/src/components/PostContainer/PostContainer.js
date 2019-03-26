@@ -1,24 +1,14 @@
 import React from 'react'
-import PostHeader from './PostHeader'
-import PostLikes from './PostLikes'
-import CommentInput from "../CommentSection/CommentInput";
-import CommentSection from "../CommentSection/CommentSection";
 import './PostContainers.scss';
-
-const PostContainer = ()=>{
+import PostItem from "./PostItem";
+const PostContainer = (props)=>{
 	return (
-		<div className="postContainer">
-			<PostHeader/>
-			<img className="heroImage" src="http://lorempixel.com/800/800"/>
-			<div className="bottomContentContainer">
-				<PostLikes />
-				<CommentSection/>
-				<time>2 HOURS AGO</time>
-			</div>
-			<CommentInput/>
+		<div className="postListContainer">
+			{props.postList.map(el => <PostItem {...el} key={el.id}/>)}
 		</div>
 	)
 }
+
 
 export default PostContainer
 

@@ -1,11 +1,11 @@
 import React from 'react'
 import './PostContainers.scss';
 
-const PostHeader = ()=>{
+const PostHeader = (props)=>{
 	return (
 		<header>
-			<img className="userImage" src="http://lorempixel.com/200/200" alt="user image"/>
-			<span>philzcoffee</span>
+			<img className="userImage" src={props.imageUrl} alt="user"/>
+			<span>{props.username}</span>
 		</header>
 	)
 }
