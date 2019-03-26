@@ -2,10 +2,13 @@ import React from 'react';
 
 const Comment = props => {
   return (
-    <p key={props.id}>
-      <span className="username">{props.username} </span>
-      {props.text}
-    </p>
+    <div>
+      <p key={props.id}>
+        <span className="username">{props.username} </span>
+        {props.text}
+      </p>
+      <p className="timeline">{props.timeStamp}</p>
+    </div>
   );
 };
 

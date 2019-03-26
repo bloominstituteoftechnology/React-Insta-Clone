@@ -32,7 +32,7 @@ const Header = props => {
   );
 };
 
-Header.prototype = {
+Header.propTypes = {
   submit: PropTypes.func,
   search: PropTypes.func,
   onChange: PropTypes.func

@@ -27,13 +27,13 @@ const PostContainer = props => {
           <img src={send} alt="" className="send" />
         </div>
         <button className="likes">{props.likes} likes</button>
-        <CommentSection comments={props.comments} />
+        <CommentSection comments={props.comments} date={props.date} />
       </div>
     </div>
   );
 };
 
-PostContainer.prototype = {
+PostContainer.propTypes = {
   thumbnail: PropTypes.string,
   username: PropTypes.string,
   img: PropTypes.string,

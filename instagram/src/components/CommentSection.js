@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import Comment from './Comment';
 import CommentInput from './CommentInput';
@@ -9,27 +10,28 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: this.props.comments,
-      text: ''
+      text: '',
+      timeStamp: ''
     };
   }
 
-  componentDidMount() {
-    const json = localStorage.getItem('comments');
-    const comments = JSON.parse(json);
+  // componentDidMount() {
+  //   const json = localStorage.getItem('comments');
+  //   const comments = JSON.parse(json);
 
-    if (comments) {
-      this.setState(() => ({
-        comments
-      }));
-    }
-  }
+  //   if (comments) {
+  //     this.setState(() => ({
+  //       comments
+  //     }));
+  //   }
+  // }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.comments.length !== this.state.comments.length) {
-      const json = JSON.stringify(this.state.comments);
-      localStorage.setItem('comments', json);
-    }
-  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevState.comments.length !== this.state.comments.length) {
+  //     const json = JSON.stringify(this.state.comments);
+  //     localStorage.setItem('comments', json);
+  //   }
+  // }
 
   onInputChange = e => {
     this.setState({
@@ -43,7 +45,10 @@ class CommentSection extends React.Component {
     const newComment = {
       id: Date.now(),
       text: this.state.text,
-      username: 'philzcoffee'
+      username: 'philzcoffee',
+      timeStamp: moment()
+        .startOf('hour')
+        .fromNow()
     };
 
     this.setState({
@@ -62,10 +67,10 @@ class CommentSection extends React.Component {
                 key={comment.id}
                 username={comment.username}
                 text={comment.text}
+                timeStamp={comment.timeStamp}
               />
             );
           })}
-          <p className="timeline">{this.props.date}</p>
         </div>
         <CommentInput
           onChange={this.onInputChange}
