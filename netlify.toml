@@ -10,6 +10,6 @@ ID = "d0b5f31d-733b-471c-a2b4-7696c4e7f467"
   base    = "instagram/real-instagram-clone"
   # NOTE: This is where we will look for package.json/.nvmrc/etc, not root.
   # This is the directory that you are publishing from (relative to root of your repo)
-  publish = instagram/real-instagram-clone/build/"
+  publish = "instagram/real-instagram-clone/build/"
   # This will be your default build command
   command = "yarn build"
