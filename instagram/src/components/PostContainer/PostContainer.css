@@ -24,6 +24,11 @@
 }
 
 .postImage {
+	width: 100%;
+}
+
+.postImage img {
+	width: 100%;
 }
 
 .postBottomBar {
@@ -36,15 +41,42 @@
 	display: flex;
 	flex-direction: column;
 	align-items: baseline;
+	justify-content: flex-start;
+	margin: 1% 0;
 }
 
 .icons {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
+	width: 10%;
+	margin-bottom: 1%;
+}
+.icons i {
+	width: fit-content;
+	margin: 0 0.625%;
 }
 
 .likes {
+	width: 15%;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.likes p {
+	font-size: 12px;
+	width: fit-content;
+	margin: 3% 0;
 }
 
 .commentSection {
+}
+.timestamp {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+.timestamp * {
+	font-size: 10px;
 }

@@ -1,9 +1,6 @@
 import React from "react";
-// import Moment from "react-moment";
-import moment from "moment";
 
 import CommentSection from "../CommentSection/CommentSection";
-// import "moment-timezone";
 
 const PostBottomBar = props => {
 	return (
@@ -20,9 +17,9 @@ const PostBottomBar = props => {
 			<div className='commentSection'>
 				<CommentSection comments={props.post.comments} />
 			</div>
-			{/* {moment().props.post.timestamp} */}
-			{/* <Moment format='YYYY/MM/DD'>{props.post.timestamp}</Moment> */}
-			{props.post.timestamp}
+			<div className='timestamp'>
+				<p>{props.post.timestamp}</p>
+			</div>
 		</div>
 	);
 };
