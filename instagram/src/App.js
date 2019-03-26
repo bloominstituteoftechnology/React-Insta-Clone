@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import PropTypes from 'prop-types';
+import Loader from 'react-loader-spinner';
 
 import dummyData from './dummy-data';
 import Header from './components/Header';
@@ -10,9 +11,17 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      dummyData,
+      dummyData: [],
       search: ''
     };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        dummyData
+      });
+    }, 2800);
   }
 
   onInputChange = e => {
@@ -25,21 +34,27 @@ class App extends Component {
     return (
       <div className="App">
         <Header onChange={this.onInputChange} />
-        {this.state.dummyData.map(data => {
-          return (
-            <PostContainer
-              key={data.id}
-              id={data.id}
-              img={data.imageUrl}
-              username={data.username}
-              date={data.timestamp}
-              likes={data.likes}
-              comments={data.comments}
-              thumbnail={data.thumbnailUrl}
-              onChange={this.onInputChange}
-            />
-          );
-        })}
+        {this.state.dummyData.length === 0 ? (
+          <div className="spinner">
+            <Loader type="Oval" color="#2626265c" height="60" width="60" />
+          </div>
+        ) : (
+          this.state.dummyData.map(data => {
+            return (
+              <PostContainer
+                key={data.id}
+                id={data.id}
+                img={data.imageUrl}
+                username={data.username}
+                date={data.timestamp}
+                likes={data.likes}
+                comments={data.comments}
+                thumbnail={data.thumbnailUrl}
+                onChange={this.onInputChange}
+              />
+            );
+          })
+        )}
       </div>
     );
   }

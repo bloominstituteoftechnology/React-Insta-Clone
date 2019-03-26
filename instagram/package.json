@@ -6,6 +6,7 @@
     "moment": "^2.24.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
+    "react-loader-spinner": "^2.3.0",
     "react-scripts": "2.1.8"
   },
   "scripts": {

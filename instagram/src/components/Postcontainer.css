@@ -41,9 +41,17 @@
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  width: 125px;
-  padding: 10px 20px;
+  width: 135px;
+  padding: 10px 10px;
+  margin-bottom: -18px;
   /* margin: 20px 10px; */
+}
+
+.post .ui-controls button {
+  border: 0;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
 }
 
 .post .ui-controls .heart {
@@ -65,7 +73,7 @@
   background: transparent;
   border: 0;
   font-stretch: 100%;
-  margin: 20px 0px 0px 10px;
+  margin: 20px 0px 0px 20px;
 }
 
 .post .comments {

@@ -1,0 +1,7 @@
+.App {
+  width: 100%;
+}
+.App div.spinner {
+  margin-top: 200px;
+  text-align: center;
+}
