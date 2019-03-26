@@ -2,23 +2,44 @@
 	display: flex;
 	flex-direction: row;
 	align-items: baseline;
-	width: 100%;
+	width: 95%;
 	border-bottom: 1px solid #e6e6e6;
+	margin: 0 auto;
 }
 
 .logo {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 	align-items: baseline;
 	width: 25%;
-	justify-content: space-between;
 	font-size: 30px;
+	margin: 0 auto;
 }
 
 .search {
-	width: 75%;
+	width: 40%;
+	margin: 0 auto;
+}
+
+.search form {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.search form input {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.search form input::placeholder {
+	font-family: "FontAwesome";
 }
 
 .nav {
 	width: 25%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
 }
