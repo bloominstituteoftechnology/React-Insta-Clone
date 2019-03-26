@@ -16,11 +16,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        data: dummyData
-      });
-    }, 2000);
+    this.setState({
+      data: window.localStorage.length === 0 ? dummyData : JSON.parse(window.localStorage.getItem('data'))
+    });
   }
 
   submitComment = (timestamp, comment) => {
@@ -32,12 +30,16 @@ class App extends Component {
     commentUnMatch.unshift(commentMatch);
 
     this.setState({ data: commentUnMatch });
+
+    window.localStorage.setItem('data', JSON.stringify(commentUnMatch))
   }
 
   search = e => {
     this.setState({ [e.target.name]: e.target.value });
+
     const search = this.state.data.slice().filter(post => post.username.toLowerCase().includes((e.target.value).toLowerCase()) || post.comments.map(comm => comm.text.toLowerCase().includes((e.target.value).toLowerCase()) || comm.username.toLowerCase().includes((e.target.value).toLowerCase())).includes(true));
     this.setState({ data: search });
+
     if (this.state.searchValue.length === 0) {
       this.setState({ data: dummyData });
     }
