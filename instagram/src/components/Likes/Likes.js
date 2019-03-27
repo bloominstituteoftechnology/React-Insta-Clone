@@ -1,4 +1,5 @@
 import React from "react";
+import "./Likes.css";
 
 class Likes extends React.Component {
 	constructor(props) {
@@ -6,14 +7,27 @@ class Likes extends React.Component {
 		this.state = {
 			post: props.post,
 			likes: props.post.likes,
-			like: "",
 			liked: false
 		};
 	}
 
+	likeHandler = () => {
+		if (this.state.liked === false) {
+			this.addLike();
+			this.state.liked = !this.state.liked;
+		} else {
+			this.subLike();
+			this.state.liked = !this.state.liked;
+		}
+	};
+
 	addLike = () => {
 		let likes = this.state.likes + 1;
-		// finalLike = copiedLikes + newLike;
+		this.setState({ likes });
+	};
+
+	subLike = () => {
+		let likes = this.state.likes - 1;
 		this.setState({ likes });
 	};
 
@@ -21,7 +35,12 @@ class Likes extends React.Component {
 		return (
 			<div className='iconslikes'>
 				<div className='icons'>
-					<i className='far fa-heart' onClick={this.addLike} />
+					<i
+						className={
+							this.state.liked === true ? "fas fa-heart liked" : "far fa-heart"
+						}
+						onClick={this.likeHandler}
+					/>
 					<i className='far fa-comment' />
 				</div>
 				<div className='likes'>

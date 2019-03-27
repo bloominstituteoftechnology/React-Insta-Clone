@@ -67,7 +67,7 @@ const dummyData = [
 	},
 	{
 		id: "c",
-		username: "playhearthstone",
+		username: "PLAYHEARTSTONE",
 		thumbnailUrl:
 			"https://tk-assets.lambdaschool.com/c432f179-8bd7-4758-959d-d88a21f96bca_37105899_432228420518610_5035444036064772096_n.jpg",
 		imageUrl:
@@ -77,7 +77,7 @@ const dummyData = [
 		comments: [
 			{
 				id: "9",
-				username: "playhearthstone",
+				username: "PLAYHEARTSTONE",
 				text:
 					"Power alone is not to be feared. Fear instead those who wield it! #FrozenThrone #Expansion #DeathKnights"
 			},
@@ -99,6 +99,102 @@ const dummyData = [
 			},
 			{
 				id: "13",
+				username: "awesomebt28",
+				text: "I like how gul'dan looks so old and useless"
+			}
+		]
+	},
+	{
+		id: "d",
+		username: "Drake",
+		thumbnailUrl: "https://www.instagram.com/p/Bj_W1-rnd5b/media/?size=t",
+		imageUrl: "https://www.instagram.com/p/Bj_W1-rnd5b/media/?size=l",
+		likes: 384757,
+		timestamp: "July 17th 2017, 12:42:40 pm",
+		comments: [
+			{
+				id: "14",
+				username: "Drake",
+				text: "Scorpion album dropping June 29 2018!"
+			},
+			{
+				id: "15",
+				username: "biancasaurus",
+				text: "Looks delicious!"
+			},
+			{
+				id: "16",
+				username: "martinseludo",
+				text: "Can't wait to try it!"
+			}
+		]
+	},
+	{
+		id: "e",
+		username: "lilyachty",
+		thumbnailUrl: "https://www.instagram.com/p/BrW8FLtjaGW/media/?size=t",
+		imageUrl: "https://www.instagram.com/p/BrW8FLtjaGW/media/?size=l",
+		likes: 13001,
+		timestamp: "July 15th 2017, 03:12:09 pm",
+		comments: [
+			{
+				id: "17",
+				username: "lilyachty",
+				text: "Thankful for my fans!"
+			},
+			{
+				id: "18",
+				username: "michaelmarzetta",
+				text: "Omg that match was crazy"
+			},
+			{
+				id: "19",
+				username: "themexican_leprechaun",
+				text: "What a setup"
+			},
+			{
+				id: "20",
+				username: "dennis_futbol",
+				text: "It that injustice"
+			},
+			{
+				id: "21",
+				username: "dennis_futbol",
+				text: "Is"
+			}
+		]
+	},
+	{
+		id: "f",
+		username: "atlanticrecords",
+		thumbnailUrl: "https://www.instagram.com/p/BtAWSeQg1e4/media/?size=l",
+		imageUrl: "https://www.instagram.com/p/BtAWSeQg1e4/media/?size=l",
+		likes: 1218,
+		timestamp: "Jan 24th 2019, 10:04:08 am",
+		comments: [
+			{
+				id: "22",
+				username: "atlanticrecords",
+				text: "Weezer's new hit album!"
+			},
+			{
+				id: "23",
+				username: "tapmelon",
+				text:
+					"Wish that death knight could be added as a new playable class in this expansion."
+			},
+			{
+				id: "24",
+				username: "micpetboudreau",
+				text: "Can't wait"
+			},
+			{
+				id: "25",
+				username: "awaywetravel",
+				text: "I <3 Hearthstone."
+			},
+			{
+				id: "26",
 				username: "awesomebt28",
 				text: "I like how gul'dan looks so old and useless"
 			}
