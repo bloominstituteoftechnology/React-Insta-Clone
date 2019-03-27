@@ -27,9 +27,25 @@ class App extends Component {
       // reference data variable not dummyData
       return post.id === postId
     }) 
-    console.log(postToUpdate)
-    console.log('inside updatePost', commentText)
-    console.log('postId is ', postId)
+    const newComment = {
+      id: Date.now(),
+      username: 'Pikachu',
+      text: commentText
+    }
+    postToUpdate.comments.push(newComment)
+
+    const index = data.indexOf(post => {return post.id === postId})
+
+    data[index] = postToUpdate;
+    this.setState (
+      {
+        dummy: data
+      }
+    )
+    
+    // console.log(postToUpdate)
+    // console.log('inside updatePost', commentText)
+    // console.log('postId is ', postId)
   }
   // get the post by id
   // get the comments 
