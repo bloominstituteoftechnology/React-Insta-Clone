@@ -26,6 +26,22 @@ class App extends Component {
         filteredData: Array.from(dummyData)
       });
     }, 2500);
+
+    const json = localStorage.getItem('filteredData');
+    const data = JSON.parse(json);
+
+    if (data) {
+      this.setState(() => ({
+        dummyData
+      }));
+    }
+  }
+
+  componentWillUnmount(prevProps, prevState) {
+    if (prevState.filteredData.length !== this.state.filteredData.length) {
+      const json = JSON.stringify(this.state.filteredData);
+      localStorage.setItem('filteredData', json);
+    }
   }
 
   onInputChange = e => {
@@ -67,16 +83,16 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.filteredData);
     return (
       <div className="App">
         <Header
           onChange={this.onInputChange}
           onSubmit={this.onSearchFormSubmit}
+          search={this.state.search}
         />
         {this.state.dummyData.length === 0 ? (
           <div className="spinner">
-            <Loader type="Oval" color="#2626265c" height="60" width="60" />
+            <Loader type="Oval" color="#262626" height="60" width="60" />
           </div>
         ) : (
           this.state.filteredData.map(data => {

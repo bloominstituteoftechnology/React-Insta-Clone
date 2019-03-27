@@ -32,7 +32,7 @@
   font-size: 0.9rem;
   color: #262626;
   margin: 0;
-  font-weight: 800;
+  font-weight: 600;
   margin-top: -2px;
 }
 
@@ -41,7 +41,7 @@
   justify-content: space-between;
   align-items: center;
   height: 50px;
-  width: 135px;
+  width: 140px;
   padding: 10px 10px;
   margin-bottom: -18px;
   /* margin: 20px 10px; */
@@ -63,12 +63,12 @@
 }
 
 .post .ui-controls .send {
-  width: 24px;
+  width: 19px;
 }
 
 .post .likes {
   color: #262626;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 1rem;
   background: transparent;
   border: 0;
@@ -82,13 +82,13 @@
   margin: 0 20px;
   color: #262626;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   margin-top: -10px;
   border-bottom: 1px solid #bfbfbf46;
 }
 
 .post .comments .username {
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .comments .timeline {
@@ -119,7 +119,7 @@
 
 .add-a-comment input::placeholder {
   color: #bfbfbf;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .more {
