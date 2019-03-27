@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CommentSection from './
+import CommentSection from '../CommentSection/CommentSection';
 
 
 const PostContainer = props => {
+    console.log(props)
 return( 
 <div>    
     {props.posts.map(post => 
@@ -12,8 +13,8 @@ return(
         <h6>{post.username}</h6>
             <img src={post.imageUrl} alt="user post img"/>
             <span className="bt">
-            <i class="far fa-heart"></i>
-            <i class="far fa-comment"></i>
+            <i className="far fa-heart" onClick={()=>props.handleLikes(post.id)}></i>
+            <i className="far fa-comment"></i>
             </span>
             <strong><span className="likes">{post.likes} Likes</span></strong>
             <span className="commentz">
