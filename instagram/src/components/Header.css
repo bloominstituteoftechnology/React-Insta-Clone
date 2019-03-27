@@ -109,18 +109,21 @@ header {
 
 .main-header .main-nav .discover img {
   cursor: pointer;
+  outline: none;
   width: 23px;
   height: 23px;
 }
 
 .main-header .main-nav .likes img {
   cursor: pointer;
+  outline: none;
   width: 24px;
   height: 24px;
 }
 
 .main-header .main-nav .profile img {
   cursor: pointer;
+  outline: none;
   width: 22px;
   height: 22px;
 }
