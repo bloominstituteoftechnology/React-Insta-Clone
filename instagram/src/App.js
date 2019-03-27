@@ -37,10 +37,10 @@ class App extends Component {
   search = e => {
     this.setState({ [e.target.name]: e.target.value });
 
-    const search = this.state.data.slice().filter(post => post.username.toLowerCase().includes((e.target.value).toLowerCase()) || post.comments.map(comm => comm.text.toLowerCase().includes((e.target.value).toLowerCase()) || comm.username.toLowerCase().includes((e.target.value).toLowerCase())).includes(true));
+    const search = this.state.data.filter(post => post.username.toLowerCase().includes((e.target.value).toLowerCase()) || post.comments.map(comm => comm.text.toLowerCase().includes((e.target.value).toLowerCase()) || comm.username.toLowerCase().includes((e.target.value).toLowerCase())).includes(true));
     this.setState({ data: search });
 
-    if (this.state.searchValue.length === 0) {
+    if (e.target.value.length === 0) {
       this.setState({ data: dummyData });
     }
   }
@@ -48,7 +48,20 @@ class App extends Component {
   render() {
     if (this.state.data.length === 0) {
       return (
-        <div className='load'>
+        <div className="App">
+          <header>
+            <i className='fab fa-instagram' />
+            <i className='headName'>Instagram</i>
+            <SearchBar
+              search={this.search}
+              searchValue={this.state.searchValue}
+            />
+            <div>
+              <i className='far fa-compass' />
+              <i className='far fa-heart' />
+              <i className='far fa-user' />
+            </div>
+          </header>
           <Loader type="Triangle" color="darkgreen" height={80} width={80} />
         </div>
       )
