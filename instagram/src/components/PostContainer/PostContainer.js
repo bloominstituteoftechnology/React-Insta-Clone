@@ -71,6 +71,7 @@ class PostContainer extends React.Component {
                         <CommentSection
                             comment={comment}
                             key={id}
+                            deleteComment={this.props.deleteComment}
                         />
                     ))}
                     <div className='addComment'>
