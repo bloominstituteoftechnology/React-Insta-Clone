@@ -15,8 +15,7 @@ componentDidMount(){
 }
 
 addNewComment = event => {
-    event.preventDefault();
-    
+    event.preventDefault(); 
     this.setState({
         comments: [
             ...this.state.comments, 

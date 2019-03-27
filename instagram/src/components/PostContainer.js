@@ -8,9 +8,9 @@ return(
 <div>    
     {props.posts.map(post => 
         <div key ={post.timestamp}> 
-        <img className="thumb" src={post.thumbnailUrl} alt={post.timestamp}/>
+        <img className="thumb" src={post.thumbnailUrl} alt= "user thumbnail"/>
         <h6>{post.username}</h6>
-            <img src={post.imageUrl} alt={post.timestamp}/>
+            <img src={post.imageUrl} alt="user post img"/>
             <span className="bt">
             <i class="far fa-heart"></i>
             <i class="far fa-comment"></i>
