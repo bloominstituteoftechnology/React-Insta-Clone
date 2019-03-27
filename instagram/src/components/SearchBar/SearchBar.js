@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   return (
       <div className="search">
         <i class="fab fa-instagram"></i> | Instagram 
