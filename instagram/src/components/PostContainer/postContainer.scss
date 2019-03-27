@@ -54,6 +54,19 @@
             &.fas.fa-heart {
                 color: red;
             }
+
+            &.far.fa-comment {
+                color: gray;
+                transition: color 1s ease-out;
+
+                &:hover {
+                    color: black;
+                }
+            }
+
+            &.fas.fa-comment {
+                color: black;
+            }
         }
 
         .like:hover {
