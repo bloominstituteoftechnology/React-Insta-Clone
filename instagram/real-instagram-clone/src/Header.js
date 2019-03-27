@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
 
-const Header = () => {
+const Header = (props) => {
+  console.log(props)
   return (
     <div>
       <div className="header">
@@ -14,7 +15,7 @@ const Header = () => {
           </div>
         </div>
         <div>
-          <input type="text" placeholder="Search....." />
+          <input  name= 'search' value = {props.search} onChange={props.handleChanges} type="text" placeholder="Search....." />
         </div>
         <div className=" header-nav">
           <i class="far fa-compass" />

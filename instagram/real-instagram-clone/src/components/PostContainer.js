@@ -1,11 +1,22 @@
 import React from "react";
 import CommentSection from "./CommentSection";
 
-const PostContainer = props => {
+class PostContainer extends React.Component{
+    constructor(props){
+        super(props)
+        this.state ={
+         liked:false
+        }
+    }
   // console.log(props)
+
+
+
+  render(){
+
   return (
     <div className="post-container">
-      {props.post.map(post => (
+      {this.props.post.map(post => (
         <div className="post" key={post.timestamp}>
           <div className="profileName">
             <div className="userinfo">
@@ -18,18 +29,19 @@ const PostContainer = props => {
           </div>
 
           <div className=" interactions">
-            <i class="far fa-heart" />
-            <i class="far fa-comment" />
+            <div onClick={() => this.setState({liked: !this.state.liked})}><i class="far fa-heart" /></div>
+            <div><i class="far fa-comment" /></div>
           </div>
           <div>
             <div>
-              <p className="likes">{post.likes} Likes</p>
+              <p className="likes">{this.state.liked === false ? post.likes : post.likes + 1} Likes</p>
             </div>
           </div>
-          <CommentSection comment={post.comments} />
+          <CommentSection comment={post.comments}/>
         </div>
       ))}
     </div>
   );
+      }
 };
 export default PostContainer;
