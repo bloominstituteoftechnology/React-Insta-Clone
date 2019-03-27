@@ -22,7 +22,7 @@ class PostContainer extends React.Component {
         e.preventDefault();
 
         const newComment = {
-            username: 'random',
+            username: JSON.parse(localStorage.getItem('user')).username,
             text: this.state.comment,
             timestamp: moment().format('MMMM Do YYYY, h:mm:ss a')
         }

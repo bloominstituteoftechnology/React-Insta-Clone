@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './login.scss';
 
 export default class Login extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             username: '',
             password: ''
@@ -12,8 +12,10 @@ export default class Login extends Component {
 
     login = e => {
         e.preventDefault();
-        this.state.username && this.state.password !== '' && localStorage.setItem('user', JSON.stringify(this.state));
-        e.target.submit();
+        if (this.state.username && this.state.password !== '') {
+            localStorage.setItem('user', JSON.stringify(this.state));
+            this.props.login();
+        }
     }
 
     handleChanges = e => {
