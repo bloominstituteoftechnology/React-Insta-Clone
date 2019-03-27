@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+
 .App {
     max-width: 640px;
     width: 100%;
@@ -23,7 +25,8 @@
             padding: 0 15px;
 
             &.headName {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-family: 'Great Vibes';
+                font-size: 4rem;
             }
 
             &.fa-instagram {
