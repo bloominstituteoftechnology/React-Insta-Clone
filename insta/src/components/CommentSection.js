@@ -1,27 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import SearchBar from './SearchBar';
 // import PostContainer from './PostContainer';
 
-class CommentSection extends React.Component{
+class CommentSection extends Component{
     constructor(props){
     super(props);
+    console.log("inside CommentSection", props)
     this.state ={
-        comments: props.comments
+        comments: props.passComment,
+        commentText: ''
     };
-    console.log(props.comments);
+    
 }
 
     render(){
-    return (
+    return ( <>
         {this.state.comments.map((comments) => {
             return (
-                <div className="userComment" key={index}>
-                    <span>{props.comments.username}</span>
-                    <span>{props.comments.text}</span>
+                <div className="userComment">
+                    <span>{comments.username}</span>
+                    <span>{comments.text}</span>
 {/* user userComment to show username & text located in data comments */}
                 </div>
              )
-            })}
+            })}</>
         
     )}}
 

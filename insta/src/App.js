@@ -4,7 +4,7 @@ import PostContainer from './components/PostContainer.js'
 import data from './components/data';
 import './App.css';
 import SearchBar from './components/SearchBar.js';
-import CommentSection from './components/CommentSection.js';
+// import CommentSection from './components/CommentSection.js';
 
 class App extends Component {
   constructor () {
@@ -29,12 +29,15 @@ class App extends Component {
       {/* mapping over data from state and putting into userPost
       userPost then set to var passPost inside PostContainer*/}
       {this.state.dummyData.map((userPost) => {
-        return <PostContainer passPost={userPost}/>
-        // userPost is the argument can be named anything but should
-        // be relative to project
-        // this argument become prop
+        return(
+          <div>
+          <PostContainer passPost={userPost}/>
+          {/* // userPost is the argument can be named anything but should
+          // be relative to project
+          // this argument become prop */}
+          </div>
+          )
         })}
-       <CommentSection comments={comments}/>
       </div>
     );
   }
