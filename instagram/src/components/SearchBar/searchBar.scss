@@ -6,6 +6,10 @@
     height: fit-content;
     border: 1px solid #6363ff;
 
+    &:hover{
+        cursor: pointer;
+    }
+
     i {
         font-size: 1.5rem;
         padding: 0px;
