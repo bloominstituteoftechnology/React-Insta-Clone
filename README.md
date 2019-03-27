@@ -1,5 +1,6 @@
 #Initializing Project, Day I on 03/25/19
 #Day 2 of project work on branch omar-okla-day2
+#Day 3 of project work on branch omar-okla-day3
 
 # React-Insta-Clone
 
