@@ -70,6 +70,8 @@ class PostContainer extends React.Component {
                     {this.props.post.comments.map((comment, id) => (
                         <CommentSection
                             comment={comment}
+                            commIndex={id}
+                            postIndex={this.props.index}
                             key={id}
                             deleteComment={this.props.deleteComment}
                         />

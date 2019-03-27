@@ -4,6 +4,15 @@
     padding: 15px 15px;
     border-radius: 50px;
 
+    sup {
+        margin-left: 10px;
+        font-weight: bolder;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
     .commentUsername {
         font-size: 1.6rem;
         padding-right: 5px;

@@ -17,7 +17,7 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      data: window.localStorage.length === 0 ? dummyData : JSON.parse(window.localStorage.getItem('data'))
+      data: localStorage.length === 0 ? dummyData : JSON.parse(localStorage.getItem('data'))
     });
   }
 
@@ -26,7 +26,7 @@ class App extends Component {
 
     commentMatch.comments.push(comment);
 
-    window.localStorage.setItem('data', JSON.stringify(this.state.data))
+    localStorage.setItem('data', JSON.stringify(this.state.data))
   }
 
   search = e => {
@@ -39,6 +39,17 @@ class App extends Component {
     if (e.target.value.length === 0) {
       this.setState({ data: dummyData });
     }
+  }
+
+  deleteComment = (postIndex, text) => {
+
+    let clone = this.state.data.slice();
+
+    clone[postIndex].comments = clone[postIndex].comments.filter(arr => arr.text !== text);
+
+    this.setState({ data: clone });
+
+    localStorage.setItem('data', JSON.stringify(clone));
   }
 
   render() {
@@ -77,9 +88,10 @@ class App extends Component {
               <i className='far fa-user' />
             </div>
           </header>
-          {this.state.data.map(post => (
+          {this.state.data.map((post, i) => (
             <PostContainer
               post={post}
+              index={i}
               key={post.timestamp}
               liker={this.liker}
               liked={this.state.liked}
