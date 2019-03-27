@@ -9,16 +9,18 @@
 }
 
 .logo {
+	width: 15%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: baseline;
-	width: 25%;
 	font-size: 30px;
+	font-family: "Nickainley";
 }
 
 .search {
-	width: 40%;
+	width: 20%;
+	margin: 0 auto;
 }
 
 .search form {
@@ -37,7 +39,7 @@
 }
 
 .nav {
-	width: 25%;
+	width: 15%;
 	display: flex;
 	justify-content: space-between;
 }

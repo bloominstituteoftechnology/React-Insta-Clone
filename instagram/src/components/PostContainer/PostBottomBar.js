@@ -1,5 +1,6 @@
 import React from "react";
-
+import "./PostContainer.css";
+import PostTopBar from "./PostTopBar";
 import CommentSection from "../CommentSection/CommentSection";
 
 const PostBottomBar = props => {

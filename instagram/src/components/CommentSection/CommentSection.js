@@ -22,6 +22,10 @@ class CommentSection extends React.Component {
 		};
 		copiedComments.push(newComment);
 		this.setState({ comments: copiedComments });
+		console.log(
+			"From CommentSection, Comment array you are adding into: ",
+			this.state.comments
+		);
 	};
 
 	render() {

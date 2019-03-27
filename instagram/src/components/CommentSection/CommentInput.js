@@ -5,7 +5,8 @@ class CommentInput extends React.Component {
 		super(props);
 		this.state = {
 			comment: "",
-			list: props.props.comments
+			list: props.props.comments,
+			props: props
 		};
 	}
 
@@ -17,7 +18,6 @@ class CommentInput extends React.Component {
 		e.preventDefault();
 		this.props.addComment(this.state.comment);
 		this.setState({ comment: "" });
-		console.log(this.state.list);
 	};
 
 	render() {
