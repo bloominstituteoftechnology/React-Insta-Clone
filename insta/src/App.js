@@ -21,6 +21,21 @@ class App extends Component {
   }
   // 2.then render (initial render first then fetch #3)
   // 3. run componentDidMount - fetch data from API
+  updatePost = (event, commentText, postId) => {
+    event.preventDefault()
+    let postToUpdate = data.find (post => {
+      // reference data variable not dummyData
+      return post.id === postId
+    }) 
+    console.log(postToUpdate)
+    console.log('inside updatePost', commentText)
+    console.log('postId is ', postId)
+  }
+  // get the post by id
+  // get the comments 
+  // add new comment
+  // add new post to state
+
   render() {
     return (
       <div className="App">
@@ -30,8 +45,11 @@ class App extends Component {
       userPost then set to var passPost inside PostContainer*/}
       {this.state.dummyData.map((userPost) => {
         return(
-          <div>
-          <PostContainer passPost={userPost}/>
+          <div key={userPost.id}>
+          <PostContainer 
+          passPost={userPost} 
+          updatePost={this.updatePost}
+          />
           {/* // userPost is the argument can be named anything but should
           // be relative to project
           // this argument become prop */}

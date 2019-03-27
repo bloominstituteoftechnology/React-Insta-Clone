@@ -10,7 +10,10 @@ const PostContainer = props => {
         <strong>{props.passPost.username}</strong>
         <img className="thumb"src={props.passPost.thumbnailUrl} alt="user avatar"/>
         <img className="main-img"src={props.passPost.imageUrl} alt="main img"/>
-        <CommentSection passComment={props.passPost.comments}/>
+        <CommentSection 
+        passComment={props.passPost.comments} 
+        updatePost={(event, commentText) => props.updatePost(event, commentText, props.passPost.id)}
+        />
     {/* set props.passPost.comments to var passComments*/}
         <p className="timestamp"></p>
         </div>
