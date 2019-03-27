@@ -18,6 +18,8 @@ export default class PostPage extends Component {
         this.setState({
             data: localStorage.getItem('data') === null ? dummyData : JSON.parse(localStorage.getItem('data'))
         });
+
+        window.onbeforeunload = () => localStorage.removeItem('user');
     }
 
     submitComment = (timestamp, comment) => {

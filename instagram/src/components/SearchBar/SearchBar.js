@@ -23,6 +23,7 @@ class SearchBar extends React.Component {
                 <input
                     placeholder='Search'
                     name='searchValue'
+                    type='search'
                     value={this.props.searchValue}
                     style={{ display: this.state.search === true ? 'flex' : 'none' }}
                     onChange={this.props.search}
