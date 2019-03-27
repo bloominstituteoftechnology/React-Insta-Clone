@@ -1,22 +1,29 @@
 import React from 'react';
 // import SearchBar from './SearchBar';
+// import PostContainer from './PostContainer';
 
-const CommentSection = props => {
+class CommentSection extends React.Component{
+    constructor(props){
+    super(props);
+    this.state ={
+        comments: props.comments
+    };
+    console.log(props.comments);
+}
+
+    render(){
     return (
-        <div className="commentSection">
-        <input placeholder="comment"/>
-        {props.passComment.map ((userComment, index) =>{
+        {this.state.comments.map((comments) => {
             return (
                 <div className="userComment" key={index}>
-                    <span>{userComment.username}</span>
-                    <span>{userComment.text}</span>
+                    <span>{props.comments.username}</span>
+                    <span>{props.comments.text}</span>
 {/* user userComment to show username & text located in data comments */}
                 </div>
              )
             })}
         
-        </div>
-    )}
+    )}}
 
 
  export default CommentSection;

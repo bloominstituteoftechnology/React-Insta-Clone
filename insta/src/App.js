@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import PostContainer from './components/PostContainer.js'
 import data from './components/data';
 import './App.css';
-// import SearchBar from './components/SearchBar.js';
+import SearchBar from './components/SearchBar.js';
+import CommentSection from './components/CommentSection.js';
 
 class App extends Component {
   constructor () {
@@ -23,6 +24,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <SearchBar />
       {/* running a forLoop on dummyData */}
       {/* mapping over data from state and putting into userPost
       userPost then set to var passPost inside PostContainer*/}
@@ -32,8 +34,7 @@ class App extends Component {
         // be relative to project
         // this argument become prop
         })}
-        {/* <SearchBar />
-        <PostContainer data={dummyData}/> */}
+       <CommentSection comments={comments}/>
       </div>
     );
   }
