@@ -1,0 +1,7 @@
+.PostPage {
+  width: 100%;
+}
+.PostPage div.spinner {
+  margin-top: 200px;
+  text-align: center;
+}

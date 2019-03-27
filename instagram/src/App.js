@@ -1,21 +1,26 @@
 import React, {Component} from 'react';
 import './App.css';
-import PropTypes from 'prop-types';
-import Loader from 'react-loader-spinner';
 import moment from 'moment';
 
 import dummyData from './dummy-data';
-import Header from './components/Header';
-import PostContainer from './components/PostContainer';
+import withAuthenticate from './authentification/withAuthenticate';
+import PostPage from './components/PostPage';
+import LoginPage from './components/login/Login';
 
-class App extends Component {
+const ComponentFromWithAuthenticate = withAuthenticate(PostPage)(LoginPage);
+
+export default class App extends Component {
   constructor() {
     super();
     this.state = {
       dummyData: [],
       search: '',
       text: '',
-      filteredData: []
+      filteredData: [],
+      username: '',
+      password: '',
+      user: 'guillaume',
+      pass: 'password'
     };
   }
 
@@ -26,22 +31,6 @@ class App extends Component {
         filteredData: Array.from(dummyData)
       });
     }, 2500);
-
-    const json = localStorage.getItem('filteredData');
-    const data = JSON.parse(json);
-
-    if (data) {
-      this.setState(() => ({
-        dummyData
-      }));
-    }
-  }
-
-  componentWillUnmount(prevProps, prevState) {
-    if (prevState.filteredData.length !== this.state.filteredData.length) {
-      const json = JSON.stringify(this.state.filteredData);
-      localStorage.setItem('filteredData', json);
-    }
   }
 
   onInputChange = e => {
@@ -58,7 +47,6 @@ class App extends Component {
       });
     }
   };
-
   handleAddComment = (e, id) => {
     e.preventDefault();
 
@@ -85,61 +73,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header
+        <ComponentFromWithAuthenticate
+          state={this.state}
           onChange={this.onInputChange}
-          onSubmit={this.onSearchFormSubmit}
-          search={this.state.search}
+          onSubmit={this.handleAddComment}
         />
-        {this.state.dummyData.length === 0 ? (
-          <div className="spinner">
-            <Loader type="Oval" color="#262626" height="60" width="60" />
-          </div>
-        ) : (
-          this.state.filteredData.map(data => {
-            return (
-              <PostContainer
-                key={data.id}
-                id={data.id}
-                img={data.imageUrl}
-                username={data.username}
-                date={data.timestamp}
-                likes={data.likes}
-                comments={data.comments}
-                thumbnail={data.thumbnailUrl}
-                onChange={this.onInputChange}
-                onSubmit={this.handleAddComment}
-                text={this.state.text}
-              />
-            );
-          })
-        )}
       </div>
     );
   }
 }
-
-Header.propTypes = {
-  onChange: PropTypes.func
-};
-
-PostContainer.propTypes = {
-  dummyData: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      imageUrl: PropTypes.string,
-      likes: PropTypes.number,
-      thumbnailUrl: PropTypes.string,
-      timestamp: PropTypes.string,
-      username: PropTypes.string,
-      comments: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.string,
-          text: PropTypes.string,
-          username: PropTypes.string
-        })
-      )
-    })
-  )
-};
-
-export default App;
