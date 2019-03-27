@@ -10,7 +10,7 @@ class PostContainer extends React.Component {
         this.state = {
             comment: '',
             commenting: false,
-            liked: false
+            liked: localStorage.getItem(this.props.post.timestamp) === null ? false : (localStorage.getItem(this.props.post.timestamp) === 'true' ? true : false)
         }
     }
 
@@ -51,7 +51,7 @@ class PostContainer extends React.Component {
                 />
                 <section className='cAndL'>
                     <i
-                        onClick={() => this.setState({ liked: !this.state.liked })}
+                        onClick={() => this.setState({ liked: !this.state.liked }) & localStorage.setItem(this.props.post.timestamp, !this.state.liked)}
                         className={this.state.liked === false ? 'far fa-heart like' : 'fas fa-heart like'}
                     />
 
@@ -70,7 +70,6 @@ class PostContainer extends React.Component {
                     {this.props.post.comments.map((comment, id) => (
                         <CommentSection
                             comment={comment}
-                            commIndex={id}
                             postIndex={this.props.index}
                             key={id}
                             deleteComment={this.props.deleteComment}

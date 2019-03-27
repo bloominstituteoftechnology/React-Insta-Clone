@@ -17,7 +17,7 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      data: localStorage.length === 0 ? dummyData : JSON.parse(localStorage.getItem('data'))
+      data: localStorage.getItem('data') === null ? dummyData : JSON.parse(localStorage.getItem('data'))
     });
   }
 
