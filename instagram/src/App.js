@@ -14,14 +14,16 @@ class App extends Component {
     this.state = {
       dummyData: [],
       search: '',
-      text: ''
+      text: '',
+      filteredData: []
     };
   }
 
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        dummyData
+        dummyData,
+        filteredData: Array.from(dummyData)
       });
     }, 2500);
   }
@@ -30,6 +32,15 @@ class App extends Component {
     this.setState({
       [e.target.name]: e.target.value
     });
+
+    //Find post that contains the username from the search input
+    if (e.target.name === 'search') {
+      this.setState({
+        filteredData: this.state.dummyData.filter(data => {
+          return data.username.includes(e.target.value);
+        })
+      });
+    }
   };
 
   handleAddComment = (e, id) => {
@@ -45,7 +56,7 @@ class App extends Component {
     };
 
     this.setState({
-      dummyData: this.state.dummyData.map(data => {
+      filteredData: this.state.filteredData.map(data => {
         if (data.id === id) {
           return {...data, comments: [...data.comments, newComment]};
         }
@@ -55,22 +66,8 @@ class App extends Component {
     });
   };
 
-  onSearchFormSubmit = e => {
-    e.preventDefault();
-
-    // this.setState({
-    //   dummyData: this.state.dummyData.map(data => {
-    //     if (id === data.id) {
-    //       return this.setState({
-    //         comments: [...this.state.dummyData, newComment]
-    //       });
-    //     }
-    //   }),
-    //   search: ''
-    // });
-  };
-
   render() {
+    console.log(this.state.filteredData);
     return (
       <div className="App">
         <Header
@@ -82,7 +79,7 @@ class App extends Component {
             <Loader type="Oval" color="#2626265c" height="60" width="60" />
           </div>
         ) : (
-          this.state.dummyData.map(data => {
+          this.state.filteredData.map(data => {
             return (
               <PostContainer
                 key={data.id}
