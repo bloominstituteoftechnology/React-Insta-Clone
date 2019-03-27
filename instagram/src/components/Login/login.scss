@@ -1,0 +1,40 @@
+div.login {
+    width: 100vw;
+    height: 100vh;
+    background: #00000095;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        width: 50vw;
+        height: 50vh;
+        background: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        box-shadow: 5px 10px 30px;
+        border: 2px solid #b1b1ff;
+        border-radius: 5px;
+
+        h1 {
+            font-family: 'Great Vibes';
+            font-size: 5rem;
+        }
+
+        form.login {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                padding: 5px 15px;
+                border-radius: 5px;
+                margin: 5px 0;
+            }
+        }
+    }
+}
