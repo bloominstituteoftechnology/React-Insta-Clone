@@ -42,6 +42,18 @@
         i {
             font-size: 2.5rem;
             margin: 10px 15px;
+
+            &.far.fa-heart {
+                transition: color 1s ease-out;
+
+                &:hover {
+                    color: red;
+                }
+            }
+
+            &.fas.fa-heart {
+                color: red;
+            }
         }
 
         .like:hover {
@@ -50,7 +62,7 @@
 
         .likes {
             width: 640px;
-            padding-left: 15px;
+            padding: 0 0 15px 15px;
             font-weight: 500;
         }
     }

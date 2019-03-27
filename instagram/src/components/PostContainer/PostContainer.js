@@ -9,6 +9,7 @@ class PostContainer extends React.Component {
         super(props);
         this.state = {
             comment: '',
+            commenting: false,
             liked: false
         }
     }
@@ -51,19 +52,27 @@ class PostContainer extends React.Component {
                 <section className='cAndL'>
                     <i
                         onClick={() => this.setState({ liked: !this.state.liked })}
-                        className={this.state.liked === false ? 'far fa-heart like' : 'fas fa-heart like'} />
+                        className={this.state.liked === false ? 'far fa-heart like' : 'fas fa-heart like'}
+                    />
 
-                    <i className='far fa-comment comment' />
+                    <i
+                        onClick={() => this.setState({ commenting: !this.state.commenting })}
+                        className={this.state.commenting === false ? 'far fa-comment like' : 'fas fa-comment like'}
+                    />
 
                     <span className='likes'>{this.state.liked === false ? this.props.post.likes : this.props.post.likes + 1} likes</span>
                 </section>
 
-                <div className='comments'>{this.props.post.comments.map((comment, id) => (
-                    <CommentSection
-                        comment={comment}
-                        key={id}
-                    />
-                ))}
+                <div
+                    className='comments'
+                    style={{ display: this.state.commenting === false ? 'none' : 'block' }}
+                >
+                    {this.props.post.comments.map((comment, id) => (
+                        <CommentSection
+                            comment={comment}
+                            key={id}
+                        />
+                    ))}
                     <div className='addComment'>
                         <form onSubmit={this.submitComment}>
                             <input
