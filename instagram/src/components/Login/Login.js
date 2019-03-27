@@ -15,6 +15,9 @@ export default class Login extends Component {
         if (this.state.username && this.state.password !== '') {
             localStorage.setItem('user', JSON.stringify(this.state));
             this.props.login();
+        } else {
+            alert('Invalid Username and/or Password');
+            this.setState({ username: '', password: '' });
         }
     }
 
@@ -42,6 +45,7 @@ export default class Login extends Component {
                             name='password'
                             value={this.state.password}
                             onChange={this.handleChanges}
+                            type='password'
                         />
                         <button>Login</button>
                     </form>
