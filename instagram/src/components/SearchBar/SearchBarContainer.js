@@ -3,8 +3,6 @@ import IGLogo from '../../assets/iglogo.png';
 import styled from 'styled-components';
 import './SearchBar.css';
 
-
-
 const SearchBar = props => {
 
   const SearchBarWrapper = styled.div`
@@ -16,17 +14,21 @@ const SearchBar = props => {
   background: #ffffff;
 `;
 
-
-
+const ImageWrapper = styled.div`
+height: 50px;
+`;
+const SocialWrapper = styled.div`
+display: flex;
+`;
   return (
     <SearchBarWrapper>
-      <div className="image-wrapper">
+      <ImageWrapper>
         <img alt="instagram logo" src={IGLogo} className="logo-image" />
-      </div>
+      </ImageWrapper>
       <div>
         <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
       </div>
-      <div className="social-wrapper">
+      <SocialWrapper>
         <div className="social">
           <i className="far fa-compass" />
         </div>
@@ -36,7 +38,7 @@ const SearchBar = props => {
         <div className="social">
           <i className="far fa-user-circle" />
         </div>
-      </div>
+      </SocialWrapper>
     </SearchBarWrapper>
   );
 };
