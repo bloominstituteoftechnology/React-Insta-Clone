@@ -55,3 +55,14 @@ span {
     font-weight: bold;
     font-size: 1.7rem;
 }
+
+button {
+    height: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    i {
+        padding: 0;
+    }
+}
