@@ -1,6 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import AuthHOC from "./AuthHOC";
+import AuthForm from "./AuthForm";
+import "./index.css";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const WrappedApp = AuthHOC(AuthForm)(App);
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<WrappedApp />, rootElement);

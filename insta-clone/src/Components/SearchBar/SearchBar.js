@@ -1,10 +1,17 @@
-import React from 'react';
-import header from '../../assets/ig_search_bar.png';
+import React from "react";
 
-const SearchBar = () => {
-  return(
-    <img src={header} alt="header" width="700px"/>
-  )
-}
+const SearchBar = props => {
+  return (
+    <form onSubmit={e => e.preventDefault()}>
+      <input
+        name="searchValue"
+        type="text"
+        onChange={props.change}
+        placeholder="Search"
+        value={props.searchValue}
+      />
+    </form>
+  );
+};
 
 export default SearchBar;

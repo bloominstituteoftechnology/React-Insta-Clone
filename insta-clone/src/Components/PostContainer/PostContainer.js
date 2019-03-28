@@ -1,22 +1,17 @@
-import React from 'react';
-import '../../App.css';
-import CommentSection from '../CommentSection/CommentSection';
+import React from "react";
+import CommentSection from "../CommentSection/CommentSection";
 
 const PostContainer = props => {
-  console.log(props)
   return (
-    <div className="post-header">
-      <div>
-        <img src={props.thumbnailUrl} alt="alt" className="profile-thumb" />
-        {props.username}
-      </div>
-      <img src={props.imageUrl} alt="alt" />
-      {props.likes}
-      <div>
-        <CommentSection comments={props.comments}  />
-      </div>
+    <div>
+      <p>{props.data.username}</p>
+      <img src={props.data.thumbnailUrl} alt="alt text" />
+      <p src={props.data.imageUrl}/>
+      <p>{props.data.likes}</p>
+      <p>{props.data.timestamp}</p>
+      <CommentSection id={props.data.id} comments={props.data.comments} addComment={props.addComment} commentValue={props.commentValue} change={props.change}/>
     </div>
-  )
-}
+  );
+};
 
 export default PostContainer;
