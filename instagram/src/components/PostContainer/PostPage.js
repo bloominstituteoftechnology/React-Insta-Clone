@@ -42,11 +42,11 @@ export default class PostPage extends Component {
         }
     }
 
-    deleteComment = (postIndex, text) => {
+    deleteComment = (postIndex, id) => {
 
-        let clone = this.state.data.slice();
+        let clone = [...this.state.data];
 
-        clone[postIndex].comments = clone[postIndex].comments.filter(arr => arr.text !== text);
+        clone[postIndex].comments = clone[postIndex].comments.filter(arr => arr.id !== id);
 
         this.setState({ data: clone });
 

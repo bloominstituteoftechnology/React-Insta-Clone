@@ -9,7 +9,7 @@ const CommentSection = props => {
             <p className='commentContent'>
                 <span className='commentUsername'>{props.comment.username}</span>
                 {props.comment.text}
-                <sup onClick={() => props.deleteComment(props.postIndex, props.comment.text)}>X</sup>
+                <sup onClick={() => props.deleteComment(props.postIndex, props.comment.id)}>X</sup>
             </p>
             <p
                 className='time'
