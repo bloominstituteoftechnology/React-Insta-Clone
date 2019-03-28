@@ -14,6 +14,7 @@ class SearchBar extends React.Component{
 	}
 	
 	onSearchPost = (e)=>{
+		e.preventDefault()
 		this.props.onSearchPost(e, this.state.query)
 		this.setState({query: ''})
 	}
@@ -22,7 +23,7 @@ class SearchBar extends React.Component{
 		return (
 			 <div className="searchBarContainer">
 				<div className="logoBox">
-					<button className="logoButton"><i className="fab fa-instagram"  /></button>
+					<button className="logoButton"><i className="fab fa-instagram" /></button>
 					<img className="logo" src={process.env.PUBLIC_URL + '/images/logo.png'} alt="logo"/>
 				</div>
 				<div className="searchInputContainer">
@@ -38,7 +39,8 @@ class SearchBar extends React.Component{
 				<div className="right">
 					<button className=""><i className="fab fa-instagram"/></button>
 					<button className=""><i className=" far fa-heart"/></button>
-					<button className=""><i className="fas fa-user-friends"/></button>
+					<button className="logoutButton"
+							onClick={this.props.onLogout}><i className="fas fa-user-friends"/>Logout</button>
 				</div>
 			</div>
 		)

@@ -14,11 +14,18 @@ const PostItem = (props)=>{
 			<PostHeader {...props}/>
 			<img className="heroImage" src={props.imageUrl} alt="hero"/>
 			<div className="bottomContentContainer">
-				<PostLikes onLikeClick={e => props.onLikeClick(e, props.id)} likes={props.likes}/>
-				<CommentSection comments={props.comments}/>
+				<PostLikes onLikeClick={e => props.onLikeClick(e, props.id)}
+						   likes={props.likes}
+						   likedPosts={props.likedPosts}
+						   postId={props.id}/>
+				<CommentSection
+					comments={props.comments}
+					postId={props.id}
+					onDeleteComment={props.onDeleteComment}/>`
 				<time>{moment().startOf('day').fromNow().toUpperCase()}</time>
 			</div>
-			<CommentInput onAddComment={props.onAddComment} postId={props.id}/>
+			<CommentInput onAddComment={props.onAddComment}
+						  postId={props.id}/>
 		</div>
 	)
 }

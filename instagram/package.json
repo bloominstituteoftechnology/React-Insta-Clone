@@ -4,11 +4,14 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "moment": "^2.24.0",
     "node-sass": "^4.11.0",
+    "npm": "^6.9.0",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
     "react-scripts": "2.1.8",
-    "reactstrap": "^7.1.0"
+    "reactstrap": "^7.1.0",
+    "styled-components": "^4.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

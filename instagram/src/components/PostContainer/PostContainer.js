@@ -7,7 +7,10 @@ const PostContainer = (props)=>{
 			{props.postList.map(el =>
 				<PostItem {...el} key={el.id}
 					 onAddComment={props.onAddComment}
-					 onLikeClick={props.onLikeClick}/>)
+					 onLikeClick={props.onLikeClick}
+					 onDeleteComment={props.onDeleteComment}
+					 likedPosts = {props.likedPosts}
+					 />)
 			}
 		</div>
 	)

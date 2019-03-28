@@ -19,6 +19,7 @@ class CommentInput extends React.Component{
 	}
 	
 	onAddComment = (e)=>{
+		e.preventDefault();
 		if(this.state.query.length === 0) return
 		const val = this.state.query.trim()
 		this.props.onAddComment(e, val, this.props.postId)
@@ -27,14 +28,14 @@ class CommentInput extends React.Component{
 	
 	render(){
 		return (
-			<form className="commentInputContainer">
+			<form className="commentInputContainer" onSubmit={(e)=> this.onAddComment(e)}>
 				<input type="text"
 					className="commentInput"
 					placeholder="Add a comment..."
 					onChange={ e => this.onQueryChanged(e.target.value)}
 					onKeyDown={(e)=> this.onKeyDown(e)}
 					value={this.state.query}/>
-				<button onSubmit={(e)=> this.onAddComment(e)} >...</button>
+				<button type="submit" >...</button>
 			</form>
 		)
 	}

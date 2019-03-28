@@ -12,8 +12,10 @@ LIKES
  Comment Item
 ================== */
 .commentItem{
+  position:relative;
   margin-bottom: 8px;
   font-size: 1rem;
+  width: 100%;
   .author{
     font-weight:bold;
     margin-right: 4px;
@@ -26,6 +28,19 @@ LIKES
   span{
     color: #222222;
   }
+  .closeButton{
+    top:0;
+    right: 10px;
+    position: absolute;
+    background-color: green;
+    padding: 4px 8px;
+    //display:none;
+    transition: all 03s ease;
+    &.show{
+      display: block;
+    }
+  }
+
 }
 
 .commentInputContainer{
