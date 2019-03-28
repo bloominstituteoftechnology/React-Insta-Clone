@@ -5,7 +5,7 @@ const withAuthenticate = Component => Component2 =>
         constructor() {
             super();
             this.state = {
-                loggedIn: false
+                loggedIn: localStorage.getItem('user') === null ? false : true
             }
         }
 

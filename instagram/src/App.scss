@@ -36,6 +36,25 @@
                     border-right: none;
                 }
             }
+
+            &.far.fa-user {
+                color: gray;
+                transition: color 1s ease-out;
+                cursor: pointer;
+
+                &:hover {
+                    color: black;
+                }
+            }
+
+            &.fas.fa-user {
+                color: gray;
+                cursor: pointer;
+
+                &:hover {
+                    color: black;
+                }
+            }
         }
 
         @media (max-width: 650px) {

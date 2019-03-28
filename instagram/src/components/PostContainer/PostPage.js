@@ -3,6 +3,7 @@ import Loader from 'react-loader-spinner';
 import dummyData from '../../dummy-data';
 import PostContainer from '../PostContainer/PostContainer';
 import SearchBar from '../SearchBar/SearchBar';
+import AccountMenu from './AccountMenu/AccountMenu';
 
 export default class PostPage extends Component {
     constructor() {
@@ -10,6 +11,7 @@ export default class PostPage extends Component {
         this.state = {
             liked: false,
             searchValue: '',
+            account: false,
             data: []
         };
     }
@@ -18,8 +20,6 @@ export default class PostPage extends Component {
         this.setState({
             data: localStorage.getItem('data') === null ? dummyData : JSON.parse(localStorage.getItem('data'))
         });
-
-        window.onbeforeunload = () => localStorage.removeItem('user');
     }
 
     submitComment = (timestamp, comment) => {
@@ -86,8 +86,12 @@ export default class PostPage extends Component {
                         <div>
                             <i className='far fa-compass' />
                             <i className='far fa-heart' />
-                            <i className='far fa-user' />
+                            <i
+                                onClick={() => this.setState({ account: !this.state.account })}
+                                className={this.state.account === false ? 'far fa-user' : 'fas fa-user'}
+                            />
                         </div>
+                        <AccountMenu account={this.state.account} />
                     </header>
                     {this.state.data.map((post, i) => (
                         <PostContainer

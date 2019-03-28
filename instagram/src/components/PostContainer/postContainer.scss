@@ -66,6 +66,10 @@
 
             &.fas.fa-comment {
                 color: black;
+
+                &:hover {
+                    color: gray;
+                }
             }
         }
 

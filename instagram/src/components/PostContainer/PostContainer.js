@@ -29,9 +29,7 @@ class PostContainer extends React.Component {
 
         this.props.submitComment(this.props.post.timestamp, newComment);
 
-        this.setState({
-            comment: ''
-        })
+        this.setState({ comment: '' })
     }
 
     render() {
