@@ -1,120 +1,57 @@
-.post {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    border: 2px solid #b1b1ff;
-    margin: 15px 0;
-    background: whitesmoke;
-    border-radius: 5px;
-    box-shadow: 5px 10px 30px;
+span {
+    padding-left: 10px;
+}
 
-    .head {
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 15px;
+i {
+    font-size: 2.5rem;
+    margin: 10px 15px;
 
-        img {
-            margin-left: 15px;
-            width: 35px;
-            border-radius: 50%;
-        }
+    &.far.fa-heart {
+        transition: color 1s ease-out;
 
-        span {
-            padding-left: 10px;
+        &:hover {
+            color: red;
         }
     }
 
-    .postImg {
-        max-width: 640px;
-        width: 100%;
+    &.fas.fa-heart {
+        color: red;
     }
 
-    .cAndL {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        width: 640px;
+    &.far.fa-comment {
+        color: gray;
+        transition: color 1s ease-out;
 
-        i {
-            font-size: 2.5rem;
-            margin: 10px 15px;
-
-            &.far.fa-heart {
-                transition: color 1s ease-out;
-
-                &:hover {
-                    color: red;
-                }
-            }
-
-            &.fas.fa-heart {
-                color: red;
-            }
-
-            &.far.fa-comment {
-                color: gray;
-                transition: color 1s ease-out;
-
-                &:hover {
-                    color: black;
-                }
-            }
-
-            &.fas.fa-comment {
-                color: black;
-
-                &:hover {
-                    color: gray;
-                }
-            }
-        }
-
-        .like:hover {
-            cursor: pointer;
-        }
-
-        .likes {
-            width: 640px;
-            padding: 0 0 15px 15px;
-            font-weight: 500;
+        &:hover {
+            color: black;
         }
     }
 
-    .comments {
-        width: 100%;
-        border-top: 1px dotted #b1b1ff;
-        margin-top: 15px;
-        background: #b1b1ff25;
-        border-radius: 0 0 5px 5px;
+    &.fas.fa-comment {
+        color: black;
 
-        .addComment {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            color: #a8a8a8;
-            border-top: 1px dotted #b1b1ff;
-            font-size: 1.2rem;
-
-            input {
-                background: none;
-                border: none;
-                padding: 15px;
-                width: 235%;
-            }
-
-            i {
-                padding: 15px;
-
-                &:hover {
-                    cursor: pointer;
-                }
-            }
+        &:hover {
+            color: gray;
         }
+    }
+}
+
+.like {
+    padding: 0px;
+    cursor: pointer;
+}
+
+input.addComment {
+    background: none;
+    border: none;
+    padding: 15px;
+    width: 235%;
+}
+
+i {
+    padding: 15px;
+
+    &:hover {
+        cursor: pointer;
     }
 }

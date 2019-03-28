@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import './login.scss';
+import { Button } from 'reactstrap';
+import Div from '../styles/div';
+import { H1, LoginForm, Input } from '../styles/input';
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default class Login extends Component {
     constructor(props) {
@@ -27,30 +31,30 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div className='login'>
-                <div>
-                    <h1>Log In:</h1>
-                    <form
+            <Div fade>
+                <Div login>
+                    <H1>Log In:</H1>
+                    <LoginForm
                         onSubmit={this.login}
                         className='login'
                     >
-                        <input
+                        <Input
                             placeholder='Username'
                             name='username'
                             value={this.state.username}
                             onChange={this.handleChanges}
                         />
-                        <input
+                        <Input
                             placeholder='Password'
                             name='password'
                             value={this.state.password}
                             onChange={this.handleChanges}
                             type='password'
                         />
-                        <button>Login</button>
-                    </form>
-                </div>
-            </div>
+                        <Button outline color='primary' size='lg'>Login</Button>
+                    </LoginForm>
+                </Div>
+            </Div>
         )
     }
 }

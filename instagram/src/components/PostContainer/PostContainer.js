@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import moment from 'moment';
+import Div from '../styles/div';
+import Img from '../styles/img';
 import './postContainer.scss';
 
 class PostContainer extends React.Component {
@@ -34,20 +36,19 @@ class PostContainer extends React.Component {
 
     render() {
         return (
-            <article className='post'>
-                <section className='head'>
-                    <img
+            <Div post>
+                <Div head>
+                    <Img
                         src={this.props.post.thumbnailUrl}
                         alt={this.props.post.timestamp}
                     />
                     <span>{this.props.post.username}</span>
-                </section>
-                <img
-                    className='postImg'
+                </Div>
+                <Img postImg
                     src={this.props.post.imageUrl}
                     alt={this.props.post.timestamp}
                 />
-                <section className='cAndL'>
+                <Div cAndL>
                     <i
                         onClick={() => this.setState({ liked: !this.state.liked }) & localStorage.setItem(this.props.post.timestamp, !this.state.liked)}
                         className={this.state.liked === false ? 'far fa-heart like' : 'fas fa-heart like'}
@@ -58,11 +59,10 @@ class PostContainer extends React.Component {
                         className={this.state.commenting === false ? 'far fa-comment like' : 'fas fa-comment like'}
                     />
 
-                    <span className='likes'>{this.state.liked === false ? this.props.post.likes : this.props.post.likes + 1} likes</span>
-                </section>
+                    <Div likes>{this.state.liked === false ? this.props.post.likes : this.props.post.likes + 1} likes</Div>
+                </Div>
 
-                <div
-                    className='comments'
+                <Div comments
                     style={{ display: this.state.commenting === false ? 'none' : 'block' }}
                 >
                     {this.props.post.comments.map((comment, id) => (
@@ -73,9 +73,10 @@ class PostContainer extends React.Component {
                             deleteComment={this.props.deleteComment}
                         />
                     ))}
-                    <div className='addComment'>
+                    <Div addComment>
                         <form onSubmit={this.submitComment}>
                             <input
+                                className='addComment'
                                 placeholder='Add a comment...'
                                 name='comment'
                                 value={this.state.comment}
@@ -83,10 +84,10 @@ class PostContainer extends React.Component {
                             />
                         </form>
                         <i className='fas fa-ellipsis-h' />
-                    </div>
-                </div>
+                    </Div>
+                </Div>
 
-            </article>
+            </Div>
         )
     }
 }

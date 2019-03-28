@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Div from '../styles/div';
+import Header from '../styles/header'
 import Loader from 'react-loader-spinner';
 import dummyData from '../../dummy-data';
 import PostContainer from '../PostContainer/PostContainer';
@@ -31,15 +33,24 @@ export default class PostPage extends Component {
     }
 
     search = e => {
-        this.setState({ [e.target.name]: e.target.value });
+        this.setState({ searchValue: e.target.value }, this.searchMatch);
+    }
 
-        const search = this.state.data.filter(post => post.username.toLowerCase().includes((e.target.value).toLowerCase()) || post.comments.map(comm => comm.text.toLowerCase().includes((e.target.value).toLowerCase()) || comm.username.toLowerCase().includes((e.target.value).toLowerCase())) === true);
+    searchMatch = () => {
+
+        const search = this.state.data.filter(post => (
+            post.username.toLowerCase().includes((this.state.searchValue).toLowerCase())
+            ||
+            post.comments.map(comm => (
+                comm.text.toLowerCase().includes((this.state.searchValue).toLowerCase())
+                ||
+                comm.username.toLowerCase().includes((this.state.searchValue).toLowerCase())
+            )) === true
+        ));
 
         search.length !== 0 && this.setState({ data: search });
 
-        if (e.target.value.length === 0) {
-            this.setState({ data: dummyData });
-        }
+        this.state.searchValue.length === 0 && this.setState({ data: dummyData });
     }
 
     deleteComment = (postIndex, id) => {
@@ -56,43 +67,44 @@ export default class PostPage extends Component {
     render() {
         if (this.state.data.length === 0) {
             return (
-                <div className="App">
-                    <header>
+                <Div App>
+                    <Header>
                         <i className='fab fa-instagram' />
                         <i className='headName'>Instagram</i>
                         <SearchBar
                             search={this.search}
+                            searchMatch={this.searchMatch}
                             searchValue={this.state.searchValue}
                         />
-                        <div>
+                        <Div cont>
                             <i className='far fa-compass' />
                             <i className='far fa-heart' />
                             <i className='far fa-user' />
-                        </div>
-                    </header>
+                        </Div>
+                    </Header>
                     <Loader type="Triangle" color="darkgreen" height={80} width={80} />
-                </div>
+                </Div>
             )
         } else {
             return (
-                <div className="App">
-                    <header>
+                <Div App>
+                    <Header>
                         <i className='fab fa-instagram' />
                         <i className='headName'>Instagram</i>
                         <SearchBar
                             search={this.search}
                             searchValue={this.state.searchValue}
                         />
-                        <div>
+                        <Div cont>
                             <i className='far fa-compass' />
                             <i className='far fa-heart' />
                             <i
                                 onClick={() => this.setState({ account: !this.state.account })}
                                 className={this.state.account === false ? 'far fa-user' : 'fas fa-user'}
                             />
-                        </div>
+                        </Div>
                         <AccountMenu account={this.state.account} />
-                    </header>
+                    </Header>
                     {this.state.data.map((post, i) => (
                         <PostContainer
                             post={post}
@@ -104,7 +116,7 @@ export default class PostPage extends Component {
                             deleteComment={this.deleteComment}
                         />
                     ))}
-                </div>
+                </Div>
             );
         }
     }

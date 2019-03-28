@@ -1,5 +1,8 @@
 import React from 'react';
-import './searchBar.scss';
+import { Button } from "reactstrap";
+import { Input } from '../styles/input'
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class SearchBar extends React.Component {
     constructor(props) {
@@ -12,15 +15,15 @@ class SearchBar extends React.Component {
     render() {
         return (
             <>
-                <button
+                <Button
                     className='search'
                     style={{ display: this.state.search === false ? 'flex' : 'none' }}
                     onClick={() => this.setState({ search: !this.state.search })}
                 >
                     <i className='fas fa-search' />
-                    <i>Search</i>
-                </button>
-                <input
+                    <i className='searchText'>Search</i>
+                </Button>
+                <Input
                     placeholder='Search'
                     name='searchValue'
                     type='search'
