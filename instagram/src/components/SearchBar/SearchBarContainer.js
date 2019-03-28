@@ -1,10 +1,25 @@
 import React from 'react';
 import IGLogo from '../../assets/iglogo.png';
+import styled from 'styled-components';
 import './SearchBar.css';
 
+
+
 const SearchBar = props => {
+
+  const SearchBarWrapper = styled.div`
+  border-bottom: 1px solid #3333;
+  height: 80px;
+  line-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+`;
+
+
+
   return (
-    <div className="search-bar-wrapper">
+    <SearchBarWrapper>
       <div className="image-wrapper">
         <img alt="instagram logo" src={IGLogo} className="logo-image" />
       </div>
@@ -22,7 +37,7 @@ const SearchBar = props => {
           <i className="far fa-user-circle" />
         </div>
       </div>
-    </div>
+    </SearchBarWrapper>
   );
 };
 
