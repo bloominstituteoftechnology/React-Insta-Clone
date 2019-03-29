@@ -21,7 +21,10 @@ export default class Login extends Component {
             this.props.login();
         } else {
             alert('Invalid Username and/or Password');
-            this.setState({ username: '', password: '' });
+            this.setState({
+                username: '',
+                password: ''
+            });
         }
     }
 

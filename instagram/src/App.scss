@@ -36,15 +36,6 @@ i {
         }
     }
 
-    &.fas.fa-search,
-    &.searchText {
-        font-size: 1.5rem;
-    }
-
-    &.fas.fa-search {
-        padding: 0;
-    }
-
     &.headName {
         font-family: 'Great Vibes';
         font-size: 4rem;
@@ -64,7 +55,16 @@ button {
     align-items: center;
 
     i {
-        padding: 0;
+
+        &.searchText {
+            font-size: 1.5rem;
+        }
+
+        &.fas.fa-search {
+            font-size: 1.1rem;
+        }
+
+        padding: 0 2.5px;
         margin: 0;
     }
 }

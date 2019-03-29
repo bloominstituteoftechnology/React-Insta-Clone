@@ -10,7 +10,9 @@ const withAuthenticate = Login => PostPage =>
         }
 
         login = () => {
-            this.setState({ loggedIn: true });
+            this.setState({
+                loggedIn: true
+            });
         }
 
         render() {
