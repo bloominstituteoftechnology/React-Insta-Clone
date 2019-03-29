@@ -8,9 +8,7 @@ const ComponentFromWithAuthenticate = withAuthenticate(Login)(PostPage);
 
 class App extends Component {
   render() {
-    return (
-      <ComponentFromWithAuthenticate />
-    )
+    return <ComponentFromWithAuthenticate />;
   }
 }
 

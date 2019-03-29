@@ -24,6 +24,7 @@ class SearchBar extends React.Component {
                     <i className='searchText'>Search</i>
                 </Button>
                 <Input
+                    ref={input => input && input.focus()}
                     placeholder='Search'
                     name='searchValue'
                     type='search'
