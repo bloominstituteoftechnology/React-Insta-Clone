@@ -17,6 +17,7 @@ class PostPage extends React.Component {
 		this.clearCacheFlag = false;
 	}
 	
+	
 	componentDidMount() {
 		if(this.clearCacheFlag){
 			this.clearCache();
@@ -65,12 +66,13 @@ class PostPage extends React.Component {
 		const copyArr = this.state.postList.slice()
 		const post = copyArr.find(el => el.id === postId)
 		const nextIndex = post.comments.length*=10
+		const username = JSON.parse(localStorage.getItem('username'))
 		
 		// add new comment
 		const newComment =
 			{
 				id: nextIndex,
-				username: "philzcoffee",
+				username: username,
 				text: val
 			}
 		
@@ -82,13 +84,11 @@ class PostPage extends React.Component {
 	deleteComment = (e, postId, commentId)=>{
 		e.preventDefault();
 		console.log('commentId', commentId)
+		
 		const copyArr = [...this.state.postList]
 		const post = copyArr.find(el=>el.id === postId)
 		const comment = post.comments.filter(comment=>comment.id !== commentId)
-		console.log('copyArr', copyArr)
-		console.log('post', post)
-		console.log('comment', comment)
-		console.log(' [...copyArr, {...post, comment}]',  [...copyArr, {...post, comment}])
+		const postIndex = copyArr.findIndex(el=>el.id === postId)
 		this.setState({postList: [...copyArr, post]})
 	}
 	

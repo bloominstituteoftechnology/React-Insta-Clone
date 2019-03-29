@@ -1,9 +1,15 @@
 import React from 'react'
 import './PostContainers.scss';
 import PostItem from "./PostItem";
+import styled from 'styled-components'
+
+export const PostHeaderContainer = styled.div`
+`
+
+
 const PostContainer = (props)=>{
 	return (
-		<div className="postListContainer">
+		<PostHeaderContainer >
 			{props.postList.map(el =>
 				<PostItem {...el} key={el.id}
 					 onAddComment={props.onAddComment}
@@ -12,7 +18,7 @@ const PostContainer = (props)=>{
 					 likedPosts = {props.likedPosts}
 					 />)
 			}
-		</div>
+		</PostHeaderContainer>
 	)
 }
 

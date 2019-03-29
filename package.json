@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
     "install": "^0.12.2",
     "moment": "^2.24.0",
     "npm": "^6.9.0",
