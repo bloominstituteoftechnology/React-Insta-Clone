@@ -38,19 +38,22 @@ export default class PostPage extends Component {
 
     searchMatch = () => {
 
-        const search = this.state.data.filter(post => (
-            post.username.toLowerCase().includes((this.state.searchValue).toLowerCase())
-            ||
-            post.comments.map(comm => (
-                comm.text.toLowerCase().includes((this.state.searchValue).toLowerCase())
+        const data = JSON.parse(localStorage.getItem('data')) === null ? dummyData : JSON.parse(localStorage.getItem('data')),
+            search = data.filter(post => (
+                post.username.toLowerCase().includes((this.state.searchValue).toLowerCase())
                 ||
-                comm.username.toLowerCase().includes((this.state.searchValue).toLowerCase())
-            )) === true
-        ));
+                post.comments.map(comm => (
+                    comm.text.toLowerCase().includes((this.state.searchValue).toLowerCase())
+                    ||
+                    comm.username.toLowerCase().includes((this.state.searchValue).toLowerCase())
+                )) === true
+            ));
+
+        console.log(data)
 
         search.length !== 0 && this.setState({ data: search });
 
-        this.state.searchValue.length === 0 && this.setState({ data: dummyData });
+        this.state.searchValue.length === 0 && this.setState({ data: data });
     }
 
     deleteComment = (postIndex, id) => {
