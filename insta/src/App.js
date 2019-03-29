@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import SearchBar from './SearchBar';
-import PostContainer from './components/PostContainer.js'
+import PostContainer from './components/PostContainer.js';
 import data from './components/data';
 import './App.css';
 import SearchBar from './components/SearchBar.js';
@@ -21,32 +21,32 @@ class App extends Component {
   }
   // 2.then render (initial render first then fetch #3)
   // 3. run componentDidMount - fetch data from API
-  updatePost = (event, commentText, postId) => {
-    event.preventDefault()
-    let postToUpdate = data.find (post => {
-      // reference data variable not dummyData
-      return post.id === postId
-    }) 
-    const newComment = {
-      id: Date.now(),
-      username: 'Pikachu',
-      text: commentText
-    }
-    postToUpdate.comments.push(newComment)
+  // updatePost = (event, commentText, postId) => {
+  //   event.preventDefault()
+  //   let postToUpdate = data.find (post => {
+  //     // reference data variable not dummyData
+  //     return post.id === postId
+  //   }) 
+  //   const newComment = {
+  //     id: Date.now(),
+  //     username: 'Pikachu',
+  //     text: commentText
+  //   }
+  //   postToUpdate.comments.push(newComment)
 
-    const index = data.indexOf(post => {return post.id === postId})
+  //   const index = data.indexOf(post => {return post.id === postId})
 
-    data[index] = postToUpdate;
-    this.setState (
-      {
-        dummy: data
-      }
-    )
+  //   data[index] = postToUpdate;
+  //   this.setState (
+  //     {
+  //       dummy: data
+  //     }
+  //   )
     
-    // console.log(postToUpdate)
-    // console.log('inside updatePost', commentText)
-    // console.log('postId is ', postId)
-  }
+  //   // console.log(postToUpdate)
+  //   // console.log('inside updatePost', commentText)
+  //   // console.log('postId is ', postId)
+  // }
   // get the post by id
   // get the comments 
   // add new comment
@@ -55,7 +55,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <SearchBar />
+                <SearchBar/>
       {/* running a forLoop on dummyData */}
       {/* mapping over data from state and putting into userPost
       userPost then set to var passPost inside PostContainer*/}

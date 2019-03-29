@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SearchBar = props => {
+const SearchBar = () => {
      return (
          <div className='searchBar'>
-         <input className="search" placeholder="Search" />
+         <input className="search" type="search" placeholder="Search" />
          </div>
      )
 }

@@ -8,7 +8,7 @@ class CommentSection extends Component{
         // console.log("inside CommentSection", props)
         this.state = {
             comments: props.passComment,
-            commentText: ''
+            commentText: ""
         };
         // console.log('inside comment section', props.updatePost())
     }
@@ -18,6 +18,28 @@ class CommentSection extends Component{
         }
         )
     }
+
+    updatePost = (event) => {
+        event.preventDefault()
+        const newComment = {
+          id: Date.now(),
+          username: 'Pikachu',
+          text: this.state.commentText
+        }
+        let comments = this.state.comments.slice()
+        comments.push(newComment)
+
+        this.setState (
+          {
+            comments,
+            commentText: ''
+          }
+        )
+        
+        // console.log(postToUpdate)
+        // console.log('inside updatePost', commentText)
+        // console.log('postId is ', postId)
+      }
 
     render() {
         return ( <>
@@ -31,7 +53,8 @@ class CommentSection extends Component{
                         </div>
                     )
                     })}
-                    <form onSubmit={(event) => this.props.updatePost(event, this.state.commentText)}>
+                    <form onSubmit={this.updatePost}>
+                    {/* dont need props because it's on class */}
                         <input 
                         placeholder ="Comment"
                         name="commentText" 
