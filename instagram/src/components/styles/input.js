@@ -18,6 +18,9 @@ const Input = styled.input`
     border-radius: 5px;
     border: 1px solid skyblue;
     margin: 5px 0;
+    &[type=password]{
+        margin-bottom: 15px;
+    }
     &:hover{
         border-color: #6363ff;
     }

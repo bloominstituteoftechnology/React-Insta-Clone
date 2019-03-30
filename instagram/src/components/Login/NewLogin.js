@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Div from '../styles/div'
-import { LoginForm, Input } from '../styles/input'
+import { LoginForm, Input, H1 } from '../styles/input'
 import { Button } from 'reactstrap';
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -42,19 +42,29 @@ export default class NewLogin extends Component {
         return (
             <Div fade>
                 <Div login>
+                    <H1>New User:</H1>
                     <LoginForm onSubmit={this.newUser}>
                         <Input
                             placeholder='Username'
                             name='username'
+                            value={this.state.username}
                             onChange={this.handleChanges}
                         />
                         <Input
                             placeholder='Password'
                             name='password'
+                            value={this.state.password}
                             onChange={this.handleChanges}
+                            type='password'
                         />
-                        <Button outline color='secondary' size='lg'>Submit</Button>
+                        <Button color='primary' size='lg'>Submit</Button>
                     </LoginForm>
+                    <Button
+                        outline
+                        color='secondary'
+                        onClick={() => this.props.history.goBack()}
+                        style={{ marginTop: 15, width: 100 }}
+                    >Back</Button>
                 </Div>
             </Div>
         )
