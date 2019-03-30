@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
+import Users from '../../users';
+import NewLogin from './NewLogin'
 import { Button } from 'reactstrap';
 import Div from '../styles/div';
 import { H1, LoginForm, Input } from '../styles/input';
@@ -10,13 +13,17 @@ export default class Login extends Component {
         super(props);
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            users: JSON.parse(localStorage.getItem('users')) === null ?
+                Users
+                :
+                JSON.parse(localStorage.getItem('users'))
         }
     }
 
     login = e => {
         e.preventDefault();
-        if (this.state.username && this.state.password !== '') {
+        if (this.state.users.filter(user => user.username === this.state.username && user.password === this.state.password).length > 0) {
             localStorage.setItem('user', JSON.stringify(this.state));
             this.props.login();
         } else {
@@ -56,6 +63,15 @@ export default class Login extends Component {
                         />
                         <Button outline color='primary' size='lg'>Login</Button>
                     </LoginForm>
+                    <Link to={{
+                        pathname: '/newlogin',
+                        state: { users: this.state.users }
+                    }}>New user?</Link>
+                    <Route
+                        exact
+                        path='/newlogin'
+                        component={NewLogin}
+                    />
                 </Div>
             </Div>
         )

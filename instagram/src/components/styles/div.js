@@ -10,6 +10,9 @@ ${props =>
         display: flex;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
 `       :
                         props.login ? css`
         width: 50vw;
