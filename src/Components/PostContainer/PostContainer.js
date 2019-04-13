@@ -14,7 +14,7 @@ const PostContainer = (props) => {
                         <img className = "profilePic" src ={obj.thumbnailUrl} alt = "tmbnl"/>
                         <p className = "userhandle">{obj.username}</p>
                         </div>
-                       
+                    
                     <CardImg top width="100%" src={obj.imageUrl} alt ="postImg"/>
                     <div className = "reactionIcons">
                             <img className = "like" src = {OpenHeart} alt ="like"/>
