@@ -28,13 +28,6 @@ searchBarHandler = event => {
   this.setState({ searchData: posts });
 };
 
-logOut = e => {
-  e.preventDefault();
-  const user = this.state.username;
-  localStorage.removeItem('user', user);
-  window.location.reload();
-}
-
   render() {
     return (
       <div className="App">
@@ -43,7 +36,6 @@ logOut = e => {
           this.state.searchData.length > 0 ?
           this.state.searchData :
           this.state.dummyData} />
-        <Button type="submit" onClick={this.logOut}>Logout</Button>
       </div>
     );
   }
