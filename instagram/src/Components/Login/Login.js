@@ -21,12 +21,6 @@ class Login extends React.Component {
         window.location.reload();
     }
 
-    logOut = e => {
-        e.preventDefault();
-        const user = this.state.username;
-        localStorage.removeItem('user', user);
-        window.location.reload();
-    }
 
     render() { 
         return (  
@@ -52,7 +46,7 @@ class Login extends React.Component {
                 />
             <br />
             <Button color='success' size='large' onClick={this.handleLoginSubmit}>Log In</Button>   
-            <Button type="submit" onClick={this.logOut}>Logout</Button> 
+            
             </FormGroup>
            </Form> 
         );

@@ -24,11 +24,19 @@ searchBarHandler = event => {
     if (post.username.includes(event.target.value)) {
       return post;
     }
-  });
+  })
   this.setState({ searchData: posts });
 };
 
-  render() {
+
+logOut = e => {
+  e.preventDefault();
+  const user = this.state.username;
+  localStorage.removeItem('user', user);
+  window.location.reload();
+}
+
+render() {
     return (
       <div className="App">
         <SearchBar searchPosts={this.searchBarHandler}/>
@@ -36,7 +44,9 @@ searchBarHandler = event => {
           this.state.searchData.length > 0 ?
           this.state.searchData :
           this.state.dummyData} />
+        <Button type="submit" onClick={this.logOut}>Logout</Button> 
       </div>
+      
     );
   }
 }
