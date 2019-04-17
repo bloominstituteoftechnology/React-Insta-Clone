@@ -32,3 +32,25 @@ Follow these steps:
 3. Run `yarn start` on the project folder to run the frontend on `localhost:3000`
 
 8. Your application is now running and can be tested locally. 
+
+
+### Assets Needed to Clone Application
+
+[Instagram Logo](./src/assets/instagram_logo.jpg)
+
+[Instagram Icon Logo](./src/assets/icon_instagram_2.jpg)
+
+[Instagram Comment Icon](./src/assets/comment.png)
+
+[Instagram Like Icon](./src/assets/like.png)
+
+[Instagram Account Icon](./src/assets/person.png)
+
+[Instagram Compass Icon](./src/assets/instagram_compass.jpg)
+
+Background: **#FAFAFA**
+
+Stories Card: **#FFFFFF**
+
+Border: **#D2D2D2**
+
