@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import "./search-bar.css";
 
 const SearchContainer = styled.div`
   font-family: "Grand Hotel", cursive;

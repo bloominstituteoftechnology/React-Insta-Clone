@@ -107,7 +107,7 @@ class CommentSection extends React.Component {
   render(props) {
     return (
       <CommentSectionContainer>
-        <div className="likes-comments">
+        <div>
           <LikesCommentsIcons>
             <I className="far fa-heart fa-2x" onClick={this.toggleLike} />
             <I
