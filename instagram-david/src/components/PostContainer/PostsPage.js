@@ -10,7 +10,7 @@ const MainContentContainer = styled.div`
 `;
 const PostsPage = props => {
   return (
-    <div className="app-container">
+    <React.Fragment>
       <SearchBar
         onChange={props.searchPosts}
         value={props.searchValue}
@@ -21,7 +21,7 @@ const PostsPage = props => {
           return <PostContainer post={post} userProfile={props.userProfile} />;
         })}
       </MainContentContainer>
-    </div>
+    </React.Fragment>
   );
 };
 
