@@ -20,6 +20,30 @@ const LikesCommentsStats = styled.div`
 const LikesCommentsStatistic = styled.p`
   margin-bottom: 5px;
 `;
+const CommentForm = styled.form`
+  width: 95%;
+  margin: 10px auto 0px;
+  display: flex;
+  justify-content: space-between;
+`;
+const CommentInput = styled.input`
+  width: 80%;
+  padding: 10px;
+  border: none;
+`;
+const SubmitComment = styled.button`
+  width: 100px;
+  color: white;
+  background-color: #3897f0;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.5rem;
+  :active {
+    transform: scale(0.99);
+  }
+`;
 class CommentSection extends React.Component {
   constructor(props) {
     super(props);
@@ -103,8 +127,8 @@ class CommentSection extends React.Component {
         {this.state.comments.map(comment => {
           return <Comment username={comment.username} text={comment.text} />;
         })}
-        <form>
-          <input
+        <CommentForm>
+          <CommentInput
             type="text"
             placeholder="Add a comment..."
             name="currentComment"
@@ -112,13 +136,13 @@ class CommentSection extends React.Component {
             onChange={this.handleChange}
             onSubmit={this.addComment}
           />
-          <button
+          <SubmitComment
             onClick={this.addComment}
             disabled={this.state.currentComment === "" ? true : false}
           >
             Submit
-          </button>
-        </form>
+          </SubmitComment>
+        </CommentForm>
       </CommentSectionContainer>
     );
   }

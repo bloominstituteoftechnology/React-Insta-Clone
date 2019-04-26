@@ -3,7 +3,6 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import SearchBar from "../SearchBar/SearchBar";
 import PostContainer from "./PostContainer";
-import "../../App.css";
 
 const MainContentContainer = styled.div`
   padding-top: 60px;
