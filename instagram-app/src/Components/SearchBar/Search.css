@@ -1,0 +1,11 @@
+.SearchBarContainer{
+margin: 0 auto;
+width: 99.5%;
+height: 80px;
+border-top: 1px solid gray;
+border-bottom: 1px solid gray;
+background-color: aliceblue;
+margin-top: 0.2%;
+margin-bottom: 2%;
+
+}

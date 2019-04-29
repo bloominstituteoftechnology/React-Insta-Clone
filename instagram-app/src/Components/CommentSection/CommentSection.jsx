@@ -11,9 +11,10 @@ class CommentSection extends Component {
       <div>
         {this.props.comments.map(e => {
           return (
-            <div>
-              <h1>{e.username}</h1>
-              <p>{e.text}</p>
+            <div key= {e.text}>
+              <h1 >{e.username}</h1>
+              <p  >{e.text}</p>
+              
             </div>
           );
         })}
