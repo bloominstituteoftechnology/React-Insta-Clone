@@ -6,6 +6,12 @@ const CommentSection = props =>{
             <p>{props.comment.username}</p>
 
             <p>{props.comment.text}</p>
+
+            <input className="addComment"
+                type="text"
+                name="newComment"
+                placeholder="Add a new comment" 
+            />
         </div>
     )
 }
