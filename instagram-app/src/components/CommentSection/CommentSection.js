@@ -1,7 +1,6 @@
 import React from 'react'; 
 import Comment from './Comment'; 
-
-// import AddNewComment from './AddNewComment'; 
+import AddNewComment from './AddNewComment'; 
 
 
 // Setting CommentSection up as a Class because it will need to hold state
@@ -16,9 +15,17 @@ class CommentSection extends React.Component {
     render() {
         return (
             <div>
-            {this.state.comments.map((comment) => 
-            <Comment comment={comment}/>
-                )}
+
+                <div className="existingComments">
+                    {this.state.comments.map((comment) => 
+                    <Comment comment={comment}/>
+                    )}
+                </div>
+                
+                <div className="newComment">
+                    <AddNewComment /> 
+                </div>
+
             </div>
         ); 
      }
