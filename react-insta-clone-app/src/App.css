@@ -1,0 +1,146 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+
+
+
+.App {
+  border: 1px solid;
+  width: 90%;
+  margin: auto;
+}
+/* Search Bar CSS start */
+.search-bar-container {
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+.search-bar-container .title-images{
+  /* border: 1px solid; */
+  width: 25%;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+.search-bar-container .title-images .logo{
+  width: 15%;
+  height: 15%;
+}
+.search-bar-container .title-images .line-break {
+  width: 1px;
+  height: 25px;
+  background-color: black;
+}
+.search-bar-container .title-images .title{
+  max-width: 60%;
+  max-height: 75px;
+}
+.search-input{
+  height: 25px;
+  width: 25%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgb(247, 244, 244);
+}
+.search-bar-container .title-icons{
+  /* border: 1px solid; */
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+}
+/* Search Bar CSS end */
+
+/*Post CSS start */
+.post-title{
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  height: 75px;
+}
+.post-title .post-title-thumbnail{
+  border-radius: 50%;
+  width: 5%;
+  height: 50%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+.post-title .post-username{
+  font-size: 18px;
+}
+.post-image{
+  width: 100%;
+}
+.icons-likes-section{
+  width: 94%;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-weight: bold;
+}
+.icons-likes-section .post-icons{
+  display: inline-flex;
+  justify-content: space-between;
+  width: 10%;
+}
+/*Post CSS end */
+
+/*Comment Section CSS start */
+.comment-section{
+  width: 94%;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  line-height: 25px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-around; */
+}
+.comment-section .individual-comment .comment-username{
+  font-weight: bold;
+  margin-right: 1%;
+}
+.comment-input{
+  width: 100%;
+  height: 25px;
+  font-size: 20px;
+  border: white;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+}
+
+/*Comment Section CSS end */
+

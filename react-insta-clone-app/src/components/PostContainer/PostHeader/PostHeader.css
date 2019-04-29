@@ -1,0 +1,12 @@
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .post-header img {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    padding-right: 5px;
+  }
