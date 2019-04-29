@@ -1,0 +1,41 @@
+
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script');
+
+h1 {
+    font-family:  'Oleo Script', cursive;
+}
+
+.instagram-logo {
+    padding:  0px 2rem;
+    border-right: 1px solid gray;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.heading-logo,
+.user-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 20%;
+
+}
+
+.logo {
+    padding: .5rem;
+}
+
+.search {
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    height: 1.5rem;
+    width: 15%;
+    text-align: center;
+    
+}
