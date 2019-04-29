@@ -2,12 +2,12 @@ import React from 'react';
 import Comment from '../CommentSection/Comment';
 import PropTypes from 'prop-types';
 import './PostContainer.css';
-import heart from '../heart.svg';
-import comment from '../comment.svg';
+import heart from '../../heart.svg';
+import comment from '../../comment.svg';
 const PostContainer = props => {
     return (
         <div className="post">
-            {console.log(props.data)}
+            
             <div className="user-banner">
                 <img className="user-img" src={props.data.thumbnailUrl} alt="user-img"/>
                 <h3>{props.data.username}</h3>
@@ -32,9 +32,13 @@ const PostContainer = props => {
 }
 
 PostContainer.propTypes = {
-    comment: PropTypes.shape({
+    data: PropTypes.shape({
+        thumbnailUrl: PropTypes.string.isRequired,
+        imageUrl: PropTypes.string.isRequired,
         username: PropTypes.string.isRequired,
-        text: PropTypes.string.isRequired
+        likes: PropTypes.number.isRequired,
+        timestamp: PropTypes.string.isRequired
     })
+    
 }
 export default PostContainer;

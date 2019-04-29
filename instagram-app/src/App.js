@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import instagram from './instagram.svg';
+
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
 import dummyData from './dummy-data';
-import PostContainer from './PostContainer/PostContainer';
+import PostContainer from './components/PostContainer/PostContainer';
 
 class App extends Component {
   constructor() {
