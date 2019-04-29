@@ -1,25 +1,28 @@
-// import React from 'react'; 
-// import Comment from './Comment'; 
+import React from 'react'; 
+import Comment from './Comment'; 
+
 // import AddNewComment from './AddNewComment'; 
 
-// class CommentSection extends React.Component {
-//     constructor() {
-//         super(); 
-//         this.state= {
-//             comments: props.comments
-//         }; 
-//     }
 
-//     render() {
-//         return (
-//            {this.state.comments.map((comment) => (
-//                <Comment commentUsername={this.comments.username} commentText={this.comments.text}/>
-//            ))} 
-//         ) 
+// Setting CommentSection up as a Class because it will need to hold state
+class CommentSection extends React.Component {
+    constructor(props) {
+        super(props); 
+        this.state= {
+            comments: props.comments
+        }; 
+    }
 
-//     }
+    render() {
+        return (
+            <div>
+            {this.state.comments.map((comment) => 
+            <Comment comment={comment}/>
+                )}
+            </div>
+        ); 
+     }
+ }
 
-// }
-
-// export default CommentSection; 
+ export default CommentSection; 
 
