@@ -32,9 +32,7 @@
 
 ### Project Setup
 
-- If you so choose you may install `create-react-app` globally by running `yarn global add create-react-app`.
-  - If you have CRA installed then run `create-react-app instagram-app` to create your starter application with the name `instagram-app`.
-  - If you don't have CRA installed then run `npx create-react-app instagram-app` to create your starter application with the name `instagram-app`.
+- Create a React application by running `yarn create react-app instagram-app`
 - Create a `components` directory inside the `src` directory, and then create a sub-directory called `SearchBar`, another one called `PostContainer`, and lastly one called `CommentSection`, all inside the `src` directory. Each of these directories should contain the component file as well as the CSS for their respective components. You'll also want to put any other components that coincide with your respective container components inside of these directories.
 
 ### Tasks (Day I)
