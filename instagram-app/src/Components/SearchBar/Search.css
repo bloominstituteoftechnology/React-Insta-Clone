@@ -7,5 +7,45 @@ border-bottom: 1px solid gray;
 background-color: aliceblue;
 margin-top: 0.2%;
 margin-bottom: 2%;
+display: flex;
+
+}
+
+.SearchBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: solid red 1px; */
+    width:1200px;
+    margin: 0 auto;
+}
+
+.SearchBar .leftofsearch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: solid black 1px; */
+    width: 15%;
+    font-size: 1.6rem;
+  
+
+}
+
+
+.SearchBar .leftofsearch .logotext{
+    border-left: solid black 1px;
+    padding-left: 20px;
+    font-family: 'Oleo Script', cursive;
+}
+
+
+
+.SearchBar .rightofsearch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: solid black 1px; */
+    width: 15%;
+    font-size: 1.6rem;
 
 }

@@ -1,0 +1,13 @@
+
+.PostContainer{
+ border: 1px solid red;
+ width:1200px;
+ margin: 0 auto;
+ 
+}
+
+.postwrapper{
+    width: 70%;
+    margin-left: 0px;
+    border: 1px solid red;
+}
