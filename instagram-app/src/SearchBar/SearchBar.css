@@ -40,3 +40,26 @@ h1 {
     text-align: center;
     
 }
+
+
+.comment-logo {
+    margin: .5rem;
+}
+
+.comment-logos {
+    width: 640px;
+    display: flex;
+    flex-wrap: wrap;  
+}
+
+.likes {
+    text-align: left;
+    margin: 0;
+    width: 100%;
+    font-weight: 600;
+}
+
+.comment-section {
+    width: 640px;
+    text-align: left;
+}

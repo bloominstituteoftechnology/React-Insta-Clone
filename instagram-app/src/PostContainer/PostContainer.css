@@ -12,3 +12,20 @@
     border-radius: 50%;
     margin-right: .5rem;
 }
+
+.add-comment {
+    width: 640px;
+    border: none;
+    border-top: 1px solid lightgray;
+    height: 1.5rem;
+    font-size: 1rem;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0px;
+
+}

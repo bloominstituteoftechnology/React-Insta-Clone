@@ -1,0 +1,10 @@
+.comment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 2rem;
+}
+
+h4 {
+    margin-right: .5rem;
+}
