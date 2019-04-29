@@ -24,7 +24,8 @@ const PostContainer = props => {
                 {props.data.comments.map((comment,index) => 
                     <Comment username={comment.username} text={comment.text} key={index}/>
                     )}
-                    <input className="add-comment" type="text" placeholder="Add Comment" />
+                <p className="timestamp">{props.data.timestamp}</p>
+                <input className="add-comment" type="text" placeholder="Add Comment" />
             </div>
         </div>
     );
