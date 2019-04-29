@@ -1,0 +1,107 @@
+
+* {
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  width: 900px;
+  border: 1px solid black;
+}
+
+.searchBar {
+  display: flex;
+  border: 1px solid black;
+  max-width: 100%;
+  margin: 10px;
+}
+
+.searchBar img {
+  width: 99%;
+  height: 100%;
+}
+
+.postContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+.postUser {
+  display: flex;
+  border: 1px solid purple;
+  width: 100%;
+  height: 65px;
+  align-items: center;
+}
+
+.postUser img {
+  width: 5%;
+  height: 70%;
+  border-radius: 50%;
+}
+
+.postUser h3 {
+  display: flex;
+  justify-content: flex-start;
+  width: 91%;
+}
+
+section .image {
+  display: flex;
+  align-self: center;
+  width: 100%;
+}
+
+.commentSection {
+  display: flex;
+  flex-direction: column-reverse;
+  border: 2px solid lavender;
+  color: black;
+  height: 100%; 
+  margin: 5px;
+}
+
+.comment {
+  display: flex;
+  justify-content: flex-start;
+  text-align: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  align-self: flex-start;
+  height: 25px;
+  margin: 5px;
+}
+
+.addComment {
+  display: flex;
+  border-top: 1px solid gray;
+  padding-top: 15px;
+  height: 40px;
+  width: 90%;
+}
+
+.logOff {
+  padding-bottom: 10px;
+}
