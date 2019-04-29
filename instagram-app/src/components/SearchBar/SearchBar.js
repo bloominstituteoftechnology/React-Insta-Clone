@@ -1,8 +1,8 @@
 import React from 'react';
-import instagram from '../instagram.svg';
-import compass from '../compass.svg';
-import heart from '../heart.svg';
-import user from '../user.svg';
+import instagram from '../../instagram.svg';
+import compass from '../../compass.svg';
+import heart from '../../heart.svg';
+import user from '../../user.svg';
 import './SearchBar.css';
 
 const SearchBar = props => {
