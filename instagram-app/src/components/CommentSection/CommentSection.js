@@ -1,11 +1,13 @@
 import React from 'react'; 
+import Comment from './Comment'; 
 
 const CommentSection = props =>{
     return (
-        <div class="comment">
-            <p>{props.comment.username}</p>
-
-            <p>{props.comment.text}</p>
+        <div>
+            <Comment 
+                username={props.comment.username}
+                commentText={props.comment.text}
+            /> 
 
             <input className="addComment"
                 type="text"
