@@ -15,7 +15,7 @@ class App extends Component {
   render () {
   return (
     <div className="App">
-      {this.state.data.map(data => <PostContainer data={data}/>)}
+      {this.state.data.map((data, index) => <PostContainer data={data} key={index}/>)}
     </div>
   );
 }}
