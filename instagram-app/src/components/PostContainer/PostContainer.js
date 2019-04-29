@@ -1,21 +1,12 @@
 import React from 'react';
-
-import CommentSection from '../CommentSection/CommentSection'; 
+import Post from './Post'; 
 
 const PostContainer = props => {
   return (
     <div class="postContainer">
-      <div class="postContent">
-        <p>{props.post.username}</p>
-      </div>
-
-      <div class="commentContainer">
-        {props.post.comments.map(comment => (
-          <p>
-            <CommentSection comment={comment} />
-          </p>
+        {props.posts.map((post) => (
+            <Post post={post}/>
         ))}
-      </div>
     </div>
   );
 };

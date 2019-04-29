@@ -16,17 +16,12 @@ class App extends React.Component {
     };
   }
 
-
 render () {
   return (
     <div className="App">
       <SearchBar /> 
 
-      {this.state.posts.map((dummyData) => (
-        <p>
-          <PostContainer post={dummyData}/> 
-        </p>
-      ))}
+      <PostContainer posts={this.state.posts}/> 
 
     </div>
   );

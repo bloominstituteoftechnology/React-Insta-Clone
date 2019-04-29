@@ -2,16 +2,16 @@ import React from "react";
 
 const SearchBar = () => {
   return (
-    <div class="headerContainer">
-      <div class="logo">
+    <div className="headerContainer">
+      <div className="logo">
         <i class="fab fa-instagram"></i>
       </div> 
 
-      <div class="logoTitle">
+      <div className="logoTitle">
         <h2>Insta-Clone</h2>
       </div>
 
-      <div class="searchBarContainer">
+      <div className="searchBarContainer">
         <input
           className="searchBar"
           type="search"
@@ -20,7 +20,7 @@ const SearchBar = () => {
         />
       </div>
 
-      <div class="icons" >
+      <div className="icons" >
         <i class="fas fa-map-marker-alt"></i>
         <i class="far fa-heart"></i>
         <i class="fas fa-user"></i>

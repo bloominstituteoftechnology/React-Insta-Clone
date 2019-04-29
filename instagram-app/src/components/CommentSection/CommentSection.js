@@ -1,21 +1,25 @@
-import React from 'react'; 
-import Comment from './Comment'; 
+// import React from 'react'; 
+// import Comment from './Comment'; 
+// import AddNewComment from './AddNewComment'; 
 
-const CommentSection = props =>{
-    return (
-        <div>
-            <Comment 
-                username={props.comment.username}
-                commentText={props.comment.text}
-            /> 
+// class CommentSection extends React.Component {
+//     constructor() {
+//         super(); 
+//         this.state= {
+//             comments: props.comments
+//         }; 
+//     }
 
-            <input className="addComment"
-                type="text"
-                name="newComment"
-                placeholder="Add a new comment" 
-            />
-        </div>
-    )
-}
+//     render() {
+//         return (
+//            {this.state.comments.map((comment) => (
+//                <Comment commentUsername={this.comments.username} commentText={this.comments.text}/>
+//            ))} 
+//         ) 
 
-export default CommentSection; 
+//     }
+
+// }
+
+// export default CommentSection; 
+
