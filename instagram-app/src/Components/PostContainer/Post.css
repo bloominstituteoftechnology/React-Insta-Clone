@@ -13,8 +13,7 @@
     padding-left:-100px;
 }
 
-.accountheader
-{
+.accountheader{
     display: flex;
     /* border : solid red 1px; */
     width: 25%;
@@ -22,12 +21,9 @@
     align-items: center;
     margin-bottom: 10px;
 
-   
-
 }
 
-.accountheader img
-{
+.accountheader img {
     
     
     width: 60px;
