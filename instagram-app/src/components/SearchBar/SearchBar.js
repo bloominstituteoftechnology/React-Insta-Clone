@@ -5,11 +5,12 @@ const SearchBar = () => {
   return (
     <div className="headerContainer">
       
-      <div className="logoWrapper">
+      <div className="logoTitleWrapper">
         
+        <div className="logo">
           <i className="fab fa-instagram"></i>
+        </div>
        
-  
         <div className="logoTitle">
           <h2>Insta-Clone</h2>
         </div>

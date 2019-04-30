@@ -2,5 +2,9 @@
   text-align: center;
   display: flex; 
   flex-direction: column; 
+  max-width: 800px; 
+  margin: 0 auto; 
+  border: 2px solid blue; 
+  box-sizing: border-box; 
 }
 
