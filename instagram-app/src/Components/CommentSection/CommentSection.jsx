@@ -17,12 +17,24 @@ class CommentSection extends Component {
     this.setState({ comment: e.target.value });
   };
 
+  AddComment = e => {
+    e.preventDefault();
+    
+   const newComment = { text: this.state.comment }
+   
+    this.setState({
+      comments: [...this.state.comments,newComment], comment:''
+    }
+    
+    )
+   
+  };
 
   render() {
     return (
       <div>
        {this.state.comments.map((e, index) => <Comment key={index} comment={e} />)}
-        <CommentInput comment={this.state.comment} submitComment={this.handleCommentSubmit} changeComment={this.commentHandler}/>
+        <CommentInput comment={this.state.comment} submitComment={this.AddComment} changeComment={this.commentHandler}/>
       </div>
     );
   }
