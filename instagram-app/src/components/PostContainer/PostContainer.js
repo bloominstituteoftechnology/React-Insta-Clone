@@ -5,7 +5,7 @@ const PostContainer = props => {
   return (
     <div class="postContainer">
         {props.posts.map((post) => (
-            <Post post={post}/>
+            <Post post={post} />
         ))}
     </div>
   );
