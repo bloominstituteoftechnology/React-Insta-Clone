@@ -5,8 +5,10 @@ import Proptypes from 'prop-types';
 function Comments(props){
     console.log(props);
     return(
+        
         <div className='comments'>
-        <span className="user">-{props.comment.username}</span>{'     '}
+       
+        <span className="user">-{props.comment.username}</span>{''}
          <span className="comment">{props.comment.text}</span>
       
     
@@ -18,7 +20,8 @@ function Comments(props){
 Comments.propTypes={
     comments:Proptypes.shape({
         text:Proptypes.string,
-        username:Proptypes.string
+        username:Proptypes.string,
+        
       
     })
 }

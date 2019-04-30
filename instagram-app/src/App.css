@@ -113,6 +113,35 @@ input{
 
 
 }
+
+.like-section{
+ /* border:solid red;*/
+  display:flex;
+  flex-direction: column;
+  padding-right:90%;
+  border-left:1px solid rgb(202, 202, 202);;
+  border-right:1px solid rgb(202, 202, 202);;
+}
+
+/*.like-icons{
+  border:solid blue;
+  
+}*/
+
+.postlike{
+  /*border:solid red;*/
+  margin-right:5px;
+  height:20px;
+}
+
+.postmessage{
+ /* border:solid pink;*/
+  height:20px;
+}
+
+.likes{
+  font-weight: bold;
+}
 .comments{
  /* border:solid red;*/
   display:flex;
@@ -153,9 +182,9 @@ input{
 }
 
 .user-comments{
-  border:1px solid rgb(202, 202, 202);
-  
-  
+  border-left:1px solid rgb(202, 202, 202);
+  border-right:1px solid rgb(202, 202, 202);
+  border-bottom:1px solid rgb(202, 202, 202);
 
 
 }
