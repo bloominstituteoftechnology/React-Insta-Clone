@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ Component } from "react";
 import dummyData from "./dummy-data";
 import "./App.css";
 import PostContainer from "./Components/PostContainer/PostContainer";
@@ -6,18 +6,23 @@ import SearchBarContainer from './Components/SearchBar/SearchBarContainer'
 
 
 
-function App() {
-  
+class App extends Component {
 
-  return (
+  state={
+      coolData:dummyData
+    }
+  
+  render() {
+    return (
     <div className="App">
         <SearchBarContainer/>
-      {dummyData.map(e => (
+      {this.state.coolData.map(e => (
         <PostContainer Data={e} key={e.timestamp} />
       ))}
     </div>
   );
 
+}
 }
 
 export default App;
