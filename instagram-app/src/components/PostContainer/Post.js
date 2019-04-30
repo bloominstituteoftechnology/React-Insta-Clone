@@ -14,10 +14,17 @@ const Post = props => {
                 <p className="postUsername">{props.post.username}</p>
           </div>
 
-          <img src= {props.post.imageUrl} />
+          <img className="postImage" src= {props.post.imageUrl} />
             
           <div className="engagement">
-            <p>{props.post.likes} likes </p>
+
+            <div className="engagementIcons">
+              <i class="far fa-heart"> </i>
+              <i class="far fa-comment"></i>
+            </div>
+
+            <p className="likesNumber">{props.post.likes} likes </p>
+
           </div>
 
           <div className="comments">

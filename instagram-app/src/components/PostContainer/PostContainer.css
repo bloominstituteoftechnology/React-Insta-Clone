@@ -1,16 +1,15 @@
 .postWrapper {
-    border: 2px solid red; 
     width: 90%; 
     margin: 0 auto; 
 }
 
 .postHeader {
-    border: 2px solid green; 
     display: flex; 
     flex-direction: row; 
-    width: 90%; 
+    width: 89%; 
     margin: 0 auto; 
     align-items: center; 
+    border: 1px solid grey; 
 }
 
 .thumbnail {
@@ -22,4 +21,31 @@
 
 .postUsername {
     font-weight: bolder; 
+}
+
+.postImage {
+    background-color: red; 
+}
+
+.engagement {
+    width: 89%; 
+    display: flex; 
+    flex-direction: column;  
+    margin: 0 auto; 
+}
+
+.engagementIcons {
+    text-align: left; 
+    display: flex; 
+    flex-direction: row;  
+    width: 7%; 
+    justify-content: space-between; 
+    padding-top: 2%; 
+}
+
+.likesNumber {
+    font-weight: bold; 
+    text-align: left; 
+    margin-top: 2%; 
+    margin-bottom: 2%; 
 }
