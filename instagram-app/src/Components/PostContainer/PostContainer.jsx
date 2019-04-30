@@ -1,6 +1,9 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
 import "./Post.css";
+
+
+
 const PostContainer = props => {
   return (
     <div className="PostContainer">
@@ -15,7 +18,6 @@ const PostContainer = props => {
         <div>{props.Data.timestamp}</div>
         <div>{props.Data.likes} likes </div>
         <CommentSection comments={props.Data.comments} />
-        <input placeholder="Add a comment..." />
       </div>
     </div>
   );

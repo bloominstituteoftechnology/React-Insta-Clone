@@ -1,24 +1,22 @@
 import "./Comment.css";
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
+import Comment from './Comment'
+import CommentInput from'./CommentInput'
 
 class CommentSection extends Component {
   constructor(props) {
     super();
+    this.state = {
+      comments: props.comments
+    };
   }
 
   render() {
     return (
       <div>
-        {this.props.comments.map(e => {
-          return (
-            <div key= {e.text}>
-              <h1 >{e.username}</h1>
-              <p  >{e.text}</p>
-              
-            </div>
-          );
-        })}
+       {this.state.comments.map((e, index) => <Comment key={index} comment={e} />)}
+        <CommentInput />
       </div>
     );
   }
