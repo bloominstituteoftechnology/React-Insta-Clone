@@ -8,15 +8,21 @@ class CommentSection extends Component {
   constructor(props) {
     super();
     this.state = {
-      comments: props.comments
+      //set initial comment state to empty string 
+      comments: props.comments, comment: ''
     };
   }
+  //bind input to state 
+  commentHandler = e => {
+    this.setState({ comment: e.target.value });
+  };
+
 
   render() {
     return (
       <div>
        {this.state.comments.map((e, index) => <Comment key={index} comment={e} />)}
-        <CommentInput />
+        <CommentInput comment={this.state.comment} submitComment={this.handleCommentSubmit} changeComment={this.commentHandler}/>
       </div>
     );
   }
