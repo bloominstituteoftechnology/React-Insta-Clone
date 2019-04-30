@@ -34,3 +34,8 @@ margin-top: 10px;
 .commnents{
     font:bold;
 }
+
+.footer{
+    font-size: 30px;
+    border:1px solid black;
+}

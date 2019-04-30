@@ -7,7 +7,7 @@ const Post = (props) => {
       <div>
           {
              props.data.map((item) => {
-                 return <PostContainer item={item} />
+                 return <PostContainer key={item.username} item={item} incrementLike={props.incrementLike}/>
              }) 
           }
       </div>    
