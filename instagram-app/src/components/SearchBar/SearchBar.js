@@ -1,14 +1,18 @@
 import React from "react";
+import './SearchBar.css'; 
 
 const SearchBar = () => {
   return (
     <div className="headerContainer">
-      <div className="logo">
-        <i class="fab fa-instagram"></i>
-      </div> 
-
-      <div className="logoTitle">
-        <h2>Insta-Clone</h2>
+      
+      <div className="logoWrapper">
+        
+          <i className="fab fa-instagram"></i>
+       
+  
+        <div className="logoTitle">
+          <h2>Insta-Clone</h2>
+        </div>
       </div>
 
       <div className="searchBarContainer">
