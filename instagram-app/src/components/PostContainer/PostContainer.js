@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import './PostContainer.css';
 import heart from '../../heart.svg';
 import comment from '../../comment.svg';
+import * as moment from 'moment';
+
+
 const PostContainer = props => {
     return (
         <div className="post">
@@ -24,7 +27,7 @@ const PostContainer = props => {
                 {props.data.comments.map((comment,index) => 
                     <Comment username={comment.username} text={comment.text} key={index}/>
                     )}
-                <p className="timestamp">{props.data.timestamp}</p>
+                <p className="timestamp">{moment().fromNow()}</p>
                 <input className="add-comment" type="text" placeholder="Add Comment" />
             </div>
         </div>
