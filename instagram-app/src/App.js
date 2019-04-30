@@ -1,3 +1,10 @@
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+// import dummyData from './dummy-data';
+import Post from './components/PostContainer/PostContainer';
+
+
 const dummyData = [
   {
     username: "philzcoffee",
@@ -80,4 +87,31 @@ const dummyData = [
   }
 ];
 
-export default dummyData;
+class App extends React.Component {
+
+  constructor() {
+    super();
+    this.state={
+      dummyData
+    };
+
+  }
+
+  render(){
+    return (
+      <div className="App">
+
+        
+      <div className="post-list">
+        {dummyData.map(ele => (
+          <Post post={ele} />
+        ))}
+       </div>
+
+    
+      
+      </div>
+    );
+  }
+}
+export default App;
