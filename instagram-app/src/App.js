@@ -9,7 +9,11 @@ import SearchBarContainer from './Components/SearchBar/SearchBarContainer'
 class App extends Component {
 
   state={
-      coolData:dummyData
+    coolData:[]
+    }
+
+    componentDidMount() {
+      this.setState({ coolData: dummyData });
     }
   
   render() {
