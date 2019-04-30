@@ -1,12 +1,13 @@
 import React from 'react';
 import CommentsInput from './commentsinput';
-
+import PropTypes from 'prop-types';
 import Comments from './comments';
 
 
 
 
-function CommentsSection(props){
+
+/*function CommentsSection(props){
     console.log(props);
     return(
        
@@ -24,5 +25,48 @@ function CommentsSection(props){
 
 
 
-export default CommentsSection;
+export default CommentsSection;*/
+
+export default class CommentsSection extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state={
+      comments: props.comments,
+      comment:""
+    }
+  }
+
+commentHandler=e=>{
+  this.setState({comment:e.target.value})
+}
+
+addComment=e=>{
+  e.preventDefault();
+  let newComment = { username:'Raypugh07',text: this.state.comment }
+  this.setState({
+    comments: [...this.state.comments,newComment], comment:''
+})
+
+}
+
+
+render(){
+  return(<div className='user-comments'>
+  {this.state.comments.map((a, b) => <Comments key={b} comment={a} />)}
+  <div className='border'></div>
+  <CommentsInput comment={this.state.comment} submitComment={this.addComment} changeComment={this.commentHandler}/>
+</div>
+
+  )
+   
+
+}
+
+}
+CommentsSection.propTypes = {
+  comments: PropTypes.arrayOf(
+    PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
+  )
+};
+
 
