@@ -1,0 +1,60 @@
+.search-bar {
+    position: fixed;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    height: 57px;
+    width: 800px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.search-bar-container-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    padding-left: 10px;
+}
+
+.fa-instagram {
+    font-size: 30px;
+}
+
+.search-bar-heading {
+    font-family: 'Cookie', cursive;
+    font-size: 33px;
+    margin-bottom: 14px;
+    padding-left: 20px;
+    border-left: 1px solid gray;
+}
+
+.search-bar-container-middle {
+
+}
+
+.search-bar-user-input {
+    background-color: rgb(243,243,243);
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding-left: 5px;
+    text-align: center;
+    height: 30px;
+    width: 200px;
+}
+
+.search-bar-container-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 20%;
+    padding-right: 10px;
+}
+
+.fa-compass, .fa-heart, .fa-user {
+    font-size: 20px;
+}
