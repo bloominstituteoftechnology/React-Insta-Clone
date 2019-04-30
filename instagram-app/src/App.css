@@ -33,26 +33,37 @@
 }
 
 
-.searchlogo {
+.search-container {
+  display: flex;
+  /* align-items: center;
+  margin-left: 30px; */
+} 
+
+.search-logo {
   display: flex;
   align-items: center;
   margin-left: 30px;
-} 
+}
 
 .fa-instagram{
   margin-right: 20px;
   margin-top: 5px;
 }
-.searchbar{
- 
+.search-btn{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 0 150px 0 150px; 
 }
 
-.icons {
+.search-icons {
   display: flex;
+ align-items: center;
 }
 
 .fa-heart{
-padding: 0 10px 0px 10px;
+
+padding: 0 10px 0px 0px;
 }
 
 .fa-user{
@@ -60,8 +71,8 @@ padding: 0 10px 0px 10px;
 }
 
 .fa-compass{
-  padding: 0 10px 0px 0px;
-}
+  padding: 0 10px 0px 10px;
+} 
 
 .input{
   height: 10px;

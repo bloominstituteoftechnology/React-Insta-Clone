@@ -2,7 +2,7 @@ import React from 'react';
 
 const SearchLogo = () => {
     return (
-        <div className="searchlogo">
+        <div className="search-logo">
             <i className="fab fa-instagram"></i>
             <h3>Instagram</h3>
 

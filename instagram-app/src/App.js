@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
 import dummyData from './dummy-data';
-import SearchLogo from './Components/SearchBar/SearchLogo';
-import SearchBar from './Components/SearchBar/SearchBar';
-import PostContainer from './Components/PostsContainer/PostContainer';
-import CommentSection from './Components/CommentSection/CommentSection';
-
+import SearchContainer from './Components/SearchBar/SeachContainer';
+import PostsContainer from './Components/PostsContainer/PostsContainer';
+import Post from './Components/PostsContainer/Post';
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       user: dummyData
     }
@@ -16,13 +14,12 @@ class App extends React.Component {
 
 
   render() {
+    console.log(this.state)
   return (
     <div className="App">
-    <PostContainer  user={this.state.user}/> 
-    {/* <CommentSection user={this.state.user.comment}/> */}
       <h1>Ello Moto!</h1>
-      <SearchLogo />
-      <SearchBar />
+      <SearchContainer />
+      <PostsContainer user={this.state.user} /> 
       
     </div>
   );
