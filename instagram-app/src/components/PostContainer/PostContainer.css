@@ -1,6 +1,7 @@
 .postWrapper {
     width: 90%; 
     margin: 0 auto; 
+    margin-bottom: 5%; 
 }
 
 .postHeader {
@@ -32,6 +33,7 @@
     display: flex; 
     flex-direction: column;  
     margin: 0 auto; 
+    border: 1px solid grey; 
 }
 
 .engagementIcons {

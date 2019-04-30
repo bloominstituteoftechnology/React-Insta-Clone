@@ -2,6 +2,8 @@ import React from 'react';
 import Comment from './Comment'; 
 import AddNewComment from './AddNewComment'; 
 
+import './CommentSection.css'; 
+
 
 // Setting CommentSection up as a Class because it will need to hold state
 class CommentSection extends React.Component {
@@ -22,9 +24,9 @@ class CommentSection extends React.Component {
                     )}
                 </div>
                 
-                <div className="newComment">
+                
                     <AddNewComment /> 
-                </div>
+                
 
             </div>
         ); 
