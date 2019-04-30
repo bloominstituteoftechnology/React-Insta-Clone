@@ -1,7 +1,7 @@
 import React from "react";
 import CommentSection from "../CommentSection/CommentSection";
 import "./Post.css";
-
+import Likes from './Likes'
 
 
 const PostContainer = props => {
@@ -16,6 +16,7 @@ const PostContainer = props => {
         
         <img src={props.Data.imageUrl} alt="posted pic" />
         <div>{props.Data.timestamp}</div>
+        <Likes/>
         <div>{props.Data.likes} likes </div>
         <CommentSection comments={props.Data.comments} />
       </div>
