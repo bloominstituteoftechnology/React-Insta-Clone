@@ -11,33 +11,41 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       comments: props.comments, 
-      comment: " "
+      commentField: " "
     };
   }
 
-  // Creating an addNewComment function
-  addNewComment = (event, index) => {
-    // Needs to add the comment on the event object to the post that is at the index number
 
-    const newComment = { username: this.state.username, text: this.state.text };
+  // This is my comment handler 
+  handleNewComment = e => {
+      this.setState({
+          commentField: e.target.value
+      })
+  }
 
-    // Updating state
-    this.setState({
-      comments: [...this.state.comments, newComment],
-      comment: " "
-    });
-  };
+  // Creating addComment function 
+  addComment = e => {
+      e.preventDefault(); 
+      
+      const newComments = this.state.comments;
+
+      newComments.push({text: this.state.commentField, username: 'kimeejohnson'});
+
+      // CLearing out field 
+      this.setState({ comments: newComments, commentField: '' });
+
+  }; 
 
   render() {
     return (
       <div>
         <div className="existingComments">
-          {this.state.comments.map(comment => (
-            <Comment comment={comment} />
+          {this.state.comments.map((comment,i) => (
+            <Comment comment={comment} key={i} />
           ))}
         </div>
 
-        <AddNewComment />
+        <AddNewComment onSubmit={this.addComment} onChange={this.handleNewComment} commentField={this.state.commentField}/>
       </div>
     );
   }

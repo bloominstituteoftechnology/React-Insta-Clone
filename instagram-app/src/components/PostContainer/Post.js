@@ -21,7 +21,6 @@ class Post extends React.Component {
      this.setState({ likes }); 
    }
 
- 
     render (){
     return(
         <div className="postWrapper">

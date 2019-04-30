@@ -26,9 +26,9 @@ const SearchBar = () => {
       </div>
 
       <div className="icons" >
-        <i class="fas fa-map-marker-alt"></i>
-        <i class="far fa-heart"></i>
-        <i class="fas fa-user"></i>
+        <i className="fas fa-map-marker-alt"></i>
+        <i className="far fa-heart"></i>
+        <i className="fas fa-user"></i>
       </div> 
     
     </div>
