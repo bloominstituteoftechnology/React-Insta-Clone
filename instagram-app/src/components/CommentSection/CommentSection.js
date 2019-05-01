@@ -31,7 +31,7 @@ class CommentSection extends React.Component {
 
       newComments.push({text: this.state.commentField, username: 'kimeejohnson'});
 
-      // CLearing out field 
+      // Clearing out field 
       this.setState({ comments: newComments, commentField: '' });
 
   }; 
