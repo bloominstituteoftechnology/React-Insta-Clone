@@ -7,8 +7,14 @@ import CommentSection from '../CommentSection/CommentSection';
 const PostContainer = props => {
     return (
         <div className="full-post">
+        
             <Post data={props.data} />
-            <CommentSection comments={props.comments} addComment={props.addComment}/>
+            <CommentSection 
+            comments={props.comments} 
+            addComment={props.addComment} 
+            handleChange={props.handleChange}
+            key= {props.index}
+            index={props.index}/>
         </div>
     );
 }
@@ -16,7 +22,9 @@ const PostContainer = props => {
 PostContainer.propTypes = {
     data: PropTypes.object,
     comments: PropTypes.array,
-    addComment: PropTypes.func
+    addComment: PropTypes.func,
+    handleChange: PropTypes.func,
+    index: PropTypes.number
     
     
 }
