@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
-
+//import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import SearchBar from './components/SearchBar/searchbar';
-import PostsContainer from './components/PostContainer/postcontainer';
+import PostsPage from './components/PostContainer/postspage';
+import withAuthenticate from './authentication';
+import Login from './components/Login/login';
+//import SearchBar from './components/SearchBar/searchbar';
+//import PostsContainer from './components/PostContainer/postcontainer';
 //import dummyData from './instagram/src/dummy-data.js';
 //import PostsContainer from './components/PostContainer/postcontainer';
 
 
-const dummyData = [
+/*const dummyData = [
   {
     username: "philzcoffee",
     thumbnailUrl:
@@ -87,14 +90,14 @@ const dummyData = [
       }
     ]
   }
-];
+];*/
 
 
 
 
 
 
-class App extends Component {
+/*class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -141,7 +144,18 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App;*/
+
+let ComponentFromWithAuthenticate=withAuthenticate(PostsPage)(Login)
+
+export default function App(props){
+  return(
+
+   <ComponentFromWithAuthenticate/>
+    
+  )
+}
+
 
 
 //<footer><div>Icons made by <a href="https://www.freepik.com/?__hstc=57440181.1c30f6235294cef2ff3ca408fc918a7f.1556573791465.1556573791465.1556573791465.1&__hssc=57440181.2.1556573791467&__hsfp=3025663657" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> 
