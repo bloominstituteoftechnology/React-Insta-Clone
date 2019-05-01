@@ -44,7 +44,7 @@ commentHandler=e=>{
 
 addComment=e=>{
   e.preventDefault();
-  let newComment = { username:'Raypugh07',text: this.state.comment }
+  let newComment = { username:'jaclyn_m_',text: this.state.comment }
   this.setState({
     comments: [...this.state.comments,newComment], comment:''
 })

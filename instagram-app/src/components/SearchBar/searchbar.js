@@ -16,6 +16,8 @@ export default function SearchBar(props){
         <input 
         type='text'
         placeholder='                       Search'
+        onChange={props.searchPosts}
+        
        />
 
     <img alt='dm' src={DM} className='icons'></img>

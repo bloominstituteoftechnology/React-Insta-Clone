@@ -15,7 +15,7 @@ const dummyData = [
 
     imageUrl:
       "https://tk-assets.lambdaschool.com/69cf901b-f96d-466e-a745-ff2a01effac9_philz-image.jpg",
-    likes: 400+' likes',
+    likes: 400,
     timestamp: "July 17th 2017, 12:42:40 pm",
     comments: [
       {
@@ -39,7 +39,7 @@ const dummyData = [
       "https://tk-assets.lambdaschool.com/ce601fdf-7cb0-4098-83d3-1a1584a72513_30841289_342445456281079_112845064497004544_n.jpg",
     imageUrl:
       "https://tk-assets.lambdaschool.com/89d13918-b7a2-4b40-9658-f376ea3f6b59_37131538_213683546146400_1083714364399157248_n.jpg",
-    likes: 4307+' likes',
+    likes: 4307,
     timestamp: "July 15th 2017, 03:12:09 pm",
     comments: [
       {
@@ -70,7 +70,7 @@ const dummyData = [
       "https://tk-assets.lambdaschool.com/c432f179-8bd7-4758-959d-d88a21f96bca_37105899_432228420518610_5035444036064772096_n.jpg",
     imageUrl:
       "https://tk-assets.lambdaschool.com/43bf01f9-319c-469d-8cf5-0120fe1007f1_yosemite.jpg",
-    likes: 5306+' likes',
+    likes: 5306,
     timestamp: "July 14th 2017, 10:04:08 am",
     comments: [
       {
@@ -98,7 +98,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      posts: [],
+      postsSearch:[]
     };
   }
 
@@ -109,13 +110,29 @@ class App extends Component {
     });
   } 
 
+  searchHandler=e=>{
+// eslint-disable-next-line 
+    let posts=this.state.posts.filter(x => {
+      if(x.username.includes(e.target.value)){
+        return x;
+      }
+    })
+    this.setState({postsSearch:posts})
+  }
  
 
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostsContainer posts={this.state.posts}/>
+        <SearchBar 
+        search={this.state.search}
+        searchPosts={this.searchHandler}
+        />
+        <PostsContainer posts={
+            this.state.postsSearch.length > 0
+              ? this.state.postsSearch
+            : this.state.posts
+          }/>
        
        
        
@@ -132,3 +149,4 @@ export default App;
 //<div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 //<div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 	
 // <PostsContainer posts={this.state.posts} />
+
