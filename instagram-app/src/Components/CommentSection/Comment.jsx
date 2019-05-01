@@ -5,7 +5,7 @@ import './Comment.css';
 const Comment = props => {
   return (
     <div className="Comment">
-     <h2 className="user">-{props.comment.username}</h2>
+     <h2 className="user">~{props.comment.username}</h2>
     <p className="commententered">{props.comment.text}</p>
      
     </div>

@@ -16,8 +16,8 @@ const PostContainer = props => {
         
         <img src={props.Data.imageUrl} alt="posted pic" />
         <div>{props.Data.timestamp}</div>
-        <Likes/>
-        <div>{props.Data.likes} likes </div>
+        <Likes numberOfLikes={props.Data.likes}/>
+        
         <CommentSection comments={props.Data.comments} />
       </div>
     </div>
@@ -25,3 +25,5 @@ const PostContainer = props => {
 };
 
 export default PostContainer;
+
+
