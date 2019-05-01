@@ -4,21 +4,28 @@ import "./App.css";
 // import PostContainer from "./Components/PostContainer/PostContainer";
 // import SearchBarContainer from "./Components/SearchBar/SearchBarContainer";
 import PostsPage from './Components/PostContainer/PostsPage.js'
+import Login from './Components/Login/Login'
+import withAuthenticate from './Components/Authentication/Authenticate'
 
 class App extends Component {
-  state = {};
-    
+  constructor() {
+    super();
+    this.state = {};
+  }
+
 
  
 
   render() {
     return (
       <div className="App">
-        <PostsPage/>
+        <Comp/>
       </div>
     );
   }
 }
+
+const Comp = withAuthenticate(PostsPage)(Login);
 
 export default App;
 
