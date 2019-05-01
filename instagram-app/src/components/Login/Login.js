@@ -5,7 +5,7 @@ class Login extends React.Component {
     super();
     this.state = {
         username: " ", 
-        password: " "
+        password: " ",
     };
   }
 
@@ -13,7 +13,7 @@ class Login extends React.Component {
   handleLogin = e => {
       this.setState({
           username: e.target.value,
-          password: e.target.value
+          password: e.target.value, 
       })
   }
 
