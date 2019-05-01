@@ -51,7 +51,7 @@ class PostContainer extends React.Component {
                     </span>
                     <span className="commenttext"><i className="far fa-comment "></i></span>
                 </div>
-                <span>{this.state.likes}<span classNama="text">likes</span></span>
+                <span>{this.state.likes}<span className="text">likes</span></span>
 
                 <CommentSection comments={this.state.comments} />
                 <form onSubmit={this.submitComment}>

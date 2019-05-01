@@ -9,6 +9,7 @@ class App extends Component {
     super();
     this.state = {
       data: [],
+      filteredPosts: []
     }
   }
 
@@ -18,11 +19,22 @@ class App extends Component {
     })
   }
 
+  searchUsername(e) {
+    const posts = this.state.data.filter(p => {
+      if (p.username.includes(e.target.value)) {
+        return p;
+      }
+    });
+    this.setState({ filteredPosts: posts });
+  }
+
   render() {
     return (
       <div>
-        <SearchBar />
-        <Post data={this.state.data} />
+        <SearchBar search={this.searchUsername}/>
+        <Post data={this.state.filteredPosts.length > 0
+              ? this.state.filteredPosts
+              : this.state.data} />
       </div>
     )
   }

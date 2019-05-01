@@ -6,7 +6,7 @@ import insta_person_logo from "../../images/Instagram-Person.png";
 import insta_logo from "../../images/insta_logo.png";
 import './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <div className="search-bar-wrapper">
             <div>
@@ -15,7 +15,7 @@ const SearchBar = () => {
             </div>
 
             <form className="instaform">
-                <input  className = "input"type="text" placeholder="Search" />
+                <input  className = "input"type="text" placeholder="Search" onKeyUp={props.search} />
             </form>
 
             <div className="social-wrapper">
