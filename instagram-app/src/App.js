@@ -10,7 +10,10 @@ class App extends Component {
     super();
     this.state = {
       data: [],
-      comments: ''
+      comments: {
+        text: '',
+        username: ''
+      }
      
     }
   }
@@ -18,14 +21,23 @@ class App extends Component {
   addComment = (e) => {
     e.preventDefault();
     const thisIndex = e.target.getAttribute('index')
-    console.log(this.state.data[thisIndex].comments)
-    // this.setState({
-    //   comments: ''
-    // })
+    //console.log(this.state.data[thisIndex].comments)
+    this.state.data[thisIndex].comments.push({ text: this.state.comments.text, username: this.state.comments.username})
+    this.setState({
+      data: [...this.state.data ]
+    })
   }
 
   handleChange = e => {
-    console.log(e.target.value)
+    //console.log(e.target.value)
+    //this.state.data[0].comments.push({ text:e.target.value, username: "Billy Bob"})
+    this.setState({
+      data: [...this.state.data],
+      comments: {
+        text: e.target.value,
+        username: "BillyBob"
+      }
+    })
   }
 
   componentDidMount() {

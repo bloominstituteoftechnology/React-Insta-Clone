@@ -11,6 +11,7 @@ const PostContainer = props => {
             <Post data={props.data} />
             <CommentSection 
             comments={props.comments} 
+            data={props.data}
             addComment={props.addComment} 
             handleChange={props.handleChange}
             key= {props.index}
