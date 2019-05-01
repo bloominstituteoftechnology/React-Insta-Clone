@@ -14,17 +14,13 @@ class App extends Component {
     this.setState({ coolData: dummyData });
   }
 
-
   searchPostsHandler = e => {
-    var updatedData = this.state.initialItems;
-    updatedData = updatedData.filter(function(item){
-      return item.toLowerCase().search(
-        e.target.value.toLowerCase()) !== -1;
+    var updatedData = this.state.coolData;
+    updatedData = updatedData.filter(function(item) {
+      return item.search(e.target.value.toLowerCase()) !== -1;
     });
-    this.setState({filteredData: updatedData});
+    this.setState({filteredData: updatedData });
   };
-
-
 
   render() {
     return (
@@ -40,4 +36,4 @@ class App extends Component {
 
 export default App;
 
-//
+

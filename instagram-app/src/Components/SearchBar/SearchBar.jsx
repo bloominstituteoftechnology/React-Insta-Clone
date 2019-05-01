@@ -1,7 +1,8 @@
 import React from "react";
 import "./Search.css";
 
-export default function SearchBar() {
+export default function SearchBar(props) {
+  
   return (
     <div className="SearchBar">
 
@@ -12,7 +13,7 @@ export default function SearchBar() {
 
       <div className="search">
         <i className="fas fa-search" aria-hidden="true" />
-        <input placeholder="Search" />
+        <input type='text' placeholder="Search" onChange={props.searchfn} />
       </div>
 
       <div className="rightofsearch">
