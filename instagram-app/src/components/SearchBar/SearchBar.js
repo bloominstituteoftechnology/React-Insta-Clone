@@ -1,7 +1,7 @@
 import React from 'react';
 import instagram from '../../instagram.svg';
 import compass from '../../compass.svg';
-import heart from '../../heart.svg';
+import Heart from '../../Heart.js';
 import user from '../../user.svg';
 import './SearchBar.css';
 
@@ -18,7 +18,7 @@ const SearchBar = props => {
 
             <div className="user-logos">
                 <img src={compass} className="compass-logo logo" alt="logo" />
-                <img src={heart} className="heart-logo logo" alt="logo" />
+                <Heart />
                 <img src={user} className="user-logo logo" alt="logo" />
             </div>
             

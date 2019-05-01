@@ -10,6 +10,7 @@ class App extends Component {
     super();
     this.state = {
       data: [],
+      likes: '',
       comments: {
         text: '',
         username: ''
@@ -40,6 +41,15 @@ class App extends Component {
     })
   }
 
+  handleLikes = e => {
+    const thisIndex = e.target.getAttribute('index')
+    console.log(this.state.data[thisIndex])
+    // this.setState({
+    //   data: [...this.state.data],
+    //   likes: newLike
+    // })
+  }
+
   componentDidMount() {
   //const user = dummyData.map(data => data.comments)
   //console.log(user)
@@ -54,7 +64,7 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-      {console.log(this.state.comments)}
+        <SearchBar />
         {this.state.data.map((data, index) => 
           
           <PostContainer className="post" 
@@ -64,6 +74,8 @@ class App extends Component {
           comments={data.comments} 
           addComment={this.addComment} 
           handleChange={this.handleChange}
+          likes={data.likes}
+          handleLikes={this.handleLikes}
           index={index}/>)}
       </div>
     );

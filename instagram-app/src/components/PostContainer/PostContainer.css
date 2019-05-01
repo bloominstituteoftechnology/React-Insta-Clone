@@ -34,3 +34,14 @@
     font-size: 12px;
     color: lightgray;
 }
+
+.heart,
+.comment {
+    height: 2rem;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.heart {
+    fill: lightgray;
+}

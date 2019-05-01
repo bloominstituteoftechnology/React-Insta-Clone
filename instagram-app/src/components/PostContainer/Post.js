@@ -1,7 +1,8 @@
 import React from 'react';
-import heart from '../../heart.svg';
-import comment from '../../comment.svg';
+import Heart from '../../Heart.js';
+import Comment from '../../Comment.js';
 import PropTypes from 'prop-types';
+
 
 const Post = props => {
     return (
@@ -13,9 +14,10 @@ const Post = props => {
             </div>
             <img className="user-post" src={props.data.imageUrl} alt="user-post"/>
             <div className="comment-logos">
-                <img className="comment-logo" src={heart} alt="heart" />
-                <img className="comment-logo" src={comment} alt="comment" />
-                <p className="likes">{props.data.likes} Likes</p>
+        
+                <Heart handleLikes={props.handleLikes}/>
+                <Comment />
+                <p className="likes">{props.likes} Likes</p>
             </div>
         </div>
     );
