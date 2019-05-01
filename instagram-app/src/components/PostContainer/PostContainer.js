@@ -10,7 +10,6 @@ import * as moment from 'moment';
 const PostContainer = props => {
     return (
         <div className="post">
-            
             <div className="user-banner">
                 <img className="user-img" src={props.data.thumbnailUrl} alt="user-img"/>
                 <h3>{props.data.username}</h3>
@@ -24,9 +23,9 @@ const PostContainer = props => {
         
             
             <div className="comment-section">
-                {props.data.comments.map((comment,index) => 
+                {props.comments.map(comment => comment.map((comment,index) => 
                     <Comment username={comment.username} text={comment.text} key={index}/>
-                    )}
+                    ))}
                 <p className="timestamp">{moment().fromNow()}</p>
                 <input className="add-comment" type="text" placeholder="Add Comment" />
             </div>

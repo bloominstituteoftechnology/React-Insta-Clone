@@ -16,19 +16,21 @@ class App extends Component {
   }
 
   componentDidMount() {
+  //const user = dummyData.map(data => data.comments)
+  //console.log(user)
+  //console.log(user.map(item => item))
   
    this.setState({
      data: dummyData,
-     comments: dummyData.filter(item => item.comments)
+     comments: dummyData.map(item => item.comments)
     })
   }
 
   render () {
     return (
       <div className="App">
-      {console.log(this.state.comments)}
-        <SearchBar />
-        {this.state.data.map((data, index) => <PostContainer className="post" data={data} key={index} comments={this.state.comments.map(comment => comment)}/>)}
+     
+        {this.state.data.map((data, index) => <PostContainer className="post" data={data} key={index} comments={this.state.comments}/>)}
       </div>
     );
 }}
