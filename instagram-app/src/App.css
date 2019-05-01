@@ -34,6 +34,10 @@
   }
 }
 
+.posts-container{
+  margin-top:45px;
+}
+
 
 .searchbar{
   /*border:solid red;*/
@@ -41,6 +45,13 @@
   display:flex;
   margin-top:10px;
   padding-bottom:10px;
+  position:fixed;
+  width:800px;
+  margin:auto;
+  background:white;
+  margin-bottom:20px;
+  top:0;
+ 
  
   
 }

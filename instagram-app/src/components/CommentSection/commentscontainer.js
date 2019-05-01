@@ -27,6 +27,8 @@ import Comments from './comments';
 
 export default CommentsSection;*/
 
+
+//refactor
 export default class CommentsSection extends React.Component{
   constructor(props) {
     super(props);
