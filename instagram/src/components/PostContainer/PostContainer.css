@@ -1,0 +1,26 @@
+.post-container {
+  margin: 20px auto;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+}
+
+.post-header h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: auto 1%;
+}
+
+.post-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin: auto 1%;
+}
+
+.posted-image {
+  margin: 10px auto;
+  width: 99%;
+}
