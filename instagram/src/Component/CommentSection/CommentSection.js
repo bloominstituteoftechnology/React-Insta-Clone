@@ -1,14 +1,12 @@
 import React from "react";
 
-export const CommentSection = ({ item }) => {
+export const CommentSection = (props) => {
 
-
-    return (<div>{console.log(item)}
+    return (<div>
         {
-            item.comments.map((msg, index) => (
-                <div key={index}><span className="comments">{msg.username}</span>  {msg.text} </div>
+            props.comments.map((msg, index) => (
+                <div key={index}><span className="comments">{msg.username }</span>: {msg.text} </div>
             )
-
             )}
 
     </div>)

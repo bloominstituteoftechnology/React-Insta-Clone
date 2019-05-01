@@ -6,37 +6,31 @@ import insta_person_logo from "../../images/Instagram-Person.png";
 import insta_logo from "../../images/insta_logo.png";
 import './SearchBar.css';
 
-const SearchBar = (props) => {
+const SearchBar = () => {
     return (
         <div className="search-bar-wrapper">
-          <div>
+            <div>
                 <img className="instalogo" src={insta_logo} />
                 <img className="logoimg" src={insta_text_logo} />
-
-                </div>
+            </div>
 
             <form className="instaform">
-                <input type="text" placeholder="Search" />
+                <input  className = "input"type="text" placeholder="Search" />
             </form>
 
             <div className="social-wrapper">
-            <div>
-                <img className="social" src={compass} />
+                <div>
+                    <img className="social" src={compass} />
                 </div>
                 <div>
-                <img className="social" src={insta_heart_logo} />
+                    <img className="social" src={insta_heart_logo} />
                 </div>
                 <div>
-                <img className="social" src={insta_person_logo} />
+                    <img className="social" src={insta_person_logo} />
                 </div>
             </div>
-
-
         </div>
-
-
     )
-
 }
 
 

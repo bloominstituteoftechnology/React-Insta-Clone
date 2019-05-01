@@ -4,19 +4,15 @@ import PostContainer from './PostContainer'
 
 const Post = (props) => {
     return (
-      <div>
-          {
-             props.data.map((item) => {
-                 return <PostContainer key={item.username} item={item} incrementLike={props.incrementLike}/>
-             }) 
-          }
-      </div>    
+        <div>
+            {
+                props.data.map((item, index) => {
+                    return <PostContainer key={index} item={item} />
+                })
+            }
+        </div>
     )
 
 }
 
 export default Post
-
-
-
-

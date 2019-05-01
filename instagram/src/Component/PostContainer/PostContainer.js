@@ -8,41 +8,59 @@ import { CommentSection } from "../CommentSection/CommentSection"
 class PostContainer extends React.Component {
     constructor(props) {
         super(props);
-        console.log(props)
         this.state = {
-            likes: this.props.item.likes
+            likes: this.props.item.likes,
+            comments: this.props.item.comments,
+            input: ''
         }
     }
 
 
     incrementLike = () => {
-        
-        this.setState(prevState => { likes: prevState.likes++ });
+        this.setState({ likes: this.state.likes + 1 });
     };
+
+    submitComment = (e) => {
+        e.preventDefault()
+        this.setState({
+            comments: [...this.state.comments, {
+                username: 'Manju',
+                text: this.state.input
+            }],
+            input: ''
+        })
+
+    }
+
+    updateInput = (e) => {
+        this.setState({ input: e.target.value })
+    }
 
     render() {
         return (
-            <div>
-                <div className="mainpart">
-                
+            <div className="mainpart" >
+                <div className="headerbar">
                     <img className="secondimg" src={this.props.item.thumbnailUrl} alt="this.props.item.username" />
                     <span className="username">{this.props.item.username} </span>
                 </div>
+                <img className="firstimg" src={this.props.item.imageUrl} alt="insta image"/>
 
-                <img className="firstimg" src={this.props.item.imageUrl} alt="" />
-
-
-                <div onClick={this.incrementLike}>
-                    <img className="likepic" src={heart} alt="" />
+                <div>
+                    <span onClick={this.incrementLike}>
+                        <img className="likepic" src={heart} alt="" />
+                    </span>
+                    <span className="commenttext"><i className="far fa-comment "></i></span>
                 </div>
-                <i className="far fa-comment"></i>
+                <span>{this.state.likes}<span classNama="text">likes</span></span>
 
-
-
-                <h1>{this.props.item.likes}<span>likes</span></h1>
-
-                <CommentSection {...this.props} />
-                <form className="footer">Add a Comment...</form>
+                <CommentSection comments={this.state.comments} />
+                <form onSubmit={this.submitComment}>
+                    <input className="footer"
+                        type='text'
+                        placeholder='Add a comments ..'
+                        value={this.state.input}
+                        onChange={this.updateInput} />
+                </form>
             </div>
         )
     }
@@ -58,6 +76,34 @@ PostContainer.propTypes = {
 };
 
 export default PostContainer
+
+
+
+// {
+//     username: "philzcoffee",
+//     thumbnailUrl:
+//       "https://tk-assets.lambdaschool.com/ecd33d34-c124-4b75-92d2-e5c52c171ed8_11201517_887808411287357_1307163552_a.jpg",
+
+//     imageUrl:
+//       "https://tk-assets.lambdaschool.com/69cf901b-f96d-466e-a745-ff2a01effac9_philz-image.jpg",
+//     likes: 400,
+//     timestamp: "July 17th 2017, 12:42:40 pm",
+//     comments: [
+//       {
+//         username: "philzcoffee",
+//         text:
+//           "We've got more than just delicious coffees to offer at our shops!"
+//       },
+//       {
+//         username: "biancasaurus",
+//         text: "Looks delicious!"
+//       },
+//       {
+//         username: "martinseludo",
+//         text: "Can't wait to try it!"
+//       }
+//     ]
+//   }
 
 
 
