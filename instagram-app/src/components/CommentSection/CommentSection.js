@@ -2,6 +2,8 @@ import React from 'react';
 import Comment from './Comment';
 import * as moment from 'moment';
 import './CommentSection.css';
+import PropTypes from 'prop-types';
+
 const CommentSection = props => {
     return(
         <div className="comment-section">
@@ -13,5 +15,9 @@ const CommentSection = props => {
         </div>
             
     );
+}
+
+CommentSection.propTypes = {
+    comments: PropTypes.array
 }
 export default CommentSection

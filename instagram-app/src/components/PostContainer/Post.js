@@ -1,10 +1,12 @@
 import React from 'react';
 import heart from '../../heart.svg';
 import comment from '../../comment.svg';
+import PropTypes from 'prop-types';
 
 const Post = props => {
     return (
         <div className="post">
+        
             <div className="user-banner">
                 <img className="user-img" src={props.data.thumbnailUrl} alt="user-img"/>
                 <h3>{props.data.username}</h3>
@@ -17,6 +19,14 @@ const Post = props => {
             </div>
         </div>
     );
+}
+
+Post.propTypes = {
+    data: PropTypes.object,
+    thumbnailUrl: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number,
+    username: PropTypes.string
 }
 
 export default Post;

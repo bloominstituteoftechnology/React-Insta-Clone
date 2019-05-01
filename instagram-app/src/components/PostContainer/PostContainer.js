@@ -14,13 +14,9 @@ const PostContainer = props => {
 }
 
 PostContainer.propTypes = {
-    data: PropTypes.shape({
-        thumbnailUrl: PropTypes.string.isRequired,
-        imageUrl: PropTypes.string.isRequired,
-        username: PropTypes.string.isRequired,
-        likes: PropTypes.number.isRequired,
-        timestamp: PropTypes.string.isRequired
-    })
+    data: PropTypes.object,
+    comments: PropTypes.array
+    
     
 }
 export default PostContainer;
