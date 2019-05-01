@@ -9,7 +9,8 @@ const withAuthenticate = PostsPage => Login =>
     constructor() {
       super();
       this.state = {
-        loggedIn: false
+        loggedIn: false,
+        username: ''
       };
     }
 
@@ -23,11 +24,12 @@ const withAuthenticate = PostsPage => Login =>
         })
       }else {
         this.setState({
-          loggedIn: true 
+          loggedIn: true, 
+          username: localStorage.getItem('username')
         })
       }
     }
-    
+
     render() {
       // If a user is logged in we return the Posts Page
       if (this.state.loggedIn) {
