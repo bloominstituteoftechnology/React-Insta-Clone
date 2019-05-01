@@ -8,14 +8,15 @@ const PostContainer = props => {
     return (
         <div className="full-post">
             <Post data={props.data} />
-            <CommentSection comments={props.comments}/>
+            <CommentSection comments={props.comments} addComment={props.addComment}/>
         </div>
     );
 }
 
 PostContainer.propTypes = {
     data: PropTypes.object,
-    comments: PropTypes.array
+    comments: PropTypes.array,
+    addComment: PropTypes.func
     
     
 }

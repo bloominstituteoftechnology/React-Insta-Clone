@@ -15,6 +15,12 @@ class App extends Component {
     }
   }
 
+  addComment() {
+    this.setState({
+      comments: ''
+    })
+  }
+
   componentDidMount() {
   //const user = dummyData.map(data => data.comments)
   //console.log(user)
@@ -30,7 +36,7 @@ class App extends Component {
     return (
       <div className="App">
      
-        {this.state.data.map((data, index) => <PostContainer className="post" data={data} key={index} comments={this.state.comments}/>)}
+        {this.state.data.map((data, index) => <PostContainer className="post" data={data} key={index} comments={this.state.comments} addComment={this.addComment}/>)}
       </div>
     );
 }}

@@ -3,6 +3,7 @@ import Comment from './Comment';
 import * as moment from 'moment';
 import './CommentSection.css';
 import PropTypes from 'prop-types';
+import Form from './Form';
 
 const CommentSection = props => {
     return(
@@ -11,13 +12,14 @@ const CommentSection = props => {
                     <Comment username={comment.username} text={comment.text} key={index}/>
                     ))}
                 <p className="timestamp">{moment().fromNow()}</p>
-                <input className="add-comment" type="text" placeholder="Add Comment" />
+                <Form addComment={props.addComment}/>
         </div>
             
     );
 }
 
 CommentSection.propTypes = {
-    comments: PropTypes.array
+    comments: PropTypes.array,
+    addComment: PropTypes.func
 }
 export default CommentSection
