@@ -1,6 +1,12 @@
 import React from "react";
 import "./Search.css";
 
+const ClearUser=(e)=>{
+  
+  window.localStorage.removeItem('user');
+  window.location.reload();
+};
+
 export default function SearchBar(props) {
   
   return (
@@ -20,6 +26,7 @@ export default function SearchBar(props) {
         <i className="far fa-compass" />
         <i className="far fa-heart" />
         <i className="far fa-user" />
+        <button onClick={ClearUser}>Logout</button>
       </div>
     </div>
   );
