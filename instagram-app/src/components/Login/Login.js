@@ -98,7 +98,7 @@ class Login extends React.Component {
           <LoginInput
             onChange={this.handleLogin}
             className="password"
-            type="text"
+            type="password"
             name="password"
             placeholder="...Type password"
             

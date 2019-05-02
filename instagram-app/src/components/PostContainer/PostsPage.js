@@ -6,7 +6,7 @@ import SearchBar from "../SearchBar/SearchBar";
 import dummyData from "../../dummy-data";
 
 class PostsPage extends React.Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
       posts: [],
@@ -45,7 +45,6 @@ class PostsPage extends React.Component {
               ? this.state.filteredPosts
               : this.state.posts
           }
-          usernameLogin={this.state.username}
         />
       </div>
     );
