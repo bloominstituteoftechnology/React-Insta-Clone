@@ -14,7 +14,7 @@ const SearchBar = props => {
             </div>
             
 
-            <input className="search" type="text" placeholder="&#128269; Search" />
+            <input onChange={props.search} className="search" type="text" placeholder="&#128269; Search" />
 
             <div className="user-logos">
                 <img src={compass} className="compass-logo logo" alt="logo" />

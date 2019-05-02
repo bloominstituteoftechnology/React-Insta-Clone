@@ -40,9 +40,17 @@ class App extends Component {
     })
   }
 
-  addLike = e => {
-    
+ handleSearch = e => {
+    console.log(e.target.value)
+    const newData = this.state.data.filter(function(item) {
+      if (e.target.value === 'philzcoffee') {
+        return item
+      }
+    })
+    console.log(newData)
+    this.setState({data: newData})
   }
+ 
   
 
   handleLikes = e => {
@@ -81,7 +89,7 @@ class App extends Component {
     return (
       <div className="App">
       
-        <SearchBar />
+        <SearchBar search={this.handleSearch} />
         {this.state.data.map((data, index) => 
           
           <PostContainer className="post" 
