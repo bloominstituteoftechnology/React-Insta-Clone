@@ -23,8 +23,8 @@ class Login extends Component {
         return (
             <div>
                 <form>
-                    <input onChange={this.databinder} value={this.state.username} type="text" placeholder="Enter User Name" ></input>
-                    <input onChange={this.databinder} value={this.state.password} type="password" placeholder="password" ></input>
+                    <input name="username" onChange={this.databinder} value={this.state.username} type="text" placeholder="Enter User Name" ></input>
+                    <input name ="password" onChange={this.databinder} value={this.state.password} type="password" placeholder="password" ></input>
                     <button onClick={this.loginHandle}>Log In</button > 
                 </form>
             </div>

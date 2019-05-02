@@ -21,7 +21,7 @@ class CommentSection extends Component {
   AddComment = e => {
     e.preventDefault();
 
-   const newComment = { text: this.state.comment, username: 'Firealem Erko' }
+   const newComment = { text: this.state.comment, username: "Firealem Erko" }
    
     this.setState({
       comments: [...this.state.comments, newComment], comment:''

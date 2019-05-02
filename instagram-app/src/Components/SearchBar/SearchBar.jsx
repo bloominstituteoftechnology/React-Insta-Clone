@@ -13,7 +13,7 @@ export default function SearchBar(props) {
 
       <div className="search">
         <i className="fas fa-search" aria-hidden="true" />
-        <input type='text' placeholder="Search" onChange={props.searchfn} />
+        <input name ='text' type='text' placeholder="Search" onChange={props.searchfn} />
       </div>
 
       <div className="rightofsearch">
