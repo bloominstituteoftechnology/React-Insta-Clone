@@ -4,12 +4,11 @@ import Likes from './Likes';
 import PropTypes from 'prop-types';
 import styled from 'styled-components'; 
 
-import './PostContainer.css';
-import '../CommentSection/CommentSection.css';
 
 const PostWrapper = styled.div`
   width: 90%;
   margin: 0 auto; 
+  margin-bottom: 5%; 
 `;
 
 const PostHeader = styled.div`
@@ -40,7 +39,7 @@ const PostImage = styled.img`
     width: 645px; 
     height: 645px; 
     border: 1px solid grey; 
-    margin-bottom: 0; 
+    margin: 0; 
 `; 
 
 class Post extends React.Component {

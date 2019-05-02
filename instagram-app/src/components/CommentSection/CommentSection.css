@@ -1,23 +1,4 @@
-.existingComments {
-    width: 89%; 
-    text-align: left; 
-    margin: 0 auto; 
-    border: 1px solid grey; 
-}
 
-.comment {
-    display: flex; 
-    flex-direction: row; 
-    flex-wrap: wrap; 
-}
-
-.commentUserName {
-    font-weight: bolder; 
-}
-
-.commentText {
-    padding-left: 2%; 
-}
 
 .addComment{
     width: 89%; 

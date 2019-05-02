@@ -2,14 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types'; 
 
 import './CommentSection.css'; 
+import styled from 'styled-components'; 
+
+const CommentWrapper = styled.div`
+    display: flex; 
+    flex-direction: row; 
+    text-align: baseline; 
+    align-items: center; 
+    padding-left: 2%; 
+`; 
+
+const CommentUserName = styled.p`
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem; 
+`; 
+
+const CommentText = styled.p`
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem; 
+  padding-left: 2%;
+`; 
 
 
 const Comment = props => {
     return (        
-        <div className="comment">
-            <p className="commentUserName">{props.comment.username} </p>
-            <p className="commentText">{props.comment.text}</p>
-        </div>
+        <CommentWrapper>
+            <CommentUserName>{props.comment.username} </CommentUserName>
+            <CommentText>{props.comment.text}</CommentText>
+        </CommentWrapper>
 
         
     );

@@ -2,13 +2,16 @@ import React from 'react';
 import styled from 'styled-components'; 
 
 const Engagement = styled.div`
-    width: 89.5%; 
+    width: 90%; 
     display: flex; 
     flex-direction: column;  
     margin: 0 auto;   
     border-right: 1px solid grey; 
-    border-left: 1px solid grey; 
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin-top: 0;  
     box-sizing: border-box; 
+    font-size: 1.5rem; 
     
 `; 
 

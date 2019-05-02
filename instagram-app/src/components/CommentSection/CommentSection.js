@@ -3,6 +3,15 @@ import Comment from './Comment';
 import AddNewComment from './AddNewComment'; 
 
 import './CommentSection.css'; 
+import styled from 'styled-components'; 
+
+const ExistingComments = styled.div`
+    width: 89.5%; 
+    text-align: left; 
+    margin: 0 auto; 
+    border-right: 1px solid grey; 
+    border-left: 1px solid grey;  
+`;
 
 
 // Setting CommentSection up as a Class because it will need to hold state
@@ -40,11 +49,11 @@ class CommentSection extends React.Component {
   render() {
     return (
       <div>
-        <div className="existingComments">
+        <ExistingComments>
           {this.state.comments.map((comment,i) => (
             <Comment comment={comment} key={i} />
           ))}
-        </div>
+        </ExistingComments>
 
         <AddNewComment onSubmit={this.addComment} onChange={this.handleNewComment} commentField={this.state.commentField}/>
       </div>
