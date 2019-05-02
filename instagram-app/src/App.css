@@ -43,8 +43,10 @@
   /*border:solid red;*/
   border-bottom:1px solid rgb(202, 202, 202);
   display:flex;
+  justify-content: space-evenly;
   margin-top:10px;
   padding-bottom:10px;
+  padding-top:10px;
   position:fixed;
   width:800px;
   margin:auto;
@@ -89,7 +91,7 @@ input{
   flex-direction: column;
   margin-left:70px;
   padding-top:10px;
-  height:20px;
+  height:30px;
 }
 
 .post-header{
@@ -202,3 +204,15 @@ input{
 
 }
 
+.Login{
+  border:1px solid rgb(202, 202, 202);
+  width:480px;
+  margin:auto;
+  margin-top:20px;
+  padding:10px 10px 10px 10px;
+}
+
+.loginbtn{
+  width:150px;
+  margin-left:35%;
+}

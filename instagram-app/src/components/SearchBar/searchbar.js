@@ -15,7 +15,7 @@ export default function SearchBar(props){
      <img alt='instalogo' src={InstaLogo} className='instalogo'></img>
         <input 
         type='text'
-        placeholder='                       Search'
+        placeholder='                  Search'
         onChange={props.searchPosts}
         
        />

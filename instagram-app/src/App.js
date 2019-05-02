@@ -1,5 +1,5 @@
-//import React, { Component } from 'react';
-import React from 'react';
+import React, { Component } from 'react';
+//import React from 'react';
 import './App.css';
 import PostsPage from './components/PostContainer/postspage';
 import withAuthenticate from './authentication';
@@ -146,7 +146,7 @@ import Login from './components/Login/login';
 
 export default App;*/
 
-let ComponentFromWithAuthenticate=withAuthenticate(PostsPage)(Login)
+/*let ComponentFromWithAuthenticate=withAuthenticate(PostsPage)(Login)
 
 export default function App(props){
   return(
@@ -154,7 +154,25 @@ export default function App(props){
    <ComponentFromWithAuthenticate/>
     
   )
+}*/
+
+
+class App extends Component{
+  constructor(){
+    super();
+    this.state={};
+  }
+  render(){
+    return(
+      <ComponentFromWithAuthenticate/>
+    )
+  }
 }
+
+let ComponentFromWithAuthenticate=withAuthenticate(PostsPage)(Login)
+
+
+export default App;
 
 
 

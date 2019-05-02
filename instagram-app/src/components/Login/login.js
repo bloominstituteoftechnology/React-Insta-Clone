@@ -2,6 +2,9 @@ import React from 'react';
 import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
 
 
+
+
+
 export default class Login extends React.Component{
     constructor(props){
         super(props);
@@ -23,10 +26,14 @@ export default class Login extends React.Component{
     }
 
     handleSubmit=e=>{
-        const user = this.state.email;
-        localStorage.setItem('user', user);
-        window.location.reload();
+          e.preventDefault();
+          const user = this.state.email;
+          localStorage.setItem('user', user);
+          window.location.reload();
       };
+
+
+      
     
 
     render() {
@@ -50,14 +57,12 @@ export default class Login extends React.Component{
                   type="password"
                 />
               </FormGroup>
-              <Button
-                block
-                bssize="large"
-                disabled={!this.validateForm()}
-                type="submit"
-              >
-                Login
-              </Button>
+              <Button className='loginbtn'
+           onClick={this.handleSubmit}
+           
+          >
+            Login
+          </Button>
             </form>
           </div>
         );
