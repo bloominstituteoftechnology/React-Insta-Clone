@@ -12,7 +12,7 @@ class Post extends React.Component {
  constructor(props) {
    super(props); 
    this.state = {
-     likes: props.post.likes 
+     likes: props.post.likes, 
    }
   } 
 
@@ -36,7 +36,7 @@ class Post extends React.Component {
           <Likes addLike={this.addLike} likes={this.state.likes} /> 
 
           <div className="comments">
-            <CommentSection comments={this.props.post.comments}/>
+            <CommentSection comments={this.props.post.comments} commentName={this.state.commentName}/>
           </div>
 
         </div>

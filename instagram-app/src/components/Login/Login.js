@@ -40,7 +40,7 @@ class Login extends React.Component {
             type="text"
             name="username"
             placeholder="...username"
-            // value=
+            
           />
 
           <input
@@ -49,7 +49,7 @@ class Login extends React.Component {
             type="text"
             name="password"
             placeholder="...password"
-            // value=
+            
           />
 
           <button className='login-btn' onClick={this.login}>Login</button>

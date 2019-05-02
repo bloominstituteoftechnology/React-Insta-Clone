@@ -12,6 +12,7 @@ class CommentSection extends React.Component {
     this.state = {
       comments: props.comments, 
       commentField: " ",
+      commentName: props.commentName
     };
   }
 
@@ -29,7 +30,7 @@ class CommentSection extends React.Component {
       
       const newComments = this.state.comments;
 
-      newComments.push({text: this.state.commentField, username: 'Dollyfan'});
+      newComments.push({text: this.state.commentField, username: this.state.commentName});
 
       // Clearing out field 
       this.setState({ comments: newComments, commentField: '' });

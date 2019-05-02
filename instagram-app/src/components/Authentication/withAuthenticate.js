@@ -33,7 +33,7 @@ const withAuthenticate = PostsPage => Login =>
     render() {
       // If a user is logged in we return the Posts Page
       if (this.state.loggedIn) {
-        return <PostsPage />;
+        return <PostsPage usernameLogin={this.state.username}/>;
       } else {
         // Otherwise we return the Login page
         return <Login />;
