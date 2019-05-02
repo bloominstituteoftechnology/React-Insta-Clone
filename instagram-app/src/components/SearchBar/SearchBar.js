@@ -12,7 +12,7 @@ const SearchBar = (props) => {
         </div>
        
         <div className="logoTitle">
-          <h2>Insta-Clone</h2>
+          <h2>Dollygram</h2>
         </div>
       </div>
 
