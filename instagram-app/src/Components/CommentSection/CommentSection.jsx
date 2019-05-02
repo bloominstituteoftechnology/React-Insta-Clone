@@ -10,12 +10,12 @@ const CommentBox = styled.div`
     input{
      border: white; 
     border-top: solid gray 1px;
-    border-right: solid gray 1px;
+    //border-right: solid gray 1px;
     margin-top: 10px;
     width: 100%;
     height: 50px;
     padding-left: 2%;
-    
+    padding-top:
     }
   `;
 
