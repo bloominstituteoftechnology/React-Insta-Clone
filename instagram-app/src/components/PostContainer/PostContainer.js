@@ -8,7 +8,11 @@ const PostContainer = props => {
     return (
         <div className="full-post">
             
-            <Post data={props.data} likes={props.likes} handleLikes={props.handleLikes}/>
+            <Post data={props.data} 
+            likes={props.likes} 
+            handleLikes={props.handleLikes} 
+            index={props.index}/>
+            
             <CommentSection 
             comments={props.comments} 
             data={props.data}

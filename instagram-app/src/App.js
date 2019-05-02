@@ -10,7 +10,6 @@ class App extends Component {
     super();
     this.state = {
       data: [],
-      likes: '',
       comments: {
         text: '',
         username: ''
@@ -41,20 +40,37 @@ class App extends Component {
     })
   }
 
+  addLike = e => {
+    
+  }
+  
+
   handleLikes = e => {
     const thisIndex = e.target.getAttribute('index')
-    console.log(this.state.data[thisIndex])
-    // this.setState({
-    //   data: [...this.state.data],
-    //   likes: newLike
-    // })
+    //this.state.data[thisIndex].likes = this.state.data[thisIndex].likes + 1
+    console.log(e.target.getAttribute('class'))
+    e.target.classList.toggle('red-heart')
+      if (e.target.getAttribute('class') === 'heart red-heart') {
+      this.state.data[thisIndex].likes = this.state.data[thisIndex].likes + 1
+      this.setState({
+        //newLikes: this.state.data[thisIndex].likes + 1,
+        data: [...this.state.data]
+      })
+    } else {
+      this.state.data[thisIndex].likes = this.state.data[thisIndex].likes - 1
+      this.setState({
+        //newLikes: this.state.data[thisIndex].likes + 1,
+        data: [...this.state.data]
+      })
+    }
+    
   }
 
   componentDidMount() {
   //const user = dummyData.map(data => data.comments)
   //console.log(user)
   //console.log(user.map(item => item))
-  const data = dummyData.map(data => data);
+ 
    this.setState({
      data: dummyData,
      
@@ -64,6 +80,7 @@ class App extends Component {
   render () {
     return (
       <div className="App">
+      
         <SearchBar />
         {this.state.data.map((data, index) => 
           
@@ -76,7 +93,10 @@ class App extends Component {
           handleChange={this.handleChange}
           likes={data.likes}
           handleLikes={this.handleLikes}
-          index={index}/>)}
+          index={index}
+      
+          />
+          )}
       </div>
     );
 }}

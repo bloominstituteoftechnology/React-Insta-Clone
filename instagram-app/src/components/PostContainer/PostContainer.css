@@ -45,3 +45,7 @@
 .heart {
     fill: lightgray;
 }
+
+.red-heart {
+    fill: red;
+}

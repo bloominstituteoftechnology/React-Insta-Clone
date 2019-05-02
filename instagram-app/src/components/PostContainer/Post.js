@@ -15,7 +15,7 @@ const Post = props => {
             <img className="user-post" src={props.data.imageUrl} alt="user-post"/>
             <div className="comment-logos">
         
-                <Heart handleLikes={props.handleLikes}/>
+                <Heart handleLikes={props.handleLikes} index={props.index}/>
                 <Comment />
                 <p className="likes">{props.likes} Likes</p>
             </div>

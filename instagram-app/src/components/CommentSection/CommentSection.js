@@ -10,9 +10,13 @@ const CommentSection = props => {
         <div className="comment-section">
             
                 {props.comments.map((comment,index) => 
-                    <Comment username={comment.username} text={comment.text} key={index} addComment={props.addComment}/>
+                    <Comment 
+                    username={comment.username} 
+                    text={comment.text} key={index} 
+                    addComment={props.addComment}/>
                     )}
                 <p className="timestamp">{moment().fromNow()}</p>
+               
                 <Form 
                 addComment={props.addComment} 
                 handleChange={props.handleChange} 
