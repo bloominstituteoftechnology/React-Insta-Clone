@@ -9,22 +9,22 @@ const dummyData = [
     timestamp: "July 17th 2017, 12:42:40 pm",
     comments: [
       {
-        username: "philzcoffee",
+        username: "JolEEEEEEEne",
         text:
-          "We've got more than just delicious coffees to offer at our shops!"
+          "Remember when Dolly remixed my favorite song for #Dumplin?!?"
       },
       {
-        username: "biancasaurus",
-        text: "Looks delicious!"
+        username: "coatOfManyColors",
+        text: "Yessssss that is my favorite!"
       },
       {
-        username: "martinseludo",
-        text: "Can't wait to try it!"
+        username: "willowdeandixon",
+        text: "Dolly. Forever."
       }
     ]
   },
   {
-    username: "cupOfAmbition",
+    username: "cupofambition",
     thumbnailUrl:
       "https://www.iconbunny.com/icons/media/catalog/product/cache/2/thumbnail/600x/1b89f2fc96fc819c2a7e15c7e545e8a9/9/0/908.6-butterfly-icon-iconbunny.jpg",
     imageUrl:
@@ -33,24 +33,24 @@ const dummyData = [
     timestamp: "July 15th 2017, 03:12:09 pm",
     comments: [
       {
-        username: "twitch",
-        text: "Epic Street Fighter action here in Las Vegas at #EVO2017!"
+        username: "cupofambition",
+        text: "#ThrowbackThursday to Dolly wishing us a Happy Easter."
       },
       {
-        username: "michaelmarzetta",
-        text: "Omg that match was crazy"
+        username: "JolEEEEEEEne",
+        text: "Yessssss so pretty!!"
       },
       {
-        username: "themexican_leprechaun",
-        text: "What a setup"
+        username: "coatOfManyColors",
+        text: "We can definitely have flowers of many colors too <3"
       },
       {
-        username: "dennis_futbol",
-        text: "It that injustice"
+        username: "BackwoodsBarbie1974",
+        text: "Such a perfect lewk."
       },
       {
-        username: "dennis_futbol",
-        text: "Is"
+        username: "willowdeandixon",
+        text: "How is she so perfect."
       }
     ]
   },
@@ -64,16 +64,16 @@ const dummyData = [
     timestamp: "July 14th 2017, 10:04:08 am",
     comments: [
       {
-        username: "playhearthstone",
-        text: "Love this shot!"
+        username: "BackwoodsBarbie1974",
+        text: "Dolly has given away 100 million books to help kids read <3"
       },
       {
-        username: "awaywetravel",
-        text: "Yosemite is my most favorite place in the universe"
+        username: "cupofambition",
+        text: "#inspiration"
       },
       {
-        username: "awesomebt28",
-        text: "I like how Half Dome looks so old and useless"
+        username: "JolEEEEEEEne",
+        text: "I can never read enough about Dolly."
       }
     ]
   }

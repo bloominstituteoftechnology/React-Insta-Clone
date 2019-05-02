@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 class Login extends React.Component {
   constructor() {
@@ -32,7 +33,8 @@ class Login extends React.Component {
   render() {
     return (
       <div className="Login">
-        <h1>Login to Insta-Clone</h1>
+        <h1>Dollygram</h1>
+        <h4>Find out who you are and do it on purpose.</h4>
         <form>
           <input
             onChange={this.handleLogin}
