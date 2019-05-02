@@ -41,14 +41,44 @@ class App extends Component {
   }
 
  handleSearch = e => {
-    console.log(e.target.value)
-    const newData = this.state.data.filter(function(item) {
-      if (e.target.value === 'philzcoffee') {
-        return item
+    //console.log(e.target.value)
+    //this.setState({data: [...this.state.data]})
+    //const text = e.target.value.split("").toString()
+    //console.log(text)
+    //const newArray = this.state.data.filter(item => (this.setState({data: item})))
+    const newArray = []
+    const result = this.state.data.filter(function(post) {
+      if (post.username === e.target.value) {
+       newArray.push(post)
+       console.log(newArray)
+       return newArray
+      } else {
+        return newArray
       }
-    })
-    console.log(newData)
-    this.setState({data: newData})
+      
+    });
+      
+        
+        // const test = item.username.split('')
+        // let testtwo = test.includes('p', 'q')
+
+        
+
+
+        // if (test.includes("p","c")) {
+        //   console.log(item)
+        // } else {console.log('false')}
+
+          
+        //return newArray.push(item)
+        
+      
+    //console.log(newArray)
+    if (newArray.length > 0) {
+      this.setState({data: newArray})
+    } else if (newArray.length === 0) {
+      this.setState({data: dummyData})
+    }
   }
  
   
@@ -78,7 +108,8 @@ class App extends Component {
   //const user = dummyData.map(data => data.comments)
   //console.log(user)
   //console.log(user.map(item => item))
- 
+    const newData = []
+    
    this.setState({
      data: dummyData,
      
@@ -88,7 +119,7 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-      
+     
         <SearchBar search={this.handleSearch} />
         {this.state.data.map((data, index) => 
           
