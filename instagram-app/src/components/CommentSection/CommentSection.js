@@ -2,7 +2,6 @@ import React from 'react';
 import Comment from './Comment'; 
 import AddNewComment from './AddNewComment'; 
 
-import './CommentSection.css'; 
 import styled from 'styled-components'; 
 
 const ExistingComments = styled.div`

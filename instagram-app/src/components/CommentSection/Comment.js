@@ -1,7 +1,6 @@
 import React from 'react'; 
 import PropTypes from 'prop-types'; 
 
-import './CommentSection.css'; 
 import styled from 'styled-components'; 
 
 const CommentWrapper = styled.div`
