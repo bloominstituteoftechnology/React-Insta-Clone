@@ -1,5 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled from 'styled-components';
+
+const LoginWrapper = styled.div`
+  border: 2px solid red; 
+`
+
 
 class Login extends React.Component {
   constructor() {
@@ -32,7 +37,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div className="Login">
+      <LoginWrapper>
         <h1>Dollygram</h1>
         <h4>Find out who you are and do it on purpose.</h4>
         <form>
@@ -56,7 +61,7 @@ class Login extends React.Component {
 
           <button className='login-btn' onClick={this.login}>Login</button>
         </form>
-      </div>
+      </LoginWrapper>
     );
   }
 }
