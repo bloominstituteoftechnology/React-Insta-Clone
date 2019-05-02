@@ -2,6 +2,37 @@ import React, { Component } from 'react';
 import { Button, Form, Input } from 'reactstrap';
 import styled from 'styled-components'
 
+const StyledDiv = styled.div`
+border: solid gray 1px;
+width: 500px;
+height: 260px;
+margin:0 auto;
+margin-top: 5%;
+border-radius:10px;
+background-color: white;
+Input{
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: center;
+  width: 80%;
+  background-color:F5F5F5
+
+}
+ Button{
+   margin-top: 10px;
+   background-color: #399DF0;
+   width: 80%
+ }
+ .logintitle{
+   //border: solid red 1px;
+   height: 100px;
+   display: flex; 
+   align-items: center; 
+   justify-content: center;
+   font-family: 'Oleo Script', cursive;
+   font-size: 3rem;
+ }
+`;
 class Login extends Component {
     
     constructor(props) {
@@ -22,31 +53,13 @@ class Login extends Component {
       
    
     render() {
-      const StyledDiv = styled.div`
-      border: solid gray 1px;
-      width: 500px;
-      height: 200px;
-      margin:0 auto;
-      margin-top: 5%;
-      border-radius:10px;
-      background-color: rgb(172, 218, 208);
-      Input{
-        margin: 0 auto;
-        margin-top: 10px;
-        text-align: center;
-        width: 80%
-
-      }
-       Button{
-         margin-top: 10px;
-         background-color: black;
-       }
-      `;
+     
 
         return (
             
               <StyledDiv>
                 <Form>
+                    <div className="logintitle">Instagram</div>
                     <Input name="username" onChange={this.databinder} value={this.state.username} type="text" placeholder="Enter User Name" ></Input>
                     <Input name ="password" onChange={this.databinder} value={this.state.password} type="password" placeholder="password" ></Input>
                     <Button  onClick={this.loginHandle} >Log In</Button > 
