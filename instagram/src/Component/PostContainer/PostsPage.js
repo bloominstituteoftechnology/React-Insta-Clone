@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import './App.css';
-import SearchBar from "./Component/SearchBar/search-bar";
-import Post from "./Component/PostContainer/Post";
-import dummyData from './dummy-data'
+import '../../../src/App.css'
+import SearchBar from '../SearchBar/search-bar';
+
+import Post from '../PostContainer/Post';
+import dummyData from '../../dummy-data'
 
 class PostsPage extends Component {
   constructor() {
@@ -32,6 +33,7 @@ class PostsPage extends Component {
       <div>
         <SearchBar search={this.searchUsername}/>
         <Post data={this.state.filterdData.length ? this.state.filterdData : this.state.data} />
+       
       </div>
     )
   }

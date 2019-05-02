@@ -18,6 +18,8 @@ class PostContainer extends React.Component {
 
     incrementLike = () => {
         this.setState({ likes: this.state.likes + 1 });
+        localStorage.setItem('name', 'manju');
+        
     };
 
     submitComment = (e) => {
@@ -29,6 +31,7 @@ class PostContainer extends React.Component {
             }],
             input: ''
         })
+        console.log(localStorage.getItem('name'))
 
     }
 
@@ -45,11 +48,11 @@ class PostContainer extends React.Component {
                 </div>
                 <img className="firstimg" src={this.props.item.imageUrl} alt="insta image"/>
 
-                <div>
-                    <span onClick={this.incrementLike}>
-                        <img className="likepic" src={heart} alt="" />
-                    </span>
-                    <span className="commenttext"><i className="far fa-comment "></i></span>
+                <div className="heartlike">
+                    <div onClick={this.incrementLike}>
+                    <i className="far fa-heart"></i>
+                    </div>
+                    <div className="commenttext"><i className="far fa-comment "></i></div>
                 </div>
                 <span>{this.state.likes}<span className="text">likes</span></span>
 

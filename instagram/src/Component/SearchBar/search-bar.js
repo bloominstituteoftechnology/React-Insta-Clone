@@ -6,6 +6,7 @@ import insta_person_logo from "../../images/Instagram-Person.png";
 import insta_logo from "../../images/insta_logo.png";
 import './SearchBar.css';
 
+
 const SearchBar = (props) => {
     return (
         <div className="search-bar-wrapper">

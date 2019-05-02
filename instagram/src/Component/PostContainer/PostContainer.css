@@ -51,10 +51,12 @@ margin-top: 10px;
     margin-top: 0px;
 }
 
-.commenttext{
-    margin-left:20px;
-    margin-top: 2px;
+
+
+.heartlike{
+    display: flex;
+    font-size: 25px;
+    
+
 }
-
-
 
