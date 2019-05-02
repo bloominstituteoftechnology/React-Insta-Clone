@@ -1,0 +1,20 @@
+.comment {
+    height: 29px;
+    padding-left: 15px;
+}
+.loveheart {
+    height: 50px;
+    margin-left: 95px;
+    }
+.comment-section {
+    padding-bottom: 5px;
+    margin-left: 100px;
+}
+.comment-input {
+    padding-left: 5px;
+    margin: 5px 0px 15px 100px;
+}
+.likes {
+    margin-left: 100px;
+    font-weight: bold;
+}
