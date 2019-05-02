@@ -15,10 +15,11 @@ const PostContainer = props => {
       </span>
         
         <img src={props.Data.imageUrl} alt="posted pic" />
-        <div>{props.Data.timestamp}</div>
+        
         <Likes numberOfLikes={props.Data.likes}/>
         
         <CommentSection comments={props.Data.comments} />
+        <div>{props.Data.timestamp}</div>
       </div>
     </div>
   );

@@ -39,6 +39,7 @@ class Login extends Component {
       }
        Button{
          margin-top: 10px;
+         background-color: black;
        }
       `;
 
@@ -48,7 +49,7 @@ class Login extends Component {
                 <Form>
                     <Input name="username" onChange={this.databinder} value={this.state.username} type="text" placeholder="Enter User Name" ></Input>
                     <Input name ="password" onChange={this.databinder} value={this.state.password} type="password" placeholder="password" ></Input>
-                    <Button  onClick={this.loginHandle}>Log In</Button > 
+                    <Button  onClick={this.loginHandle} >Log In</Button > 
                 </Form>
                 </StyledDiv>
             
