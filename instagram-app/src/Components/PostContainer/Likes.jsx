@@ -19,7 +19,7 @@ class Likes extends Component {
 
   render() {
     const StyledLikes = styled.div`
-      border: solid red 1px;
+      // border: solid red 1px;
       text-align: left;
       padding-left: 2%;
       font-size: 1.5rem;
