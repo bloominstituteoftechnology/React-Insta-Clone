@@ -2,10 +2,46 @@ import React from 'react';
 import CommentSection from '../CommentSection/CommentSection'; 
 import Likes from './Likes'; 
 import PropTypes from 'prop-types';
+import styled from 'styled-components'; 
 
 import './PostContainer.css';
 import '../CommentSection/CommentSection.css';
 
+const PostWrapper = styled.div`
+  width: 90%;
+  margin: 0 auto; 
+`;
+
+const PostHeader = styled.div`
+    display: flex; 
+    flex-direction: row; 
+    width: 89.5%; 
+    margin: 0 auto; 
+    align-items: center; 
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+`; 
+
+const Thumbnail = styled.img`
+    width: 5%; 
+    height: 5%; 
+    border-radius: 100%; 
+    margin-right: 2%;  
+    margin-left: 2%; 
+`;
+
+const PostUsername = styled.p`
+    font-size: 1.5rem; 
+    font-family: 'Pacifico', cursive;
+`;
+
+const PostImage = styled.img`
+    width: 645px; 
+    height: 645px; 
+    border: 1px solid grey; 
+    margin-bottom: 0; 
+`; 
 
 class Post extends React.Component {
 
@@ -23,15 +59,15 @@ class Post extends React.Component {
 
     render (){
     return(
-        <div className="postWrapper">
-            
-          <div className="postHeader">
-                <img className="thumbnail" src={this.props.post.thumbnailUrl}/>
+        <PostWrapper>
+  
+          <PostHeader>
+                <Thumbnail src={this.props.post.thumbnailUrl}/>
 
-                <p className="postUsername">{this.props.post.username}</p>
-          </div>
+                <PostUsername>{this.props.post.username}</PostUsername>
+          </PostHeader>
 
-          <img className="postImage" src= {this.props.post.imageUrl} />
+          <PostImage src= {this.props.post.imageUrl} />
 
           <Likes addLike={this.addLike} likes={this.state.likes} /> 
 
@@ -39,7 +75,7 @@ class Post extends React.Component {
             <CommentSection comments={this.props.post.comments} commentName={this.state.commentName}/>
           </div>
 
-        </div>
+        </PostWrapper>
     );
     }
 }; 
