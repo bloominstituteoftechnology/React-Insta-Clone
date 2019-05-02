@@ -1,0 +1,108 @@
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    margin : 0;
+    padding:0;
+}
+
+.header-name{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width:30%;
+    margin-top:1%;
+}
+
+.title{
+    margin:0px 2px 0px 0px;
+    font-size:1.3rem;
+    font-family: 'Rock Salt', cursive;
+
+}
+
+input {
+    border-radius : 6%;
+    width:80%;
+}
+
+.picture {
+        display:flex;
+        width:30%;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+}
+
+
+.picture > h5{
+    font-size: 1.3rem;
+    color:black;
+    margin-top:10%;
+    
+}
+
+.picture , .picture >h5 {
+    margin-bottom : 4%;
+}
+
+.thumb{
+    margin-top:2%;
+    border-radius: 50%;
+    width:50%;
+    height:auto;
+}
+
+.date { 
+    margin-bottom: 10%;
+    margin-top: -5%;
+}
+.likes{
+    font-size:1rem;
+}
+
+.imageurl {
+    width:100%;
+    height:auto;
+}
+
+.compo-image {
+    margin-left: 0 auto;
+    display: block;
+    border:1px solid black;
+    box-shadow: 8px 9px gray;
+
+}
+
+
+.commentaire {
+    color:black;
+    font-size:0.8rem;
+    margin-top:9%;
+}
+
+.icon{
+    display:flex;
+    justify-content: space-between;
+    width:10%;
+    margin-bottom: 3%;
+}
+
+.user-section{
+    display: flex;
+    width:100%
+}
+
+.text{
+    margin-top:0.17rem;
+    margin-left: 1%;
+    color:black;
+}
+
+/* Styling the form input and the form component*/
+
+.form-input {
+    width:100%;
+    margin-bottom: 10%;
+}

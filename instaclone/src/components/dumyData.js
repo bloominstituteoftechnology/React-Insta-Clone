@@ -65,7 +65,7 @@ const dummyData = [
     timestamp: "July 14th 2017, 10:04:08 am",
     comments: [
       {
-        username: "hearthstone",
+        username: "playhearthstone",
         text: "Love this shot!"
       },
       {
