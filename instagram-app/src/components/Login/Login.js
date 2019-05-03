@@ -63,8 +63,7 @@ class Login extends React.Component {
   // Login handler 
   handleLogin = e => {
       this.setState({
-          username: e.target.value,
-          password: e.target.value, 
+          username: e.target.value 
       })
   }
 
@@ -96,7 +95,6 @@ class Login extends React.Component {
           />
 
           <LoginInput
-            onChange={this.handleLogin}
             className="password"
             type="password"
             name="password"

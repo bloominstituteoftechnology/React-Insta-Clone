@@ -37,6 +37,7 @@ class CommentSection extends React.Component {
       
       const newComments = this.state.comments;
       const newCommentUserName = localStorage.getItem('username'); 
+      console.log(newCommentUserName); 
 
       newComments.push({text: this.state.commentField, username: newCommentUserName});
 
