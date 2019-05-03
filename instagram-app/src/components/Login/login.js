@@ -1,5 +1,40 @@
 import React from 'react';
-import { Button, FormGroup, FormControl, FormLabel } from "react-bootstrap";
+import {FormGroup, FormControl, FormLabel } from "react-bootstrap";
+import Instagram from './logo.png';
+
+
+import styled from 'styled-components';
+
+
+export const Button = styled.button`
+  
+width:150px;
+margin-left:35%;
+background:#33A2FF;
+color:white;
+border-radius:10px;
+border:0px solid;
+ 
+`;
+
+export const form=styled.form`
+border:1px solid rgb(202, 202, 202);
+width:480px;
+margin:auto;
+margin-top:20px;
+padding:10px 10px 10px 10px;
+
+
+`;
+
+export const Form=styled.form`
+border:1px solid rgb(202, 202, 202);
+width:480px;
+margin:auto;
+margin-top:20px;
+padding:10px 10px 10px 10px;
+
+`;
 
 
 
@@ -38,7 +73,8 @@ export default class Login extends React.Component{
 
     render() {
         return (
-          <div className="Login">
+          <div /*className="Login"*/><Form>
+          <img alt='instagram' src={Instagram} className='login-logo'></img>
             <form onSubmit={this.handleSubmit}>
               <FormGroup controlId="email" bssize="large">
                 <FormLabel>Username</FormLabel>
@@ -57,13 +93,14 @@ export default class Login extends React.Component{
                   type="password"
                 />
               </FormGroup>
-              <Button className='loginbtn'
-           onClick={this.handleSubmit}
+              <Button //className='loginbtn'
+           disabled={!this.validateForm()}
+           type="submit"
            
           >
             Login
           </Button>
-            </form>
+            </form>  </Form>
           </div>
         );
       }

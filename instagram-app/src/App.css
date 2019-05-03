@@ -216,3 +216,10 @@ input{
   width:150px;
   margin-left:35%;
 }
+
+.login-logo{
+  /*border:solid red;*/
+  width:280px;
+  margin:auto;
+  margin-left:20%;
+}

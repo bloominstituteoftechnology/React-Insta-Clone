@@ -19,7 +19,7 @@ import React from 'react';
       }
     }
     render() {
-     if (this.state.loggedIn) return <PostsPage />;
+     //if (this.state.loggedIn) return <PostsPage />;
       return <LoginPage />;
     }
   };
