@@ -3,6 +3,7 @@ import withAuthenticate from './components/Authentication/withAuthenticate';
 import './App.css';
 
 import PostPage from './components/PostContainer/PostPage';
+//import Login from './components/PostContainer/Login';
 
 class App extends Component {
   constructor() {
@@ -15,7 +16,7 @@ class App extends Component {
   
   
   render () {
-    const ComponentFromWithinAuthenticate = withAuthenticate(PostPage)
+    const ComponentFromWithinAuthenticate = withAuthenticate
     return (
       <div className="App">
         <ComponentFromWithinAuthenticate />
@@ -25,4 +26,4 @@ class App extends Component {
 }
 
 
-export default App;
+export default withAuthenticate(PostPage);
