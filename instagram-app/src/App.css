@@ -1,0 +1,225 @@
+.App {
+  text-align: center;
+  width:800px;
+  margin:auto;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.posts-container{
+  margin-top:45px;
+}
+
+
+.searchbar{
+  /*border:solid red;*/
+  border-bottom:1px solid rgb(202, 202, 202);
+  display:flex;
+  justify-content: space-evenly;
+  margin-top:10px;
+  padding-bottom:10px;
+  padding-top:10px;
+  position:fixed;
+  width:800px;
+  margin:auto;
+  background:white;
+  margin-bottom:20px;
+  top:0;
+ 
+ 
+  
+}
+
+.cameralogo{
+  height:25px;
+  padding-top:7px;
+}
+
+.instalogo{
+  width:150px;
+  height:32px;
+  border-left:1px solid rgb(202, 202, 202);
+  margin-left:10px;
+  padding-top:5px;
+  padding-left:5px;
+  
+}
+
+input{
+  border:1px solid rgb(202, 202, 202);
+  color:gray;
+  background:rgb(243, 241, 241);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  border-radius:5px;
+  margin-top:5px;
+  margin-bottom:5px;
+  margin-left:15%;
+  width:200px;
+}
+
+
+.icons{
+  display:flex;
+  flex-direction: column;
+  margin-left:70px;
+  padding-top:10px;
+  height:30px;
+}
+
+.post-header{
+  border:1px solid rgb(202, 202, 202);
+  display:flex;
+  justify-content: flex-start;
+  margin-top:10px;
+  padding-left:5px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+.userimg{
+  /*border:solid red;*/
+  border-radius:90px;
+  height:30px;
+ 
+
+}
+
+.username{
+  /*border:solid blue;*/
+  font-weight: bold;
+  width:150px;
+  
+  
+
+}
+
+.postimage{
+ 
+  width:800px;
+
+
+}
+
+.like-section{
+ /* border:solid red;*/
+  display:flex;
+  flex-direction: column;
+  padding-right:90%;
+  border-left:1px solid rgb(202, 202, 202);
+  border-right:1px solid rgb(202, 202, 202);
+}
+
+/*.like-icons{
+  border:solid blue;
+  
+}*/
+
+.postlike{
+  /*border:solid red;*/
+  margin-right:5px;
+  height:20px;
+  cursor: pointer;
+}
+
+.postmessage{
+ /* border:solid pink;*/
+  height:20px;
+}
+
+.likes{
+  font-weight: bold;
+}
+.comments{
+ /* border:solid red;*/
+  display:flex;
+  padding:5px 5px 5px 5px;
+ 
+ 
+}
+
+.border{
+  border-top:1px solid rgb(202, 202, 202);
+  width:750px;
+  margin:auto;
+  margin-top:10px;
+}
+.user{
+ /* border:solid blue;*/
+  font-weight: bold;
+}
+
+.comment{
+  /*border:solid pink;*/
+  margin-left:10px;
+  font-weight: 450;
+}
+
+.comment-input{
+  width:800px;
+  margin:auto;
+  /*background:white;*/
+  background-color:transparent;
+  border: 0px solid;
+  padding:20px 20px 20px 20px;
+  color:gray;
+  
+}
+
+.comment-input:focus {
+  outline:none;
+}
+
+.user-comments{
+  border-left:1px solid rgb(202, 202, 202);
+  border-right:1px solid rgb(202, 202, 202);
+  border-bottom:1px solid rgb(202, 202, 202);
+
+
+}
+
+.Login{
+  border:1px solid rgb(202, 202, 202);
+  width:480px;
+  margin:auto;
+  margin-top:20px;
+  padding:10px 10px 10px 10px;
+}
+
+.loginbtn{
+  width:150px;
+  margin-left:35%;
+}
+
+.login-logo{
+  /*border:solid red;*/
+  width:280px;
+  margin:auto;
+  margin-left:20%;
+}
