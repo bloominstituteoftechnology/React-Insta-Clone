@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+
+i {
+    font-size: 3rem;
+
+    &.fa-instagram {
+        border-right: 2px solid #6363ff;
+        padding: 0 15px;
+
+        @media (max-width: 650px) {
+            border-right: none;
+        }
+    }
+
+    &.far.fa-user,
+    &.far.fa-heart,
+    &.far.fa-compass {
+        color: gray;
+        transition: color 1s ease-out;
+        cursor: pointer;
+        padding: 0;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    &.fas.fa-user {
+        color: gray;
+        transition: color 1s ease-out;
+        cursor: pointer;
+        padding: 0;
+
+        &:hover {
+            color: black;
+        }
+    }
+
+    &.headName {
+        font-family: 'Great Vibes';
+        font-size: 4rem;
+    }
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+button {
+    height: 30px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+
+        &.searchText {
+            font-size: 1.5rem;
+        }
+
+        &.fas.fa-search {
+            font-size: 1.1rem;
+        }
+
+        padding: 0 2.5px;
+        margin: 0;
+    }
+}

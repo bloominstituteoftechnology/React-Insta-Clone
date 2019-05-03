@@ -1,0 +1,25 @@
+.commentContent {
+    font-size: 1.5rem;
+    background: #b1b1ff50;
+    padding: 15px 15px;
+    border-radius: 50px;
+
+    sup {
+        margin-left: 10px;
+        font-weight: bolder;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .commentUsername {
+        font-size: 1.6rem;
+        padding-right: 5px;
+        font-weight: 650;
+    }
+}
+
+.time {
+    padding: 0 15px;
+}

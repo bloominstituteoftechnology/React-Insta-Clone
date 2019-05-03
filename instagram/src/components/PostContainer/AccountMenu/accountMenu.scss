@@ -1,0 +1,15 @@
+.accMenu {
+    position: absolute;
+    top: 50px;
+    right: 340px;
+    background: whitesmoke;
+    border: 2px solid #b1b1ff;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    span {
+        padding: 5px 0 10px;
+    }
+}
