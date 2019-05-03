@@ -25,7 +25,7 @@ import React from 'react'
 //   }
 //   };
 
-  const withAuthenticate = PostPage  =>
+  const withAuthenticate = PostPage  => Login => 
   class extends React.Component {
     constructor(props) {
             super(props);
@@ -33,8 +33,24 @@ import React from 'react'
               logginIn: false
             };
           }
+
+    componentDidMount() {
+      if (!localStorage.getItem('user')) {
+        this.setState({ loggedIn: false});
+      } else {
+        this.setState({loggedIn: true})
+      }
+    }
+      
+    
+
+
     render() {
-      return <PostPage />;
+      if (this.state.loggedIn) {
+        return <PostPage />
+      } else {
+        return <Login />
+      }
     }
   
   };

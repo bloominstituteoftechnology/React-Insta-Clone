@@ -23,7 +23,7 @@ class PostPage extends Component {
     e.preventDefault();
     const thisIndex = e.target.getAttribute('index')
     //console.log(this.state.data[thisIndex].comments)
-    this.state.data[thisIndex].comments.push({ text: this.state.comments.text, username: this.state.comments.username})
+    this.state.data[thisIndex].comments.push({ text: this.state.comments.text, username: localStorage.getItem('user')})
     this.setState({
       data: [...this.state.data ]
     })

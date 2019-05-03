@@ -3,7 +3,7 @@ import withAuthenticate from './components/Authentication/withAuthenticate';
 import './App.css';
 
 import PostPage from './components/PostContainer/PostPage';
-//import Login from './components/PostContainer/Login';
+import Login from './components/Login/Login';
 
 class App extends Component {
   constructor() {
@@ -26,4 +26,4 @@ class App extends Component {
 }
 
 
-export default withAuthenticate(PostPage);
+export default withAuthenticate(PostPage)(Login);
