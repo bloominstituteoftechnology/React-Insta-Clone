@@ -1,5 +1,42 @@
 import React from "react";
-import './Login.css';
+
+import styled from 'styled-components';
+
+const Loginpage = styled.form`
+margin-left:400px;
+border:2px solid black;
+margin-right:400px;
+text-align:center;
+margin-top:150px;
+margin-bottom:40px;
+height:500px;
+
+`;
+const Input = styled.input`
+height:40px;
+width:200px;
+text-align:center;
+font-size:20px;
+`;
+
+
+const Input1 = styled.input`
+height:40px;
+width:200px;
+margin-top:20px;
+text-align:center;
+font-size:20px;
+`;
+const Button = styled.button`
+height:40px;
+width:100px;
+margin-top:20px;
+font-size:20px;
+`;
+const H1 = styled.h1`
+font-family:cursive;
+
+`
 
 class LoginPage extends React.Component {
     constructor(props) {
@@ -12,7 +49,7 @@ class LoginPage extends React.Component {
     }
 
     handleInputChange = e => {
-        console.log('typeing', e.target.name)
+     
         this.setState({ [e.target.name]: e.target.value })
     }
 
@@ -26,29 +63,42 @@ class LoginPage extends React.Component {
 
     render() {
         return (
-            <form className="loginpage">
+            <Loginpage>
+               <div>
+                <H1>Welcome to Instagram</H1>
                 <h2>LogIn</h2>
-                <input
+                </div>
+
+                <div>
+                    <div>
+                <Input
                     className="login-user"
                     type="text"
                     name="username"
                     placeholder="Username"
                     value={this.state.username}
                     onChange={this.handleInputChange} />
+                    </div>
 
-                <input
+                    <div>
+
+                <Input1
                     className="login-Password"
                     type="text"
                     name="password"
                     placeholder="Password"
                     value={this.state.password}
                     onChange={this.handleInputChange} />
-
-                <button type="submit" onClick={this.loginAttempt}>
+                    </div>
+                    
+                 <div>
+                <Button type="submit" onClick={this.loginAttempt}>
                     LogIn
-        </button>
+        </Button>
+        </div>
+        </div>
 
-            </form>
+            </Loginpage>
 
         )
     }
