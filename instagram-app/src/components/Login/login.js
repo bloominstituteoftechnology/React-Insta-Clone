@@ -17,15 +17,6 @@ border:0px solid;
  
 `;
 
-export const form=styled.form`
-border:1px solid rgb(202, 202, 202);
-width:480px;
-margin:auto;
-margin-top:20px;
-padding:10px 10px 10px 10px;
-
-
-`;
 
 export const Form=styled.form`
 border:1px solid rgb(202, 202, 202);

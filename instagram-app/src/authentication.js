@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-  let withAuthenticate = PostsPage => LoginPage =>
+  let withAuthenticate = PostsPage => Login =>
   class extends React.Component {
     constructor(props) {
       super(props);
@@ -19,8 +19,8 @@ import React from 'react';
       }
     }
     render() {
-     //if (this.state.loggedIn) return <PostsPage />;
-      return <LoginPage />;
+     if (this.state.loggedIn) return <PostsPage />;
+      return <Login/>;
     }
   };
 
