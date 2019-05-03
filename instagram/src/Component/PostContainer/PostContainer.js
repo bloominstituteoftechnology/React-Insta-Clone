@@ -41,7 +41,7 @@ margin-left:10px;
 
 `;
 
-const Likestext =  styled.div`
+const Likestext = styled.div`
 font-size: 10px;
 margin-top: 0px;
 font-size:20px;
@@ -71,7 +71,7 @@ class PostContainer extends React.Component {
     incrementLike = () => {
         this.setState({ likes: this.state.likes + 1 });
         localStorage.setItem('name', 'manju');
-        
+
     };
 
     submitComment = (e) => {
@@ -93,33 +93,33 @@ class PostContainer extends React.Component {
 
     render() {
         return (
-            <Mainpart className="mainpart" >
-                <InstaHeader  className="headerbar">
-                     <div>
-                    <Thumbnail className="secondimg" src={this.props.item.thumbnailUrl} alt="this.props.item.username" />
+            <Mainpart >
+                <InstaHeader>
+                    <div>
+                        <Thumbnail src={this.props.item.thumbnailUrl} alt="this.props.item.username" />
                     </div>
                     <div>
-                    <span className="username">{this.props.item.username} </span>
+                        <span>{this.props.item.username} </span>
                     </div>
                 </InstaHeader>
 
-                <Instaimg className="firstimg" src={this.props.item.imageUrl} alt="insta image"/>
+                <Instaimg src={this.props.item.imageUrl} alt="insta image" />
 
-               
 
-                <Likecommentpic className="heartlike">
+
+                <Likecommentpic>
                     <div onClick={this.incrementLike}>
-                    <i className="far fa-heart"></i>
-                   </div>
-                   
+                        <i className="far fa-heart"></i>
+                    </div>
+
                     <div ><i className="far fa-comment "></i></div>
-                    </Likecommentpic>
-                
-                <Likestext className="text">{this.state.likes}<span>likes</span></Likestext>
+                </Likecommentpic>
+
+                <Likestext>{this.state.likes}<span>likes</span></Likestext>
 
                 <CommentSection comments={this.state.comments} />
                 <form onSubmit={this.submitComment}>
-                    < Addcomment 
+                    < Addcomment
                         type='text'
                         placeholder='Add a comments ..'
                         value={this.state.input}

@@ -36,7 +36,7 @@ display:flex;
 padding-right: 40px;
 `
 
-const Social = styled.img`
+const Img = styled.img`
 height:30px;
 margin-left: 30px;
 `
@@ -45,23 +45,23 @@ const SearchBar = (props) => {
     return (
         <Header>
             <div>
-                <LogoImage className="instalogo" src={insta_logo} />
-                <img className="logoimg" src={insta_text_logo} />
+                <LogoImage src={insta_logo} />
+                <img src={insta_text_logo} />
             </div>
 
-            <form className="instaform">
+            <form>
                 <Input className="input" type="text" placeholder="Search" onKeyUp={props.search} />
             </form>
 
-            <Images className="social-wrapper">
+            <Images>
                 <div>
-                    <Social className="social" src={compass} />
+                    <Img src={compass} />
                 </div>
                 <div>
-                    <Social className="social" src={insta_heart_logo} />
+                    <Img src={insta_heart_logo} />
                 </div>
                 <div>
-                    <Social className="social" src={insta_person_logo} />
+                    <Img src={insta_person_logo} />
                 </div>
             </Images>
         </Header>
