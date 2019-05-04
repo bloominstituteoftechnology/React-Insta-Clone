@@ -20,7 +20,9 @@ const PostContainer = props => {
             handleChange={props.handleChange}
             key= {props.index}
             likes={props.likes}
+            timestamp={props.timestamp}
             index={props.index}/>
+            
         </div>
     );
 }
@@ -31,7 +33,8 @@ PostContainer.propTypes = {
     addComment: PropTypes.func,
     handleChange: PropTypes.func,
     index: PropTypes.number,
-    likes: PropTypes.number
+    likes: PropTypes.number,
+    timestamp: PropTypes.string
     
     
 }

@@ -4,8 +4,12 @@ import compass from '../../compass.svg';
 import Heart from '../../Heart.js';
 import user from '../../user.svg';
 import './SearchBar.css';
+import { Button } from 'reactstrap';
+
+
 
 const SearchBar = props => {
+    
     return (
         <div className="search-bar">
             <div className="heading-logo">
@@ -21,6 +25,8 @@ const SearchBar = props => {
                 <Heart />
                 <img src={user} className="user-logo logo" alt="logo" />
             </div>
+
+            <Button color="danger" onClick={props.logOut}>Log Out</Button>
             
         </div>
     );

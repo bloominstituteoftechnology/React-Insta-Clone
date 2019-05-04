@@ -15,7 +15,7 @@ const CommentSection = props => {
                     text={comment.text} key={index} 
                     addComment={props.addComment}/>
                     )}
-                <p className="timestamp">{moment().fromNow()}</p>
+                <p className="timestamp">{props.timestamp}</p>
                
                 <Form 
                 addComment={props.addComment} 
@@ -32,6 +32,7 @@ CommentSection.propTypes = {
     comments: PropTypes.array,
     addComment: PropTypes.func,
     handleChange: PropTypes.func,
-    index: PropTypes.number
+    index: PropTypes.number,
+    timestamp: PropTypes.string
 }
 export default CommentSection

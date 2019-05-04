@@ -24,9 +24,11 @@ class PostPage extends Component {
     const thisIndex = e.target.getAttribute('index')
     //console.log(this.state.data[thisIndex].comments)
     this.state.data[thisIndex].comments.push({ text: this.state.comments.text, username: localStorage.getItem('user')})
+   // this.state.data.map((object,index)  => localStorage.setItem(`post:${index}`, `${object.comments}`))
     this.setState({
       data: [...this.state.data ]
     })
+    
   }
 
   handleChange = e => {
@@ -87,8 +89,12 @@ class PostPage extends Component {
         data: [...this.state.data]
       })
     }
-    
   }
+
+  logOut = e => {
+    localStorage.clear();  
+    window.location.reload()
+}
 
   componentDidMount() {
   //const user = dummyData.map(data => data.comments)
@@ -109,10 +115,10 @@ class PostPage extends Component {
     return (
       <div className="App">
       
-        <SearchBar search={this.handleSearch} />
+        <SearchBar search={this.handleSearch} logOut={this.logOut} />
         {this.state.data.map((data, index) => 
           <PostContainer className="post" 
-          
+          timestamp={data.timestamp}
           data={data} 
           key={index} 
           comments={data.comments} 
