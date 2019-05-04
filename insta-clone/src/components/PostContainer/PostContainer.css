@@ -1,0 +1,42 @@
+.postContainer {
+    background-color: rgb(241, 239, 239);
+    display: flex;
+    flex-direction: column;
+    max-width: 665px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.card {
+    border-bottom: .5px solid black;
+    margin-bottom: 10px;
+}
+
+.commentSection {
+    display: flex;
+    align-items: baseline;
+    margin-left: 5px;
+    margin-bottom: 25px;
+    
+}
+
+span {
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    margin-right: 5px;
+
+}
+
+.userInfo {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.userInfo img {
+    border-radius: 50%;
+    width:100px;
+    height: 100px;
+    margin-right: 25px;
+}
