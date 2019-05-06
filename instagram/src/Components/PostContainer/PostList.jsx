@@ -1,6 +1,8 @@
 import React from "react";
 import PostContainer from "./PostContainer";
 
+import PropTypes from "prop-types";
+
 const PostList = props => {
   console.log(props);
   return (
@@ -18,5 +20,16 @@ const PostList = props => {
     </div>
   );
 };
+
+PostList.propTypes = {
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      key: PropTypes.number,
+      username: PropTypes.string,
+      thumbnailUrl: PropTypes.string,
+      imageUrl: PropTypes.string
+    })
+  )
+}
 
 export default PostList;
