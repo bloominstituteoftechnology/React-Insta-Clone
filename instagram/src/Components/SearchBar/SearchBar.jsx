@@ -1,10 +1,14 @@
 import React from 'react';
 
+import './SearchBar.css';
+
 function SearchBar() {
     return (
-        <div>
+        <div className='searchBar'>
+            <div className='logo'>
             <i className="fab fa-instagram" aria-hidden="true"></i>
             <h1>Instagram</h1>
+            </div>
             <section>
                 <input type='text' placeholder='search'></input>
             </section>
