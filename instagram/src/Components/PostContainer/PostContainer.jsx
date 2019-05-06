@@ -10,6 +10,7 @@ class PostContainer extends React.Component {
     };
 
     render() {
+        console.log(this.props);
         return (
             <div className='postContainer'>
                 <div className='postHeader'>
@@ -26,6 +27,7 @@ class PostContainer extends React.Component {
                 <p className='likes'>{this.props.likes} likes</p>
                 <section className='commentSection'>
                     <CommentSection comments={this.props.comments} />
+                    
                 </section>
             </div>
         );

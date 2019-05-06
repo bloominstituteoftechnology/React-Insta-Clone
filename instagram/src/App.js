@@ -1,6 +1,6 @@
 import React from "react";
 import SearchBar from "./Components/SearchBar/SearchBar";
-import PostContainer from "./Components/PostContainer/PostContainer";
+import PostList from "./Components/PostContainer/PostList";
 
 import "./App.css";
 
@@ -15,10 +15,11 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state.posts);
     return (
       <div className="App">
         <SearchBar />
-        <PostContainer posts={this.state.posts} />
+        <PostList posts={this.state.posts} />
       </div>
     );
   }
