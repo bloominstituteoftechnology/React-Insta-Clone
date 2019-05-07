@@ -14,34 +14,36 @@ class App extends React.Component {
     this.state = {
       posts: [],
       filteredPost: [],
-      likes: ''
+      likes: ""
     };
   }
 
   componentDidMount() {
     this.setState({ posts: dummyData });
-    console.log('CDM happened');
+    console.log("CDM happened");
   }
 
-searchPostsHandler = event => {
-  const posts = this.state.posts.filter(post => {
-    if (post.username.includes(event.target.value)) {
-      return post;
-    }
-  })
-  this.setState({ filteredPost: posts});
-}
-
+  searchPostsHandler = event => {
+    const posts = this.state.posts.filter(post => {
+      if (post.username.includes(event.target.value)) {
+        return post;
+      }
+    });
+    this.setState({ filteredPost: posts });
+  };
 
   render() {
     console.log(this.state.posts);
     return (
       <div className="App">
-        <SearchBar searchPostsHandler={this.searchPostsHandler}/>
-        <PostList posts={this.state.filteredPost.length > 0
+        <SearchBar searchPostsHandler={this.searchPostsHandler} />
+        <PostList
+          posts={
+            this.state.filteredPost.length > 0
               ? this.state.filteredPost
-              : this.state.posts }
-          />
+              : this.state.posts
+          }
+        />
       </div>
     );
   }
@@ -50,16 +52,16 @@ searchPostsHandler = event => {
 App.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({
-    username: PropTypes.string,
-    thumbnailUrl: PropTypes.string,
-    imageUrl: PropTypes.string,
-    likes: PropTypes.number,
-    timestamp: PropTypes.string,
-    // comments: PropTypes.arrayOf(
-    //    PropTypes.string
-    // )
+      username: PropTypes.string,
+      thumbnailUrl: PropTypes.string,
+      imageUrl: PropTypes.string,
+      likes: PropTypes.number,
+      timestamp: PropTypes.string
+      // comments: PropTypes.arrayOf(
+      //    PropTypes.string
+      // )
     })
   )
-}
+};
 
 export default App;
