@@ -31,12 +31,20 @@ img {
     margin: 0
 }
 
-.postCommentsHeader .fa-heart {
+.postIcons .fa-heart {
     font-size: 2rem;
+    margin: 10px;
 }
 
-.postCommentsHeader .fa-comment {
+.postIcons .fa-comment {
     font-size: 2rem;
+    margin: 10px;
+}
+
+.postIcons {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 10px;
 }
 
 .likes {

@@ -12,16 +12,36 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData
+      posts: [],
+      filteredPost: [],
+      likes: ''
     };
   }
+
+  componentDidMount() {
+    this.setState({ posts: dummyData });
+    console.log('CDM happened');
+  }
+
+searchPostsHandler = event => {
+  const posts = this.state.posts.filter(post => {
+    if (post.username.includes(event.target.value)) {
+      return post;
+    }
+  })
+  this.setState({ filteredPost: posts});
+}
+
 
   render() {
     console.log(this.state.posts);
     return (
       <div className="App">
-        <SearchBar />
-        <PostList posts={this.state.posts} />
+        <SearchBar searchPostsHandler={this.searchPostsHandler}/>
+        <PostList posts={this.state.filteredPost.length > 0
+              ? this.state.filteredPost
+              : this.state.posts }
+          />
       </div>
     );
   }

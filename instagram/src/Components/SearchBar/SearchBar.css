@@ -28,15 +28,20 @@ input {
     background-color: rgb(243, 242, 242);
 }
 
+.icons {
+    display: flex;
+    
 
-.fa-compass {
+}
+
+.icons .fa-compass {
     margin: 0 10px;
 }
 
-.fa-heart {
+.icons .fa-heart {
     margin: 0 10px;
 }
 
-.fa-user {
+.icons .fa-user {
     margin: 0 10px;
 }

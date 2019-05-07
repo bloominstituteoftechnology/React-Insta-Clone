@@ -7,11 +7,16 @@ import './PostContainer.css';
 class PostContainer extends React.Component {
     state = {
         posts: [],
-        likes: ''
+        likes: this.props.likes 
     };
 
+    handleClick = () => {
+        let likes = this.state.likes + 1;
+        this.setState({ likes });
+      };
+
     render() {
-        console.log(this.props);
+        console.log(this.state.likes);
         return (
             <div className='postContainer'>
                 <div className='postHeader'>
@@ -23,10 +28,10 @@ class PostContainer extends React.Component {
                 </section>
                 <section className='commentsHeader'>
                 <div className='postIcons'>
-                    <i className="fa fa-heart" aria-hidden="true"></i>
-                    <i className="fa fa-comment" aria-hidden="true"></i> 
+                    <i className="fa fa-heart" aria-hidden="true" onClick={this.handleClick}></i>
+                    <i className="fa fa-comment" aria-hidden="true" ></i> 
                 </div>
-                <p className='likes'>{this.props.likes} likes</p>
+                <p className='likes'>{this.state.likes} likes</p>
                 </section>
                 <section className='commentSection'>
                     <CommentSection comments={this.props.comments} />
