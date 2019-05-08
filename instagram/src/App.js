@@ -2,12 +2,15 @@ import React from "react";
 // import SearchBar from "./Components/SearchBar/SearchBar";
 // import PostList from "./Components/PostContainer/PostList";
 import PostPage from "./Components/PostContainer/PostPage";
-
+import LoginPage from "./Components/Authentication/LoginPage";
+import withAuthenticate from './Components/Authentication/withAuthenticate';
 import PropTypes from "prop-types";
 
 import "./App.css";
 
-// import dummyData from "./dummy-data";
+const ComponentFromWithAuthenticate = withAuthenticate(PostPage);
+
+
 
 class App extends React.Component {
   constructor() {
@@ -22,7 +25,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <PostPage />
+        <ComponentFromWithAuthenticate />
+        
       </div>
     );
   }
