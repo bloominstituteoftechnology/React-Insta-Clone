@@ -1,25 +1,20 @@
 import React from "react";
-// import SearchBar from "./Components/SearchBar/SearchBar";
-// import PostList from "./Components/PostContainer/PostList";
+
 import PostPage from "./Components/PostContainer/PostPage";
-import LoginPage from "./Components/Authentication/LoginPage";
+import LoginPage from "./Components/Login/LoginPage";
 import withAuthenticate from './Components/Authentication/withAuthenticate';
 import PropTypes from "prop-types";
 
 import "./App.css";
 
-const ComponentFromWithAuthenticate = withAuthenticate(PostPage);
+const ComponentFromWithAuthenticate = withAuthenticate(PostPage)(LoginPage);
 
 
 
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      posts: [],
-      filteredPost: [],
-      likes: ""
-    };
+    this.state = {};
   }
 
   render() {

@@ -1,14 +1,28 @@
 import React from "react";
-import PostPage from '../PostContainer/PostPage';
-import LoginPage from './LoginPage';
 
-const withAuthenticate = App =>
+
+const withAuthenticate = PostPage => LoginPage =>
   class extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            loggedIn: false
+        };
+    }
+
+    componentDidMount() {
+        if (!localStorage.getItem('user')) {
+            this.setState({ loggedIn: false });
+        } else {
+            this.setState({ loggedIn: true });
+        }
+    }
+
     render() {
-      if (localStorage.getItem("user")) {
-        return <LoginPage/>;
+      if (this.state.loggedIn) {
+        return <PostPage />;
       } else {
-        return <PostPage  />;
+        return <LoginPage />;
       }
     }
   };
