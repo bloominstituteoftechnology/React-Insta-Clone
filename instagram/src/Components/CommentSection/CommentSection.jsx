@@ -2,6 +2,8 @@ import React from "react";
 
 import PropTypes from "prop-types";
 
+import './CommentSection.css';
+
 class CommentSection extends React.Component {
   state = {
     comments: [],
@@ -30,14 +32,15 @@ class CommentSection extends React.Component {
     console.log(this.state.userComment)
   }
 
+
   render() {
     console.log(this.state.comments);
     return (
       <div>
         {this.state.comments.map((post, index) => (
-          <div key={index} className="commentSection">
+          <div key={index} className="individualComments">
             <strong className="username">{post.username}</strong>
-            <p>{post.text}</p>
+            <p className="commentText">{post.text}</p>
           </div>
         ))}
 

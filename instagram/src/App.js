@@ -1,12 +1,13 @@
 import React from "react";
-import SearchBar from "./Components/SearchBar/SearchBar";
-import PostList from "./Components/PostContainer/PostList";
+// import SearchBar from "./Components/SearchBar/SearchBar";
+// import PostList from "./Components/PostContainer/PostList";
+import PostPage from "./Components/PostContainer/PostPage";
 
 import PropTypes from "prop-types";
 
 import "./App.css";
 
-import dummyData from "./dummy-data";
+// import dummyData from "./dummy-data";
 
 class App extends React.Component {
   constructor() {
@@ -18,32 +19,10 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.setState({ posts: dummyData });
-    console.log("CDM happened");
-  }
-
-  searchPostsHandler = event => {
-    const posts = this.state.posts.filter(post => {
-      if (post.username.includes(event.target.value)) {
-        return post;
-      }
-    });
-    this.setState({ filteredPost: posts });
-  };
-
   render() {
-    console.log(this.state.posts);
     return (
       <div className="App">
-        <SearchBar searchPostsHandler={this.searchPostsHandler} />
-        <PostList
-          posts={
-            this.state.filteredPost.length > 0
-              ? this.state.filteredPost
-              : this.state.posts
-          }
-        />
+        <PostPage />
       </div>
     );
   }
