@@ -7,13 +7,20 @@ import './PostContainer.css';
 class PostContainer extends React.Component {
     state = {
         posts: [],
-        likes: this.props.likes 
+        likes: this.props.likes,
+        view: { open: false }
     };
 
     handleClick = () => {
         let likes = this.state.likes + 1;
         this.setState({ likes });
       };
+
+    toggleCommentView = () => {
+        this.setState({
+            open: !this.state.open
+          });
+    }
 
     render() {
         console.log(this.state.likes);
@@ -29,11 +36,11 @@ class PostContainer extends React.Component {
                 <section className='commentsHeader'>
                 <div className='postIcons'>
                     <i className="fa fa-heart" aria-hidden="true" onClick={this.handleClick}></i>
-                    <i className="fa fa-comment" aria-hidden="true" ></i> 
+                    <i className="fa fa-comment" aria-hidden="true" onClick={this.toggleCommentView.bind(this)}></i> 
                 </div>
                 <p className='likes'>{this.state.likes} likes</p>
                 </section>
-                <section className='commentSection'>
+                <section className={'commentSectionCollapse' + (this.state.open ? ' in' : '')}>
                     <CommentSection comments={this.props.comments} />
                     
                 </section>

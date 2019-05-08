@@ -57,5 +57,10 @@ img {
     margin: 0;
 }
 
+.commentSectionCollapse {
+    display: none
+}
 
-
+.commentSectionCollapse.in {
+    display: flex
+}
