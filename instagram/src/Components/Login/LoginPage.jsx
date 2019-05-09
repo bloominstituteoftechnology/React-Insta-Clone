@@ -1,4 +1,5 @@
 import React from "react";
+import styled from 'styled-components';
 
 class LoginPage extends React.Component {
   constructor(props) {
@@ -22,9 +23,9 @@ class LoginPage extends React.Component {
 
   render() {
     return (
-      <div className="loginPage">
-        <h1>Login to Instagram Clone!</h1>
-        <form className="loginForm">
+      <LoginPageStyled>
+        <h1>Login to <span>Instagram</span> Clone!</h1>
+        <FormStyled>
           <input 
             type="text" 
             placeholder="username" 
@@ -40,10 +41,44 @@ class LoginPage extends React.Component {
             onChange={this.handleChange}
             />
           <button onClick={this.handleLogin}>Log In</button>
-        </form>
-      </div>
+        </FormStyled>
+      </LoginPageStyled>
     );
   }
 }
+
+const LoginPageStyled = styled.div`
+  // border: 1px solid black;
+  margin: 50% auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    span{
+      font-family: "Dancing Script", cursive;
+    }
+    
+  }
+`;
+
+const FormStyled = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    margin: 3px auto;
+    border-radius: 3px;
+  }
+
+  button {
+    border-radius: 3px;
+    margin: 3px auto;
+  }
+`
+
 
 export default LoginPage;

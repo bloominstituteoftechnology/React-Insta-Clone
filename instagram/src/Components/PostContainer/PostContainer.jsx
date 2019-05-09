@@ -1,7 +1,8 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 
-import './PostContainer.css';
+
+import styled from 'styled-components';
 
 
 class PostContainer extends React.Component {
@@ -25,7 +26,7 @@ class PostContainer extends React.Component {
     render() {
         console.log(this.state.likes);
         return (
-            <div className='postContainer'>
+            <PostContainerStyle>
                 <div className='postHeader'>
                     <img src={this.props.thumbnail} alt='' className="thumbnailImg" />
                     <h3 className='username'>{this.props.username}</h3>
@@ -44,9 +45,76 @@ class PostContainer extends React.Component {
                     <CommentSection comments={this.props.comments} />
                     
                 </section>
-            </div>
+            </PostContainerStyle>
         );
     }
 }
+
+const PostContainerStyle = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 90%;
+    border: 1px solid rgb(230, 230, 230);
+    
+    .postHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .thumbnailImg {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+    }
+    
+    img {
+        height: auto;
+        width: 100%;
+    }
+    
+    .commentHeader {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0
+    }
+    
+    .postIcons .fa-heart {
+        font-size: 2rem;
+        margin: 10px;
+    }
+    
+    .postIcons .fa-comment {
+        font-size: 2rem;
+        margin: 10px;
+    }
+    
+    .postIcons {
+        display: flex;
+        justify-content: flex-start;
+        margin: 10px 10px;
+    }
+    
+    .likes {
+        display: flex;
+        justify-content: flex-start;
+        margin: 10px 10px;
+    }
+    
+    .likes p {
+        margin: 0;
+    }
+    
+    .commentSectionCollapse {
+        display: none
+    }
+    
+    .commentSectionCollapse.in {
+        display: flex
+    }
+    `
 
 export default PostContainer;

@@ -5,7 +5,6 @@ import LoginPage from "./Components/Login/LoginPage";
 import withAuthenticate from './Components/Authentication/withAuthenticate';
 import PropTypes from "prop-types";
 
-import "./App.css";
 
 const ComponentFromWithAuthenticate = withAuthenticate(PostPage)(LoginPage);
 
