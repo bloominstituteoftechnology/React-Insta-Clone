@@ -5,18 +5,22 @@ import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer';
 import SearchBar from './components/Searchbar';
 
-function App() {
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state={
+      data: dummyData
+    }
+  }
+
+  render(){
   return (
     <div className="App">
-      <PostContainer data={dummyData.map(item =>
-        <div className="dataSet">
-          <p>{item.username}</p>
-          <img src={item.img} alt={item.username}
-        </div>
-      )}/>
+      <PostContainer data={this.state.data}/>
       <SearchBar />
     </div>
   );
+}
 }
 
 export default App;

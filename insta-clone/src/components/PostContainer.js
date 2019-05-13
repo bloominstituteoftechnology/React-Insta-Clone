@@ -3,23 +3,23 @@ import React from 'react';
 
 const PostContainer = props => {
     return (
-
         <div className="data">
-          <h3>{props.data}</h3>
-
-        </div>
-
-
+          {props.data.map(item => (
+            <div>
+              <h3>{item.username}</h3>
+              <img src={item.thumbnailUrl}/>
+              <h4>{item.likes}</h4>
+              <h4>{item.timestamp}</h4>
+              <p>{item.comments.map(item =>(
+                <div>
+                  <p>{item.username}</p>
+                  <p>{item.text}</p>
+                </div>
+              ))}</p>
+            </div>
+          ))}
+      </div>
     )
 }
 
 export default PostContainer;
-
-
-// {props.pokemon.map(pokemon => (
-//        <div key={pokemon.id} className="pokemon">
-//          <img src={pokemon.img} alt={pokemon.name} />
-//          <div>
-//            <h3>{pokemon.name}</h3>
-//          </div>
-//        </div>
