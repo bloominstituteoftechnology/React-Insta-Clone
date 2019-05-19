@@ -3,6 +3,15 @@ import CommentSectionContainer from '../commentSection/CommentsSectionContainer'
 import PropTypes from 'prop-types';
 import './post.css'
 import LikeSection from './LikeSection'
+import styled from 'styled-components';
+
+const Container = styled.div`
+    max-width: 640px;
+    width: 100%;
+    margin: 10px auto;
+    border: 1px solid lightgray;
+
+`;
 
 class Post extends React.Component {
     constructor(props) {
