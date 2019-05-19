@@ -6,6 +6,7 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "2.1.1",
+    "reactstrap": "^8.0.0",
     "styled-components": "^4.2.0"
   },
   "scripts": {
