@@ -41,4 +41,8 @@ Post.propTypes = {
   )
 }
 
+Post.defaultProps = {
+  dummyData: []
+}
+
 export default Post;

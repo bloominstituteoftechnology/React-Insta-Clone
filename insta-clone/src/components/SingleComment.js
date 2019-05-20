@@ -24,5 +24,8 @@ Comment.propTypes = {
   )
 }
 
+Comment.defaultProps = {
+  dummyData: []
+}
 
 export default Comment;

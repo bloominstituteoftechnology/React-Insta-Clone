@@ -27,5 +27,8 @@ PostHeader.propTypes = {
   )
 }
 
+PostHeader.defaultProps = {
+  dummyData: []
+}
 
 export default PostHeader;
