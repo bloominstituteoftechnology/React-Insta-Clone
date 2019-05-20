@@ -12,18 +12,20 @@ class App extends React.Component {
     super();
     this.state={
       data: dummyData,
+
     }
   }
+
 
   render(){
   return (
     <div className="App">
       <SearchBar />
-      <PostContainer data={this.state.data}/>
-
+      <PostContainer posts={this.state.data}/>
     </div>
   );
 }
 }
+
 
 export default App;
