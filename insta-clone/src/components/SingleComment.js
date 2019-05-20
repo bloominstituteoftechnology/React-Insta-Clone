@@ -1,5 +1,6 @@
 //Single comment
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Comment = props => {
   return (
@@ -9,5 +10,19 @@ const Comment = props => {
     </div>
   );
 };
+
+Comment.propTypes = {
+  dummyData: PropTypes.arrayOf(
+    PropTypes.shape({
+      comments: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+          username: PropTypes.string
+        })
+      )
+    })
+  )
+}
+
 
 export default Comment;
