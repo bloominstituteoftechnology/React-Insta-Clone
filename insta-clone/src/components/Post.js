@@ -5,6 +5,10 @@ import PostHeader from './PostHeader.js';
 import Likes from './Likes.js';
 import PropTypes from 'prop-types';
 
+//Here, all aspects of the dummyData are combined into one component so that
+//they can be properly mapped and styled in the PostContainer. Notice that all
+//elements of the array can be referrenced now by the same prop. All instances
+//of post are instances of dummyData being passed down from App.js
 const Post = props => {
   return (
     <div className="header">

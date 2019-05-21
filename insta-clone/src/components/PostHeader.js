@@ -2,6 +2,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+//Here I am creating a component that comprises just the thumbnail and the username
+//because it will be easier to style them as a single component. This component
+//is passed into the Post component where it is combined with the imageUrl,
+//the CommentSection component, and the likes component
 const PostHeader = props => {
   return (
     <div>
