@@ -10,22 +10,21 @@ import PropTypes from 'prop-types';
 //elements of the array can be referrenced now by the same prop. All instances
 //of post are instances of dummyData being passed down from App.js
 const Post = props => {
-  return (
-    <div className="header">
-        <PostHeader
-        username={props.post.username}
-        thumbnailUrl={props.post.thumbnailUrl}
-        />
-    <div className="post">
-      <img
-      alt="picture"
-      src={props.post.imageUrl}
+return(  <div>
+    <div>
+      <PostHeader
+      thumbnailUrl={props.post.thumbnailUrl}
+      username={props.post.username}
       />
     </div>
-      <Likes like={props.post.likes} />
-      <CommentSection comments={props.post.comments}/>
+    <div>
+      <img
+        alt="posted picture"
+        src={props.post.imageUrl}
+        />
     </div>
-  )
+  </div>
+);
 }
 
 Post.propTypes = {

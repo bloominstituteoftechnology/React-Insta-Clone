@@ -7,19 +7,18 @@ import PropTypes from 'prop-types';
 //is passed into the Post component where it is combined with the imageUrl,
 //the CommentSection component, and the likes component
 const PostHeader = props => {
-  return (
-    <div>
-      <div className="profile">
-        <img
-        alt="user profile picture"
-        src={props.thumbnailUrl}
-        />
-      </div>
-      <div className="userName">
-        <h4>{props.username}</h4>
-      </div>
-    </div>
-)
+  return( <div>
+            <div className="thumbnail">
+              <img
+                alt="profile picture"
+                src={props.thumbnailUrl}
+                />
+            </div>
+            <div className="userName">
+              <strong>{props.username}</strong>
+            </div>
+          </div>
+);
 }
 
 PostHeader.propTypes = {

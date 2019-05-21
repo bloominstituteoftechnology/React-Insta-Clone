@@ -5,14 +5,12 @@ import Post from './Post';
 
 
 const PostContainer = props => {
-
-      return (
+  return (
         <div>
           {props.posts.map(item => <Post post={item}/>)}
         </div>
-    );
+      );
 }
-
 
 
 

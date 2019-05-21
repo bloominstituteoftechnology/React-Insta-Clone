@@ -2,14 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Comment = props => {
-  return (
-    <div>
-      <p>{props.comment.text}</p>
-      <p>{props.comment.username}</span>
-    </div>
-  );
-};
+
 
 Comment.propTypes = {
   dummyData: PropTypes.arrayOf(
