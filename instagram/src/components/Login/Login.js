@@ -2,6 +2,11 @@ import React from 'react';
 import './Login.css'
 import styled from 'styled-components';
 
+const Container = styled.div`
+    text-align: center;
+    margin-top: 150px;
+`;
+
 const LoginContainer = styled.div`
     width: 66%;
     height: 500px;
@@ -43,9 +48,9 @@ class Login extends React.Component {
 
     render() {
         return(
-            <div>
+            <Container>
                 <LoginTop>
-                    Please Log in.
+                    Please log in using any username and password.
                 </LoginTop>
                 <LoginContainer>
                     <form>
@@ -71,7 +76,7 @@ class Login extends React.Component {
                         </button>
                     </form>
                 </LoginContainer>
-            </div>
+            </Container>
         );
     }
 }
