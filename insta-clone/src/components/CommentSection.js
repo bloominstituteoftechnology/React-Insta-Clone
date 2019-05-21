@@ -21,12 +21,13 @@ post = () => {
   this.setState({comment: `${this.state.msg}`})
 }
 
-// type="text" value={props.comment} change={props.changeHandler} placeholder="Add comment"
-
+//Here, the comments section of the array is mapped over, returning each item of the comment
+//section. The comment section is combined with an input because the input needs to be
+//rendered in and interact with the comment section.
   render(){
   return (
     <div>
-      {this.state.comments.map((item) => <Comment comment={item}/>)}
+      {this.state.comments.map((item) => <Comment com={item}/>)}
       <p>{this.state.comment}</p>
       <PostInput
       comment={this.state.msg}
