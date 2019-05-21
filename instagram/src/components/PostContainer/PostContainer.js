@@ -6,7 +6,9 @@ import Post from './Post'
 const PostContainer = props => {
     return (
         <div>
-            <Post posts={props.posts} />
+            <Post 
+                posts={props.posts}
+            />
         </div>
     );
 }
