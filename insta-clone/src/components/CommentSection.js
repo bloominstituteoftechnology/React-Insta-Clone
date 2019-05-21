@@ -29,7 +29,7 @@ post = () => {
   return (
     <div>
       <div>
-        {this.state.comments.map((item) => <Comment com={item} />)}
+        {this.state.comments.map((item, i) => <Comment com={item} key={i}/>)}
       </div>
         <div className="newComment">
           <p><strong>coolguy420</strong> {this.state.comment}</p>

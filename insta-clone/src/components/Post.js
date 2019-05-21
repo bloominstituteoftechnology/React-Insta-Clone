@@ -23,7 +23,7 @@ return(  <div>
                 src={props.post.imageUrl}
                 />
             </div>
-              <Likes likes={props.post.likes}/>
+              <Likes likes={props.post.likes} />
               <CommentSection comments={props.post.comments}/>
           </div>
 );

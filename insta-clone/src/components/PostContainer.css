@@ -20,4 +20,19 @@
 .likes {
   text-align: left;
   margin-left: 22%;
+  margin-top: 10px;
+}
+
+.heart img{
+  width: 2.5%;
+
+}
+
+.heart {
+  margin-left: -50%;
+  margin-top: 10px;
+}
+
+.heart:hover {
+  cursor: pointer;
 }

@@ -3,11 +3,13 @@
   text-align: left;
   display: flex;
   margin-left: 22%;
+  line-height: 0.1;
 }
 
 .newComment {
   text-align: left;
   margin-left: 22%;
+  margin-top: -10px;
 }
 
 .input {

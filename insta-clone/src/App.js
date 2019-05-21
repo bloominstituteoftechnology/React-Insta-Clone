@@ -11,16 +11,27 @@ class App extends React.Component {
   constructor(){
     super();
     this.state={
-      data: dummyData,
+      data: [],
+      search: ""
 
     }
   }
 
+componentDidMount () {
+  this.setState({data: dummyData});
+}
 
+changeHandler = e => {
+  this.setState({search: e.target.value})
+}
+
+
+
+// value={props.search} onChange={props.change} onSubmit={props.submit}
   render(){
   return (
     <div className="App">
-      <SearchBar />
+      <SearchBar search={this.state.search} change={this.changeHandler} searchGram={this.find}/>
       <PostContainer posts={this.state.data} />
     </div>
   );
