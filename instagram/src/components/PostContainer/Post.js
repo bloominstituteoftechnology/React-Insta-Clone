@@ -1,7 +1,6 @@
 import React from 'react';
-import heart from '../../assets/heart.png';
-import comment from '../../assets/comment.png';
 import CommentSection from '../CommentSection/CommentSection';
+import PostIcons from '../PostIcons/PostIcons';
 import './PostContainer.css';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -34,14 +33,6 @@ const BottomPost = styled.div`
     margin-bottom: 20px;
 `;
 
-const PostIcons = styled.div`
-    padding-top: 5px;
-`;
-
-const PcImage = styled.img`
-    width: 60px;
-`;
-
 const Likes = styled.p`
     margin-top: 0;
 `;
@@ -58,14 +49,7 @@ const Post = props => {
                         </UsernIcon>
                         <img src={post.imageUrl} alt="Shared Post" />
                         <BottomPost>
-                            <PostIcons>
-                                <PcImage 
-                                    onClick={props.incrementLike} 
-                                    src={heart} 
-                                    alt="Heart" 
-                                />
-                                <PcImage src={comment} alt="Comment" />
-                            </PostIcons>
+                            <PostIcons />
                             <Likes>
                                 <strong>{post.likes} likes</strong>
                             </Likes>
