@@ -29,7 +29,6 @@ class App extends Component {
     this.setState({searchedPosts: searchPost});
   }
 
-
   login() {
     localStorage.setItem('username', '')
   }
@@ -38,11 +37,13 @@ class App extends Component {
     return (
       <div>
         <Searchbar searchInput={this.searchInput} />
-        <PostsPage posts={
-          this.state.searchedPosts.length > 0
-          ? this.state.searchedPosts:
-          this.state.posts
-        } />
+        <PostsPage 
+          posts={
+            this.state.searchedPosts.length > 0
+            ? this.state.searchedPosts:
+            this.state.posts
+          }
+        />
       </div>
       
     );

@@ -20,13 +20,6 @@ const Authenticate = App =>
             }
             localStorage.removeItem('user')
         }
-
-        // componentWillUnmount() {
-        //     if(this.localStorage.getItem('user')) {
-        //         localStorage.removeItem('user')
-        //     }
-
-        // }
 //Add a localStorage.remove
         render() {
             if (this.state.loginStatus) return <App />
