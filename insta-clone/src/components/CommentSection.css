@@ -1,1 +1,16 @@
 /* CommentSection CSS */
+.comments {
+  text-align: left;
+  display: flex;
+  margin-left: 22%;
+}
+
+.newComment {
+  text-align: left;
+  margin-left: 22%;
+}
+
+.input {
+  margin-left: -45%;
+  margin-bottom: 50px;
+}

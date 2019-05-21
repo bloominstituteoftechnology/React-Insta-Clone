@@ -2,6 +2,7 @@
 import React from 'react';
 import PostInput from './PostInput';
 import Comment from './SingleComment.js';
+import './CommentSection.css';
 
 class CommentSection extends React.Component {
   constructor(props){
@@ -27,13 +28,19 @@ post = () => {
   render(){
   return (
     <div>
-      {this.state.comments.map((item) => <Comment com={item}/>)}
-      <p>{this.state.comment}</p>
-      <PostInput
-      comment={this.state.msg}
-      changeHandler={this.changeHandler}
-      change={this.post}
-      />
+      <div>
+        {this.state.comments.map((item) => <Comment com={item} />)}
+      </div>
+        <div className="newComment">
+          <p><strong>coolguy420</strong> {this.state.comment}</p>
+        </div>
+          <div className="input">
+            <PostInput
+            comment={this.state.msg}
+            changeHandler={this.changeHandler}
+            change={this.post}
+            />
+          </div>
     </div>
   );
 }

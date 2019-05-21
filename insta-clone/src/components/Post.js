@@ -11,21 +11,21 @@ import PropTypes from 'prop-types';
 //of post are instances of dummyData being passed down from App.js
 const Post = props => {
 return(  <div>
-    <div>
-      <PostHeader
-      thumbnailUrl={props.post.thumbnailUrl}
-      username={props.post.username}
-      />
-    </div>
-    <div>
-      <img
-        alt="posted picture"
-        src={props.post.imageUrl}
-        />
-    </div>
-      <Likes likes={props.post.likes}/>
-      <CommentSection comments={props.post.comments}/>
-  </div>
+            <div>
+              <PostHeader
+              thumbnailUrl={props.post.thumbnailUrl}
+              username={props.post.username}
+              />
+            </div>
+            <div>
+              <img
+                alt="posted picture"
+                src={props.post.imageUrl}
+                />
+            </div>
+              <Likes likes={props.post.likes}/>
+              <CommentSection comments={props.post.comments}/>
+          </div>
 );
 }
 

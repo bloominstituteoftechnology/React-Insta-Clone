@@ -1,5 +1,6 @@
 //header
 import React from 'react';
+import './PostContainer.css';
 import PropTypes from 'prop-types';
 
 //Here I am creating a component that comprises just the thumbnail and the username
@@ -7,7 +8,7 @@ import PropTypes from 'prop-types';
 //is passed into the Post component where it is combined with the imageUrl,
 //the CommentSection component, and the likes component
 const PostHeader = props => {
-  return( <div>
+  return( <div className="header">
             <div className="thumbnail">
               <img
                 alt="profile picture"
