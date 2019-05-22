@@ -2,28 +2,33 @@
 
 .thumb {
   border-radius: 50%;
-  height: 40px;
-  float: left;
+  height: 100px;
   margin-bottom: 10px;
+  margin-right:800px;
+  margin-top: 65px;
 
 }
 
 h6 {
-  font-size: 16px;
-  margin-bottom: 10px;
+font-size: 20px;
+ text-align: center;
+ margin-bottom: 55px;
+ margin-top: -65px;
+ margin-right:495px;
 }
+ 
 
 .bt {
   display: flex;
-  justify-content: left;
- 
-  margin: 5px;
+  justify-content: center;
+  margin: 25px;
 }
 
 
 .commentz {
   margin: 10px; 
   line-height: 25px;
+  text-align: center;
 }
 
 .search {
@@ -44,7 +49,7 @@ h6 {
 
 .mmm {
   display: flex;
-  font-size: 50px
+  font-size: 60px
 }
 
 form {

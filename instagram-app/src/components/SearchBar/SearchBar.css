@@ -16,6 +16,7 @@ h1 {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+    background-color: aqua;
 }
 
 .heading-logo,
