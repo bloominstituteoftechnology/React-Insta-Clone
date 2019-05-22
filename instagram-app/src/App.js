@@ -1,31 +1,47 @@
-
-import React, { Component } from 'react';
-import './App.css';
-import dummyData from './dummy-data';
-import PostsContainer from './components/PostsContainer/PostsContainer';
-import SearchBar from './components/SearchBar/SearchBarContainer';
+import React, { Component } from "react";
+import "./App.css";
+import dummyData from "./dummy-data";
+import PostContainer from "./components/PostsContainer/PostContainer";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      posts: []
+      data: dummyData,
+      liked: false
     };
   }
 
-  componentDidMount(){
-    setTimeout( () => {
-      this.setState({posts: dummyData});
-    }, 2000)
-  }
+  handleLikes = id => {
+    const selected = this.state.data.filter(post => post.id === id);
 
-  
+    const newPost = {
+      id: selected[0].id,
+      username: selected[0].username,
+      thumbnailUrl: selected[0].thumbnailUrl,
+      likes: this.state.liked ? selected[0].likes -1: selected[0].likes +1,
+      timestamp: selected[0].timestamp,
+      comments: selected[0].comments,
+      imageUrl: selected[0].imageUrl
+    };
+    const filteredData = this.state.data.map(post => {
+      if (post.id !== id) {
+        return post;
+      } else {
+        console.log(newPost);
+        return newPost;
+      }
+    });
+
+    this.setState({ data: [...filteredData], liked: !this.state.liked});
+  };
 
   render() {
     return (
       <div className="App">
         <SearchBar />
-        <PostsContainer posts={this.state.posts} />
+        <PostContainer posts={this.state.data} handleLikes={this.handleLikes} />
       </div>
     );
   }

@@ -1,37 +1,61 @@
-.search-bar-wrapper {
-    border-bottom: 1px solid #3333;
-    height: 80px;
-    line-height: 70px;
-    display: flex;
-    justify-content: space-between;
-    background: #ffffff;
-  }
 
-  .search-bar {
-    padding: 5px 10px;
-    background: #FAFAFA;
-    border: 1px solid #EEEEEE;
-    text-align: center;
-    opacity: .5;
-  }
-  
-  .image-wrapper {
-    height: 29px;
-  }
-  
-  .logo-image {
-    margin: 10px 0;
-    padding: 0 10px;
-    border-left: 1px solid #EEEEEE;
-    height: 100%;
-  }
-  
-  .social-wrapper {
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script');
+
+h1 {
+    font-family:  'Oleo Script', cursive;
+}
+
+.instagram-logo {
+    padding:  0px 2rem;
+    border-right: 1px solid gray;
+}
+
+.search-bar {
     display: flex;
-  }
-  
-  .social {
-    margin: 10px;
-    width: 24px;
-    height: 24px;
-  }
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.heading-logo,
+.user-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 15rem;
+
+}
+
+.logo {
+    padding: .5rem;
+}
+
+.search {
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    height: 1.5rem;
+    width: 10rem;
+    text-align: center;
+    
+}
+
+
+.comment-logo {
+    margin: .5rem;
+}
+
+.comment-logos {
+    width: 640px;
+    display: flex;
+    flex-wrap: wrap;  
+}
+
+.likes {
+    text-align: left;
+    margin: 0;
+    width: 100%;
+    font-weight: 600;
+}
+
