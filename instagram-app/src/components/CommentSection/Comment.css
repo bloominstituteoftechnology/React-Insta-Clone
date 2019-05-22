@@ -1,6 +1,6 @@
 .comment-text {
     text-align: left;
-    padding: 2px;
+    padding: 5px;
     margin-left: 4px;
   }
   
@@ -10,6 +10,13 @@
   }
   
   .user {
-    font-weight: 500;
+    font-weight: bold;
     font-size: 12px;
+  }
+
+  .comment-submit {
+    border: 1px solid white;
+    border-top: 1px solid #EEEEEE;
+    width: 97%;
+    padding: 15px 5px;
   }

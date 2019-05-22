@@ -1,9 +1,10 @@
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
 import CommentInput from './CommentInput';
 
-class CommentSectionContainer extends React.Component {
+class CommentSection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,19 +12,21 @@ class CommentSectionContainer extends React.Component {
       comment: ''
     };
   }
-  componentDidMount() {
-    const id = this.props.postId;
-    if (localStorage.getItem(id)) {
-      // alert('Yay!');
-      this.setState({
-        comments: JSON.parse(localStorage.getItem(this.props.postId))
-      });
-    } else {
-      this.setComments();
-    }
-  }
 
-  componenetWillUnmount() {
+  
+  componentDidMount(){
+    const id = this.props.postId;
+  if (localStorage.getItem(id)) {
+    this.setState({
+      comments: JSON.parse(localStorage.getItem(this.props.postId))
+    });
+
+  } else {
+    this.setComments();
+  }
+}
+
+  componentWillUnmount() {
     this.setComments();
   }
 
@@ -34,16 +37,17 @@ class CommentSectionContainer extends React.Component {
     );
   };
 
-  commentHandler = e => {
-    this.setState({ comment: e.target.value });
-  };
+  
+  commentHandler = event => {
+    this.setState({comment: event.target.value})
+  }
 
   handleCommentSubmit = e => {
     e.preventDefault();
-    const newComment = { username: 'sharanjitsandhu', text: this.state.comment};
+    const newComment = { text: this.state.comment, username: 'justinandrade' };
     const comments = this.state.comments.slice();
     comments.push(newComment);
-    this.setState({ comments, comment: '' });
+    this.setState({ comments, comment: ''});
     setTimeout(() => {
       this.setComments();
     }, 500);
@@ -53,7 +57,7 @@ class CommentSectionContainer extends React.Component {
     return (
       <div>
         {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
-        <CommentInput 
+        <CommentInput  
         comment={this.state.comment}
         submitComment={this.handleCommentSubmit}
         changeComment={this.commentHandler}
@@ -63,10 +67,10 @@ class CommentSectionContainer extends React.Component {
   }
 }
 
-CommentSectionContainer.propTypes = {
+CommentSection.propTypes = {
   comments: PropTypes.arrayOf(
-    PropTypes.shape({ username: PropTypes.string, text: PropTypes.string })
+    PropTypes.shape({ text: PropTypes.string, username: PropTypes.string })
   )
 };
 
-export default CommentSectionContainer;
+export default CommentSection;

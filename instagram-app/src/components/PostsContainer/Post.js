@@ -1,7 +1,10 @@
+
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSectionContainer';
-import PropTypes from 'prop-types';
 import PostHeader from './PostHeader';
+import heart from '../../assets/heart.svg';
+import message from '../../assets/message.svg';
+import share from '../../assets/share.svg'
 
 import './Posts.css';
 
@@ -19,18 +22,14 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <CommentSection 
-      postId={props.post.imageUrl}
-      comments={props.post.comments}/>
+      <div className='post-interface'>
+        <img className='logo' alt='heart' src={heart}/>
+        <img className='logo' alt='message icon' src={message}/>
+        <img className= 'logo'alt='share icon' src={share}/>
+      </div>
+      <CommentSection comments={props.post.comments} />
     </div>
   );
 };
 
-Post.propTypes = {
-  post: PropTypes.shape({
-    username: PropTypes.string,
-    thumbnailUrl: PropTypes.string,
-    imageUrl: PropTypes.string
-  })
-};
 export default Post;
