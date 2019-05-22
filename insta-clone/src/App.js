@@ -12,26 +12,42 @@ class App extends React.Component {
     super();
     this.state={
       data: [],
-      search: ""
+      input: "",
+      search: dummyData
 
     }
   }
 
 componentDidMount () {
   this.setState({data: dummyData});
+
 }
 
 changeHandler = e => {
-  this.setState({search: e.target.value})
+  this.setState({input: e.target.value})
+}
+
+find = event => {
+  const posts = this.state.data.filter(post=>{
+    if(post.username===this.state.input){
+      return true;
+    }
+    else {
+      return false;
+    }
+  })
+  this.setState({search: posts})
+
+} else{
+  this.setState({search: this.state.dummyData})
 }
 
 
-
-// value={props.search} onChange={props.change} onSubmit={props.submit}
   render(){
   return (
     <div className="App">
-      <SearchBar search={this.state.search} change={this.changeHandler} searchGram={this.find}/>
+    <span>{this.state.input}</span>
+      <SearchBar search={this.state.input} change={this.changeHandler} searchGram={this.find}/>
       <PostContainer posts={this.state.data} />
     </div>
   );

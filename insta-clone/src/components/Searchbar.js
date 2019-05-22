@@ -10,10 +10,10 @@ const SearchBar = props => {
         <img src={Camera} alt="instagram camera"/>
       </div>
       <form className="search">
-        <input type="text" placeholder="search" value={props.search} onChange={props.change}/>
+        <input type="text" placeholder="search" value={props.search} onChange={props.change} />
       </form>
       <div className="searchButton">
-        <button onClick={props.searchGram}>enter</button>
+        <button onSubmit={props.searchGram}>enter</button>
       </div>
     </div>
   )
