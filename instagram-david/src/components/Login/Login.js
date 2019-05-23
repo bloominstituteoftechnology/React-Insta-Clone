@@ -1,13 +1,15 @@
 import React from "react";
 import {
   LoginPage,
+  LoginImgContainer,
+  LoginImg,
   LoginContainer,
   Instagram,
   LoginForm,
   LoginInput,
   LoginButton
 } from "./LoginStyles";
-
+import instagramPhoto from "../../assets/instagram-login-phone-photo.jpg";
 class Login extends React.Component {
   constructor() {
     super();
@@ -29,6 +31,9 @@ class Login extends React.Component {
   render() {
     return (
       <LoginPage>
+        <LoginImgContainer>
+          <LoginImg src={instagramPhoto} />
+        </LoginImgContainer>
         <LoginContainer>
           <LoginForm>
             <Instagram>Instagram</Instagram>
