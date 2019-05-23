@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-brand img {
+  width: 150px;
+}
+
+.compass {
+  width: 20px;
+  margin-left: 20px;
+}
