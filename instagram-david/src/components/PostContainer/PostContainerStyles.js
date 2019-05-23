@@ -7,6 +7,7 @@ export const PostContainerDiv = styled.div`
   margin-bottom: 30px;
   border: 1px solid #e2e2e2;
   background-color: white;
+  font-family: arial;
 `;
 export const PostHeading = styled.div`
   display: flex;
