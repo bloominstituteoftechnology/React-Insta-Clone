@@ -1,36 +1,36 @@
 import React from 'react'
+import data from './dummy-data'
 import SearchBar from './components/SearchBar'
+import PostContainer from './components/PostContainer'
+
 import './App.css'
-
-import { library } from '@fortawesome/fontawesome-svg-core'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCompass } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faCompass)
 
 class App extends React.Component {
   constructor() {
     super()
-    this.toggle = this.toggle.bind(this)
     this.state = {
-      isOpen: false
+      post: []
     }
   }
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    })
+
+  componentDidMount() {
+    console.log("CDM running");
+    this.setState({ post: data });
   }
+
   render() {
+    console.log(this.state.post)
     return (
       <div className="App">
         <header className="App-header">
           <SearchBar />
         </header>
+        <div className='post-container'>
+          <PostContainer post={this.state.post} />
+        </div>
       </div>
     );
   }
-
 }
 
 export default App;
