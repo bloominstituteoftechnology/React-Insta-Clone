@@ -8,15 +8,21 @@ import CommentSection from '../CommentSection/CommentSection'
 const PostContainer = props =>{
    console.log(props)
      return(
-    <div>
-    //     {props.list.map( p => {
-       return <Post object ={p}/>
-    })}
-     {/* {props.list.map( p=> {
-       return <CommentSection thing = {p}/>
-     })} */}
+       <div>
+        <Post
+          name= {props.object.username}
+           imgThumbnail = {props.object.thumbnailUrl}
+            img = {props.object.imageUrl}
+            likes = {props.object.likes}
+             time = {props.object.timestamp}
+             />
 
-      </div>)
+             <CommentSection
+
+               comment= {props.object.comments}/>
+        </div>
+      )
+     
 }
 
 PostContainer.propTypes = {

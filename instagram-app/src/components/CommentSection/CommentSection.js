@@ -1,17 +1,34 @@
 import React from 'react'
 import PostContainer from '../PostContainer/PostContainer'
+import Comment from './Comment'
+import './CommentSection.css'
 
 
-const Comment  = props => {
+const CommentSection  = props => {
 
     return ( 
 
-        <div>
-             <h1> YO!{props.object.comments.map ( e=> {
-              return e.text
-          })}</h1>
-        </div>
+       <div className = "CommentSection">
+          {props.comment.map (e => {
+             return <Comment text={e}   />
+          })}
+          <div>
+              
+          <form>
+              <button> Add Comment</button>
+              <input type = 'text'>
+              
+               </input>
+              
+              
+              
+               </form>
+ </div>
+          
+
+           
+       </div>
   
      )
 }
-export default Comment
+export default CommentSection

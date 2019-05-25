@@ -8,10 +8,27 @@ import PropTypes from 'prop-types'
 
 class App extends React.Component {
 
-  state = { data: dummyData
+  state = { newComment: ' ',
+    data: dummyData
 
 
   }
+
+  onInputChange = (e) => {
+    this.setState({newComment: e.target.value})
+  }
+
+  addComment = (e, comment) =>{
+    e.preventDefault();
+    const newOne = {
+      text: comment
+    }
+  
+
+  this.setState ({
+    data: [...this.state.data, newOne ],
+    newComment: ' '
+  })}
 
   render(){
      console.log(this.state.data)
@@ -19,13 +36,12 @@ class App extends React.Component {
   return (
     <div className="App">
       <SearchBar/>
-      <PostContainer
-      list = {this.state.data }
-      
-        
-          />
-       <h1>88888</h1>
-    </div>
+       {this.state.data.map(e => {
+       return <PostContainer 
+           object={e} key={e.id}/>
+       })}
+          
+     </div>
   );
 }}
 
