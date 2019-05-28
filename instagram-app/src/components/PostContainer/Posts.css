@@ -1,0 +1,17 @@
+.post-image{
+    border: 2px solid dodgerblue;
+}
+.PostHeader {
+    display: flex;
+    border: 2px solid dodgerblue;
+    justify-content: flex-start;
+
+    
+}
+.PostHeader h1 {
+    font-size: 50px;
+    margin-left: 50px;
+ }
+ .post-image{
+     width:100%;
+ }
