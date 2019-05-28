@@ -1,29 +1,63 @@
 import React from 'react'
+import PropTypes from 'prop-types';
+import CommentSection from '../CommentSection/CommentSection'
+ import LikeSection from './LikeSection';
+ import PostHeader from './PostHeader';
+ 
 
 
+class Post extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      likes: props.post.likes
+    };
+  }
 
-const Post = props => {
+  addLike = () => {
+    let likes = this.state.likes + 1;
+    this.setState ({likes});
+  };
 
-return(
-    <div>
-       <div>
-       <h2> {props.name}</h2>
-         <img src = {props.imgThumbnail}></img>
+  
 
-       </div>
-          
-
-         <img src = {props.img}></img>
-
-         <h2> Likes: {props.likes}</h2>
-         <h2>{props.time}</h2>
-
+    render() {
+      return (
+        <div className="post-border">
+          <PostHeader
+            username={this.props.post.username}
+            thumbnailUrl={this.props.post.thumbnailUrl}
+          />
+          <div className="post-image-wrapper">
+            <img
+              
+              className="post-image"
+              src={this.props.post.imageUrl}
+            />
+          </div>
+          <LikeSection
+           addLike={this.addLike}
+            likes={this.state.likes}
+          />
+          <CommentSection
+            postId={this.props.post.imageUrl}
+            comments={this.props.post.comments}
+          />
+        </div>
+      );
+    }
+  }
          
-         
-       
-    </div>
-)
-
-
+        
+ 
+ 
+Post.propTypes = {
+  post: PropTypes.shape ({
+    username: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    imgageUrl: PropTypes.string
+  })
 }
+
+
 export default Post

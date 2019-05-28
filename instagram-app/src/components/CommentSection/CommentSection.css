@@ -1,5 +1,22 @@
 .CommentSection{
- border:3px solid dodgerblue;
- width: 75%;
+  width: 100%;
  margin: auto;
+}
+
+input{
+    margin: 20px;
+}
+ 
+.Comment {
+    display: inline-flex;
+    width: 100%;
+    flex-direction: column;
+ border: 2px solid dodgerblue;
+   }
+
+.Comment p {
+    margin: 10px;
+}
+.name {
+    font-size: 20px;
 }

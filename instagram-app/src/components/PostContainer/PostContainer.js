@@ -9,18 +9,9 @@ const PostContainer = props =>{
    console.log(props)
      return(
        <div>
-        <Post
-          name= {props.object.username}
-           imgThumbnail = {props.object.thumbnailUrl}
-            img = {props.object.imageUrl}
-            likes = {props.object.likes}
-             time = {props.object.timestamp}
-             />
-
-             <CommentSection
-
-               comment= {props.object.comments}/>
-        </div>
+         {props.posts.map (p => <Post key = {p.imgUrl} post ={p} />)}
+         </div>
+          
       )
      
 }
