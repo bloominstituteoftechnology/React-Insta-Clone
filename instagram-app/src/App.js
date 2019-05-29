@@ -14,7 +14,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log("CDM running");
     this.setState({ post: data });
   }
 

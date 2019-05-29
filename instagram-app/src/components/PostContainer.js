@@ -9,8 +9,6 @@ import { Card, CardImg, CardBody,
     CardTitle } from 'reactstrap'
 
 const PostContainer = props => {
-    console.log("rendering")
-    console.log(props.post)
     return (
         <div>
             {props.post.map(post => (
