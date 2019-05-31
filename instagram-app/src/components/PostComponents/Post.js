@@ -38,14 +38,6 @@ class Post extends React.Component {
 
 	}
 
-	addClass = () => {
-		if (this.state.isLiked === false) {
-			return this.setState({ class: {} })
-		} else if (this.state.isLiked === true) {
-			return this.setState({ class: { color: 'red' } })
-		}
-	}
-
 	render() {
 		return (
 			<div className="post-border">
@@ -66,7 +58,6 @@ class Post extends React.Component {
                         toggleLike={this.toggleLike}
 						likes={this.state.likes}
 						isLiked={this.state.isLiked}
-						addClass={this.addClass}
                     />
 
                     <CommentSection

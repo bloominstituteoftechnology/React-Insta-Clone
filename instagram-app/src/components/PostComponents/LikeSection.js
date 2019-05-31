@@ -17,7 +17,6 @@ const LikeSection = props => {
                     className={`post-heart${props.isLiked ? ' liked' : ''}`}
                     icon={faHeart}
                     size='lg'
-                    onClick={props.addClass.bind(this)}
                     onClick={props.toggleLike}
                 />
                 <FontAwesomeIcon className='post-comment' icon={faComment} size='lg' />
