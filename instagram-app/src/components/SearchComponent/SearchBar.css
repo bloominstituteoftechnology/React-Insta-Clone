@@ -1,0 +1,30 @@
+nav {
+    width: 640px;
+    border-radius: 3px;
+}
+
+.navbar-brand img {
+    width: 150px;
+}
+
+.compass, .user, .heart {
+    width: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #555;
+}
+
+.compass:hover, .user:hover, .heart:hover {
+    color: #111;
+}
+
+.search-bar {
+    display: flex;
+    margin-right: 70px;
+}
+
+.search {
+    color: darkgray;
+    margin-right: 8px;
+    margin-top: 10px;
+}

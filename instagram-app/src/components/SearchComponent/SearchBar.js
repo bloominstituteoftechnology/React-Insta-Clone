@@ -1,5 +1,6 @@
-import React from 'react'
-import logo from '../images/instagram-logo.png'
+import React from 'react';
+import logo from '../../images/instagram-logo.png';
+import './SearchBar.css'
 
 import {
   Navbar,

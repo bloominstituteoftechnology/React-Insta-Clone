@@ -1,35 +1,24 @@
-import React from 'react'
-import data from './dummy-data'
-import SearchBar from './components/SearchBar'
-import PostContainer from './components/PostContainer'
-
+import React, { Component } from 'react';
+import PostsPage from './components/PostComponents/PostPage';
+import LoginPage from './components/LoginComponent/Login';
+import Authenticate from './components/Authentication/Authenticate';
 import './App.css'
 
-class App extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      post: []
-    }
-  }
+class App extends Component {
+	constructor() {
+		super();
+		this.state = {};
+	}
 
-  componentDidMount() {
-    this.setState({ post: data });
-  }
-
-  render() {
-    console.log(this.state.post)
-    return (
-      <div className="App">
-        <header className="App-header">
-          <SearchBar />
-        </header>
-        <div className='post-container'>
-          <PostContainer post={this.state.post} />
-        </div>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="App">
+				<ConditionalView />
+			</div>
+		);
+	}
 }
+
+const ConditionalView = Authenticate(PostsPage)(LoginPage);
 
 export default App;

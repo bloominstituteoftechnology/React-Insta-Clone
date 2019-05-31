@@ -15,7 +15,7 @@
   justify-content: center;
 }
 
-nav {
+/* nav {
   width: 640px;
   border-radius: 3px;
 }
@@ -41,13 +41,12 @@ nav {
 }
 
 .search {
-  /* margin-left: 20px; */
   margin-right: 8px;
   margin-top: 10px;
   color: darkgray;
-}
+} */
 
-.post-header {
+/* .post-header {
   display: flex;
 }
 
@@ -63,9 +62,9 @@ nav {
   margin-left: 10px;
   margin-top: 5px;
   font-weight: bold;
-}
+} */
 
-.comments {
+/* .comments {
   text-align: left;
   line-height: .75;
 }
@@ -93,4 +92,4 @@ nav {
   display: flex;
   margin-bottom: 10px;
   color: firebrick;
-}
+} */
