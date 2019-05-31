@@ -11,11 +11,17 @@ const LikeSection = props => {
             <div
                 className='heart-n-comment'
                 key='likes-icons-container'
-                onClick={props.incrementLike}
             >
-                <FontAwesomeIcon className='post-heart' icon={faHeart} size='lg' />
-                <FontAwesomeIcon className='post-comment' icon={faComment} size='lg' />
 
+                <FontAwesomeIcon
+                    className={`post-heart${props.isLiked ? ' liked' : ''}`}
+                    icon={faHeart}
+                    size='lg'
+                    onClick={props.addClass.bind(this)}
+                    onClick={props.toggleLike}
+                />
+                <FontAwesomeIcon className='post-comment' icon={faComment} size='lg' />
+                { console.log(props.isLiked) }
             </div>
             <div className='likes'>
                 <strong>{props.likes} likes</strong>

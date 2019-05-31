@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import dummyData from '../../dummy-data';
-import PostsContainer from './PostContainer';
-import SearchBar from '../SearchComponent/SearchBar';
+import React, { Component } from 'react'
+import dummyData from '../../dummy-data'
+import PostsContainer from './PostContainer'
+import SearchBar from '../SearchComponent/SearchBar'
 
 class PostsPage extends Component {
 	constructor() {
@@ -9,29 +9,17 @@ class PostsPage extends Component {
 		this.state = {
 			posts: [],
 			filteredPosts: [],
-		};
-	}
-	componentDidMount() {
-		this.setState({ posts: dummyData });
+		}
 	}
 
-	searchPostsHandler = e => {
-		// eslint-disable-next-line
-		const posts = this.state.posts.filter(p => {
-			if (p.username.includes(e.target.value)) {
-				return p;
-			}
-		});
-		this.setState({ filteredPosts: posts });
-	};
+	componentDidMount() {
+		this.setState({ posts: dummyData })
+	}
 
 	render() {
 		return (
 			<div className="App">
-				<SearchBar
-					searchTerm={this.state.searchTerm}
-					searchPosts={this.searchPostsHandler}
-				/>
+				<SearchBar />
 				<PostsContainer
 					posts={
 						this.state.filteredPosts.length > 0
@@ -44,4 +32,4 @@ class PostsPage extends Component {
 	}
 }
 
-export default PostsPage;
+export default PostsPage

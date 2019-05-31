@@ -31,7 +31,19 @@
     color: #555;
 }
 
-.post-comment:hover, .post-heart:hover {
+.post-heart:hover {
+    color: #222;
+}
+
+.liked {
+    color: red;
+}
+
+.liked:hover {
+    color: maroon;
+}
+
+.post-comment:hover {
     color: #222;
 }
 

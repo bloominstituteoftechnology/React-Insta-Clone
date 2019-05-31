@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 import CommentSection from '../CommentComponents/CommentSection'
 import PostHeader from './PostHeader'
 import LikeSection from './LikeSection'
@@ -12,12 +12,40 @@ class Post extends React.Component {
 		super(props);
 		this.state = {
 			likes: props.post.likes,
-		};
+			toggleLike: this.toggleLike.bind(this),
+			isLiked: false,
+			class: {}
+		}
 	}
+
 	incrementLike = () => {
-		let likes = this.state.likes + 1;
-		this.setState({ likes });
-	};
+
+		// this.setState({ likes });
+	}
+
+	toggleLike = () => {
+		this.setState({
+			isLiked: !this.state.isLiked
+		})
+
+		if (this.state.isLiked === true) {
+			let likes = this.state.likes - 1
+			return this.setState({ likes })
+		} else if (this.state.isLiked === false) {
+			let likes = this.state.likes + 1
+			return this.setState({ likes })
+		}
+
+	}
+
+	addClass = () => {
+		if (this.state.isLiked === false) {
+			return this.setState({ class: {} })
+		} else if (this.state.isLiked === true) {
+			return this.setState({ class: { color: 'red' } })
+		}
+	}
+
 	render() {
 		return (
 			<div className="post-border">
@@ -30,12 +58,15 @@ class Post extends React.Component {
                     <CardImg
                         alt="post thumbnail"
                         className="post-image"
-                        src={this.props.post.imageUrl}
+						src={this.props.post.imageUrl}
+						onDoubleClick={this.toggleLike}
                     />
 
                     <LikeSection
-                        incrementLike={this.incrementLike}
-                        likes={this.state.likes}
+                        toggleLike={this.toggleLike}
+						likes={this.state.likes}
+						isLiked={this.state.isLiked}
+						addClass={this.addClass}
                     />
 
                     <CommentSection

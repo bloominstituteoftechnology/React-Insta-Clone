@@ -3,12 +3,12 @@ import { Input, Form } from 'reactstrap'
 
 const CommentInput = props => {
     return (
-        <Form onSubmit={props.addComment}>
+        <Form onSubmit={props.submitComment}>
             <Input
                 placeholder='Add a comment...'
                 type='text'
-                onChange={props.onInputChange}
-                value={props.text}
+                onChange={props.changeComment}
+                value={props.comment}
             />
         </Form>
     )
