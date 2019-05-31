@@ -1,26 +1,54 @@
-import React from 'react';
+import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
+// import dummyData from './components/dummy-data';
+// console.log(dummyData);
+import CommentSection from './components/CommentSection/CommentSection'
+import PostContainer from './components/PostContainer/PostContainer'
+import SearchBar from './components/SearchBar/SearchBar'
+import ReactDOM from 'react-dom'
+import dummyData from './components/dummy-data';
+class App extends Component {
+  constructor (){
+  super();
+  this.state = {
+    dummyData:  []
+  };
+  console.log(this);
+  }
+  componentDidMount() {
+    this.setState({dummyData});
+  }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  // getCharacters = URL => {
+    
+  
+  //   fetch(URL)
+  //     .then(res => {
+  //       return res.json();
+  //     })
+  //     .then(data => {
+  //       this.setState({ dumData: data.results});
+  //     })
+  //     .catch(err => {
+  //       throw new Error(err);
+  //     });
+    
+  // };
+
+  render() {
+    return (
+      <div className="App">
+        
+        <div>
+        <PostContainer/>
+        <SearchBar/>
+        <CommentSection/>
+        </div>
+       
+      </div>
+    );
+  }
 }
 
 export default App;
