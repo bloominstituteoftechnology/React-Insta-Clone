@@ -14,7 +14,7 @@ class App extends Component {
   this.state = {
     dummyData:  []
   };
-  console.log(this);
+ 
   }
   componentDidMount() {
     this.setState({dummyData});
@@ -41,11 +41,13 @@ class App extends Component {
       <div className="App">
         
         <div>
-        <PostContainer
-        post = {this.state.dummyData}
-        />
         <SearchBar/>
-        <CommentSection/>
+        <PostContainer
+        post = {this.state.dummyData}/>
+
+      
+      
+        
         </div>
        
       </div>

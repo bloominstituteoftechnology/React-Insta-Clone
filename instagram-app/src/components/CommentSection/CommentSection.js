@@ -1,8 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-const CommentSection = (props) => {
+import PostContainer from './../PostContainer/PostContainer'
+
+const CommentSection = (props,index) => {
+  console.log(props);
   return (
-    <div>CommentSection</div>
+   
+    <div >
+      {props.comm.map( comment => {
+        console.log (comment)
+        return( <div key = {comment.timestamp}><div>{comment.username}</div>
+          <div>{comment.text}</div></div>
+          )
+      })}
+    </div>
+   
   );
 }
 
