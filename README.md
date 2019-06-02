@@ -32,7 +32,7 @@
 
 ### Project Setup
 
-- Create a React application by running `yarn create react-app instagram-app` from inside this directory.
+- Create a React application by running `npx create-react-app instagram-app` from inside this directory.
 - cd into `instagram-app`
 - Create a `components` directory inside the `src` directory, and then create a sub-directory called `SearchBar`, another one called `PostContainer`, and lastly one called `CommentSection`, all inside the `src` directory. Each of these directories should contain the component file as well as the CSS for their respective components. You'll also want to put any other components that coincide with your respective container components inside of these directories.
 
