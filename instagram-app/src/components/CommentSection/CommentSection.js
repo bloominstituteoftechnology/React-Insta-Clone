@@ -5,7 +5,6 @@ import Comment from '../Comment/Comment';
 
 const commentSection = (props) => {
     const { comment } = props;
-    console.log(comment);
     return (
         <div>
             <Comment comment={comment}/>
@@ -15,7 +14,6 @@ const commentSection = (props) => {
 
 commentSection.propTypes = {
     comment: PropTypes.shape({
-        id: PropTypes.string.isRequired,
         username: PropTypes.string.isRequired,
         text: PropTypes.string.isRequired
     })

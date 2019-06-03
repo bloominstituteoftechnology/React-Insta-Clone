@@ -1,13 +1,5 @@
 .comment{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: .5rem;
-    box-shadow: 0 2px 2px grey;
-    width: 60%;
-    margin: 0 auto;
+    text-align: left;
+    padding: 0 1rem;
 }
 
-.comment h3{
-
-}

@@ -4,11 +4,9 @@ import './Comment.css';
 
 const comment = (props) => {
     const { username, text } = props.comment;
-    console.log(props.comment);
     return (
         <div className='comment'>
-            <h3>Username: {username}</h3>
-            <p>Comment: {text}</p>
+            <p><strong>{username}</strong> {text}</p>
         </div>
     )
 }
