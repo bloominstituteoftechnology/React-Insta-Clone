@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import moment from "moment";
 import uuid from "uuid";
 import "./PostContainer.css";
 import CommentSection from "../CommentSection/CommentSection";
@@ -13,6 +14,8 @@ const postContainer = props => {
     timestamp,
     username
   } = props.data;
+
+  const timestampDate = Date.parse(timestamp.replace("th", ""));
   return (
     <div className="postContainer">
       <div className="user-container">
@@ -22,15 +25,15 @@ const postContainer = props => {
       <img className="main_image" src={imageUrl} alt="banner" />
       <i className="far fa-heart" />
       <i className="far fa-comment" />
-      <p className='likes'>{likes} likes</p>
+      <p className="likes">{likes} likes</p>
       {comments.map(comment => {
         return <CommentSection key={uuid()} comment={comment} />;
       })}
-      <p className="timestamp">{timestamp}</p>
+      <p className="timestamp">{moment(timestampDate).fromNow()}</p>
       <div className="horizontal" />
-      <div className='comment-bottom'>
-              <input className="search" type="text" placeholder="Add a comment..." />
-              <p className='three-dots'>&#8230;</p>
+      <div className="comment-bottom">
+        <input className="search" type="text" placeholder="Add a comment..." />
+        <p className="three-dots">&#8230;</p>
       </div>
     </div>
   );
