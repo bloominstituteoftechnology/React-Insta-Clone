@@ -7,7 +7,7 @@ const postContainer = (props) => {
     return (
         <div>
             {data.comments.map(comment => {
-                return <CommentSection comment={comment}/>
+                return <CommentSection key={comment.id} comment={comment}/>
             })}
         </div>
     )
