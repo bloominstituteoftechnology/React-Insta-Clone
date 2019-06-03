@@ -4,8 +4,8 @@ const PostTop = props => {
   return (
     <div>
       <img 
-      alt="post-top"
-      src={props.thumbnailUrl}
+      alt="user-image"
+      src={props.thumbnail}
       />
       {props.username}
     </div>

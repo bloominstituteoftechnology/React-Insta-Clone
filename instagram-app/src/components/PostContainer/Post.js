@@ -1,15 +1,19 @@
 import React from "react";
 
 import PostTop from "./PostTop";
+import PostContent from "./PostContent";
 
 const Post = props => {
   return (
     <div>
       <PostTop 
       username={props.postData.username}
-      thumbnailUrl={props.postData.thumbnailUrl}
-      image={props.postData.image}
+      thumbnail={props.postData.thumbnailUrl}
       />
+     <PostContent 
+     image={props.postData.imageUrl}
+     likes={props.postData.likes}
+     />
     </div>
   )
 }
