@@ -1,0 +1,52 @@
+.Post{
+  background-color: #ededed;
+  border-radius: 5px;
+  width:500px;
+  max-height: 900px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+
+}
+.PostHeader{
+  display: flex;
+  height: 40px;
+  margin-left: 10px;
+  align-items: center;
+}
+.PostFooter{
+  display: Flex;
+  height: 40px;
+  margin-left: 10px;
+}
+.PostImage{
+  align-self: center;
+  width: 495px;
+  height: 495px;
+}
+.PostThumb{
+  margin: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+}
+.Time{
+  margin-left: 10px;
+  font-size: .5rem;
+}
+.CommentInput{
+  margin-left: 10px;
+  width: 100%;
+  height: 25px;
+  font-size: 1.5rem;
+}
+.InputSection{
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+}
+.CommentButton{
+  margin: 0px 10px;
+  width: 30px;
+  height: 30px;
+}

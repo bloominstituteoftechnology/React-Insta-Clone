@@ -1,0 +1,10 @@
+.Comment{
+  margin: 10px;
+}
+.Username{
+  font-weight: bold;
+}
+.CommentSection{
+  height: 125px;
+  overflow: hidden;
+}
