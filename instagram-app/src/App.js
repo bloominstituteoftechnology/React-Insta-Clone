@@ -40,7 +40,8 @@ class App extends Component {
          <PostContainer
            posts={this.state.posts}
            commentChange={}
-           addComment={this.addComment()}
+           addComment={this.addComment()} // Need to figure out how to add comment to the appropriate username. 
+           //One idea is to generate a unique id for each of the dummy data and use it to find the right post to add a comment too
            />
         </header>
       </div>
