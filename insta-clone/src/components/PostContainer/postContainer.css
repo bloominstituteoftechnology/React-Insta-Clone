@@ -5,7 +5,8 @@
   max-height: 900px;
   display: flex;
   flex-direction: column;
-  margin: 50px;
+  margin: 25px auto;
+
 
 }
 .PostHeader{
@@ -15,8 +16,9 @@
   align-items: center;
 }
 .PostFooter{
-  display: Flex;
-  height: 40px;
+  display: flex;
+  flex-flow: column;
+  height: 50px;
   margin-left: 10px;
 }
 .PostImage{
@@ -47,6 +49,21 @@
 }
 .CommentButton{
   margin: 0px 10px;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
+}
+.PostIcons{
+  display: flex;
+}
+.Icons{
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+#Likes{
+  margin: 0px ;
+}
+img{
+  cursor: pointer;
 }

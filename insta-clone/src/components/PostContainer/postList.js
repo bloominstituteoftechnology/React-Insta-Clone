@@ -1,28 +1,28 @@
 import React from "react";
 import "./postContainer.css";
-import PropTypes from 'prop-types';
-import Comments from "../CommentSection/commentSection"
+import PropTypes from "prop-types";
+import Comments from "../CommentSection/commentSection";
+import comment from "../../icons/comment.png";
+import like from "../../icons/heart_unfilled.png";
+import liked from "../../icons/heart_filled.png";
+
+import more from "../../icons/more.png";
 export default class postContainer extends React.Component {
+  postTimeHandler = startTime => {
+    let endTime = new Date();
+    let timeDiff = endTime - startTime; //in ms
+    // strip the ms
+    timeDiff /= 1000 * 60;
 
-  postTimeHandler = (startTime) =>{
-
-  let endTime = new Date();
-  let timeDiff = endTime - startTime; //in ms
-  // strip the ms
-  timeDiff /= 1000 * 60;
-
-  // get seconds
-  var seconds = Math.round(timeDiff);
-  return(startTime)
-
-  }
-
+    // get seconds
+    var seconds = Math.round(timeDiff);
+    return startTime;
+  };
 
   postHandler = () => {
     if (this.props.data) {
       return this.props.data.map(post => {
         return (
-
           <div
             className="Post"
             key={post.id}
@@ -39,16 +39,24 @@ export default class postContainer extends React.Component {
             </section>
             <img className="PostImage" src={post.imageUrl} alt="imagePost" />
             <section className="PostFooter">
-            <p id="Likes">{post.likes} likes</p>
+              <div className="PostIcons">
+                <img className="Icons" src={comment} />
+                <img className="Icons" src={like} />
+              </div>
+              <p id="Likes">{post.likes} likes</p>
             </section>
-            <Comments comments={post.comments}/>
-              <p className="Time">{this.postTimeHandler(post.timestamp)}</p>
-            
+            <Comments comments={post.comments} />
+            <p className="Time">{this.postTimeHandler(post.timestamp)}</p>
+
             <div className="InputSection">
-            <input className="CommentInput" type="text" placeholder="Add a comment..."/>
-            <button className="CommentButton">...</button>
-          </div>
+              <input
+                className="CommentInput"
+                type="text"
+                placeholder="Add a comment..."
+              />
+            <img className="CommentButton" src={more} />
             </div>
+          </div>
         );
       });
     }
@@ -62,4 +70,4 @@ export default class postContainer extends React.Component {
 
 postContainer.propTypes = {
   data: PropTypes.array.isRequired
-}
+};
