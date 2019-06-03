@@ -1,4 +1,7 @@
 import React from 'react';
+import { IoIosHeartEmpty} from "react-icons/io";
+import { FaRegComment } from "react-icons/fa";
+import CommentSection from '../CommentSection/CommentSection';
 import './PostContainer.css';
 
 const PostContainer = (props) => {
@@ -11,6 +14,18 @@ const PostContainer = (props) => {
             <div className="user__post">
                 <img className="post__image" src={props.post.imageUrl} alt="user-post"/>
             </div>
+            <div className="reaction">
+            <div className="post__icons">
+            <IoIosHeartEmpty /> <FaRegComment/>
+            </div>
+            {props.post.likes} likes</div>
+            {props.post.comments.map((comment, index) =>{
+                console.log("===",comment);
+                return <CommentSection key={index} props={comment}/>
+            })
+            }
+            <div className="timestamp">
+            {props.post.timestamp}</div>
         </div>
     )
 }
