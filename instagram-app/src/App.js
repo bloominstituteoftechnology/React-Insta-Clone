@@ -16,8 +16,7 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
-        <h1>Hello from App!</h1>
-        <SearchBar />
+        {/* <SearchBar /> */}
         <PostContainer 
         postData = {this.state.postData}
         />
