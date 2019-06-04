@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import pt from 'prop-types';
 import uuidv4 from 'uuid/v4';
 import moment from 'moment';
+import faker from 'faker';
 import { IoIosHeartEmpty} from "react-icons/io";
 import { FaRegComment } from "react-icons/fa";
 import CommentSection from '../CommentSection/CommentSection';
@@ -21,7 +22,7 @@ const PostContainer = ({ props }) => {
         e.preventDefault();
         const newComment = {
             id: uuidv4(),
-          username: "user",
+          username: faker.name.findName(),
           text: inputValue
         };
         setComment(comments.concat(newComment));
@@ -64,7 +65,7 @@ export default PostContainer;
 PostContainer.propTypes = {
     props: pt.shape({
         comments: pt.arrayOf(pt.shape({
-            id: pt.number.isRequired,
+            id: pt.string.isRequired,
             username: pt.string.isRequired,
             text: pt.string.isRequired
         })),
@@ -74,5 +75,4 @@ PostContainer.propTypes = {
         likes: pt.number.isRequired, 
         username: pt.string.isRequired
     }).isRequired
-    
 }
