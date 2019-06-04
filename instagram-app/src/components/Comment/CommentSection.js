@@ -3,24 +3,25 @@ import './comment.css';
 
 class CommentSection extends React.Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
-      value: '',
-      comment: props.comment.text
+      text: '',
+      comment: props.comment
     };
   }
 
   handleChange = event => {
     this.setState({
-      value: event.target.value
+      text: event.target.value
     });
   };
 
   addComment = event => {
     event.preventDefault();
-
+    console.log('add comment ');
     const newComment = {
-      value: this.state.value
+      text: this.state.text,
+      username: 'sunil'
     };
 
     this.setState({
@@ -29,11 +30,21 @@ class CommentSection extends React.Component {
   };
 
   render() {
+    console.log(this.state.comment);
     return (
-      <div className='comment'>
+      <div className='comments'>
+        <div className='hearts'>
+          <p>
+            <i className='heart outline icon' />
+          </p>
+          <p>
+            <i className='comment outline icon say' />
+          </p>
+        </div>
+
         <p className='likes'>{this.props.likes}&nbsp;likes</p>
 
-        {this.props.comment.map(comment => {
+        {this.state.comment.map(comment => {
           return (
             <div className='user-comment'>
               <p className='user'>{comment.username}</p>
@@ -42,8 +53,12 @@ class CommentSection extends React.Component {
           );
         })}
 
-        <form>
-          <input type='text' placeholder='Add a comment' onChange={this.handleChange} value={this.state.value} />
+        <div class='time'>
+          <p>{this.props.time}</p>
+        </div>
+
+        <form onSubmit={this.addComment}>
+          <input type='text' placeholder='Add a comment' onChange={this.handleChange} value={this.state.value} className='input' />
         </form>
       </div>
     );

@@ -8,9 +8,9 @@ import './postcontainer.css';
 const PostContainer = props => {
   return (
     <div class='post-container'>
-      <HeaderPost thumbnail={props.post.thumbnailUrl} usernames={props.post.username} />
-      <ImagePost img={props.post.imageUrl} />
-      <CommentSection comment={props.post.comments} users={props.post} likes={props.post.likes} />
+      <HeaderPost thumbnail={props.post.thumbnailUrl} usernames={props.post.username} key={props.post.key} />
+      <ImagePost img={props.post.imageUrl} key={props.post.key} />
+      <CommentSection comment={props.post.comments} users={props.post} likes={props.post.likes} time={props.post.timestamp} key={props.post.key} />
     </div>
   );
 };

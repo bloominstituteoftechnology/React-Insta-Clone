@@ -14,3 +14,33 @@
     font-weight: 700;
     line-height: .1;
 }
+
+.input {
+    width: 95%;
+    border: none;
+    padding: 20px 0;
+    margin-left: 10px;
+    outline: none;
+
+}
+
+.hearts {
+    display: flex;
+    margin-left: 10px;
+    padding-top: 10px;
+}
+
+.say {
+    padding-left: 15px;
+}
+
+.time {
+    font-size: 10px;
+    padding: 10px;
+    line-height: .1;
+    color: rgb(173, 170, 170);
+    margin-top: -10px;
+    border-bottom: 1px solid rgb(243, 238, 238);
+    width: 90%;
+
+}
