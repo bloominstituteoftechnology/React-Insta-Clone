@@ -7,67 +7,98 @@ import like from "../../icons/heart_unfilled.png";
 import liked from "../../icons/heart_filled.png";
 
 import more from "../../icons/more.png";
-export default class postContainer extends React.Component {
-  postTimeHandler = startTime => {
-    let endTime = new Date();
-    let timeDiff = endTime - startTime; //in ms
-    // strip the ms
-    timeDiff /= 1000 * 60;
-
-    // get seconds
-    var seconds = Math.round(timeDiff);
-    return startTime;
+export default class Post extends React.Component {
+  state = {
+    post: [],
+    text: ""
   };
-
-  postHandler = () => {
-    if (this.props.data) {
-      return this.props.data.map(post => {
-        return (
-          <div
-            className="Post"
-            key={post.id}
-            username={post.username}
-            likes={post.likes}
-          >
-            <section className="PostHeader">
-              <img
-                className="PostThumb"
-                src={post.thumbnailUrl}
-                alt="thumbnail"
-              />
-              <p id="username">{post.username}</p>
-            </section>
-            <img className="PostImage" src={post.imageUrl} alt="imagePost" />
-            <section className="PostFooter">
-              <div className="PostIcons">
-                <img className="Icons" src={comment} />
-                <img className="Icons" src={like} />
-              </div>
-              <p id="Likes">{post.likes} likes</p>
-            </section>
-            <Comments comments={post.comments} />
-            <p className="Time">{this.postTimeHandler(post.timestamp)}</p>
-
-            <div className="InputSection">
-              <input
-                className="CommentInput"
-                type="text"
-                placeholder="Add a comment..."
-              />
-            <img className="CommentButton" src={more} />
-            </div>
-          </div>
-        );
-      });
+  updateCommentHandler = () => {
+    let post = { ...this.state.post };
+    //Make New Comment
+    let comment = {
+      id: Date.now(),
+      username: post.username,
+      text: this.state.text
+    };
+    //setState of comments
+    this.setState(prevState => ({
+      post: {
+        ...prevState.post,
+        comments: [...post.comments, comment]
+      }
+    }));
+  };
+  MakeComments = () => {
+    if (this.state.post.comments) {
+      return <Comments comments={this.state.post.comments} />;
     }
+  };
+  commentTextHandler = e => {
+    this.setState({
+      text: e.target.value
+    });
+  };
+  componentDidMount = () => {
+    this.setState({
+      post: this.props.data
+    });
   };
 
   render() {
-    console.log(this.props.data);
-    return <div>{this.postHandler()}</div>;
+    let post = { ...this.state.post };
+    return (
+      <div>
+        <div
+          className="Post"
+          key={post.id}
+          username={post.username}
+          likes={post.likes}
+        >
+          <section className="PostHeader">
+            <img
+              className="PostThumb"
+              src={post.thumbnailUrl}
+              alt="thumbnail"
+            />
+            <p id="username">{post.username}</p>
+          </section>
+          <img className="PostImage" src={post.imageUrl} alt="imagePost" />
+          <section className="PostFooter">
+            <div className="PostIcons">
+              <img className="Icons" src={comment} />
+              <img className="Icons" src={like} />
+            </div>
+            <p id="Likes">{post.likes} likes</p>
+          </section>
+          {this.MakeComments()}
+          <p className="Time">{post.timestamp}</p>
+
+          <div className="InputSection">
+            <input
+              className="CommentInput"
+              type="text"
+              placeholder="Add a comment..."
+              value={this.state.text}
+              onChange={this.commentTextHandler}
+            />
+            <img
+              className="CommentButton"
+              src={more}
+              onClick={this.updateCommentHandler}
+            />
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
-postContainer.propTypes = {
-  data: PropTypes.array.isRequired
+Post.propTypes = {
+  data: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    likes: PropTypes.number.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    thumbnailUrl: PropTypes.string.isRequired
+  })
 };
