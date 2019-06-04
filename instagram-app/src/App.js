@@ -1,6 +1,6 @@
 import React from 'react';
 import dummyData from './dummy-data';
-import PostContainer from './components/PostContainer';
+import PostContainer from './components/PostContainer/PostContainer';
 
 import './App.css';
 

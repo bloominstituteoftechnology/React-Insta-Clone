@@ -1,0 +1,16 @@
+.user-comment {
+    display: flex;
+    line-height: .1;
+    padding-left: 10px;
+}
+
+.user {
+    padding-right: 10px;
+    font-weight: 700;
+}
+
+.likes {
+    padding-left: 10px;
+    font-weight: 700;
+    line-height: .1;
+}

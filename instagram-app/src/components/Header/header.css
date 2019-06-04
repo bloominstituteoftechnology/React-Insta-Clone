@@ -1,0 +1,17 @@
+.header {
+
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+
+}
+
+.thumbnail {
+    height: 40px;
+    border-radius: 50%;
+
+}
+
+.username {
+    padding-left: 10px;
+}
