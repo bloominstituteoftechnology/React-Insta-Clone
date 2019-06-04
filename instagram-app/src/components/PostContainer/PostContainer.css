@@ -4,6 +4,7 @@
     width: 50%;
     margin: 5rem auto;
     border: 1px solid lightgray;
+    overflow: hidden;
 }
 .user__deets {
     width: 100%;
@@ -47,6 +48,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     color: gray;
-    margin-bottom: 1rem;
+    margin: 0 .5rem;
     padding: 1rem;
+    border-bottom: 1px solid lightgrey;
 }
