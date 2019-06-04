@@ -6,7 +6,8 @@ class CommentSection extends React.Component {
     super(props);
     this.state = {
       text: '',
-      comment: props.comment
+      comment: props.comment,
+      likes: props.likes
     };
   }
 
@@ -29,11 +30,22 @@ class CommentSection extends React.Component {
     });
   };
 
+  addLikes = event => {
+    console.log('add Likes');
+    const newLikes = {
+      likes: this.state.like + 1
+    };
+
+    this.setState({
+      likes: [...this.state.likes, newLikes]
+    });
+  };
+
   render() {
     console.log(this.state.comment);
     return (
       <div className='comments'>
-        <div className='hearts'>
+        <div onclick={this.addLikes} className='hearts'>
           <p>
             <i className='heart outline icon' />
           </p>
