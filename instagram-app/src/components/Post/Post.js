@@ -29,7 +29,7 @@ class Post extends React.Component{
             <h2> {user.username} </h2>
           </div>
         </div>
-        <div>
+        <div className="postContain">
           <img className="post_image" alt="user_post" src={user.imageUrl} />
         </div>
         <div className="interaction_container">

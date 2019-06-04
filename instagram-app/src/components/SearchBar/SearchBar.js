@@ -19,8 +19,8 @@ class SearchComponent extends React.Component{
       <div className="search-component-container">
         <div className="search-component-instagram-logo">
           <FontAwesomeIcon icon={faInstagram} className="instalogo" />
-          <div className="vertical_line"></div>
-          <img src={instaFont} />
+          <div className="vertical_line" />
+          <img className="instaFont" src={instaFont} />
         </div>
         <div className="input">
         <input className="search-input"
@@ -29,9 +29,9 @@ class SearchComponent extends React.Component{
           onChange={this.props.searchPostHandler}/>
         </div>
         <div className="search-component-navigation">
-          <FontAwesomeIcon icon={faCompass} /> 
-          <FontAwesomeIcon icon={faHeart} />
-          <FontAwesomeIcon icon={faUser} />
+          <FontAwesomeIcon icon={faCompass} className="topCompass" /> 
+          <FontAwesomeIcon icon={faHeart} className="topHeart" />
+          <FontAwesomeIcon icon={faUser} className="topUser" />
         </div>
           <FontAwesomeIcon icon="fas fa-ellipsis-h" />
       </div>
