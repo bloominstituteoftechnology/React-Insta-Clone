@@ -2,6 +2,7 @@ import React from "react";
 
 import PostTop from "./PostTop";
 import PostContent from "./PostContent";
+import CommentSection from "../CommentSection/CommentSection";
 
 const Post = props => {
   return (
@@ -14,6 +15,13 @@ const Post = props => {
      image={props.postData.imageUrl}
      likes={props.postData.likes}
      />
+     {props.postData.comments.map(comment => (
+      <CommentSection 
+      comments={comment}
+      key={comment.id}
+      />
+     ))}
+     
      <input 
      placeholder="Add a comment..."
      className="post-input"

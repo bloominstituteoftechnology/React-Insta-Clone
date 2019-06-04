@@ -1,16 +1,15 @@
-import React from "react";
+// import React from "react";
+// import CommentSection from "./CommentSection"
 
-const Comments = props => {
-
-}
-
-
-{/* {props.postData.comments.map(comment => (
-        <CommentSection 
-        comments={comment}
-        key={comment.id}
-        />
-      ))} */}
+// const Comments = props => {
+//   return (
+//     <div>
+//       {props.comments.username}
+//     </div>
+//   )
+// }
 
 
-export default Comments;
+
+
+// export default Comments;
