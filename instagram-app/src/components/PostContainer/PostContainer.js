@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import uuidv4 from 'uuid/v4';
+import moment from 'moment';
 import { IoIosHeartEmpty} from "react-icons/io";
 import { FaRegComment } from "react-icons/fa";
 import CommentSection from '../CommentSection/CommentSection';
@@ -8,8 +9,10 @@ import './PostContainer.css';
 
 const PostContainer = ({ props }) => {
     const { comments, thumbnailUrl, imageUrl, timestamp, likes, username } = props;
+    const  commentDate = timestamp.replace(/th/, "");
     const [inputValue, setChange] = useState('');
     const [inputComment, setComment] = useState(comments);
+    const [createdAt, settimestamp] = useState(moment(new Date(commentDate)).format("MMM D LTS"));
     const handleChange = (e) =>{
         setChange(e.target.value);
       }
@@ -22,6 +25,7 @@ const PostContainer = ({ props }) => {
         };
         setComment(comments.concat(newComment));
         setChange('');
+        settimestamp(moment(new Date()).format("MMM D LTS"))
       }
     
     return (
@@ -44,7 +48,7 @@ const PostContainer = ({ props }) => {
             })
             }
             <div className="timestamp">
-            {timestamp}</div>
+            {createdAt}</div>
             <Form 
                 inputValue={inputValue}
                 changeHandler={handleChange}
