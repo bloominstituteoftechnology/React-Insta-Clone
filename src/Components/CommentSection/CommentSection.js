@@ -12,16 +12,4 @@ class CommentSection extends Component {
     };
   }
 };
-
-  render() {
-    return (
-      <div className="commentSection">
-        {this.state.comments.map(comment => (
-          <Comment
-            username={comment.username}
-            text={comment.text}
-            id={comment.id}
-          />
-        )
-    )
-  };
+export default CommentSection;
