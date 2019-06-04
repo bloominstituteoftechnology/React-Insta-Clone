@@ -1,4 +1,5 @@
 import React from 'react';
+import pt from 'prop-types';
 import './Form.css';
 
 const Form = ({ inputValue, changeHandler, addComment }) => {
@@ -15,3 +16,8 @@ const Form = ({ inputValue, changeHandler, addComment }) => {
 }
 
 export default Form;
+Form.propTypes = {
+    inputValue: pt.string.isRequired,
+    changeHandler: pt.func.isRequired,
+    addComment: pt.func.isRequired
+}
