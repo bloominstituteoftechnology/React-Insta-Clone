@@ -26,6 +26,18 @@ class Comments extends React.Component {
     }
   }
 
+  // deleteComment = (id, index) => {
+  //   this.setState((prevState) => {
+  //   const newData = prevState.data;
+  //   newData[index].comments = newData[index].comments.filter(x => x.id !== id);
+  //     return {
+  //       data: newData,
+  //     };
+  //   }, () => {
+  //     localStorage.removeItem('data');
+  //   });
+  // }
+
   render() {
     const time = moment(this.props.time, "MMM Do YYYY, h:mm:ss a")
     const newTime= time.fromNow().toUpperCase();
@@ -47,7 +59,7 @@ class Comments extends React.Component {
               placeholder="Add a comment..."/>
           </form>
 
-          {/* add more image here */}
+          {/* add ellipses image here */}
         </div>
       </div>
     )
