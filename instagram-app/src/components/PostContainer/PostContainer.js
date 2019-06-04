@@ -15,6 +15,9 @@ const PostContainer = ({ props }) => {
     const [inputValue, setChange] = useState('');
     const [inputComment, setComment] = useState(comments);
     const [createdAt, settimestamp] = useState(moment(new Date(commentDate)).format("MMM D LTS"));
+
+    const [addLikes, updateLikes] = useState(likes);
+
     const handleChange = (e) =>{
         setChange(e.target.value);
       }
@@ -29,6 +32,10 @@ const PostContainer = ({ props }) => {
         setChange('');
         settimestamp(moment(new Date()).format("MMM D LTS"))
       }
+      const handleLikes = () =>{
+        let newLike = likes;
+        updateLikes(newLike + 1)
+      }
     
     return (
         <div className="post__container">
@@ -41,9 +48,13 @@ const PostContainer = ({ props }) => {
             </div>
             <div className="reaction">
             <div className="post__icons">
-            <IoIosHeartEmpty /> <FaRegComment/>
+            <span
+            onClick={handleLikes}
+            ><IoIosHeartEmpty /></span>
+
+            <span><FaRegComment/></span>
             </div>
-            {likes} likes</div>
+            {addLikes} likes</div>
             {
                 inputComment.map((comment) =>{
                 return <CommentSection key={comment.id} props={comment}/>
