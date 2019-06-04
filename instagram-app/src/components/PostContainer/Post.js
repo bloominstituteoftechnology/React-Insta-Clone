@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./PostContainer.css";
+
 import PostTop from "./PostTop";
 import PostContent from "./PostContent";
 import CommentSection from "../CommentSection/CommentSection";
@@ -21,7 +23,9 @@ const Post = props => {
       key={comment.id}
       />
      ))}
-     
+     <span id="timestamp">
+      {props.postData.timestamp}
+     </span>
      <input 
      placeholder="Add a comment..."
      className="post-input"

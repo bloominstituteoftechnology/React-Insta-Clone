@@ -5,7 +5,7 @@ const PostTop = props => {
     <div className="post-top">
       <img 
       className="thumb-img"
-      alt="user-image"
+      alt="user"
       src={props.thumbnail}
       />
       <div className="username">

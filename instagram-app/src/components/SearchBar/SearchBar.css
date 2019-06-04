@@ -9,12 +9,11 @@ padding: 20px;
 
 .logo {
   height: 50px;
-  size: 10px;
 }
 
 #fab-logo {
   height: 100%;
-  width:50px;
+  width:50%;
 }
 
 input {
@@ -24,7 +23,6 @@ input {
 
 .icons {
   display: flex;
-  
 }
 
 .far {

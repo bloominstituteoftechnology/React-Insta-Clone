@@ -1,12 +1,18 @@
 import React from "react";
 import "./SearchBar.css";
 
+import logo from "./logo.png";
+
 const SearchBar = () => {
   return (
     <div className="search-bar-container">
       
       <div className="logo">
-      <i id="fab-logo" className="fab fa-instagram" />
+      <img 
+      id="fab-logo"
+      src= {logo}
+      alt="insta-logo"
+      />
       </div>
 
       <input 

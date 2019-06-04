@@ -41,6 +41,13 @@
   margin: 10px;
 }
 
+#timestamp {
+  float: left;
+  font-size: .6rem;
+  opacity: 3;
+  margin: 10px;
+}
+
 .post-input {
   width: 99%;
 }

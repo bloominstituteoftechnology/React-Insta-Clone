@@ -5,7 +5,7 @@ const PostContent = props => {
     <div>
         <img
         className="post-img" 
-        alt="post-photo"
+        alt="post"
         src={props.image}
         />
         <div id="post-icons">
