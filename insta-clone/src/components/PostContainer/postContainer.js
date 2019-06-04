@@ -7,7 +7,7 @@ export default class postContainer extends React.Component {
   postHandler = () => {
     if (DATA) {
       return DATA.map(post => {
-        return <Post key={post.id} data={post} />;
+        return <Post key={post.id} data={post} filter={this.props.filter} />;
       });
     }
   };

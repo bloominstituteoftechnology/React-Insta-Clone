@@ -3,30 +3,50 @@ import "./postContainer.css";
 import PropTypes from "prop-types";
 import Comments from "../CommentSection/commentSection";
 import comment from "../../icons/comment.png";
-import like from "../../icons/heart_unfilled.png";
-import liked from "../../icons/heart_filled.png";
-
+import Like from "../LikeSection/Like.js";
 import more from "../../icons/more.png";
 export default class Post extends React.Component {
   state = {
     post: [],
-    text: ""
+    text: "",
+    search: true
   };
-  updateCommentHandler = () => {
-    let post = { ...this.state.post };
-    //Make New Comment
-    let comment = {
-      id: Date.now(),
-      username: post.username,
-      text: this.state.text
-    };
-    //setState of comments
-    this.setState(prevState => ({
-      post: {
-        ...prevState.post,
-        comments: [...post.comments, comment]
-      }
-    }));
+  updateCommentHandler = event => {
+    event.preventDefault();
+    if (this.state.text.trim().length !== 0) {
+      let post = { ...this.state.post };
+      //Make New Comment
+      let comment = {
+        id: Date.now(),
+        username: post.username,
+        text: this.state.text
+      };
+      //setState of comments
+      this.setState(prevState => ({
+        post: {
+          ...prevState.post,
+          comments: [...post.comments, comment]
+        },
+        text: ""
+      }));
+    }
+  };
+  likeCallBack = bool => {
+    if (bool) {
+      this.setState(prevState => ({
+        post: {
+          ...prevState.post,
+          likes: this.state.post.likes + 1
+        }
+      }));
+    } else {
+      this.setState(prevState => ({
+        post: {
+          ...prevState.post,
+          likes: this.state.post.likes - 1
+        }
+      }));
+    }
   };
   MakeComments = () => {
     if (this.state.post.comments) {
@@ -38,16 +58,44 @@ export default class Post extends React.Component {
       text: e.target.value
     });
   };
+  searchHandler = () => {
+    if (this.props.filter.trim().length !== 0) {
+      if (!this.state.post.username.includes(this.props.filter)) {
+        if (this.state.search) {
+          this.setState({
+            search: false
+          });
+        }
+      }
+      if (this.state.post.username.includes(this.props.filter)) {
+        if (!this.state.search) {
+          this.setState({
+            search: true
+          });
+        }
+      }
+    } else {
+      if (!this.state.search) {
+        this.setState({
+          search: true
+        });
+      }
+    }
+  };
   componentDidMount = () => {
     this.setState({
       post: this.props.data
     });
   };
+  componentDidUpdate = () => {
+    this.searchHandler();
+  };
 
   render() {
     let post = { ...this.state.post };
+
     return (
-      <div>
+      <div className={this.state.search === true ? "Searched" : "nSearched"}>
         <div
           className="Post"
           key={post.id}
@@ -65,28 +113,30 @@ export default class Post extends React.Component {
           <img className="PostImage" src={post.imageUrl} alt="imagePost" />
           <section className="PostFooter">
             <div className="PostIcons">
-              <img className="Icons" src={comment} />
-              <img className="Icons" src={like} />
+              <Like cb={this.likeCallBack} />
+              <input className="Icons" src={comment} type="image" />
             </div>
             <p id="Likes">{post.likes} likes</p>
           </section>
           {this.MakeComments()}
           <p className="Time">{post.timestamp}</p>
-
-          <div className="InputSection">
-            <input
-              className="CommentInput"
-              type="text"
-              placeholder="Add a comment..."
-              value={this.state.text}
-              onChange={this.commentTextHandler}
-            />
-            <img
-              className="CommentButton"
-              src={more}
-              onClick={this.updateCommentHandler}
-            />
-          </div>
+          <form onSubmit={this.updateCommentHandler}>
+            <div className="InputSection">
+              <input
+                className="CommentInput"
+                type="text"
+                placeholder="Add a comment..."
+                value={this.state.text}
+                onChange={this.commentTextHandler}
+              />
+              <input
+                className="CommentButton"
+                src={more}
+                type="image"
+                value="Submit"
+              />
+            </div>
+          </form>
         </div>
       </div>
     );

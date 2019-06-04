@@ -67,3 +67,13 @@
 img{
   cursor: pointer;
 }
+.nSearched{
+  visibility: collapse;
+  margin: 0px;
+  padding: 0px;
+  width: 0px;
+  height: 0px;
+}
+.Searched{
+  visibility: visible;
+}
