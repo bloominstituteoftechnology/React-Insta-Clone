@@ -19,32 +19,17 @@ class App extends Component {
   componentDidMount() {
     this.setState({dummyData});
   }
-
-  // getCharacters = URL => {
-    
-  
-  //   fetch(URL)
-  //     .then(res => {
-  //       return res.json();
-  //     })
-  //     .then(data => {
-  //       this.setState({ dumData: data.results});
-  //     })
-  //     .catch(err => {
-  //       throw new Error(err);
-  //     });
-    
-  // };
+onSearchSubmit= (term) => {
+  //jsonn
+}
 
   render() {
     return (
       <div className="App">
-        
         <div>
-        <SearchBar/>
+        <SearchBar onSubmit={this.onSearchSubmit}/>
         <PostContainer post = {this.state.dummyData}/>
         </div>
-       
       </div>
     );
   }
