@@ -12,13 +12,13 @@ const SearchBar = () => {
         </div>
         <div className="icon-wrapper">
           <div className="social">
-            <i className="fa fa-compass" />
+          <i class="far fa-compass"></i>
           </div>
           <div className="social">
-            <i className="fa fa-heart" />
+            <i className="fas fa-heart" />
           </div>
           <div className="social">
-            <i className="fa fa-user-circle" />
+            <i className="fas fa-user-circle" />
           </div>
         </div>
       </div>
