@@ -3,11 +3,16 @@ import React from "react"
 const PostContent = props => {
   return (
     <div>
-        <img 
+        <img
+        className="post-img" 
         alt="post-photo"
         src={props.image}
         />
-      <div>
+        <div id="post-icons">
+          <i className="far fa-comment"></i>
+          <i className="far fa-heart"></i>
+        </div>
+      <div className="post-likes">
         {props.likes} likes
       </div>
     </div>

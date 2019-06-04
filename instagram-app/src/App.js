@@ -16,7 +16,7 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
-        {/* <SearchBar /> */}
+        <SearchBar />
         <PostContainer 
         postData = {this.state.postData}
         />
