@@ -42,12 +42,7 @@ class App extends Component {
         
         <div>
         <SearchBar/>
-        <PostContainer
-        post = {this.state.dummyData}/>
-
-      
-      
-        
+        <PostContainer post = {this.state.dummyData}/>
         </div>
        
       </div>

@@ -1,1 +1,6 @@
-/* Styles for Search Bar*/
+.search-header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1020px;
+    width: 100%;
+} 
