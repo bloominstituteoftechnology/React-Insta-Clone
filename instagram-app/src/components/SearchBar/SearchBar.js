@@ -12,7 +12,7 @@ const SearchBar = ({ handleSearch, search }) => {
                 <IoLogoInstagram />
                 </div>
                 <h3 className="logo__text">
-                    instagram
+                    Instagram
                 </h3>
             </div>
             <input
