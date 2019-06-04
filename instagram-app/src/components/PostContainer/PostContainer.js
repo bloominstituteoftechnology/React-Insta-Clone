@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import pt from 'prop-types';
 import uuidv4 from 'uuid/v4';
 import moment from 'moment';
 import { IoIosHeartEmpty} from "react-icons/io";
@@ -59,3 +60,19 @@ const PostContainer = ({ props }) => {
 }
 
 export default PostContainer;
+
+PostContainer.propTypes = {
+    props: pt.shape({
+        comments: pt.arrayOf(pt.shape({
+            id: pt.number.isRequired,
+            username: pt.string.isRequired,
+            text: pt.string.isRequired
+        })),
+        thumbnailUrl: pt.string.isRequired,
+        imageUrl: pt.string.isRequired, 
+        timestamp: pt.string.isRequired, 
+        likes: pt.number.isRequired, 
+        username: pt.string.isRequired
+    }).isRequired
+    
+}
