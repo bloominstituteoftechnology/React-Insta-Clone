@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import dummyData from '../../dummy-data';
 import PostContainer from './PostContainer';
 import SearchComponent from '../SearchBar/SearchBar';

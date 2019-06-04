@@ -1,5 +1,7 @@
 .user_post{
-    border: 1px solid #D3D3D3;
+    /* border: 1px solid #D3D3D3; */
+    border: 1px solid red;
+    padding-left: 26%;
   }
   .userInfo{
     display: flex;

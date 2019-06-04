@@ -6,28 +6,39 @@
     border-bottom: .5px solid #D3D3D3;
   }
   .search-component-instagram-logo{
+    border: 1px solid blue;
+    font-size: 30px;
     display: flex;
     justify-content: flex-start;
-  
+    margin-left: 23%;
   }
+
+  .instalogo{
+    padding-right: 25%;
+    padding-top: 5%;
+  }
+
   .icons{
+    /* border: 1px solid blue; */
     height: 32px;
     width: 32px;
     margin-right: 35px;
   }
-  
+
   .instagram_icon{
+    /* border: 1px solid blue; */
     margin-right: 20px;
   }
   
   .instagram_logo{
+    /* border: 3px solid blue; */
     height: 40px;
     margin-left: 20px;
   }
   
   .vertical_line{
-    border-left: 2px solid black;
-    height: 35px;
+    border-left: 1px solid gray;
+    height: 33px;
   }
   
   .search-input {
