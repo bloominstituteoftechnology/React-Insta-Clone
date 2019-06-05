@@ -11,6 +11,7 @@
   .post-image-wrapper {
     height: 100%;
     width: 100%;
+    margin-bottom: 20px;
   }
   
   .post-image {
@@ -19,13 +20,22 @@
   
   .post-header {
     display: flex;
+    align-items: center;
+    margin: 5px;
   }
   
-  .post-thumb-wrapper {
+  .post-thumbnail-wrapper {
     height: 50px;
     width: 50px;
+    margin-right: 20px;
   }
   .post-thumbnail {
     height: 100%;
     border-radius: 50%;
   }
+
+ .userName {
+   display: flex;
+   font-size: 1.2rem;
+   font-weight: bold;
+ }

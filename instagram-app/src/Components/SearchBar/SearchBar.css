@@ -10,10 +10,13 @@
   
   .img-wrapper {
     height: 50px;
+    margin-left: 5px;
   }
   
   .logo-image {
     height: 100%;
+    margin-top: 30%;
+
   }
   
   .social-wrapper {
