@@ -11,6 +11,7 @@ import "./PostContainer.css";
 
 const PostContainer = ({ props }) => {
   const {
+    postId,
     comments,
     thumbnailUrl,
     imageUrl,
@@ -28,16 +29,17 @@ const PostContainer = ({ props }) => {
   const [addLikes, updateLikes] = useState(likes);
 
   useEffect(()=>{
-    console.log('working');
     const post = JSON.parse(localStorage.getItem("posts"));
     const postUpdate = post.map((userPost) => {
+      if(postId === userPost.postId) {
         return {
           ...userPost, comments: inputComment
         }
+      }
+      return userPost;
     });
-    console.log(postUpdate);
     localStorage.setItem("posts", JSON.stringify(postUpdate));
-  },[inputComment])
+  },[inputComment, postId])
 
   const handleChange = e => {
     setChange(e.target.value);
@@ -45,6 +47,7 @@ const PostContainer = ({ props }) => {
   const postComment = e => {
     e.preventDefault();
     const newComment = {
+      postId: postId,
       id: uuidv4(),
       username: faker.name.findName(),
       text: inputValue

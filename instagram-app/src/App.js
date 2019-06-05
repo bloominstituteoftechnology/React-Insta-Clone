@@ -1,8 +1,15 @@
 import React, { useState, useEffect } from "react";
+import uuidv4 from "uuid/v4";
 import data from "./dummy-data";
 import SearchBar from "./components/SearchBar/SearchBar";
 import PostContainer from "./components/PostContainer/PostContainer";
 import "./App.css";
+
+const preprocessData = data.map(post=> {
+  return {
+      ...post, postId: uuidv4()
+    }
+  })
 
 function App() {
   const [posts, setData] = useState([]);
@@ -10,12 +17,11 @@ function App() {
 
   useEffect(() => {
     const allData = localStorage.getItem("posts");
-    console.log('---------',JSON.parse(allData));
     let postData
     if(allData) {
       postData = JSON.parse(allData);
     }else {
-      localStorage.setItem("posts", JSON.stringify(data));
+      localStorage.setItem("posts", JSON.stringify(preprocessData));
       postData = JSON.parse(localStorage.getItem("posts"));
     }
     setData(postData);
@@ -23,7 +29,6 @@ function App() {
 
   const handleSearch = e => {
     e.preventDefault();
-    console.log("searching");
     const data = posts;
     const query = [];
     setSearch(e.target.value.toLowerCase());
@@ -35,18 +40,6 @@ function App() {
     });
     setData(query);
   };
-
-  // const addComment = (postId, commentUpdate) => {
-  //   const postUpdate = posts.map((userPost) => {
-  //     if (postId === userPost.id) {
-  //       return {
-  //         ...userPost, comments: commentUpdate
-  //       }
-  //     }
-  //     return userPost;
-  //   })
-  //   localStorage.setItem("posts", JSON.stringify(postUpdate));
-  // }
 
   return (
     <div className="App">
