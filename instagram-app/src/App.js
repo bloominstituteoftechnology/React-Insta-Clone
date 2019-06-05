@@ -5,20 +5,22 @@ import PostContainer from "./components/PostContainer/PostContainer";
 import "./App.css";
 
 function App() {
-  const [posts, setData] = useState(data);
+  const [posts, setData] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
     const allData = localStorage.getItem("posts");
+    console.log('---------',JSON.parse(allData));
     let postData
-    if(!allData) {
+    if(allData) {
+      postData = JSON.parse(allData);
+    }else {
       localStorage.setItem("posts", JSON.stringify(data));
       postData = JSON.parse(localStorage.getItem("posts"));
-    }else {
-      postData = JSON.parse(allData);
     }
     setData(postData);
   }, []);
+
   const handleSearch = e => {
     e.preventDefault();
     console.log("searching");

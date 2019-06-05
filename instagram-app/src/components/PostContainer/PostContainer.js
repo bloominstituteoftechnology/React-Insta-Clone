@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import pt from "prop-types";
 import uuidv4 from "uuid/v4";
 import moment from "moment";
@@ -26,6 +26,18 @@ const PostContainer = ({ props }) => {
   );
 
   const [addLikes, updateLikes] = useState(likes);
+
+  useEffect(()=>{
+    console.log('working');
+    const post = JSON.parse(localStorage.getItem("posts"));
+    const postUpdate = post.map((userPost) => {
+        return {
+          ...userPost, comments: inputComment
+        }
+    });
+    console.log(postUpdate);
+    localStorage.setItem("posts", JSON.stringify(postUpdate));
+  },[inputComment])
 
   const handleChange = e => {
     setChange(e.target.value);
