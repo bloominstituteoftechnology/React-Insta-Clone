@@ -1,0 +1,14 @@
+.searchBar {
+    margin-top: 10px;
+    display: flex;
+    // justify-content: space-evenly;
+    font-size: 20px;
+
+    input[type=text] {
+        width: 100%;
+    }
+    
+    .div {
+        margin-right: 9rem;
+    }
+}
