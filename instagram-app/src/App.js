@@ -34,11 +34,27 @@ function App() {
     setData(query);
   };
 
+  // const addComment = (postId, commentUpdate) => {
+  //   const postUpdate = posts.map((userPost) => {
+  //     if (postId === userPost.id) {
+  //       return {
+  //         ...userPost, comments: commentUpdate
+  //       }
+  //     }
+  //     return userPost;
+  //   })
+  //   localStorage.setItem("posts", JSON.stringify(postUpdate));
+  // }
+
   return (
     <div className="App">
       <SearchBar search={search} handleSearch={handleSearch} />
       {posts.map((userPost, index) => {
-        return <PostContainer key={index} props={userPost} />;
+        return <PostContainer 
+        key={index} 
+        props={userPost} 
+
+        />;
       })}
     </div>
   );
