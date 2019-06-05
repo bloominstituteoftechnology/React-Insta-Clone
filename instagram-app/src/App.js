@@ -5,17 +5,16 @@ import PostContainer from "./components/PostContainer/PostContainer";
 import "./App.css";
 
 function App() {
-  const initialState = () => JSON.parse(window.localStorage.getItem("posts") || null);
-  const [post, setData] = useState(initialState);
+  const [post, setData] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
     localStorage.setItem("posts", JSON.stringify(data));
-    // const allData = localStorage.getItem("posts");
-    // const postData = JSON.parse(allData);
-    // console.log(postData);
-    setData(post);
-  }, [post]);
+    const allData = localStorage.getItem("posts");
+    const postData = JSON.parse(allData);
+    console.log(postData);
+    setData(postData);
+  }, []);
   const handleSearch = e => {
     e.preventDefault();
     console.log("searching");
