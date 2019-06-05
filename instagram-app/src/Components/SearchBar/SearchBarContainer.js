@@ -1,5 +1,6 @@
 import React from 'react';
 import './SearchBar.css';
+import { FaCompass, FaHeart, FaUserAlt } from 'react-icons/fa';
 
 const SearchBar = props => {
     return (
@@ -12,13 +13,13 @@ const SearchBar = props => {
         </div>
         <div className="icon-wrapper">
           <div className="social">
-          <i className="far fa-compass"></i>
+            <FaCompass />
           </div>
           <div className="social">
-            <i className="fas fa-heart" />
+            <FaHeart />
           </div>
           <div className="social">
-            <i className="fas fa-user-circle" />
+            <FaUserAlt />
           </div>
         </div>
       </div>
