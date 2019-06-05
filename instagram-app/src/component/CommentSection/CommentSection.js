@@ -38,12 +38,12 @@ class CommentSection extends React.Component {
               <p className="timestamp">{this.props.timestamp}</p>
               <form onSubmit={this.addNewComment}>
                 <input 
-                type="text" 
-                name='newComment' 
-                value={this.state.newComment} 
-                onChange={this.changeHandler} 
-                 placeholder="add a comment..." 
-              />
+                    type="text" 
+                    name='newComment' 
+                    value={this.state.newComment} 
+                    onChange={this.changeHandler} 
+                    placeholder="add a comment..." 
+                />
               </form>
           </div> 
         );

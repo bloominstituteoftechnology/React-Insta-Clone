@@ -6,7 +6,14 @@ class SearchBar extends React.Component {
     // }
     render(){
         return( 
-            <input type="text" placeholder="search..." />
+            <input 
+                name="search" 
+                onChange={this.props.searchFilter}
+                placeholder="search..."
+                type="text"
+                //value={this.props.newSearch}
+                 
+            />
         );
     }
 }
