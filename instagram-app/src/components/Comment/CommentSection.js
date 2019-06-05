@@ -7,7 +7,7 @@ class CommentSection extends React.Component {
     this.state = {
       text: '',
       comment: props.comment,
-      likes: props.likes
+      likes: this.props.likes
     };
   }
 
@@ -31,13 +31,15 @@ class CommentSection extends React.Component {
   };
 
   addLikes = event => {
-    console.log('add Likes');
-    const newLikes = {
-      likes: this.state.like + 1
-    };
+    // console.log('add Likes');
+    // const newLikes = {
+    //   likes: this.state.like + 1
+    // };
 
     this.setState({
-      likes: [...this.state.likes, newLikes]
+      // likes: [...this.state.likes, newLikes]
+      ...this.state,
+      likes: this.state.likes + 1
     });
   };
 
@@ -45,7 +47,7 @@ class CommentSection extends React.Component {
     console.log(this.state.comment);
     return (
       <div className='comments'>
-        <div onclick={this.addLikes} className='hearts'>
+        <div onClick={this.addLikes} className='hearts'>
           <p>
             <i className='heart outline icon' />
           </p>
@@ -54,7 +56,7 @@ class CommentSection extends React.Component {
           </p>
         </div>
 
-        <p className='likes'>{this.props.likes}&nbsp;likes</p>
+        <p className='likes'>{this.state.likes}&nbsp;likes</p>
 
         {this.state.comment.map(comment => {
           return (
