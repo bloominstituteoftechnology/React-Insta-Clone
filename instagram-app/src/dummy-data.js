@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const dummyData = [
   {
@@ -29,7 +29,7 @@ const dummyData = [
         text: "Can't wait to try it!"
       }
     ]
-  },
+  }, 
   {
     id: "b",
     username: "fortnite",

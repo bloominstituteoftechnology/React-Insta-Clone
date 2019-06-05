@@ -1,27 +1,29 @@
 import React from 'react';
-import dummyData from './dummy-data';
-import './App.css';
+import SearchBar from './component/SearchBar/SearchBar';
 import PostContainer from './component/PostContainer/PostContainer';
+import dummyData from './dummy-data';
 
-class App extends React.Component{
+import './App.css';
 
-  constructor (props){
-    super(props);
-    this.state = {
-     data:dummyData
-    }
+class App extends React.Component {
+    state = {
+      data: []
+     }
+
+  componentDidMount(){
+    this.setState({data: dummyData})
   }
 
-  render(){
-    return(
-      <div>
-        {this.state.data.map((post)=>(
-          <PostContainer post={this.state.post}/>
-        ))}
-        <h2>heyyyy</h2>
-      </div>
+
+render() {
+  console.log('render', this.state.data);
+  return(
+    <div className="App">
+      <SearchBar />
+      <PostContainer data={this.state.data}/>
+    </div>
+
     )
   }
 }
-
 export default App;
