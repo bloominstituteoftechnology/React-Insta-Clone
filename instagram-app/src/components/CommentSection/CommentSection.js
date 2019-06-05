@@ -3,10 +3,10 @@ import './CommentSection.css';
 import Comment from './Comment/Comment';
 import moment from 'moment';
 
-class Comments extends React.Component{
-  constructor(props){
+class Comments extends React.Component {
+  constructor(props) {
     super(props)
-    this.state ={
+    this.state = {
       comments: props.comments,
       comment: ''
     }
@@ -26,7 +26,19 @@ class Comments extends React.Component{
     }
   }
 
-  render(){
+  // deleteComment = (id, index) => {
+  //   this.setState((prevState) => {
+  //   const newData = prevState.data;
+  //   newData[index].comments = newData[index].comments.filter(x => x.id !== id);
+  //     return {
+  //       data: newData,
+  //     };
+  //   }, () => {
+  //     localStorage.removeItem('data');
+  //   });
+  // }
+
+  render() {
     const time = moment(this.props.time, "MMM Do YYYY, h:mm:ss a")
     const newTime= time.fromNow().toUpperCase();
     return(
@@ -46,7 +58,8 @@ class Comments extends React.Component{
               value={this.state.comment}
               placeholder="Add a comment..."/>
           </form>
-          <img alt="more" src="./../img/more.png" />
+
+          {/* add ellipses image here */}
         </div>
       </div>
     )

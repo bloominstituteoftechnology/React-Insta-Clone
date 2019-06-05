@@ -1,34 +1,54 @@
-.user_post{
-    border: 1px solid #D3D3D3;
+.user_post {
+    border: 1px solid #dddddd;
+    margin: 0 auto;
+    width: 44.85%;
+    margin-top: 5%;
+    border-radius: 3px;
   }
-  .userInfo{
-    display: flex;
-    align-items: center;
-    padding: 10px 15px 0px;
-    margin-bottom: 15px;
-  }
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px 0;
+  margin-bottom: 15px;
+  width: 57.5%;
+}
+
+.username {
+  font-size: 15px;
+  font-weight: bold;
+}
   
-  .post_image{
-    width: 638.5px;
-  }
-  .user_icon{
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
-  }
+.post_image {
+  width: 100%;
+}
+
+.user_icon {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.interaction_container_top {
+  display: flex;
+  font-size: 30px;
+  padding-left: 20px;
+  margin-top: 1%;
+}
+
+.interaction_container {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
   
-  .interaction_container{
-    margin: 0;
-    padding-top: 10px;
-    padding-left: 10px;
-  }
+.interaction_container p {
+  font-size: 1.3rem;
+  line-height: 0;
+}
   
-  .interaction_container p {
-    font-size: 1.3rem;
-    line-height: 0;
-  }
-  
-  .user_interaction{
-    padding-right: 15px;
-  }
+.user_interaction {
+  padding-right: 20px;
+}

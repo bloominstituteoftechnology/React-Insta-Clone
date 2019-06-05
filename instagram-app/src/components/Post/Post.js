@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Post.css';
 import Comments from '../CommentSection/CommentSection';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart, faComment} from '@fortawesome/free-regular-svg-icons';
 
 class Post extends React.Component{
   constructor(props){
@@ -24,15 +26,19 @@ class Post extends React.Component{
         <div className="userInfo">
             <img className="user_icon" alt="user_icon" src={user.thumbnailUrl} />
           <div>
-            <h2> {user.username} </h2>
+            <h2 className="username"> {user.username} </h2>
           </div>
         </div>
-        <div>
+        <div className="postContain">
           <img className="post_image" alt="user_post" src={user.imageUrl} />
         </div>
-        <div className="interaction_container">
-          <img onClick={this.addLike} className="user_interaction" alt="likes" src="./../img/heart.png" />
-          <img className="user_interaction" alt="comment" src="./../img/message.png" />
+        <div className="interaction_container_top">
+          <div onClick={this.addLike} className="user_interaction" alt="likes">
+            <FontAwesomeIcon icon={faHeart} className="likeHeart" />
+          </div>
+          <div className="user_interaction" alt="comment">
+            <FontAwesomeIcon icon={faComment} />
+          </div>
         </div>
         <div className="interaction_container">
           <p>{this.state.likes} likes </p>

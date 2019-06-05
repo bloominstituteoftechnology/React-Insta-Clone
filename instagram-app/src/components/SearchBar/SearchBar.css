@@ -6,39 +6,54 @@
     border-bottom: .5px solid #D3D3D3;
   }
   .search-component-instagram-logo{
+    /* border: 1px solid blue; */
+    font-size: 30px;
     display: flex;
     justify-content: flex-start;
-  
+    margin-left: 15%;
   }
-  .icons{
-    height: 32px;
-    width: 32px;
-    margin-right: 35px;
+
+  .instalogo{
+    padding-right: 5%;
+    padding-top: 1%;
   }
-  
-  .instagram_icon{
-    margin-right: 20px;
-  }
-  
-  .instagram_logo{
-    height: 40px;
-    margin-left: 20px;
+
+  .instaFont{
+    width: 33%;
+    height: 100%;
+    padding-left: 5%;
   }
   
   .vertical_line{
-    border-left: 2px solid black;
-    height: 35px;
+    border-left: 1px solid gray;
+    height: 33px;
   }
+
+  .input{
+    margin-right: 10%;;
+  } 
   
   .search-input {
     color: #D3D3D3;
-    height: 30px;
+    height: 20px;
     width: 250px;
     padding: 2px;
-    background-color: #FAFAFA;
-    /* background-image: url('./search.png'); */
-    background-repeat: no-repeat;
-    background-position: 70px center;
+    background: #f4f4f4;
     text-align: center;
     font-size: 1.3rem;
+    border-radius: 3px;
+  }
+
+  .search-component-navigation{
+    /* border: 1px solid blue; */
+    font-size: 30px;
+    margin-right: 20%;
+  }
+
+  .topUser{
+    padding-left: 20px;
+  }
+
+  .topHeart{
+    padding-left: 20px;
   }
