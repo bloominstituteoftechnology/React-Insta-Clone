@@ -2,6 +2,7 @@ import React from 'react';
 import CommentSection from '../Comment/CommentSection';
 import HeaderPost from '../Header/HeaderPost';
 import ImagePost from '../Post-Image/ImagePost';
+import PostPage from './PostPage';
 
 import './postcontainer.css';
 

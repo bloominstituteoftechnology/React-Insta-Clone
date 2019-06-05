@@ -2,6 +2,8 @@ import React from 'react';
 import dummyData from './dummy-data';
 import PostContainer from './components/PostContainer/PostContainer';
 import SearchBar from './components/SearchBar/SearchBar';
+import Login from './components/Login/Login';
+import withAuthenticate from './components/Authentication/withAuthenticate';
 
 import './App.css';
 
@@ -15,7 +17,7 @@ class App extends React.Component {
   }
 
   handleSearch = search => {
-    console.log(search)
+    console.log(search);
     const name = this.state.data.filter(user => {
       return user.username.toLowerCase().includes(search.toLowerCase());
     });
@@ -42,12 +44,9 @@ class App extends React.Component {
         {renderedData.map(post => {
           return <PostContainer post={post} key={post.id} />;
         })}
-
-
-        
       </div>
     );
   }
 }
 
-export default App;
+export default withAuthenticate(App)(Login);
