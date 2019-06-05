@@ -42,9 +42,12 @@ export default class Login extends React.Component {
     }
     return (
       <div className="Login">
+        <h1>Login Here</h1>
         <input
           type="text"
           name="email"
+          className="fInput"
+          placeholder="email/username"
           value={this.state.email}
           onChange={this.textFormHandler}
         />
@@ -52,10 +55,12 @@ export default class Login extends React.Component {
         <input
           type="password"
           name="password"
+          className="fInput"
+          placeholder="password"
           value={this.state.password}
           onChange={this.textFormHandler}
         />
-        <button onClick={this.Login}>Login</button>
+      <button className="Btn" onClick={this.Login}>Login</button>
       </div>
     );
   }

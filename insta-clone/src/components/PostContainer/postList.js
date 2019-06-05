@@ -5,6 +5,7 @@ import Comments from "../CommentSection/commentSection";
 import comment from "../../icons/comment.png";
 import Like from "../LikeSection/Like.js";
 import more from "../../icons/more.png";
+import {getUser} from "../withAuth/services"
 export default class Post extends React.Component {
   state = {
     post: [],
@@ -18,7 +19,7 @@ export default class Post extends React.Component {
       //Make New Comment
       let comment = {
         id: Date.now(),
-        username: post.username,
+        username: getUser().email,
         text: this.state.text
       };
       //setState of comments

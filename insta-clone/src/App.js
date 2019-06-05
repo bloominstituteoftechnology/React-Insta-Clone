@@ -14,7 +14,6 @@ function App() {
     <Router>
       <div className="App">
         <Route path="/" component={Nav} />
-        <PrivateRoute path="/posts" component={Nav} />
       </div>
     </Router>
   );
