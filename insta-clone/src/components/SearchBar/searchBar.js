@@ -5,6 +5,9 @@ import discover from "../../icons/discover.png";
 import heart from "../../icons/heart_unfilled.png";
 import profile from "../../icons/profile.png";
 import Posts from "../PostContainer/postContainer.js";
+import Login from "../LoginComponent/login.js";
+import { isLoggedIn, logout } from "../withAuth/services";
+import { BrowserRouter, Route } from "react-router-dom";
 export default class searchBar extends React.Component {
   state = {
     text: ""
@@ -13,6 +16,19 @@ export default class searchBar extends React.Component {
     this.setState({
       text: e.target.value
     });
+  };
+  LoggedInHandler = () => {
+    return isLoggedIn() === true ? (
+      <Posts filter={this.state.text} />
+    ) : (
+      <Login />
+    );
+  };
+  SignOutHandler = async () => {
+    await logout(this.RedirectHandler);
+  };
+  RedirectHandler = () => {
+    this.props.history.push("/login");
   };
   render() {
     return (
@@ -32,10 +48,10 @@ export default class searchBar extends React.Component {
           <div className="Nav Images">
             <img src={discover} alt="Nav" />
             <img src={heart} alt="Nav" />
-            <img src={profile} alt="Nav" />
+            <img src={profile} alt="Nav" onClick={this.SignOutHandler} />
           </div>
         </div>
-        <Posts filter={this.state.text} />
+        {this.LoggedInHandler()}
       </div>
     );
   }
