@@ -37,7 +37,7 @@ const PostContainer = ({ props }) => {
       username: faker.name.findName(),
       text: inputValue
     };
-    setComment(comments.concat(newComment));
+    setComment([...inputComment, newComment]);
     setChange("");
     settimestamp(moment(new Date()).format("MMM D LTS"));
   };
