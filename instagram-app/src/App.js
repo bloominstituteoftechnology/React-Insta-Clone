@@ -5,21 +5,24 @@ import PostContainer from "./components/PostContainer/PostContainer";
 import "./App.css";
 
 function App() {
-  const initialState = () => JSON.parse(window.localStorage.getItem("posts") || null);
-  const [post, setData] = useState(initialState);
+  const [posts, setData] = useState(data);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    localStorage.setItem("posts", JSON.stringify(data));
-    // const allData = localStorage.getItem("posts");
-    // const postData = JSON.parse(allData);
-    // console.log(postData);
-    setData(post);
-  }, [post]);
+    const allData = localStorage.getItem("posts");
+    let postData
+    if(!allData) {
+      localStorage.setItem("posts", JSON.stringify(data));
+      postData = JSON.parse(localStorage.getItem("posts"));
+    }else {
+      postData = JSON.parse(allData);
+    }
+    setData(postData);
+  }, []);
   const handleSearch = e => {
     e.preventDefault();
     console.log("searching");
-    const data = post;
+    const data = posts;
     const query = [];
     setSearch(e.target.value.toLowerCase());
     data.map(user => {
@@ -34,7 +37,7 @@ function App() {
   return (
     <div className="App">
       <SearchBar search={search} handleSearch={handleSearch} />
-      {post.map((userPost, index) => {
+      {posts.map((userPost, index) => {
         return <PostContainer key={index} props={userPost} />;
       })}
     </div>

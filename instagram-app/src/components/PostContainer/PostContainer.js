@@ -22,7 +22,7 @@ const PostContainer = ({ props }) => {
   const [inputValue, setChange] = useState("");
   const [inputComment, setComment] = useState(comments);
   const [createdAt, settimestamp] = useState(
-    moment(new Date(commentDate)).format("MMM D LTS")
+    moment(new Date(commentDate), "MMM D LTS").fromNow()
   );
 
   const [addLikes, updateLikes] = useState(likes);
@@ -39,7 +39,7 @@ const PostContainer = ({ props }) => {
     };
     setComment([...inputComment, newComment]);
     setChange("");
-    settimestamp(moment(new Date()).format("MMM D LTS"));
+    settimestamp(moment(new Date(), "MMM D LTS").fromNow());
   };
   const handleLikes = () => {
     let newLike = likes;
