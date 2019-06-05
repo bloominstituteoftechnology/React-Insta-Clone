@@ -1,35 +1,31 @@
 import React, {Component, useState} from 'react';
-import logo from './logo.svg';
+import Proptypes from 'prop-types';
 import Data from './dummy-data';
+import SearchBar from './components/SearchBar/SearchBar';
 import PostContainer from './components/PostContainer/PostContainer';
 import './App.css';
 
 class App extends Component {
 
-  constructor () {
+  constructor (props) {
     super(props);
 
     this.state = {
-      posts: Data,
-      comment: [],
-      username: //Current user object
+      posts: [],
+      filteredPosts: []      
     }
   }
 
-  addComment(username) {
-    this.state.posts.map(post => {
-      if (username === post.username) {
-        const newComment = {
-          username: this.state.username,
-          text: this.state.comment
-        };
-    
-        this.setState({
-          comment: newComment,
-          posts: this.state.posts['comments'].concat(comment),
-        })
-      }
-    })
+  componentDidMount() {
+    this.setState({posts: Data});
+  }
+
+
+  search(event) {
+    let posts = this.state.posts.filter(post => {
+      if(post.username.includes(event.target.value)) { return post; }
+    });
+    this.setState({filteredPosts: posts});
   }
 
 
@@ -37,10 +33,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+          <SearchBar 
+            search={this.search}
+            />
          <PostContainer
            posts={this.state.posts}
-           commentChange={}
-           addComment={this.addComment()} // Need to figure out how to add comment to the appropriate username. 
+           addComment={this.addComment} // Need to figure out how to add comment to the appropriate username. 
            //One idea is to generate a unique id for each of the dummy data and use it to find the right post to add a comment too
            />
         </header>

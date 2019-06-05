@@ -4,16 +4,17 @@ export default function AddComment (props) {
     return (
         <div
           className='add-comment'>
+            <form
+              onSubmit={props.submitComment}>
             <input 
               className='comment-form'
               type='text'
-              placeholder='Add a Comment'
+              placeholder='Add a Comment....'
+              value={props.comment}
               onChange={props.onChange}
             />
-            <button
-              className='add-comment-button'
-              onClick={props.onClick}
-            >...</button>
+            </form>
+            
         </div>
 
     );

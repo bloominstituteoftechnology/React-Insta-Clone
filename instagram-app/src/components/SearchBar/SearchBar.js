@@ -6,9 +6,8 @@ export default function SearchBar (props) {
           className='search-bar'>
               <input
                 type='text'
-                className=''
-                onchange={props.onChange}
-                onKeyDown={props.enterButton}
+                className='search-input'
+                onKeyDown={props.search}
               />
         </div>
     )
