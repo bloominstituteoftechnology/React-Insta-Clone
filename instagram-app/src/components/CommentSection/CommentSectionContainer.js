@@ -7,13 +7,13 @@ class CommentSection extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            comment: props.CommentSection
+            comments: props.comments
         };
     }
     render() {
         return(
             <div>
-                {this.state.comments.map((b, a) => <Comment key={a} comment={b} />)}
+                {this.state.comments.map((c, i) => <Comment key={i} comment={c} />)}
                 <CommentForm />
             </div>
         );
