@@ -1,23 +1,34 @@
 import React from "react";
-import "./commentSection.css";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const CommentSection = styled.div`
+  height: 125px;
+  overflow: hidden;
+`;
+const Content = styled.span`
+  font-weight: ${props => (props.username ? "bold" : "normal")};
+`;
+const Comment = styled.div`
+  margin: 10px;
+`;
+
 export default class commentContainer extends React.Component {
   commentHandler = () => {
     if (this.props.comments) {
       return this.props.comments.map(comment => {
         return (
-          <div className="Comment" key={comment.id}>
-            <span className="Username" key={comment.username}>
-              {comment.username}{" "}
-            </span>
-            <span> {comment.text}</span>
-          </div>
+          <Comment>
+            <Content username>
+              {comment.username} <Content> {comment.text}</Content>
+            </Content>
+          </Comment>
         );
       });
     }
   };
   render() {
-    return <div className="CommentSection">{this.commentHandler()}</div>;
+    return <CommentSection>{this.commentHandler()}</CommentSection>;
   }
 }
 commentContainer.propTypes = {

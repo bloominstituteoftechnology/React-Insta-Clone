@@ -5,7 +5,61 @@ import Comments from "../CommentSection/commentSection";
 import comment from "../../icons/comment.png";
 import Like from "../LikeSection/Like.js";
 import more from "../../icons/more.png";
-import {getUser} from "../withAuth/services"
+import { getUser } from "../withAuth/services";
+import styled from "styled-components";
+
+const PostContainer = styled.div`
+  background-color: #ededed;
+  border-radius: 5px;
+  width: ${props => (props.searched ? "500px" : "0px")};
+  max-height: ${props => (props.searched ? "900px" : "0px")};
+  display: flex;
+  flex-direction: column;
+  margin: ${props => (props.searched ? "25px auto" : "0px")};
+  visibility: ${props => (props.searched ? "visible" : "collapse")};
+`;
+const Running = styled.div`
+  display: flex;
+  flex-flow: ${props => (props.header ? "row" : "column")};
+  height: ${props => (props.header ? "50px" : "auto")};
+  margin-left: 10px;
+  align-items: ${props => (props.header ? "center" : "flex-start")};
+`;
+const PostImage = styled.img`
+  margin: ${props => (props.thumbnail ? "5px" : "0px")};
+  align-self: ${props => (props.thumbnail ? "flex-start" : "center")};
+  width: ${props => (props.thumbnail ? "25px" : "495px")};
+  height: ${props => (props.thumbnail ? "25px" : "495px")};
+  border-radius: ${props => (props.thumbnail ? "25px" : "0px")};
+`;
+const Icons = styled.div`
+  display: flex;
+`;
+const Icon = styled.input`
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+`;
+const TimeStamp = styled.p`
+  margin-left: 10px;
+  font-size: 0.5rem;
+`;
+const Likes = styled.p`
+  margin: 0px;
+`;
+const InputSection = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+`;
+const CommentInput = styled.input`
+  margin: 0px 10px;
+  width: ${props => (props.button ? "25px" : "100%")};
+  height: 25px;
+  font-size: 1.5rem;
+`;
 export default class Post extends React.Component {
   state = {
     post: [],
@@ -96,50 +150,33 @@ export default class Post extends React.Component {
     let post = { ...this.state.post };
 
     return (
-      <div className={this.state.search === true ? "Searched" : "nSearched"}>
-        <div
-          className="Post"
-          key={post.id}
-          username={post.username}
-          likes={post.likes}
-        >
-          <section className="PostHeader">
-            <img
-              className="PostThumb"
-              src={post.thumbnailUrl}
-              alt="thumbnail"
+      <PostContainer searched={this.state.search}>
+        <Running header>
+          <PostImage src={post.thumbnailUrl} thumbnail />
+          <p id="username">{post.username}</p>
+        </Running>
+        <PostImage src={post.imageUrl} />
+        <Running>
+          <Icons>
+            <Like cb={this.likeCallBack} />
+            <Icon src={comment} type="image" />
+          </Icons>
+          <Likes>{post.likes} likes</Likes>
+        </Running>
+        {this.MakeComments()}
+        <TimeStamp>{post.timestamp}</TimeStamp>
+        <form onSubmit={this.updateCommentHandler}>
+          <InputSection>
+            <CommentInput
+              type="text"
+              placeholder="Add a comment..."
+              value={this.state.text}
+              onChange={this.commentTextHandler}
             />
-            <p id="username">{post.username}</p>
-          </section>
-          <img className="PostImage" src={post.imageUrl} alt="imagePost" />
-          <section className="PostFooter">
-            <div className="PostIcons">
-              <Like cb={this.likeCallBack} />
-              <input className="Icons" src={comment} type="image" />
-            </div>
-            <p id="Likes">{post.likes} likes</p>
-          </section>
-          {this.MakeComments()}
-          <p className="Time">{post.timestamp}</p>
-          <form onSubmit={this.updateCommentHandler}>
-            <div className="InputSection">
-              <input
-                className="CommentInput"
-                type="text"
-                placeholder="Add a comment..."
-                value={this.state.text}
-                onChange={this.commentTextHandler}
-              />
-              <input
-                className="CommentButton"
-                src={more}
-                type="image"
-                value="Submit"
-              />
-            </div>
-          </form>
-        </div>
-      </div>
+            <CommentInput button src={more} type="image" value="Submit" />
+          </InputSection>
+        </form>
+      </PostContainer>
     );
   }
 }
