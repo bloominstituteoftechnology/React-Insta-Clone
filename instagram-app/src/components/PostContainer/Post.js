@@ -2,6 +2,27 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
 import LikeSection from './LikeSection';
+import styled from 'styled-components';
+
+const PostContainer = styled.div`
+margin: 15px 0;
+border: 1px solid lightgray;
+
+`;
+
+const PostImage = styled.img`
+width: 100%;
+`;
+
+const ThumbnailImage = styled.img` 
+height: 30px;
+width: 30px;
+`;
+
+const UserName = styled.span`
+font-weight: 300;
+font-size: 10px;
+`;
 
 class Post extends React.Component {
     constructor(props) {
@@ -19,20 +40,26 @@ class Post extends React.Component {
 
     render() {
         return (
-            <div
-              className='post'
-            >
-                <img className='thumbnail' alt='' src={this.props.post.thumbnailUrl} /> {this.props.post.userName}
-                <img className='post-image' alt='' src={this.props.post.imageUrl} />
+            <PostContainer>
+                <ThumbnailImage
+                  alt=""
+                  src={this.props.post.thumbnailUrl}
+                />
+                <UserName>{this.props.post.username}</UserName>
+                <br/>
+                <PostImage
+                  alt=""
+                  src={this.props.post.imageUrl}
+                />
+
                 <LikeSection
                   incrementLikes={this.incrementLikes}
                   likes={this.state.likes}
                 />
-    
                 <CommentSection
-                    comments={this.props.post.comments}
+                  comments={this.props.post.comments}
                 />
-            </div>
+            </PostContainer>
         )
     }
 
