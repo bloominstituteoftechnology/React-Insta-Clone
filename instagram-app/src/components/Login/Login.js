@@ -1,4 +1,21 @@
 import React from 'react';
+import './login.css';
+
+import styled from 'styled-components';
+
+const Button = styled.button`
+  background: dodgerblue;
+  border-radius: 5px;
+  color: black
+  margin: 0 1em;
+  padding: 10px 20px;
+
+`;
+
+const input = styled.input`
+  background-color: yellow;
+  padding: 20px;
+`;
 
 class LoginForm extends React.Component {
   state = {
@@ -24,9 +41,15 @@ class LoginForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.login}>
-          <input type='text' placeholder='username' value={this.state.username} name='username' onChange={this.onHandleChange} />
-          <input type='text' placeholder='password' value={this.state.password} name='password' onChange={this.onHandleChange} />
-          <button>Log In</button>
+          <div className='login'>
+            <div className='username'>
+              <input type='text' placeholder='username' value={this.state.username} name='username' onChange={this.onHandleChange} />
+            </div>
+            <div className='password'>
+              <input type='text' placeholder='password' value={this.state.password} name='password' onChange={this.onHandleChange} />
+            </div>
+            <Button>Log In</Button>
+          </div>
         </form>
       </div>
     );

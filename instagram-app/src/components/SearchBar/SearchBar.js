@@ -21,13 +21,24 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className='search-bar'>
-        <p>
-          <i className='instagram icon' />{' '}
-        </p>
-        <p className='insta'>Instagram</p>
-        <form>
-          <input type='text' onChange={this.handleChange} name='search' placeholde='search' onKeyDown={this.handleSearch} />
-        </form>
+        <div className='search'>
+          <div clasName='icon'>
+            <i className='big instagram icon' />
+          </div>
+          <div className='logo'>
+            <p className='insta'>Instagram</p>
+          </div>
+
+          <form className='pd'>
+            <input type='text' onChange={this.handleChange} name='search' placeholder='search' onKeyDown={this.handleSearch} className='form' />
+          </form>
+
+          <div className='left-icon'>
+            <i class='large compass outline icon' />
+            <i class='large heart outline icon' />
+            <i class='large user outline icon' />
+          </div>
+        </div>
       </div>
     );
   }

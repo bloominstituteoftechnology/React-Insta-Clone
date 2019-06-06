@@ -37,9 +37,7 @@ class App extends React.Component {
     const renderedData = this.state.filterNames.length > 0 ? this.state.filterNames : this.state.data;
     return (
       <div className='App'>
-        <div className='search-bar'>
-          <SearchBar search={this.handleSearch} />
-        </div>
+        <SearchBar search={this.handleSearch} />
 
         {renderedData.map(post => {
           return <PostContainer post={post} key={post.id} />;

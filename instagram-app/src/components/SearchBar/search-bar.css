@@ -1,7 +1,37 @@
 .search-bar {
-    display: flex;
+
+    position: relative;
+
+
 }
+
+.search {
+    display: flex;
+    align-content: center;
+    justify-content: baseline;
+    padding: 10px;
+    padding-right: 20px;
+
+}
+
+
 
 .insta {
     font-family: 'Oleo Script', cursive;
+    font-size: 2rem;
+    position: absolute;
+    top: 5px;
+}
+
+.form {
+    position: absolute;
+    left: 40%;
+    padding: 3px 20px;
+    text-align: center;
+    width: 400px;
+}
+
+.left-icon {
+    right: 20px;
+    position: absolute;
 }

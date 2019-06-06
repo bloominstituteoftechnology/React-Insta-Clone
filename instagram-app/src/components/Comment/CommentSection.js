@@ -7,7 +7,8 @@ class CommentSection extends React.Component {
     this.state = {
       text: '',
       comment: props.comment,
-      likes: this.props.likes
+      likes: this.props.likes,
+      username: this.props.users.username
     };
   }
 
@@ -22,7 +23,7 @@ class CommentSection extends React.Component {
     console.log('add comment ');
     const newComment = {
       text: this.state.text,
-      username: 'sunil'
+      username: this.state.username
     };
 
     this.setState({
