@@ -1,1 +1,14 @@
+.comment {
+    font-weight: 300;
+    font-size: 14px;
+}
+.usercomment {
+    text-align: left;
+    padding: 2px;
+    margin: 4px;
+}
 
+.username {
+    font-weight: 500;
+    font-size: 12px;
+}
