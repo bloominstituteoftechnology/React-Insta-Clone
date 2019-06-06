@@ -2,7 +2,7 @@ import React from 'react';
 import Comment from './Comment';
 import AddComment from "./AddComment";
 import PropTypes from 'prop-types';
-import AddComment from './CommentSection/AddComment';
+
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -15,7 +15,27 @@ class CommentSection extends React.Component {
 
     componentDidMount() {
         const id = this.props.postId;
+        if (localStorage.getItem(id)) {
+            this.setState({
+                comments: JSON.parse(localStorage.getItem(this.props.postId))
+            });
+        } else {
+            this.saveComments();
+        }
+        
     }
+
+    componentWillUnmount() {
+        this.saveComments()
+    }
+
+
+    saveComments() {
+        localStorage.setItem(
+            this.props.postId,
+            JSON.stringify(this.state.comments)
+        );
+    };
 
     addComment() {
         const newComment = { text: this.state.comment, username: 'damolaadewunmi' };

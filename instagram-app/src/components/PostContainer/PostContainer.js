@@ -1,14 +1,13 @@
 import React from 'react';
 import Post from './Post';
-import uuid from 'uuid';
 
 
 
-export default function PostContainer(prop) {
+export default function PostContainer(props) {
     return (
-        prop.posts.map(post => 
+        props.posts.map(post => 
         <Post
-          key={uuid()}
+          key={post.postId}
           post={post}
         />
     ))

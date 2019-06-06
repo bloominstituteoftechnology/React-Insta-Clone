@@ -12,7 +12,7 @@ class Login extends React.Component {
     }
 
     onChange(event) {
-        this.setState({ [e.target.name]: e.target.value});
+        this.setState({ [event.target.name]: event.target.value});
     }
 
     render() {

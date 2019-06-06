@@ -22,8 +22,8 @@ class Post extends React.Component {
             <div
               className='post'
             >
-                <img className='thumbnail' src={this.props.post.thumbnailUrl} /> {this.props.post.userName}
-                <img className='post-image' src={this.props.post.imageUrl} />
+                <img className='thumbnail' alt='' src={this.props.post.thumbnailUrl} /> {this.props.post.userName}
+                <img className='post-image' alt='' src={this.props.post.imageUrl} />
                 <LikeSection
                   incrementLikes={this.incrementLikes}
                   likes={this.state.likes}
