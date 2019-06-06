@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import pt from "prop-types";
 import uuidv4 from "uuid/v4";
 import moment from "moment";
@@ -11,6 +11,7 @@ import "./PostContainer.css";
 
 const PostContainer = ({ props }) => {
   const {
+    postId,
     comments,
     thumbnailUrl,
     imageUrl,
@@ -27,12 +28,26 @@ const PostContainer = ({ props }) => {
 
   const [addLikes, updateLikes] = useState(likes);
 
+  useEffect(()=>{
+    const post = JSON.parse(localStorage.getItem("posts"));
+    const postUpdate = post.map((userPost) => {
+      if(postId === userPost.postId) {
+        return {
+          ...userPost, comments: inputComment
+        }
+      }
+      return userPost;
+    });
+    localStorage.setItem("posts", JSON.stringify(postUpdate));
+  },[inputComment, postId])
+
   const handleChange = e => {
     setChange(e.target.value);
   };
   const postComment = e => {
     e.preventDefault();
     const newComment = {
+      postId: postId,
       id: uuidv4(),
       username: faker.name.findName(),
       text: inputValue

@@ -1,27 +1,36 @@
 import React, { useState, useEffect } from "react";
+import uuidv4 from "uuid/v4";
 import data from "./dummy-data";
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
+// import SearchBar from "./components/SearchBar/SearchBar";
+// import PostContainer from "./components/PostContainer/PostContainer";
+import withAuthenticate from './components/authentication/withAuthenticate';
+import PostPage from './components/PostContainer/PostPage';
 import "./App.css";
 
+const preprocessData = data.map(post=> {
+  return {
+      ...post, postId: uuidv4()
+    }
+  })
+
 function App() {
-  const [posts, setData] = useState(data);
+  const [posts, setData] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
     const allData = localStorage.getItem("posts");
     let postData
-    if(!allData) {
-      localStorage.setItem("posts", JSON.stringify(data));
-      postData = JSON.parse(localStorage.getItem("posts"));
-    }else {
+    if(allData) {
       postData = JSON.parse(allData);
+    }else {
+      localStorage.setItem("posts", JSON.stringify(preprocessData));
+      postData = JSON.parse(localStorage.getItem("posts"));
     }
     setData(postData);
   }, []);
+
   const handleSearch = e => {
     e.preventDefault();
-    console.log("searching");
     const data = posts;
     const query = [];
     setSearch(e.target.value.toLowerCase());
@@ -34,12 +43,23 @@ function App() {
     setData(query);
   };
 
+  const ComponentFromWithAuthenticate = withAuthenticate(PostPage);
+
   return (
     <div className="App">
-      <SearchBar search={search} handleSearch={handleSearch} />
+      {/* <SearchBar search={search} handleSearch={handleSearch} />
       {posts.map((userPost, index) => {
-        return <PostContainer key={index} props={userPost} />;
-      })}
+        return <PostContainer 
+        key={index} 
+        props={userPost} 
+
+        />;
+      })} */}
+      <ComponentFromWithAuthenticate 
+        handleSearch={handleSearch}
+        search={search}
+        posts={posts}
+      />
     </div>
   );
 }
