@@ -1,15 +1,16 @@
 import React from 'react';
 
-const withAuthenticate = (WrappedComponent) => class extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {}
-    }
-  
+const withAuthenticate = (WrappedComponent, Login)  => class extends React.Component {
     render() {
+      let viewComponent;
+      if (localStorage.getItem("User")) {
+        viewComponent = <WrappedComponent {...this.props}/>
+      } else {
+        viewComponent = <Login />
+      }
       return (
         <div className="container">
-          <WrappedComponent {...this.props}/>
+          {viewComponent}
         </div>
       )
     }

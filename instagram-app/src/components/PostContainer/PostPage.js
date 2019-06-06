@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBar from "../SearchBar/SearchBar.js";
+import SearchBar from "../SearchBar/SearchBar";
 import PostContainer from './PostContainer';
 
 
