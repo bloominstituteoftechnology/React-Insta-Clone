@@ -89,7 +89,7 @@ const PostContainer = ({ props }) => {
   );
 
   const [addLikes, updateLikes] = useState(likes);
-console.log(createdAt);
+  
   useEffect(()=>{
     const post = JSON.parse(localStorage.getItem("posts"));
     const postUpdate = post.map((userPost) => {

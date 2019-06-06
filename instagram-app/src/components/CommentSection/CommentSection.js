@@ -1,12 +1,25 @@
 import React from 'react';
 import pt from 'prop-types';
-import './CommentSection.css';
+import styled from 'styled-components';
+// import './CommentSection.css';
+
+const CommentArea = styled.div`
+display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    line-height: 0;
+    padding: 0 1rem 0 1rem;
+    p span {
+        font-weight: bold; 
+    }
+`;
 
 const CommentSection = ({ props }) => {
     return (
-        <div className="comment__container">
+        <CommentArea>
         <p><span className="user__comment">{props.username}</span>&nbsp;&nbsp;{props.text}</p>
-        </div>
+        </CommentArea>
     )
 }
 
