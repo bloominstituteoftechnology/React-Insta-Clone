@@ -6,6 +6,10 @@ class SearchBar extends React.Component {
     // }
     render(){
         return( 
+            <div className="instagram-logo">
+                <i class="fab fa-instagram"></i>
+            </div>
+            
             <input 
                 name="search" 
                 onChange={this.props.searchFilter}
