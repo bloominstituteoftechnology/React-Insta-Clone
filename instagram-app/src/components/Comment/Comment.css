@@ -1,0 +1,7 @@
+.comment {
+  padding-bottom: 5px;
+  
+  .username {
+    font-weight: bolder;
+  }
+}
