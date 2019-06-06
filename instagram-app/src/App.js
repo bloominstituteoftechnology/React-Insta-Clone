@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import uuidv4 from "uuid/v4";
 import data from "./dummy-data";
-import SearchBar from "./components/SearchBar/SearchBar";
-import PostContainer from "./components/PostContainer/PostContainer";
+// import SearchBar from "./components/SearchBar/SearchBar";
+// import PostContainer from "./components/PostContainer/PostContainer";
+import PostPage from './components/PostContainer/PostPage';
 import "./App.css";
 
 const preprocessData = data.map(post=> {
@@ -43,14 +44,19 @@ function App() {
 
   return (
     <div className="App">
-      <SearchBar search={search} handleSearch={handleSearch} />
+      {/* <SearchBar search={search} handleSearch={handleSearch} />
       {posts.map((userPost, index) => {
         return <PostContainer 
         key={index} 
         props={userPost} 
 
         />;
-      })}
+      })} */}
+      <PostPage 
+        handleSearch={handleSearch}
+        search={search}
+        posts={posts}
+      />
     </div>
   );
 }
