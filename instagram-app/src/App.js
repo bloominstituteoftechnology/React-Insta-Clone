@@ -5,6 +5,7 @@ import data from "./dummy-data";
 // import PostContainer from "./components/PostContainer/PostContainer";
 import withAuthenticate from './components/authentication/withAuthenticate';
 import PostPage from './components/PostContainer/PostPage';
+import Login from './components/Login/Login';
 import "./App.css";
 
 const preprocessData = data.map(post=> {
@@ -43,7 +44,7 @@ function App() {
     setData(query);
   };
 
-  const ComponentFromWithAuthenticate = withAuthenticate(PostPage);
+  const ComponentFromWithAuthenticate = withAuthenticate(PostPage, Login);
 
   return (
     <div className="App">
