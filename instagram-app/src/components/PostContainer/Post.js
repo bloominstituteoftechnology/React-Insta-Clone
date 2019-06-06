@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CommentSection from '../CommentSection/CommentSection';
+import LikeSection from './LikeSection';
 
 class Post extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            likes: props.posts.likes
+            likes: props.post.likes
         };
     }
 
@@ -23,8 +24,10 @@ class Post extends React.Component {
             >
                 <img className='thumbnail' src={this.props.post.thumbnailUrl} /> {this.props.post.userName}
                 <img className='post-image' src={this.props.post.imageUrl} />
-                {/* Enter fa-icons for like here */}
-                <p>{this.props.post.likes} likes</p>
+                <LikeSection
+                  incrementLikes={this.incrementLikes}
+                  likes={this.state.likes}
+                />
     
                 <CommentSection
                     comments={this.props.post.comments}

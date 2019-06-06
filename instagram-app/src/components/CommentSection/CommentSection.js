@@ -2,6 +2,7 @@ import React from 'react';
 import Comment from './Comment';
 import AddComment from "./AddComment";
 import PropTypes from 'prop-types';
+import AddComment from './CommentSection/AddComment';
 
 class CommentSection extends React.Component {
     constructor(props) {
