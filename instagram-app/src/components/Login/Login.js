@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Login.css";
 
 const Login = ({ props }) => {
   const [userInput, setUserInput] = useState("");
   const [userPassword, setUserPassword] = useState("");
+  const [loggedIn, setloggedIn] = useState(false);
 
-  const loginHandler =()=>{
+  useEffect(() =>{
+    setloggedIn(true)
+  },[userInput])
+  const loginHandler = ()=>{
     let logDeets = {
       username: userInput,
-      password: userPassword
+      password: userPassword,
+      loggedIn: loggedIn
     }
     localStorage.setItem("User", JSON.stringify(logDeets));
   }

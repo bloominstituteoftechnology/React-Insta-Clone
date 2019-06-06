@@ -20,9 +20,9 @@ const PostContainer = ({ props }) => {
     username
   } = props;
   const commentDate = timestamp.replace(/th/, "");
-  const [inputValue, setChange] = useState("");
-  const [inputComment, setComment] = useState(comments);
-  const [createdAt, settimestamp] = useState(
+  const [inputValue, setInputValue] = useState("");
+  const [inputComment, setInputComment] = useState(comments);
+  const [createdAt, setCreatedAt] = useState(
     moment(new Date(commentDate), "MMM D LTS").fromNow()
   );
 
@@ -42,7 +42,7 @@ const PostContainer = ({ props }) => {
   },[inputComment, postId])
 
   const handleChange = e => {
-    setChange(e.target.value);
+    setInputValue(e.target.value);
   };
   const postComment = e => {
     e.preventDefault();
@@ -52,9 +52,9 @@ const PostContainer = ({ props }) => {
       username: faker.name.findName(),
       text: inputValue
     };
-    setComment([...inputComment, newComment]);
-    setChange("");
-    settimestamp(moment(new Date(), "MMM D LTS").fromNow());
+    setInputComment([...inputComment, newComment]);
+    setInputValue("");
+    setCreatedAt(moment(new Date(), "MMM D LTS").fromNow());
   };
   const handleLikes = () => {
     let newLike = likes;
