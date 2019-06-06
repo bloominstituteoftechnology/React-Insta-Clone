@@ -18,17 +18,17 @@ const dummyData = [
         id: 1,
         username: "philzcoffee",
         text:
-          "We would like to give a warm welcome to the newest addition of our team Bryce Soghigian"
+          "Pretty clean design"
       },
       {
         id: 2,
         username: "biancasaurus",
-        text: "Looks delicious!"
+        text: "Can I hire Bryce Soghigian?"
       },
       {
         id: 3,
         username: "martinseludo",
-        text: "Can't wait to try it!"
+        text: "Of course just check out his website"
       }
     ]
   },
