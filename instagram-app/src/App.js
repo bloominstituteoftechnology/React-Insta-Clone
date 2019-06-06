@@ -3,6 +3,7 @@ import uuidv4 from "uuid/v4";
 import data from "./dummy-data";
 // import SearchBar from "./components/SearchBar/SearchBar";
 // import PostContainer from "./components/PostContainer/PostContainer";
+import withAuthenticate from './components/authentication/withAuthenticate';
 import PostPage from './components/PostContainer/PostPage';
 import "./App.css";
 
@@ -42,6 +43,8 @@ function App() {
     setData(query);
   };
 
+  const ComponentFromWithAuthenticate = withAuthenticate(PostPage);
+
   return (
     <div className="App">
       {/* <SearchBar search={search} handleSearch={handleSearch} />
@@ -52,7 +55,7 @@ function App() {
 
         />;
       })} */}
-      <PostPage 
+      <ComponentFromWithAuthenticate 
         handleSearch={handleSearch}
         search={search}
         posts={posts}
