@@ -4,7 +4,7 @@ import "./App.css";
 
 import PostContainer from "./components/PostContainer/PostContainer";
 import SearchBar from "./components/SearchBar/SearchBar";
-
+import Header from "./components/Header/Header";
 import PropTypes from "prop-types";
 
 class App extends Component {
@@ -42,6 +42,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header/>
         <SearchBar
           searchPosts={this.searchPosts}
         />
