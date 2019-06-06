@@ -27,19 +27,19 @@ const PostContainer = ({ props }) => {
   );
 
   const [addLikes, updateLikes] = useState(likes);
-
+console.log(createdAt);
   useEffect(()=>{
     const post = JSON.parse(localStorage.getItem("posts"));
     const postUpdate = post.map((userPost) => {
       if(postId === userPost.postId) {
         return {
-          ...userPost, comments: inputComment
+          ...userPost, comments: inputComment, timestamp: `${moment(new Date(), "MMM D LTS")}`, likes: addLikes
         }
       }
       return userPost;
     });
     localStorage.setItem("posts", JSON.stringify(postUpdate));
-  },[inputComment, postId])
+  },[inputComment, postId, createdAt, addLikes])
 
   const handleChange = e => {
     setInputValue(e.target.value);
