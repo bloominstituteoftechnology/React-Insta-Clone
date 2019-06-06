@@ -1,12 +1,36 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect
-} from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { handleLogin, isLoggedIn } from "../withAuth/services";
-import "./login.css";
+import styled from "styled-components";
+
+const LoginForm = styled.div`
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+  width: 350px;
+  height: 500px;
+`;
+
+const TextInput = styled.input`
+  margin: 25px;
+  width: 75%;
+  height: 25px;
+  border: none;
+  border-bottom: 2px solid black;
+  &:focus {
+    outline: none;
+  }
+`;
+
+const Button = styled.button`
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+`;
+
 export default class Login extends React.Component {
   state = {
     loggedIn: false,
@@ -41,27 +65,25 @@ export default class Login extends React.Component {
       return <Redirect to="/posts" />;
     }
     return (
-      <div className="Login">
+      <LoginForm>
         <h1>Login Here</h1>
-        <input
+        <TextInput
           type="text"
           name="email"
-          className="fInput"
           placeholder="email/username"
           value={this.state.email}
           onChange={this.textFormHandler}
         />
 
-        <input
+        <TextInput
           type="password"
           name="password"
-          className="fInput"
           placeholder="password"
           value={this.state.password}
           onChange={this.textFormHandler}
         />
-      <button className="Btn" onClick={this.Login}>Login</button>
-      </div>
+        <Button onClick={this.Login}>Login</Button>
+      </LoginForm>
     );
   }
 }

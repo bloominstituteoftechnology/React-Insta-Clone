@@ -1,5 +1,4 @@
 import React from "react";
-import "./postContainer.css";
 import PropTypes from "prop-types";
 import Post from "./postList";
 import DATA from "../../dummy-data.js";

@@ -1,5 +1,4 @@
 import React from "react";
-import "./searchBar.css";
 import insta from "../../icons/insta.png";
 import discover from "../../icons/discover.png";
 import heart from "../../icons/heart_unfilled.png";
@@ -8,6 +7,43 @@ import Posts from "../PostContainer/postContainer.js";
 import Login from "../LoginComponent/login.js";
 import { isLoggedIn, logout } from "../withAuth/services";
 import { BrowserRouter, Route } from "react-router-dom";
+import styled from "styled-components";
+const Nav = styled.div`
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  margin-bottom: 100px;
+  align-items: center;
+`;
+const Logo = styled.div`
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+  height: 50px;
+  font-size: 1rem;
+  font-style: oblique;
+  align-items: center;
+`;
+const LogoText = styled.h1`
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  height: 50px;
+`;
+const Images = styled.div`
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  width: 25%;
+`;
+const NavInput = styled.input`
+  width: ${props => (props.searchbar ? "250px" : "25px")};
+  height: 25px;
+`;
+
 export default class searchBar extends React.Component {
   state = {
     text: ""
@@ -33,24 +69,25 @@ export default class searchBar extends React.Component {
   render() {
     return (
       <div>
-        <div className="Nav">
-          <div className="Nav Logo">
+        <Nav>
+          <Logo>
             <img src={insta} alt="logo" />
-            <h1>Insta Copy</h1>
-          </div>
-          <div className="Input">
-            <input
-              className="SearchInput"
-              type="text"
-              onChange={this.textHandler}
+            <LogoText>Insta Copy</LogoText>
+          </Logo>
+
+          <NavInput searchbar type="text" onChange={this.textHandler} />
+
+          <Images>
+            <NavInput src={discover} alt="Nav" type="image" />
+            <NavInput src={heart} alt="Nav" type="image" />
+            <NavInput
+              src={profile}
+              alt="Nav"
+              onClick={this.SignOutHandler}
+              type="image"
             />
-          </div>
-          <div className="Nav Images">
-            <img src={discover} alt="Nav" />
-            <img src={heart} alt="Nav" />
-            <img src={profile} alt="Nav" onClick={this.SignOutHandler} />
-          </div>
-        </div>
+          </Images>
+        </Nav>
         {this.LoggedInHandler()}
       </div>
     );
