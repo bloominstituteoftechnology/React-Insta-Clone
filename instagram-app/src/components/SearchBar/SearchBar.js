@@ -18,21 +18,6 @@ nav {
     margin: 0 auto;
     width: 80%;
 }
-
-.logo__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    height: 3rem;
-    padding: 1rem;
-}
-.logo__text {
-    font-family: 'Lobster', cursive;
-    font-size: 2rem;
-    border-left: 1px solid black;
-    padding: 0 0 0 1rem;
-}
 .logo__icon {
     margin: 0 auto;
     align-items: center;
@@ -62,19 +47,34 @@ nav {
     margin: 0 auto;
 }
 `;
+const LogoHeader = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    height: 3rem;
+    padding: 1rem;
+`;
+
+const LogoImage = styled.div`
+font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    border-left: 1px solid black;
+    padding: 0 0 0 1rem;
+`;
 
 const SearchBar = ({ handleSearch, search }) => {
     return (
         <Header className="header">
         <nav>
-        <div className="logo__container">
+        <LogoHeader>
                 <div className="logo__icon">
                 <IoLogoInstagram />
                 </div>
-                <h3 className="logo__text">
+                <LogoImage>
                     Instagram
-                </h3>
-            </div>
+                </LogoImage>
+        </LogoHeader>
             <input
             className="search"
             placeholder= "Search"
