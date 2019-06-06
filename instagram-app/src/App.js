@@ -48,14 +48,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <SearchBar search={search} handleSearch={handleSearch} />
-      {posts.map((userPost, index) => {
-        return <PostContainer 
-        key={index} 
-        props={userPost} 
-
-        />;
-      })} */}
       <ComponentFromWithAuthenticate 
         handleSearch={handleSearch}
         search={search}

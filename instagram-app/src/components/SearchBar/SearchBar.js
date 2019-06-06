@@ -1,11 +1,71 @@
 import React from 'react';
-import './SearchBar.css';
+import styled from 'styled-components';
 import { IoLogoInstagram, IoIosHeartEmpty } from "react-icons/io";
 import { FiCompass, FiUser } from "react-icons/fi";
 
+const Header = styled.header`
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+    height: 5rem;
+    border-bottom: 1px solid lightgray;
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.logo__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    height: 3rem;
+    padding: 1rem;
+}
+.logo__text {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    border-left: 1px solid black;
+    padding: 0 0 0 1rem;
+}
+.logo__icon {
+    margin: 0 auto;
+    align-items: center;
+    padding: 0.8rem 3rem 0 0;
+    width: .5rem;
+    font-size: 3rem;
+}
+.icon__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    vertical-align: middle;
+    height: 5rem;
+    align-items: center;
+    padding: 0 5rem 0 0;
+    width: 2rem;
+    font-size: 1.5rem;
+    
+    div {
+    margin: 0 auto;
+    padding: 1rem;
+    }
+}
+.search{
+    height: 1.5rem;
+    width: 12rem;
+    margin: 0 auto;
+}
+`;
+
 const SearchBar = ({ handleSearch, search }) => {
     return (
-        <header className="header">
+        <Header className="header">
         <nav>
         <div className="logo__container">
                 <div className="logo__icon">
@@ -28,7 +88,7 @@ const SearchBar = ({ handleSearch, search }) => {
             </div>
         </nav>
             
-        </header>
+        </Header>
     )
 }
 
