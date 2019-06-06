@@ -3,16 +3,19 @@ import uuidv4 from "uuid/v4";
 import data from "./dummy-data";
 // import SearchBar from "./components/SearchBar/SearchBar";
 // import PostContainer from "./components/PostContainer/PostContainer";
-import withAuthenticate from './components/authentication/withAuthenticate';
-import PostPage from './components/PostContainer/PostPage';
-import Login from './components/Login/Login';
+import withAuthenticate from "./components/authentication/withAuthenticate";
+import PostPage from "./components/PostContainer/PostPage";
+import Login from "./components/Login/Login";
 import "./App.css";
 
-const preprocessData = data.map(post=> {
+const preprocessData = data.map(post => {
   return {
-      ...post, postId: uuidv4()
-    }
-  })
+    ...post,
+    postId: uuidv4(),
+    show: "on"
+  };
+});
+const ComponentFromWithAuthenticate = withAuthenticate(PostPage, Login);
 
 function App() {
   const [posts, setData] = useState([]);
@@ -20,10 +23,10 @@ function App() {
 
   useEffect(() => {
     const allData = localStorage.getItem("posts");
-    let postData
-    if(allData) {
+    let postData;
+    if (allData) {
       postData = JSON.parse(allData);
-    }else {
+    } else {
       localStorage.setItem("posts", JSON.stringify(preprocessData));
       postData = JSON.parse(localStorage.getItem("posts"));
     }
@@ -33,22 +36,26 @@ function App() {
   const handleSearch = e => {
     e.preventDefault();
     const data = posts;
-    const query = [];
+    // const query = [];
     setSearch(e.target.value.toLowerCase());
-    data.map(user => {
-      if (user.username.toLowerCase().includes(search)) {
-        query.push(user);
+    const query = data.map(post => {
+      if (!post.username.toLowerCase().includes(search)) {
+        return {
+          ...post,
+          show: "off"
+        };
       }
-      return query;
+      return {
+        ...post,
+        show: "on"
+      };
     });
     setData(query);
   };
 
-  const ComponentFromWithAuthenticate = withAuthenticate(PostPage, Login);
-
   return (
     <div className="App">
-      <ComponentFromWithAuthenticate 
+      <ComponentFromWithAuthenticate
         handleSearch={handleSearch}
         search={search}
         posts={posts}
