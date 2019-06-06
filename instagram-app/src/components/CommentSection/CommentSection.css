@@ -1,0 +1,10 @@
+.commentSection {
+    padding-left: 10px;
+
+    input[type=text] {
+        width: 95%;
+        font-size: 12px;
+        outline: none;
+        border: none;
+    }
+}
