@@ -1,7 +1,7 @@
 import React from 'react';
 import pt from 'prop-types';
 import styled from 'styled-components';
-// import './Form.css';
+
 
 const FormInput = styled.input`
 width: 100%;

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import uuidv4 from "uuid/v4";
 import data from "./dummy-data";
-// import SearchBar from "./components/SearchBar/SearchBar";
-// import PostContainer from "./components/PostContainer/PostContainer";
 import withAuthenticate from "./components/authentication/withAuthenticate";
 import PostPage from "./components/PostContainer/PostPage";
 import Login from "./components/Login/Login";
