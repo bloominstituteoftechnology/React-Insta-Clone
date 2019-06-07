@@ -8,7 +8,8 @@ class CommentSection extends React.Component {
       text: '',
       comment: props.comment,
       likes: this.props.likes,
-      username: this.props.users.username
+      username: this.props.users.username,
+      isLiked: false
     };
   }
 
@@ -20,7 +21,7 @@ class CommentSection extends React.Component {
 
   addComment = event => {
     event.preventDefault();
-    console.log('add comment ');
+
     const newComment = {
       text: this.state.text,
       username: this.state.username
@@ -32,16 +33,27 @@ class CommentSection extends React.Component {
   };
 
   addLikes = event => {
-    // console.log('add Likes');
-    // const newLikes = {
-    //   likes: this.state.like + 1
-    // };
+    if (this.state.isLiked) {
+      this.setState(prevState => {
+        return {
+          isLiked: false,
+          likes: prevState.likes - 1
+        };
+      });
+    } else {
+      this.setState(prevState => {
+        return {
+          isLiked: true,
+          likes: prevState.likes + 1
+        };
+      });
+    }
 
-    this.setState({
-      // likes: [...this.state.likes, newLikes]
-      ...this.state,
-      likes: this.state.likes + 1
-    });
+    // this.setState({
+    //   // likes: [...this.state.likes, newLikes]
+    //   ...this.state,
+    //   likes: this.state.likes + 1
+    // });
   };
 
   render() {

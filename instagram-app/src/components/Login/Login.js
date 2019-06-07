@@ -1,22 +1,8 @@
 import React from 'react';
 import './login.css';
+import {Button, Login, LoginContainer, LoginInput, Insta, Logo} from './LoginStyle';
 
-import styled from 'styled-components';
-
-const Button = styled.button`
-  background: dodgerblue;
-  border-radius: 5px;
-  color: black
-  margin: 0 1em;
-  padding: 10px 20px;
-
-`;
-
-const input = styled.input`
-  background-color: yellow;
-  padding: 20px;
-`;
-
+//---------------Start of Class---------------------------//
 class LoginForm extends React.Component {
   state = {
     password: '',
@@ -41,15 +27,23 @@ class LoginForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.login}>
-          <div className='login'>
-            <div className='username'>
-              <input type='text' placeholder='username' value={this.state.username} name='username' onChange={this.onHandleChange} />
-            </div>
-            <div className='password'>
-              <input type='text' placeholder='password' value={this.state.password} name='password' onChange={this.onHandleChange} />
-            </div>
-            <Button>Log In</Button>
-          </div>
+          <LoginContainer>
+            <Insta>
+              <Logo>Instagram</Logo>
+              <i class='fab fa-instagram fa-5x' />
+            </Insta>
+            <Login>
+              <div className='username'>
+                <LoginInput type='text' placeholder='username' value={this.state.username} name='username' onChange={this.onHandleChange} />
+              </div>
+
+              <div className='password'>
+                <LoginInput type='text' placeholder='password' value={this.state.password} name='password' onChange={this.onHandleChange} />
+              </div>
+
+              <Button>Log In</Button>
+            </Login>
+          </LoginContainer>
         </form>
       </div>
     );

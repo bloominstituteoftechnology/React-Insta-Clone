@@ -7,14 +7,14 @@ class SearchBar extends React.Component {
     search: ''
   };
 
-  handleChange = event => {
+  onHandleChange = event => {
     this.setState({
       [event.target.name]: event.target.value
     });
   };
 
   handleSearch = event => {
-    if (this.state.search.length === 1) return this.props.search('');
+    if (this.state.search.length === 0) return this.props.search('');
 
     return this.props.search(this.state.search);
   };
@@ -30,7 +30,7 @@ class SearchBar extends React.Component {
           </div>
 
           <form className='pd'>
-            <input type='text' onChange={this.handleChange} name='search' placeholder='search' onKeyDown={this.handleSearch} className='form' />
+            <input type='text' onChange={this.onHandleChange} name='search' placeholder='search' onKeyDown={this.handleSearch} className='form' />
           </form>
 
           <div className='left-icon'>
