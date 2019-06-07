@@ -32,25 +32,23 @@ function App() {
     }
     setData(postData);
   }, []);
-
   const handleSearch = e => {
     e.preventDefault();
     const data = posts;
-    // const query = [];
-    setSearch(e.target.value.toLowerCase());
-    const query = data.map(post => {
-      if (!post.username.toLowerCase().includes(search)) {
+    setSearch(e.target.value.trim());
+      const query = data.map(post => {
+        if (!post.username.trim().toLowerCase().includes(e.target.value.trim())) {
+          return {
+            ...post,
+            show: "off"
+          };
+        }
         return {
           ...post,
-          show: "off"
+          show: "on"
         };
-      }
-      return {
-        ...post,
-        show: "on"
-      };
-    });
-    setData(query);
+      });
+      setData(query);
   };
 
   return (
