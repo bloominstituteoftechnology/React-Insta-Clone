@@ -5,21 +5,29 @@
     display: flex;
     justify-content: space-between;
     background: #ffffff;
-  }
-  
-  .image-wrapper {
-    height: 50px;
-  }
-  
-  .logo-image {
-    height: 100%;
-  }
-  
-  .social-wrapper {
+}
+
+.image-section-wrapper {
     display: flex;
-  }
-  
-  .social {
+    justify-content: left;
+    flex-direction: row;
+}
+
+.image-wrapper {
+    height: 50px;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.logo-image {
+    height: 100%;
+}
+
+.social-wrapper {
+    display: flex;
+}
+
+.social {
     width: 20px;
     height: 20px;
-  }
+}
