@@ -1,42 +1,63 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
+
+const Container = styled.div`
+width: 100%;
+height: 100vh;
+background-color: #fafafa;
+margin: 0 auto;
+margin-top: 0;
+`;
+
+const Header = styled.header`
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    font-weight: lighter;
+    padding: 0 0 0 1rem;
+    margin: 0 0 3rem 0;
+`;
 const Form = styled.form`
-  width: 50%;
-  margin: 0 auto;
+  width: 15%;
+  height: 40%;
+  margin: 5rem auto;
+  border: 2px solid lightgrey;
+  padding: 4rem;
 `;
 
 const FormInput = styled.input`
-  font-size: 0.9em;
+  /* font-size: 0.9em; */
   color: #000;
   font-weight: 100;
-  width: 94.5%;
+  width: 90%;
   display: block;
-  border: none;
-  border-radius: 10px;
-  padding: 0.8em;
-  border: 2px solid #76b852;
+  padding: 0.5rem;
+  background-color: rgba(242, 241, 239, 1);
+  border: 2px solid rgba(242, 241, 239, 1);
   -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
   transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #fff 4%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
   background-position: -800px 0;
   background-size: 100%;
   background-repeat: no-repeat;
   font-family: "Montserrat", sans-serif;
   margin: auto;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  &:focus {
+    outline: none;
+    border:1px solid rgba(189, 195, 199, 1);
+}
 `;
 
 const SubmitBtn = styled.input`
   font-size: 0.9em;
   color: #fff;
-  background: #76b852;
+  background: lightskyblue;
   outline: none;
-  border: 1px solid #76b852;
-  border-radius: 10px;
+  border: 1px solid lightskyblue;
+  border-radius: 5px;
   cursor: pointer;
-  padding: 0.9em;
+  padding: 0.5em;
   -webkit-appearance: none;
   width: 100%;
   margin: 2em 0;
@@ -47,15 +68,15 @@ const SubmitBtn = styled.input`
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
     transition: 0.5s all;
-    background: #8dc26f;
+    background: skyblue;
   }
 `;
-const Label = styled.label`
-  font-size: 0.9em;
-  color: #000;
-  font-weight: 100;
-  margin-left: 0.7rem;
-`;
+// const Label = styled.label`
+//   font-size: 0.9em;
+//   color: #000;
+//   font-weight: 100;
+//   margin-left: 0.7rem;
+// `;
 
 const Login = ({ props }) => {
   const [userInput, setUserInput] = useState({
@@ -90,23 +111,28 @@ const Login = ({ props }) => {
   //   setUserPassword(e.target.value)
   // };
   return (
+    <Container>
     <Form onSubmit={e => loginHandler(e)}>
-      <Label htmlFor="username">Username</Label>
+    <Header>Instagram</Header>
+      {/* <Label htmlFor="username">Username</Label> */}
       <FormInput
+        placeholder="Phone number, username or email"
         name="username"
         type="text"
         value={userInput.username}
         onChange={handleUserNameChange}
       />
-      <Label htmlFor="password">Password</Label>
+      {/* <Label htmlFor="password">Password</Label> */}
       <FormInput
+        placeholder="Password"
         name="password"
         type="password"
         value={userInput.password}
         onChange={handleUserNameChange}
       />
-      <SubmitBtn type="submit" value="LOGIN" />
+      <SubmitBtn type="submit" value="Log In" />
     </Form>
+    </Container>
   );
 };
 

@@ -50,6 +50,7 @@ function App() {
   };
 
   return (
+    <>
     <div className="App">
       <ComponentFromWithAuthenticate
         handleSearch={handleSearch}
@@ -57,6 +58,7 @@ function App() {
         posts={posts}
       />
     </div>
+    </>
   );
 }
 
