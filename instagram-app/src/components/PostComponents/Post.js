@@ -18,11 +18,6 @@ class Post extends React.Component {
 		}
 	}
 
-	incrementLike = () => {
-
-		// this.setState({ likes });
-	}
-
 	toggleLike = () => {
 		this.setState({
 			isLiked: !this.state.isLiked

@@ -20,7 +20,6 @@ const LikeSection = props => {
                     onClick={props.toggleLike}
                 />
                 <FontAwesomeIcon className='post-comment' icon={faComment} size='lg' />
-                { console.log(props.isLiked) }
             </div>
             <div className='likes'>
                 <strong>{props.likes} likes</strong>

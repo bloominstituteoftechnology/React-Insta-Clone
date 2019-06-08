@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
 import logo from '../../images/instagram-logo.png'
-import dummyData from '../../dummy-data'
 import './SearchBar.css'
 
 import {
@@ -8,59 +7,46 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  Input
+  Input,
+  Form
 } from 'reactstrap'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCompass, faHeart, faUser } from '@fortawesome/free-regular-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
-export default class SearchBar extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      posts: [],
-      filteredPosts: [],
-    }
-  }
-
-  componentDidMount() {
-    this.setState({ posts: dummyData })
-  }
-
-  searchPostsHandler = e => {
-		const posts = this.state.posts.filter(post => {
-		  if (post.username.includes(e.target.value)) {
-			return post
-      }
-      return this.state.filteredPosts
-		})
-		this.setState({ filteredPosts: posts })
-	}
-
-  render() {
-    return (
-      <div>
-        <Navbar color="light" light expand="md">
-            <NavbarBrand href="/"><img src={logo} alt='Logo' /></NavbarBrand>
-            <Nav className="ml-auto" navbar>
-                <NavItem className='search-bar'>
-                  <FontAwesomeIcon className='search' icon={faSearch} />
+const SearchBar = props => {
+  return (
+    <div>
+      { console.log(props.search) }
+      <Navbar color="light" light expand="md">
+          <NavbarBrand href="/"><img src={logo} alt='Logo' /></NavbarBrand>
+          <Nav className="ml-auto" navbar>
+              <NavItem className='search-bar'>
+                <FontAwesomeIcon className='search' icon={faSearch} />
+                <Form>
                   <Input
-                    type="search"
-                    placeholder='Search'
-                    value={this.state.username}
-                    onKeyDown={this.state.searchPostsHandler}
+                    name='search'
+                    type="text"
+                    placeholder='Search users...'
+                    onChange={props.inputHandler}
+                    value={props.search}
+                    // onSubmit={props.searchPostsHandler}
+                    onKeyDown={props.searchPostsHandler}
                   />
-                </NavItem>
-                <NavItem>
-                    <FontAwesomeIcon className='compass' icon={faCompass} spin />
-                    <FontAwesomeIcon className='heart' icon={faHeart} />
-                    <FontAwesomeIcon className='user' icon={faUser} />
-                </NavItem>
-            </Nav>
-        </Navbar>
-      </div>
-    )
-  }
+                </Form>
+
+              </NavItem>
+              <NavItem>
+                  <FontAwesomeIcon className='compass' icon={faCompass} spin />
+                  <FontAwesomeIcon className='heart' icon={faHeart} />
+                  <FontAwesomeIcon className='user' icon={faUser} />
+              </NavItem>
+          </Nav>
+      </Navbar>
+    </div>
+  )
 }
+
+
+export default SearchBar
