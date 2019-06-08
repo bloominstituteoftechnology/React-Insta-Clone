@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Form = styled.form`
-width: 50%;
+  width: 50%;
   margin: 0 auto;
 `;
 
 const FormInput = styled.input`
-font-size: 0.9em;
+  font-size: 0.9em;
   color: #000;
   font-weight: 100;
   width: 94.5%;
@@ -29,7 +29,7 @@ font-size: 0.9em;
 `;
 
 const SubmitBtn = styled.input`
-font-size: 0.9em;
+  font-size: 0.9em;
   color: #fff;
   background: #76b852;
   outline: none;
@@ -42,60 +42,68 @@ font-size: 0.9em;
   margin: 2em 0;
   letter-spacing: 4px;
   &:hover {
-  -webkit-transition: 0.5s all;
-  -moz-transition: 0.5s all;
-  -o-transition: 0.5s all;
-  -ms-transition: 0.5s all;
-  transition: 0.5s all;
-  background: #8dc26f;
-}
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    background: #8dc26f;
+  }
 `;
 const Label = styled.label`
-font-size: 0.9em;
+  font-size: 0.9em;
   color: #000;
   font-weight: 100;
   margin-left: 0.7rem;
 `;
 
 const Login = ({ props }) => {
-  const [userInput, setUserInput] = useState("");
-  const [userPassword, setUserPassword] = useState("");
+  const [userInput, setUserInput] = useState({
+    username: "",
+    password: ""
+  });
+  // const [userPassword, setUserPassword] = useState("");
   const [loggedIn, setloggedIn] = useState(false);
 
-  useEffect(() =>{
-    setloggedIn(true)
-  },[userInput])
-  const loginHandler = ()=>{
+  useEffect(() => {
+    setloggedIn(true);
+  }, [userInput.username, userInput.password]);
+  const loginHandler = () => {
     let logDeets = {
-      username: userInput,
-      password: userPassword,
+      username: userInput.username,
+      password: userInput.password,
       loggedIn: loggedIn
-    }
+    };
     localStorage.setItem("User", JSON.stringify(logDeets));
-  }
+  };
 
   const handleUserNameChange = e => {
-    setUserInput(e.target.value);
+    e.persist();
+    const target = e.target;
+    const value = target.value;
+    const name = target.name;
+    // setUserInput(e.target.value);
+    setUserInput(userInput => ({ ...userInput, [name]: value }));
+    console.log(userInput);
   };
-  const handlePasswordChange = e => {
-    setUserPassword(e.target.value)
-  };
+  // const handlePasswordChange = e => {
+  //   setUserPassword(e.target.value)
+  // };
   return (
-    <Form onSubmit={(e) => loginHandler(e)}>
-      <Label htmlFor="username">
-        Username
-      </Label>
+    <Form onSubmit={e => loginHandler(e)}>
+      <Label htmlFor="username">Username</Label>
       <FormInput
-      type="text"
-      value={userInput}
-      onChange={handleUserNameChange}/>
-      <Label htmlFor="password">
-        Password
-      </Label>
+        name="username"
+        type="text"
+        value={userInput.username}
+        onChange={handleUserNameChange}
+      />
+      <Label htmlFor="password">Password</Label>
       <FormInput
-      type="password" 
-      value={userPassword}
-      onChange={handlePasswordChange}
+        name="password"
+        type="password"
+        value={userInput.password}
+        onChange={handleUserNameChange}
       />
       <SubmitBtn type="submit" value="LOGIN" />
     </Form>
