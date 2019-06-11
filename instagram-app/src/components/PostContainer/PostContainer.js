@@ -9,29 +9,33 @@ class PostContainer extends React.Component {
         return (
 
 
-         <div className="post-container">
+    <div className="post-container">
 
-        {this.props.data.map(post => {
-             return (
-           <>
-            <header>
+     {this.props.data.map(post => {
+         return (
+                <>
+                    <header>
                                 
-                 <img src={post.thumbnailUrl} alt="thumbnail" />
+                        <img src={post.thumbnailUrl} alt="thumbnail" />
                                         
-                <h3>{post.username}</h3>
+                        <h3>{post.username}</h3>
                                 
-            </header>
+                    </header>
 
-            <img scr={post.imageUrl} alt="main image" />
+                    <img scr={post.imageUrl} alt="main-image" />
                             
-         <section className="likebar">
-            
-        </section>
+            <section className="likebar">
+                {post.likes} likes
+            </section>
+                     
+            <CommentSection
+                        comments={post.comments}
+                        timestamp={post.timestamp} />
                             
-                    </>
+                </>
                         
-                    )
-                })}
+        );
+})}
 
 
 

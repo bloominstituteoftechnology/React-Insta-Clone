@@ -9,16 +9,13 @@ import dummyData from './dummy-data';
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      data: []
-    }
-  }
+  state = {
+    data: []
+  };
+  
 
       componentDidMount() {
-      this.setState({ data: dummyData })
+     this.setState({ data: dummyData })
     }
     render() {
 
