@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 const comment = (props) => {
     const { username, text } = props.comment;
-    console.log(props.comment);
-    return (
+     return (
         <div className='comment'>
             <h3>Username: {username}</h3>
             <p>Comment: {text}</p>
@@ -17,4 +16,6 @@ comment.propTypes = {
         text: PropTypes.string.isRequired
     })
 }
+
+
 export default comment;

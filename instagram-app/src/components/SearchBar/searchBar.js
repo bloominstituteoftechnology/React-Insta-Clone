@@ -1,7 +1,7 @@
 import React from "react";
-import "./SearchBar.css";
+import "./searchBar.css";
 
-const searchBar = () => {
+const searchBar = props => {
   return (
     <div className="searchBar">
       <div className="logo">
@@ -10,8 +10,14 @@ const searchBar = () => {
         <span>Instagram</span>
       </div>
       <div className='search-div'>
-        <input className="search" type="text" placeholder="&#x1F50D; Search" />
-      </div>
+      
+        <input
+          onChange={props.onchangeValue}
+          className="search"
+          type="text"
+          placeholder="Search"
+        />
+        </div>
       <div className="right-icons">
         <i className="far fa-compass" />
         <i className="far fa-heart" />
