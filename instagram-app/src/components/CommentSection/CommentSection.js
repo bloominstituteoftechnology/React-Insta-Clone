@@ -10,10 +10,13 @@ class CommentSection extends React.Component {
             <div>
                 {this.props.comments.map((comment, index) => {
                     return (
+                        <>
                         <h3>{comment.username}</h3>
-                        <p>{comment.text}</p>
+                            <p>{comment.text}</p>
+                        </>
                     );
-               })}
+                })
+                }
           </div>
         );
     };
