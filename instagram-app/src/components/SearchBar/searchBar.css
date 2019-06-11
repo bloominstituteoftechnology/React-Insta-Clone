@@ -1,0 +1,46 @@
+.searchBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    min-height: 20px;
+    border-bottom: 1px solid rgb(165, 164, 164);
+    margin-bottom: 1rem;
+    font-family: 'Satisfy', cursive;
+}
+
+.searchBar span{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.fa-instagram{
+    font-size: 1.6rem;
+}
+
+.vertical{
+    border-left: 1px solid rgb(165, 164, 164);
+}
+.search-div{
+    width: 60%;
+}
+.search{
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid rgb(165, 164, 164);
+    width: 50%;
+}
+.right-icons{
+    align-self: flex-end;
+    width: 18%;
+}
+
+.right-icons > i{
+    padding-left: 1rem;
+    color: rgb(48, 48, 48);
+}
+
+.logo{
+    display: flex;
+    width: 18%;
+    justify-content: space-between;
+}
