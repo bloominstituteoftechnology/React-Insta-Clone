@@ -1,4 +1,4 @@
-# React-Insta-Clone
+# React-Insta-Clone (Ali)
 
 ## Introduction
 
