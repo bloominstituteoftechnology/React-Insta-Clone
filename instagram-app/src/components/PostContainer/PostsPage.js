@@ -14,12 +14,32 @@ class PostsPage extends Component {
     componentDidMount() {
         this.setState({ posts: dummyData });
     }
+
+    searchPostsHandler = e => {
+        const posts = this.state.posts.filter(p => {
+            if (p.username.includes(e.target.value)) {
+                return p;
+            }
+        });
+        this.setState({ filteredPosts: posts });
+    };
+    render() {
+        return (
+        <div className="App">
+            <SearchBar
+            searchTerm={this.state.searchTerm}
+            searchPosts={this.searchPostsHandler}
+            />
+            <PostsContainer
+            posts={
+                this.state.filteredPosts.length > 0
+                ? this.state.filteredPosts
+                : this.state.posts
+            }
+            />
+        </div>
+        );
+    }
 }
 
-searchPostsHandler = e => {
-    const posts = this.state.posts.filter(p => {
-        if (p.username.includes(e.target.value)) {
-            return p;
-        }
-    })
-}
+export default PostsPage;
