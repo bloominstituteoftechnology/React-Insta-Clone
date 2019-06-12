@@ -29,7 +29,7 @@
   - In `App.js` use `componentDidMount()` to set your data to the component's state. This dummy data held in state is an array you can map over, and output a `PostContainer` for each element in the array. Make sure to inject the right props into each `PostContainer` component.
 - Adding comments
   - Lets divide up the data that we've been working with this far by separating the comments array onto a new component's state. Pass down the comments through each post to the CommentSection component. Be sure that you set the incoming `comments` props data on the state of the CommentSection component.
-  - Create a function in `App.js` called `addNewComment` that takes in an event and an index number. The function will add the comment that is on the event object to the post that is at that index number.
+  - Create a function in `App.js` called `addNewComment` that takes in an event and a post id. The function will add the comment contained inside the event object to the post with the given id. Alternatively, you can use the index number of the post instead of its id.
   - Pass the `addNewComment` function down the component tree to where ever you have your 'Add a comment...' input.
   - The 'Add a comment...' input should be wrapped in a `<form></form>` element. Using that form's `onSubmit` event handler, invoke the `addNewComment` function and pass it the required arguments it needs to add a new comment.
   - Update your state with the new comment (This should trigger your component tree to "re-render" with your new comment on that post).
