@@ -20,7 +20,7 @@ componentDidMount() {
 
 searchPostsHandler = e => {
   const posts = this.state.posts.filter(p => {
-    if (p.p.username.includes(e.target.value)) {
+    if (p.username.includes(e.target.value)) {
       return p;
     }
   });
