@@ -15,14 +15,15 @@ class PostContainer extends React.Component {
          return (
                 <>
                     <header>
-                                
-                        <img src={post.thumbnailUrl} alt="thumb" />
+
+                     
+                  <img src={post.thumbnailUrl} alt="thumb" /> 
                                         
                         <h3>{post.username}</h3>
                                 
                     </header>
 
-                    <img scr={post.imageUrl} alt="main" />
+                    <img src={post.imageUrl} alt="main" />
                             
             <section className="likebar">
                 {post.likes} likes
