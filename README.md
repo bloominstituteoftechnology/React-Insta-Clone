@@ -2,6 +2,7 @@
 
 ## Introduction
 
+
 - The purpose of this project is to continue building on your knowledge of React that you have gained thus far.
 
   - Here, you'll be implementing a lot of the same concepts that you have been in previous projects, in a very similar fashion.
