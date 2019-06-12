@@ -78,7 +78,7 @@ const SubmitBtn = styled.input`
 //   margin-left: 0.7rem;
 // `;
 
-const Login = ({ props }) => {
+const Login = () => {
   const [userInput, setUserInput] = useState({
     username: "",
     password: ""
