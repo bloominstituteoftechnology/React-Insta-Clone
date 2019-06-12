@@ -1,8 +1,16 @@
 import React from 'react'
 import CommentSection from '../CommentSection/CommentSection'
+import PropTypes from 'prop-types'
 
-const PostContainer = (props) => {
-    return ( props.post.map( (myPost) => (
+class PostContainer extends React.Component {
+    constructor(props){
+     super(props);
+      
+    }
+
+
+    render(){
+    return ( this.props.post.map( (myPost) => (
         <div key={myPost.id}>
           <img src={myPost.thumbnailUrl} alt='user' />
           <p>{myPost.username}</p>
@@ -17,5 +25,20 @@ const PostContainer = (props) => {
     )
         
 }
+
+}
+///// Here are my propTypes /////
+
+PostContainer.propTypes ={
+  post: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    thumbnailUrl: PropTypes.string,
+    username: PropTypes.string,
+    imageUrl: PropTypes.string,
+    likes: PropTypes.number
+  }))
+
+}
+
 
 export default PostContainer
