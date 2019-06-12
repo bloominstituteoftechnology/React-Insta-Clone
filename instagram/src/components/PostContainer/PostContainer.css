@@ -1,0 +1,21 @@
+.thumbnail{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 10px 0;
+}
+
+.username{
+    font-weight: bold;
+    padding-left: 15px;
+}
+
+
+.imageurl {
+    max-width: 500px;
+    height: auto;
+} 
+
+.insta-heart2 {
+    cursor: pointer;
+}

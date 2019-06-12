@@ -1,0 +1,12 @@
+.addComment {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-top: 1px solid grey;
+}
+
+.comment-input{
+   border: none;
+   width: 100%;
+   padding: 10px 0;
+}
