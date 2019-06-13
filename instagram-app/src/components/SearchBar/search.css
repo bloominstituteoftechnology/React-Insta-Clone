@@ -1,0 +1,12 @@
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 77px;
+}
+
+.left-hand {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
