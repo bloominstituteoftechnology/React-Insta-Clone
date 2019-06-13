@@ -1,0 +1,7 @@
+.App-header {
+  max-width: 122.3rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 4.5rem;
+  margin: 25px auto;
+}

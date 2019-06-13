@@ -1,0 +1,27 @@
+.hide {
+    display: none;
+}
+
+
+.fa-times-circle {
+    display: inline;
+    position: absolute;
+    margin: 0;
+    top: 6px;
+    right: 5px;
+    font-size: 1.4rem;
+}
+
+.fa-search {
+    display: inline;
+    position: absolute;
+    margin: 0;
+    left: 10.7rem;
+    top: 6px;
+    font-size: 1.4rem;
+    cursor: text;
+}
+
+.icon-left {
+    left: 5px;
+}
