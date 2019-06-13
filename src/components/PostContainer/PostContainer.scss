@@ -1,0 +1,40 @@
+.postContainer {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+
+  .user {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+
+    .profileImg {
+      border-radius: 100px;
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    .username {
+      font-weight: bolder;
+    }
+  }
+
+  .icons {
+    font-size: 20px;
+    font-weight: 100;
+    cursor: pointer;
+    padding: 0;
+    padding-left: 10px;
+  }
+
+  .likes {
+    font-weight: bolder;
+    padding-left: 10px;
+  }
+
+  .time {
+    color: grey;
+    font-size: 12px;
+    padding-left: 10px;
+  }
+}
