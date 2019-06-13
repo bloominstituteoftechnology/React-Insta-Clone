@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
+    "is-empty": "^1.2.0",
     "jwt-decode": "^2.2.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
