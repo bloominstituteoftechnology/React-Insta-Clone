@@ -1,3 +1,5 @@
+Millan Figueroa
+
 # React-Insta-Clone
 
 ## Introduction
