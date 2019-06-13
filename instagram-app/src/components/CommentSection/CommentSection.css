@@ -1,0 +1,16 @@
+.comment {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    height: 2rem;
+}
+
+h4 {
+    margin-right: .5rem;
+}
+
+.comment-section {
+    width: 640px;
+    text-align: left;
+    margin: 0 auto;
+}
