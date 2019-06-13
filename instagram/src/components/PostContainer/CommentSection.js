@@ -25,17 +25,22 @@ class CommentSection extends React.Component{
        });
    }
    addComment=event=>{
+    
        if(event.keyCode===13){
            event.preventDefault();
            const newComment={
                username:localStorage.user,
                text:this.state.newCommentInput,
+               
            }
+           
            this.setState({
                comments:[...this.state.comments,newComment],
                newCommentInput:''
            });
+           localStorage.setItem('comment',newComment)  
        }
+       
    }
    handleComment=event=>{
        this.setState({
