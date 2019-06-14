@@ -9,9 +9,13 @@ class App extends Component {
   constructor(){
         super();
         this.state={
-          postData:{dummyData},
-          username:{LogIn}
+          data:[]
         }
+    }
+    componentDidMount(){
+      this.setState({
+        data:dummData
+      })
     }
 
     logOut=event=>{
