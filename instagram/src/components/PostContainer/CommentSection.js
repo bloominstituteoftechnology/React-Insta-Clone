@@ -5,76 +5,105 @@ import PropTypes from 'prop-types';
 
 class CommentSection extends React.Component{
    
-    constructor(){
-       super();
+    constructor(props){
+       super(props);
        this.state = {
-        id: 0,
-        comments: [],
-        newComment: '',
-        timestamp: '',
-        username:''
+        comments: props.comments,
+        likes: props.likes,
+        timestamp: props.timestamp,
+        input: ""
         
     }
    }
-   componentDidMount(){
-       this.setState({
-           id:this.props.id,
-           comments:this.props.comments,
-           timestamp:this.props.timestamp,
-           username:this.props.username
-       });
-   }
+
    addComment=event=>{
     
-       if(event.keyCode===13){
-           event.preventDefault();
-           const newComment={
-               username:localStorage.user,
-               text:this.state.newCommentInput,
-               
-           }
-           
-           this.setState({
-               comments:[...this.state.comments,newComment],
-               newCommentInput:''
-           });
-           localStorage.setItem('comment',newComment)  
-       }
-       
-   }
+    if (this.state.input) {
+        this.setState({
+          comments: [
+            ...this.state.comments,
+            {
+              text: this.state.input,
+              username: "Anonymous"
+            }
+          ]
+        });
+       event.currentTarget.value = null;
+      }
+    };
    handleComment=event=>{
-       this.setState({
-           newCommentInput:event.target.value
-       });
+    const {value} = event.target;
+    this.setState({
+      input: value,
+    });
+   }
+   handleSubmit=event=>{
+    if (event.keyCode === 13 && event.shiftKey === false) {
+        if (this.state.input.length >= 1)
+          event.preventDefault();
+          this.addComment(event);
+      }
    }
 
    
     render(){
-        return(
+        return(    
         <div className="comments">
-            <div className="list">{this.state.comments.map((comment,index)=>{
-                return(
-                    <div className="comment" key={index}>
-                        <span className="user">{comment.username}</span>
-                        <span className="text">{comment.text}</span>
-                    </div>
-                    );
-            })}
-           </div>
-           <div className="timeStamp">
-            <span><div format="YYYY/MM/DD">{this.props.timestamp}</div></span>
-           </div>
-           <div className="add-comment">
-            <input className="comment-input" id={`CommentSection__${this.state.id}`} type="text"placeholder="Add a comment..."value={this.state.newCommentInput} onChange={this.handleComment}onKeyDown={this.addComment} />
-              <p className="dots">...</p>      
-            </div>
+        <div className="likeTab">
+          <i class="far fa-heart"></i>
+          <i class="far fa-comment"></i>
         </div>
+        <p className="userLikes">{this.state.likes} likes</p>
+        <div>
+          {this.state.comments.map( (comment, index) =>{
+            return <p className="user" key={index}>
+                     <span>{comment.username}</span>
+                   {comment.text}</p>  
+          })}
+        </div> 
+        <p className="timeStamp">{this.state.timestamp}</p>
+        <hr/> 
+        <div className="pageFooter">
+  
+        <form className='add-comment' onSubmit={this.addComment}>
+          <textarea className="comment-input"
+            value={this.state.input} 
+            onChange={this.handleComment} 
+            onKeyDown={this.handleSubmit} 
+            placeholder="Add a comment..."
+          />
+        </form>
+        <p id="dots">...</p>  
+        </div> 
+      </div> 
+        //<div className="comments">
+            //</div><div className="list">{this.state.comments.map((comment,index)=>{
+               // return(
+                   // <div className="comment" key={index}>
+                      //  <span className="user">{comment.username}</span>
+                       // <span className="text">{comment.text}</span>
+                   // </div>
+                   // );
+           // })}
+           //</div>
+           //<div className="timeStamp">
+            //<span><div format="YYYY/MM/DD">{this.props.timestamp}</div></span>
+          // </div>
+          // <div className="add-comment">
+            //<input className="comment-input" id={`CommentSection__${this.state.id}`} type="text"placeholder="Add a comment..."value={this.state.newCommentInput} onChange={this.handleComment}onKeyDown={this.addComment} />
+              //<p className="dots">...</p>      
+            //</div>
+        //</div>
         );
     }
 };
 
-CommentSection.propTypes={
-    id: PropTypes.number,
-    newComment: PropTypes.string,
-    timestamp: PropTypes.string}
+CommentSection.propTypes = {
+    comments: PropTypes.arrayOf(PropTypes.shape({
+      key: PropTypes.number,
+      username: PropTypes.string,
+      text: PropTypes.string, 
+       }))
+      .isRequired
+    }
 export default CommentSection;
