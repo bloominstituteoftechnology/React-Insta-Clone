@@ -11,7 +11,7 @@ class Login extends Component {
         };
     }
 
-    handlInputChange = e => {
+    handleInputChange = e => {
         this.setState({ [e.target.name]: e.target.value });
     };
 
@@ -37,7 +37,7 @@ class Login extends Component {
                 </FormGroup>
                 <FormGroup>
                     <Input
-                        type="text"
+                        type="password"
                         name="password"
                         placeholder="Password"
                         value={this.state.password}
