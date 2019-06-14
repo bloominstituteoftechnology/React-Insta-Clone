@@ -5,41 +5,53 @@ import SearchBar from '../SearchBar/SearchBarContainer';
 
 class PostsPage extends Component {
     constructor() {
-        super()
-        this.state = {
-            posts: [],
-            filteredPosts: []
-        };
+      super();
+      this.state = {
+        posts: [],
+        data: [],
+        search: '',
+        postsDuplicate: dummyData
+      };
     }
     componentDidMount() {
-        this.setState({ posts: dummyData });
+      this.setState({ posts: dummyData });
     }
-
-    searchPostsHandler = e => {
-        const posts = this.state.posts.filter(p => {
-            if (p.username.includes(e.target.value)) {
-                return p;
-            }
-        });
-        this.setState({ filteredPosts: posts });
+  
+    searchHandler = e => {
+      this.setState({ search: e.target.value });
     };
+  
+    find = e => {
+      e.preventDefault();
+      e.stopPropagation();
+  
+      const found = this.state.posts.filter(post => {
+        if (
+          post.username.toLowerCase().includes(this.state.search.toLowerCase())
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+      this.setState({ posts: found });
+      if (this.state.search == '') {
+        this.setState({ posts: this.state.postsDuplicate });
+      }
+    };
+  
     render() {
-        return (
+      return (
         <div className="App">
-            <SearchBar
-            searchTerm={this.state.searchTerm}
-            searchPosts={this.searchPostsHandler}
-            />
-            <PostsContainer
-            posts={
-                this.state.filteredPosts.length > 0
-                ? this.state.filteredPosts
-                : this.state.posts
-            }
-            />
+          <SearchBar
+            search={this.state.search}
+            change={this.searchHandler}
+            find={this.find}
+          />
+          <PostsContainer posts={this.state.posts} />
         </div>
-        );
+      );
     }
-}
-
-export default PostsPage;
+  }
+  
+  export default PostsPage;
