@@ -30,16 +30,16 @@ class Login extends Component {
                     <Input
                         type="text"
                         name="username"
-                        placeholder="username"
+                        placeholder="Username"
                         value={this.state.username}
                         onChange={this.handleInputChange}
                     />    
                 </FormGroup>
                 <FormGroup>
                     <Input
-                        type="password"
+                        type="text"
                         name="password"
-                        placeholder="password"
+                        placeholder="Password"
                         value={this.state.password}
                         onChange={this.handleInputChange}
                     /> 
@@ -48,7 +48,7 @@ class Login extends Component {
                     </Button>    
                 </FormGroup>
             </Form>
-        )
+        );
     }
 }
 
