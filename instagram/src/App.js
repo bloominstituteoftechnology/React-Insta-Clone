@@ -9,7 +9,8 @@ class App extends Component {
   constructor(){
         super();
         this.state={
-          data:[]
+          data:[],
+          input:''
         }
     }
     componentDidMount(){
@@ -23,12 +24,23 @@ class App extends Component {
       localStorage.removeItem('user')
       window.location.reload();
   }
+    handleSearch=str=>{
+      const filterPost= dummyData.filter(post=>{
+        return post.username.includes(str)
+      })
+      this.setState({data:filterPost})
+    }
    
   render(){
     return (
       <div className="whole-app">
        <button onClick={this.logOut}>LogOut</button>
-        <span><SearchBar/></span>
+        <span><SearchBar
+                handleSearch={this.handleSearch}
+                dummyData={this.state.data}
+                input={this.Input}
+                />
+        </span>
         <span className="post">
        {dummyData.map((post,index)=>{
          return(
