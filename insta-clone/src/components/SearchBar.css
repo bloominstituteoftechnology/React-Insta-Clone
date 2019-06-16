@@ -1,0 +1,9 @@
+/* Searchbar CSS */
+.search-container{
+  display: flex;
+  margin-left: 22%;
+}
+
+.search {
+  margin-top: 15px;
+}
