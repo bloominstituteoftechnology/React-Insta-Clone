@@ -1,0 +1,109 @@
+.posts {
+    width: 100%;
+    margin-top: 100px;
+}
+
+div.card {
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+div.card-header {
+    background-color: #C18C5B;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    max-height: 100px;
+    color: white;
+    font-size: 1.75rem;
+}
+
+.card-header img {
+    max-width: 75px;
+    max-height: 75px;
+    margin-right: 2%;
+    border-radius: 50%;
+}
+
+.card-body img {
+    width: 100%;
+    height: 100%;
+}
+
+div.card-footer {
+    background-color: #C18C5B;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.card-footer button {
+    color: #C18C5B;
+    background-color: white;
+    border-color: #C18C5B;
+}
+
+div.card-footer button:hover {
+    background-color: #C18C5B;
+    color: white;
+    border-color: white;
+}
+
+div.modal-content {
+    background-color: #2A1E2F;
+}
+
+h5.modal-title {
+    color: #9A8FA9;
+}
+
+li.list-group-item {
+    background-color: #2A1E2F;
+    color: white;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-footer form {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-footer input {
+    width: 100%;
+    text-align: center;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    margin-bottom: 2%;
+    border-color: #627965;
+    color: #627965;
+}
+
+.modal-footer input:active {
+    border-color: #627965;
+    color: #627965;
+}
+
+.modal-footer form button {
+    background-color: #627965;
+    color: white;
+    border: 1px solid white;
+    width: 48%;
+    margin-bottom: 2%;
+}
+
+.modal-footer form button:hover {
+    background-color: white;
+    color: #627965;
+    border: 1px solid #627965;
+}
