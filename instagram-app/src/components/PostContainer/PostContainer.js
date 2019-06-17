@@ -1,5 +1,6 @@
 import React from 'react'
 import CommentSection from '../CommentSection/CommentSection';
+import './PostContainer.css';
 
 
 class PostContainer extends React.Component {
