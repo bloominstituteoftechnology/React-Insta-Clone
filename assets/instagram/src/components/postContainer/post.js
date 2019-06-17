@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CommentSection from '../CommentSection/CommentSectionContainer';
+import CommentSection from '../commentsection/Comment';
 import LikeSection from './LikeSection';
 import PostHeader from './PostHeader';
 import styled from 'styled-components';

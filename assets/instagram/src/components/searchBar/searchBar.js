@@ -15,10 +15,10 @@ const LogoHeader = styled.div`
   line-height: 75px;
 `;
 
-const LogoImage = styled.img`
-  height: 50%;
-  padding: 0px 15px;
-`;
+// const LogoImage = styled.img`
+//   height: 50%;
+//   padding: 0px 15px;
+// `;
 
 const InputContainer = styled.div`
   width: 300px;
