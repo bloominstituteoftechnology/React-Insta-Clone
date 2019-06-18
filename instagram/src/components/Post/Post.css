@@ -1,0 +1,8 @@
+.username-container {
+  width: 250px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  /* border: 1px solid red; */
+}

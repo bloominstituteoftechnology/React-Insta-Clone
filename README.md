@@ -1,5 +1,6 @@
 # React-Insta-Clone
 
+Live site: https://alejandrok-insta-clone.netlify.com
 ## Introduction
 
 - The purpose of this project is to continue building on your knowledge of React that you have gained thus far.

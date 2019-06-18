@@ -1,0 +1,33 @@
+.login-form {
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	height: 300px;
+	margin: 50px auto;
+
+	border: 1px solid black;
+}
+
+input {
+	width: 80%;
+}
+
+.login-form h2 {
+	width: 50%;
+	margin: 20px auto;
+}
+
+.login-input {
+	width: 50%;
+	margin: 15px auto;
+}
+
+.login-input input {
+	margin: 10px 0;
+}
+
+.login-input button {
+	width: 80%;
+	height: 30px;
+	padding-top: 2px;
+}

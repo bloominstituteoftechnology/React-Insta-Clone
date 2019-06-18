@@ -1,0 +1,16 @@
+.comment-section {
+  /* border: 1px solid red; */
+  margin-left: 50px;
+}
+
+.comment-icons {
+  width: 100px;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid blue; */
+}
+
+.likes {
+  font-weight: bold;
+}
