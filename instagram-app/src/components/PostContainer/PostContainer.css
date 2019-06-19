@@ -41,6 +41,7 @@ max-width: 900px;
 
 header {
 
+    width: 27rem;
     height: 3rem;
     border: 2px dashed hotpink;
 }
@@ -48,5 +49,9 @@ header {
 
 .likebar {
 
+    margin: 7px;
+    width: 4rem;
+    font-size: 0.6rem;
+    font-weight: bold;
     border: 3px solid yellow;
 }

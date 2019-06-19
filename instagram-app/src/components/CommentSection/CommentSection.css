@@ -1,15 +1,25 @@
 
 .comment-sec {
 
+    display: flex;
+    margin: 7px;
+    height: 10rem;
     border: 2px solid lightskyblue;
 }
 
+
 .comment-sec h3 {
 
+    width: 4rem;
+    font-size: 0.6rem;
+    font-weight: bold;
     border: 2px dotted darkviolet;
 }
 
+
 .comment-sec p {
 
+    
+    font-size: 0.6rem;
     border: 2px dashed darkseagreen;
 }

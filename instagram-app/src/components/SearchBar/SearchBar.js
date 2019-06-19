@@ -7,7 +7,9 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <input type='text' placeholder='Search...' />
+            <div className='search-bar'>
+                <input type='text' placeholder='Search...' />
+             </div>
         );
     };
 }
