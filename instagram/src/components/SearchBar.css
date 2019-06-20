@@ -1,0 +1,19 @@
+.instaSearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    width: 173px;
+    margin-right: 317px;
+    margin-top: 13px;
+    margin-bottom: 0px;
+    height: 12px;
+}
+
+.searchBar_wrapper {
+     width: 200px;
+}
+
+
