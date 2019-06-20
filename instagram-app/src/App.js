@@ -11,7 +11,8 @@ const preprocessData = data.map(post => {
   return {
     ...post,
     postId: uuidv4(),
-    show: "on"
+    show: "on",
+    liked: false
   };
 });
 const ComponentFromWithAuthenticate = withAuthenticate(PostPage, Login);

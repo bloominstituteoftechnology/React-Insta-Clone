@@ -79,8 +79,10 @@ const PostContainer = ({ props }) => {
     timestamp,
     likes,
     username,
-    show
+    show,
+    liked
   } = props;
+  console.log(props);
   const commentDate = timestamp.replace(/th/, "");
   const [inputValue, setInputValue] = useState("");
   const [inputComment, setInputComment] = useState(comments);
@@ -120,7 +122,7 @@ const PostContainer = ({ props }) => {
   };
   const handleLikes = () => {
     let newLike = likes;
-    updateLikes(newLike + 1);
+      updateLikes(newLike+=1);
   };
   
 
