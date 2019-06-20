@@ -8,7 +8,7 @@ display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    line-height: 0;
+    line-height: 2;
     padding: 0 1rem 0 1rem;
     p span {
         font-weight: bold; 
