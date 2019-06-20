@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import uuidv4 from "uuid/v4";
+import Fuse from 'fuse.js';
 import data from "./dummy-data";
 import withAuthenticate from "./components/authentication/withAuthenticate";
 import PostPage from "./components/PostContainer/PostPage";
@@ -33,17 +34,23 @@ function App() {
   const handleSearch = e => {
     e.preventDefault();
     const data = posts;
+    let options = {
+      keys: ["username"]
+    };
+    
     setSearch(e.target.value.trim());
       const query = data.map(post => {
-        if (!post.username.trim().toLowerCase().includes(e.target.value.trim())) {
+        let fuse = new Fuse([post], options);
+    let result = fuse.search(e.target.value.trim());
+        if (result.length || e.target.value.trim() === '') {
           return {
             ...post,
-            show: "off"
+            show: "on"
           };
         }
         return {
           ...post,
-          show: "on"
+          show: "off"
         };
       });
       setData(query);
