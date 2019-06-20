@@ -46,6 +46,17 @@ nav {
     width: 12rem;
     margin: 0 auto;
 }
+input {
+    text-align: center;
+    width: 205px;
+    height: 18px;
+    border: 1px solid rgb(211, 209, 209);
+    font-size: 12px;
+    border-radius: 3px;
+    color: rgb(211, 209, 209);
+    background: rgb(250, 250, 250);
+    padding: 5px;
+  }
 `;
 const LogoHeader = styled.div`
     display: flex;
@@ -77,7 +88,7 @@ const SearchBar = ({ handleSearch, search }) => {
         </LogoHeader>
             <input
             className="search"
-            placeholder= "Search"
+            placeholder= "&#128269; Search"
             value={search}
             onChange={handleSearch}
             />
