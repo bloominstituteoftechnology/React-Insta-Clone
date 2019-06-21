@@ -20,6 +20,7 @@
 }
 
 .mainImage {
+    width: 850px;
     margin: 15px 0px 0px 20px;
 }
 
@@ -33,4 +34,9 @@
 
 .commentHeart {
     margin: 10px 0px 0px 20px;
+}
+
+.mainPhoto {
+  max-width: 850px;
+  height: auto;
 }

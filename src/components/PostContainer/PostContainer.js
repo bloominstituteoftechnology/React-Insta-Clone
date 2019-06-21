@@ -63,7 +63,11 @@ class PostContainer extends Component {
           <img src ={this.props.postings.thumbnailUrl} alt ="icon" height='60'  width='60' className='rounded' />
           <div className='userID'>{this.props.postings.username}</div>
         </div>
-        <img src ={this.props.postings.imageUrl} onDoubleClick={this.handleClick} alt ="mainPost" height='600' className='mainImage'/>
+
+        <div className="mainPhoto">
+          <img src ={this.props.postings.imageUrl} onDoubleClick={this.handleClick} alt ="mainPost" height='600' className='mainImage'/>
+        </div>
+
         <div className='commentHeart'>
           <img src={heart} onClick={this.handleClick} alt ="Women's Day!" height="35" width="35"/>
           <img src="https://d30y9cdsu7xlg0.cloudfront.net/png/124237-200.png" onClick={this.showComment} onSubmit={this.handleComment}
