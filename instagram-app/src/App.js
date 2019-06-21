@@ -1,6 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import dummyData from '../../dummy-data';
+import CommentSection from './components/CommentSection/CommentSection';
+import PostContainer from './components/PostContainer/PostContainer';
+import SearchBar from './components/SearchBar/SearchBar';
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -19,6 +24,9 @@ function App() {
           Learn React
         </a>
       </header>
+        <SearchBar />
+        <PostContainer />
+        <CommentSection />	
     </div>
   );
 }
