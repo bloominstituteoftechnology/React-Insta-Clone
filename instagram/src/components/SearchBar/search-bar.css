@@ -1,0 +1,31 @@
+.search-bar{
+    height:76px;
+    display:flex;
+    flex-wrap: nowrap;
+    width:100%;
+    justify-content:center;
+    align-items: center;
+    background-color:white;
+    border-bottom:0.5px solid lightgray;
+}
+
+.logo{
+    height:76px;
+}
+
+.bar{
+    height:25px;
+    width:190px;
+    margin-left:200px;
+    margin-right:200px;
+}
+
+.icons{
+    list-style: none;
+    display:flex;
+}
+
+.explore, .heart , .profile {
+    height:45px;
+    width:45px;
+}
