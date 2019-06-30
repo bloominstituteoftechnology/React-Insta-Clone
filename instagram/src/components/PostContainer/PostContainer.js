@@ -21,7 +21,8 @@ const PostContainer = props => {
                      <CommentSection  comments={post.comments}/> 
                      <section className="postForm">
                          <form>
-                             <textarea placeholder="Add a comment..."></textarea>
+                             <textarea placeholder="Add a comment..." autocomplete="off">
+                             </textarea>
                          </form>
                      </section>
                   </div>

@@ -32,8 +32,15 @@
     width:100%;
 }
 
+.postForm {
+    height: 50px;
+}
 .postForm textarea {
 
-    width:90%;
+    width:95%;
+    border: none;
+    resize: none;
+    height:18px;
+    outline:none;
 
 }
