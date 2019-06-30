@@ -23,6 +23,9 @@ const PostContainer = props => {
                          <form>
                              <textarea placeholder="Add a comment..." autocomplete="off">
                              </textarea>
+                             <button>
+                                 Post
+                             </button>
                          </form>
                      </section>
                   </div>

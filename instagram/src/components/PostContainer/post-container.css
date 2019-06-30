@@ -34,13 +34,30 @@
 
 .postForm {
     height: 50px;
+    border-top:0.3px solid #f3f3f3;
+    padding-top:20px;
 }
 .postForm textarea {
 
-    width:95%;
+    width:85%;
     border: none;
     resize: none;
     height:18px;
     outline:none;
 
+}
+
+.postForm  button {
+
+    font-size:20px;
+    color: purple;
+    border: none;
+    background: none;
+    opacity:0.5;
+
+}
+
+.postForm button:hover{
+    opacity:1;
+    cursor: pointer;
 }
