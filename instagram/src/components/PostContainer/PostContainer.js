@@ -1,9 +1,10 @@
 import React from 'react';
 import './post-container.css';
+import CommentSection from '../CommentSection/CommentSection';
 
 const PostContainer = props => {
 
-    console.log("from post container", props);
+  
  
 
     return(
@@ -11,10 +12,20 @@ const PostContainer = props => {
                 {props.postsData.map( post => (
                   <div className="post">
                     <div className="post-header">
-                      <img className="profile-pic" src={post.thumbnailUrl} />
-                      <h1 className="username">{post.username}</h1>
+                        <img className="profile-pic" src={post.thumbnailUrl} />
+                        <h1 className="username">{post.username}</h1>
                     </div>
+                    <div className="post-pic">
+                        <img src={post.imageUrl}/>
+                    </div>
+                     <CommentSection  comments={post.comments}/> 
+                     <section className="postForm">
+                         <form>
+                             <textarea placeholder="Add a comment..."></textarea>
+                         </form>
+                     </section>
                   </div>
+                
 
 
                 ))}

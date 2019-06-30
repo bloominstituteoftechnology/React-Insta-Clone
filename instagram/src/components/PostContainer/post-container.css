@@ -4,14 +4,17 @@
 
 .post{
     display:inline-block;
-    width:500px;
-    border:0.5 solid lightgrey;
+    width:800px;
+    border:0.5px solid lightgrey;
     margin-bottom:100px;
     margin-top:100px;
 }
 
 .post-header{
     display:flex;
+    padding-bottom:20px;
+    padding-top:20px;
+    padding-left:20px;
 }
 
 .profile-pic{
@@ -23,4 +26,14 @@
 
 .username{
     font-size:16px;
+}
+
+.post-pic img{
+    width:100%;
+}
+
+.postForm textarea {
+
+    width:90%;
+
 }
