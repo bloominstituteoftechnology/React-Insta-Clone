@@ -9,7 +9,7 @@ import {
   LoginInput,
   LoginButton
 } from "./LoginStyles";
-import instagramPhoto from "../../assets/instagram-login-phone-photo.jpg";
+import instagramPhoto from "../../assets/instagram-login-phone-photo-compressed.jpg";
 class Login extends React.Component {
   constructor() {
     super();
