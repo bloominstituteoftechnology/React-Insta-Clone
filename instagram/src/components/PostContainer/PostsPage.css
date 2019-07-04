@@ -1,0 +1,42 @@
+.post-container-div {
+    margin-top: 200px;
+    margin-bottom: 40px;
+}
+
+.log-out-btn {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.log-out-btn:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Animations */
+
+@keyframes show-anim {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.show {
+    animation-name: show-anim;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide-anim {
+    from {opacity: 1;}
+    to {opacity: 0;}
+    
+}
+
+.hide {
+    animation-name: hide-anim;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}

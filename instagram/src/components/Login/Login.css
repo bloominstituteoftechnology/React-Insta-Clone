@@ -1,0 +1,102 @@
+.login-div {
+    display: flex;
+    align-items: center;
+    height: auto;
+    position: relative;
+    top: 25vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.login-div .instagram-logo {
+    max-height: 57px;
+    padding-left: 19px;
+    padding-top: 5px;
+}
+
+.login-div .instagram-logo:hover {
+    filter:opacity(30%);
+}
+
+.login-div .login-form .login-input-div {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.login-div .login-form .login-input-div .login-input {
+    font-size: 18px;
+    margin: 5px;
+}
+
+.login-div .form-btn {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    background: white;
+}
+
+.login-div .login-btn:hover {
+    background: green;
+    color: white;
+    cursor: pointer;
+}
+
+.login-div .register-btn:hover {
+    background: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.login-div .delete-btn:hover {
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+.login-div p, .register-section {
+    opacity: 0;
+}
+
+.delete-section select {
+    margin-right: 10px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.delete-section input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.display-none {
+    display: none;
+}
+
+
+/* Animations */
+
+@keyframes show-anim {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.show {
+    animation-name: show-anim;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hide-anim {
+    from {opacity: 1;}
+    to {opacity: 0;}
+    
+}
+
+.hide {
+    animation-name: hide-anim;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
