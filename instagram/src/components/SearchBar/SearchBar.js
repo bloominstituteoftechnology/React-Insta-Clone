@@ -11,12 +11,12 @@ const SearchBar = props => {
 
     return(
       <div className="search-bar">
-             <img className="logo" src={logo}/>
+             <img className="logo" src={logo} alt="logo-pic"/>
              <input className="bar" type="text" placeholder="Search"/>
              <ul className="icons">
-                 <li><img className="explore" src={explore}/></li>
-                 <li><img className="heart" src={heart}/></li>
-                 <li><img className="profile" src={profile}/></li>
+                 {/* <li><img className="explore" src={explore} alt="explore-icon"/></li> */}
+                 <li><img className="heart" src={heart} alt="heart-icon"/></li>
+                 <li><img className="profile" src={profile} alt="profile-icon"/></li>
              </ul>
 
       </div>

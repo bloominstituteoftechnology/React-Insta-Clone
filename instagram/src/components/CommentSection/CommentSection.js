@@ -2,18 +2,29 @@ import React from 'react';
 import './comment-section.css';
 
 
-const CommentSection = props => {
+class CommentSection extends React.Component {
+constructor(props){
+    super(props);
+    this.state = props;
 
-    console.log("from comments", props);
+}
 
+render(){
     return(
         <div className="comment-container">
-         {props.comments.map(c => (
-             <div className="each-comment"><p className="comment-username">{c.username}</p><p className="comment-text">{c.text}</p></div>
+         {this.state.comments.map(c => (
+             <div className="each-comment" key ={c.id}>
+                <p className="comment-username">{c.username}</p>
+                <p className="comment-text">{c.text}</p>
+             </div>
          ))}
         </div>
     )
 }
+}
+
+
+
 
 
 
