@@ -81,7 +81,6 @@ const PostContainer = ({ props }) => {
     show,
     liked
   } = props;
-  console.log(props);
   const commentDate = timestamp.replace(/th/, "");
   const [inputValue, setInputValue] = useState("");
   const [inputComment, setInputComment] = useState(comments);
@@ -125,11 +124,20 @@ const PostContainer = ({ props }) => {
     setInputValue("");
     setCreatedAt(moment(new Date(), "MMM D LTS").fromNow());
   };
-  const handleLikes = () => {
-    let newLike = likes;
-    setLikeStatus(!liked);
-    !liked ? updateLikes((newLike += 1)) : updateLikes((newLike -= 1));
-    window.location.reload();
+  const handleLikes = async () => {
+    if (!LikeStatus) {
+      console.log("=====like", LikeStatus);
+      setLikeStatus(true);
+      updateLikes(likes => (likes += 1));
+    } else if (LikeStatus) {
+      console.log("=====like", LikeStatus);
+      console.log("=====like", liked);
+      setLikeStatus(false);
+      updateLikes(likes => (likes -= 1));
+    }
+    // LikeStatus ? updateLikes((newLike += 1)) : updateLikes((newLike -= 1));
+
+    // window.location.reload();
   };
 
   return (
@@ -143,7 +151,10 @@ const PostContainer = ({ props }) => {
       </UserPostArea>
       <Reaction>
         <PostIcons>
-          <span onClick={handleLikes} style={{ color: liked ? "red" : "" }}>
+          <span
+            onClick={() => handleLikes()}
+            style={{ color: LikeStatus ? "red" : "" }}
+          >
             <IoIosHeartEmpty />
           </span>
 
