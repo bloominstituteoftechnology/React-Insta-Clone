@@ -126,18 +126,12 @@ const PostContainer = ({ props }) => {
   };
   const handleLikes = async () => {
     if (!LikeStatus) {
-      console.log("=====like", LikeStatus);
       setLikeStatus(true);
       updateLikes(likes => (likes += 1));
     } else if (LikeStatus) {
-      console.log("=====like", LikeStatus);
-      console.log("=====like", liked);
       setLikeStatus(false);
       updateLikes(likes => (likes -= 1));
     }
-    // LikeStatus ? updateLikes((newLike += 1)) : updateLikes((newLike -= 1));
-
-    // window.location.reload();
   };
 
   return (
