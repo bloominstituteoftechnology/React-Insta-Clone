@@ -1,22 +1,21 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
-
 const Container = styled.div`
-width: 100%;
-height: 100vh;
-background-color: #fafafa;
-margin: 0 auto;
-margin-top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa;
+  margin: 0 auto;
+  margin-top: 0;
 `;
 
 const Header = styled.header`
-@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
-    font-family: 'Lobster', cursive;
-    font-size: 2rem;
-    font-weight: lighter;
-    padding: 0 0 0 1rem;
-    margin: 0 0 3rem 0;
+  @import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+  font-family: "Lobster", cursive;
+  font-size: 2rem;
+  font-weight: lighter;
+  padding: 0 0 0 1rem;
+  margin: 0 0 3rem 0;
 `;
 const Form = styled.form`
   width: 15%;
@@ -45,8 +44,8 @@ const FormInput = styled.input`
   margin-bottom: 1em;
   &:focus {
     outline: none;
-    border:1px solid rgba(189, 195, 199, 1);
-}
+    border: 1px solid rgba(189, 195, 199, 1);
+  }
 `;
 
 const SubmitBtn = styled.input`
@@ -71,19 +70,13 @@ const SubmitBtn = styled.input`
     background: skyblue;
   }
 `;
-// const Label = styled.label`
-//   font-size: 0.9em;
-//   color: #000;
-//   font-weight: 100;
-//   margin-left: 0.7rem;
-// `;
 
 const Login = () => {
   const [userInput, setUserInput] = useState({
     username: "",
     password: ""
   });
-  // const [userPassword, setUserPassword] = useState("");
+
   const [loggedIn, setloggedIn] = useState(false);
 
   useEffect(() => {
@@ -103,35 +96,30 @@ const Login = () => {
     const target = e.target;
     const value = target.value;
     const name = target.name;
-    // setUserInput(e.target.value);
+
     setUserInput(userInput => ({ ...userInput, [name]: value }));
-    console.log(userInput);
   };
-  // const handlePasswordChange = e => {
-  //   setUserPassword(e.target.value)
-  // };
+
   return (
     <Container>
-    <Form onSubmit={e => loginHandler(e)}>
-    <Header>Instagram</Header>
-      {/* <Label htmlFor="username">Username</Label> */}
-      <FormInput
-        placeholder="Phone number, username or email"
-        name="username"
-        type="text"
-        value={userInput.username}
-        onChange={handleUserNameChange}
-      />
-      {/* <Label htmlFor="password">Password</Label> */}
-      <FormInput
-        placeholder="Password"
-        name="password"
-        type="password"
-        value={userInput.password}
-        onChange={handleUserNameChange}
-      />
-      <SubmitBtn type="submit" value="Log In" />
-    </Form>
+      <Form onSubmit={e => loginHandler(e)}>
+        <Header>Instagram</Header>
+        <FormInput
+          placeholder="Phone number, username or email"
+          name="username"
+          type="text"
+          value={userInput.username}
+          onChange={handleUserNameChange}
+        />
+        <FormInput
+          placeholder="Password"
+          name="password"
+          type="password"
+          value={userInput.password}
+          onChange={handleUserNameChange}
+        />
+        <SubmitBtn type="submit" value="Log In" />
+      </Form>
     </Container>
   );
 };
