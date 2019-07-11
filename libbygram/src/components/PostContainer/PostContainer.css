@@ -1,0 +1,24 @@
+ .post-container {
+    display: flex;
+    justify-content: flex-start;
+    height: 600px;
+    max-width: 500px;
+    border: 1px solid whitesmoke;
+}
+
+.user-img {
+    height: 30px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    
+}
+
+.post-img {
+    height: 400px;
+    width: 100%;
+}
+
