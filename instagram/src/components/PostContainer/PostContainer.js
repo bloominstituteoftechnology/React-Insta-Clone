@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 const PostContainer = props => {
 
-
  
 
     return(
@@ -19,16 +18,7 @@ const PostContainer = props => {
                     <div className="post-pic">
                         <img src={post.imageUrl} alt="post-pic"/>
                     </div>
-                     <CommentSection  comments={post.comments}/> 
-                     <section className="postForm">
-                         <form>
-                             <textarea placeholder="Add a comment...">
-                             </textarea>
-                             <button>
-                                 Post
-                             </button>
-                         </form>
-                     </section>
+                     <CommentSection  comments={post.comments} newComment={props.newComment}/>
                   </div>
                 
 
