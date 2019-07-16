@@ -32,11 +32,13 @@ handleSubmit = (event) => {
     //get a copy of our current comments living in our states
     let currentComments = this.state.comments.slice();
 
-    //push the new comment posted and merget with the current state 
+    //push the new comment posted and merge it with the current state 
     currentComments.push(newComment);
 
     //using seState set the comments to new comments and empty the value of comment
-    this.setState({ comments: newComment, comment: ''});
+    this.setState({ comments: currentComments, comment: ''});
+
+    console.log(currentComments);
 
 
   
@@ -51,7 +53,7 @@ render(){
     console.log("I just rendered");
     return(
         <div className="comment-container">
-         {this.props.comments.map(c => (
+         {this.state.comments.map(c => (
              <div className="each-comment" key ={c.id}>
                 <p className="comment-username">{c.username}</p>
                 <p className="comment-text">{c.text}</p>
