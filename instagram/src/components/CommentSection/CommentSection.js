@@ -38,11 +38,9 @@ handleSubmit = (event) => {
     //using seState set the comments to new comments and empty the value of comment
     this.setState({ comments: currentComments, comment: ''});
 
-    console.log(currentComments);
+    
 
-
-  
-}
+  };
 
 
 
@@ -50,8 +48,9 @@ handleSubmit = (event) => {
 
 
 render(){
-    console.log("I just rendered");
+ 
     return(
+        
         <div className="comment-container">
          {this.state.comments.map(c => (
              <div className="each-comment" key ={c.id}>
@@ -69,6 +68,9 @@ render(){
     )
 }
 }
+
+
+
 
 
 

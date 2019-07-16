@@ -1,7 +1,10 @@
 import React from 'react';
-import './post-container.css';
-import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
+import './post-container.css';
+
+import CommentSection from '../CommentSection/CommentSection';
+import PostIcons from '../PostIcons/PostIcons';
+
 
 const PostContainer = props => {
 
@@ -18,8 +21,10 @@ const PostContainer = props => {
                     <div className="post-pic">
                         <img src={post.imageUrl} alt="post-pic"/>
                     </div>
+                     <PostIcons likes={post.likes} id={post.id}/>
                      <CommentSection  comments={post.comments} newComment={props.newComment}/>
                   </div>
+
                 
 
 

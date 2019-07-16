@@ -1,0 +1,19 @@
+.heart-like-icon{
+
+    width:40px;
+    height:auto;
+}
+
+.heart-like-icon:hover{
+    cursor: pointer;
+}
+
+.icons-container{
+    list-style:none;
+    display:flex;
+    align-items: center;
+}
+
+.likes{
+    padding:0 20px 0 20px;
+}
