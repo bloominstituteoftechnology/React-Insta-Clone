@@ -1,0 +1,16 @@
+@import './components/SearchBar/SearchBar.css';
+@import './Components/CommentSection/CommentSection.css';
+@import './components/PostContainer/PostContainer.css';
+
+.fullContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.centeredContainer {
+  max-width: 800px;
+  min-width: 500px;
+  border: 2px solid white;
+  background: white;
+}
