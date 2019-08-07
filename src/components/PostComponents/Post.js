@@ -9,7 +9,7 @@ import { Card, CardImg } from 'reactstrap'
 
 class Post extends React.Component {
 	constructor(props) {
-		super(props);
+		super(props)
 		this.state = {
 			likes: props.post.likes,
 			toggleLike: this.toggleLike.bind(this),
@@ -35,7 +35,7 @@ class Post extends React.Component {
 
 	render() {
     return (
-      <div className="post-border">
+      <div className='post-border'>
         <Card>
           <PostHeader
             username={this.props.post.username}
@@ -43,8 +43,8 @@ class Post extends React.Component {
           />
 
           <CardImg
-            alt="post thumbnail"
-            className="post-image"
+            alt='post thumbnail'
+            className='post-image'
             src={this.props.post.imageUrl}
             onDoubleClick={this.toggleLike}
           />

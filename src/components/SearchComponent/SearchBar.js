@@ -19,9 +19,9 @@ const SearchBar = ({ searchPosts, inputHandler, search }) => {
   return (
     <div>
       {/* { console.log(searchPosts) } */}
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/"><img src={logo} alt='Logo' /></NavbarBrand>
-        <Nav className="ml-auto" navbar>
+      <Navbar color='light' light expand='md'>
+        <NavbarBrand href='/'><img src={logo} alt='Logo' /></NavbarBrand>
+        <Nav className='ml-auto' navbar>
           <NavItem className='search-bar'>
             <FontAwesomeIcon className='search' icon={faSearch} />
             <Form>

@@ -10,7 +10,7 @@ const PostHeader = props => {
             />
 			<CardTitle className='post-title'>{props.username}</CardTitle>
 		</div>
-	);
-};
+	)
+}
 
-export default PostHeader;
+export default PostHeader

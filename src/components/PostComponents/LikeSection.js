@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 import { CardBody } from 'reactstrap'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons'
 
 const LikeSection = props => {
 	return (
@@ -25,7 +25,7 @@ const LikeSection = props => {
                 <strong>{props.likes} likes</strong>
             </div>
         </CardBody>
-	);
-};
+	)
+}
 
-export default LikeSection;
+export default LikeSection

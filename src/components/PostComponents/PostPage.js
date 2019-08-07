@@ -4,8 +4,8 @@ import PostsContainer from './PostContainer'
 import SearchBar from '../SearchComponent/SearchBar'
 
 class PostsPage extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props)
 		this.state = {
 			posts: [],
 			filteredPosts: [],
@@ -28,7 +28,7 @@ class PostsPage extends Component {
 
 	render() {
 		return (
-			<div className="App">
+			<div className='App'>
         { console.log('Posts:', this.state.posts.filter(post => post.username === this.state.search)) }
         { console.log('Filtered Posts:', this.state.filteredPosts) }
 				<SearchBar
