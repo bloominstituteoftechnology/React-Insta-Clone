@@ -45,7 +45,7 @@ class Login extends Component {
 					/>
 					<br />
 					<Button onClick={this.handleLoginSubmit}>
-						Log In Now!!!
+						Log In 🚀
 					</Button>
 				</FormGroup>
 			</Form>
