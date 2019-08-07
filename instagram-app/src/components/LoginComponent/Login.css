@@ -1,0 +1,31 @@
+.login-form button {
+  background: darkslateblue;
+  color: cyan;
+  border: 2px solid cyan;
+  padding: 10px 25px;
+}
+
+.login-form button:hover {
+  background: cyan;
+  color: darkslateblue;
+  border: 2px solid darkslateblue;
+}
+
+.login-form {
+  background: slateblue;
+  padding: 80px 10px 416px 10px;
+}
+
+.login-form h3 {
+  margin: 50px 0;
+  font-size: 38px;
+}
+
+.sub-header {
+  margin: 50px 0;
+  font-weight: bold;
+}
+
+.password input {
+  margin-bottom: 50px;
+}

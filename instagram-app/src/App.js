@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import PostsPage from './components/PostComponents/PostPage';
-import LoginPage from './components/LoginComponent/Login';
-import Authenticate from './components/Authentication/Authenticate';
+import React, { Component } from 'react'
+import PostsPage from './components/PostComponents/PostPage'
+import LoginPage from './components/LoginComponent/Login'
+import Authenticate from './components/Authentication/Authenticate'
 import './App.css'
 
 class App extends Component {
 	constructor() {
 		super();
-		this.state = {};
+		this.state = {}
 	}
 
 	render() {
@@ -15,10 +15,10 @@ class App extends Component {
 			<div className="App">
 				<ConditionalView />
 			</div>
-		);
+		)
 	}
 }
 
-const ConditionalView = Authenticate(PostsPage)(LoginPage);
+const ConditionalView = Authenticate(PostsPage)(LoginPage)
 
-export default App;
+export default App

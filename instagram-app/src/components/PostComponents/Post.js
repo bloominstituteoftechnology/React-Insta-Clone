@@ -34,35 +34,35 @@ class Post extends React.Component {
 	}
 
 	render() {
-		return (
-			<div className="post-border">
-                <Card>
-                    <PostHeader
-                        username={this.props.post.username}
-                        thumbnailUrl={this.props.post.thumbnailUrl}
-                    />
+    return (
+      <div className="post-border">
+        <Card>
+          <PostHeader
+            username={this.props.post.username}
+            thumbnailUrl={this.props.post.thumbnailUrl}
+          />
 
-                    <CardImg
-                        alt="post thumbnail"
-                        className="post-image"
-						src={this.props.post.imageUrl}
-						onDoubleClick={this.toggleLike}
-                    />
+          <CardImg
+            alt="post thumbnail"
+            className="post-image"
+            src={this.props.post.imageUrl}
+            onDoubleClick={this.toggleLike}
+          />
 
-                    <LikeSection
-                        toggleLike={this.toggleLike}
-						likes={this.state.likes}
-						isLiked={this.state.isLiked}
-                    />
+          <LikeSection
+            toggleLike={this.toggleLike}
+            likes={this.state.likes}
+            isLiked={this.state.isLiked}
+          />
 
-                    <CommentSection
-                        postId={this.props.post.imageUrl}
-                        comments={this.props.post.comments}
-                    />
-                </Card>
-			</div>
-		);
-	}
+          <CommentSection
+            postId={this.props.post.imageUrl}
+            comments={this.props.post.comments}
+          />
+        </Card>
+      </div>
+    )
+  }
 }
 
 Post.propTypes = {
@@ -71,6 +71,6 @@ Post.propTypes = {
 		thumbnailUrl: PropTypes.string,
 		imageUrl: PropTypes.string,
 	}),
-};
+}
 
-export default Post;
+export default Post
