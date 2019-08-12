@@ -59,7 +59,7 @@
 }
 
 .cameralogo{
-  height:25px;
+  height:30px;
   padding-top:7px;
 }
 
@@ -87,11 +87,12 @@ input{
 
 
 .icons{
-  display:flex;
-  flex-direction: column;
+ /* display:flex;
+  flex-direction: column;*/
   margin-left:70px;
   padding-top:10px;
-  height:30px;
+  height:25px;
+  cursor: pointer;
 }
 
 .post-header{
@@ -99,8 +100,8 @@ input{
   display:flex;
   justify-content: flex-start;
   margin-top:10px;
-  padding-left:5px;
-  padding-top:10px;
+  padding-left:15px;
+  padding-top:15px;
   padding-bottom:10px;
 }
 .userimg{
@@ -136,17 +137,23 @@ input{
   border-right:1px solid rgb(202, 202, 202);
 }
 
-/*.like-icons{
-  border:solid blue;
+.like-icons{
+  /*border:solid blue;*/
   
-}*/
+}
 
 .postlike{
   /*border:solid red;*/
-  margin-right:5px;
+  margin-right:15px;
   height:20px;
   cursor: pointer;
+
 }
+
+/*.postlike:active{
+background-color:red;
+border-radius:100%;
+}*/
 
 .postmessage{
  /* border:solid pink;*/
@@ -155,6 +162,10 @@ input{
 
 .likes{
   font-weight: bold;
+  /*border:solid red;*/
+  padding:5px;
+  width:200px;
+  display:flex;
 }
 .comments{
  /* border:solid red;*/

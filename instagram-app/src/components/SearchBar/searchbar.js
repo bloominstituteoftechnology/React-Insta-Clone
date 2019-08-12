@@ -27,13 +27,15 @@ border-bottom:1px solid rgb(202, 202, 202);
   justify-content: space-evenly;
   margin-top:10px;
   padding-bottom:10px;
-  padding-top:10px;
+  padding-top:15px;
   position:fixed;
   width:800px;
   margin:auto;
   background:white;
   margin-bottom:20px;
   top:0;
+
+  
   
  
 
@@ -50,7 +52,7 @@ export default function SearchBar(props){
      <img alt='instalogo' src={InstaLogo} className='instalogo'></img>
         <input 
         type='text'
-        placeholder='                  Search'
+        placeholder='                 Search'
         onChange={props.searchPosts}
         
        />

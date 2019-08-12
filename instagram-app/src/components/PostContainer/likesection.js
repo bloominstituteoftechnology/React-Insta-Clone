@@ -3,6 +3,8 @@ import Like from './like.png';
 import Message from './bubble.png';
 
 
+
+
 export default function LikeSection(props){
     return(
         <div className='like-section'>
