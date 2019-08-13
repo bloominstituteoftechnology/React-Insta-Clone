@@ -1,0 +1,313 @@
+.searchBarContainer {
+    display: inline-block;
+    height: 64px;
+    left: 0px;
+    width: 100%;
+    max-width: 100%;
+    background-color: white;
+    position: fixed;
+    border: 1px solid rgba(128, 128, 128, 0.281);
+}
+
+.searchSubContainer {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+}
+
+.postContainer {
+    display: flex;
+    font-size: 1.4rem;
+    flex-direction: column;
+    height: auto;
+    width: 604px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    background-color: white;
+    border: 1px solid lightgray;
+}
+html {
+    font-size: 65.2%;
+  }
+.App {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background-color: rgb(250, 250, 250);
+}
+
+.iconContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 150px;
+    margin-top: 6px;
+}
+
+.searchBarInput {
+    max-width: 100%;
+    width: 100%;
+    display: inline-block;
+    height: 36px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    /* margin-left: 80%; */
+    padding-left: 10px;
+}
+
+.searchForm {
+    display: flex;
+    width: 30%;
+}
+
+.searchHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 64px;
+    width: 90%;
+    padding-top: 10px;
+}
+
+.loginText {
+    margin-top: 20px;
+}
+
+.submitBtn {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+
+    top: 50%;
+    font-size: 24px;
+    /* left: auto;
+    right: auto; */
+    margin-left: 6%; 
+    margin-right: 50%;
+    line-height: 40px;
+    width: 300px;
+    height: auto;
+    background-color: rgb(230, 232, 233);
+    border-left: none;
+    border-bottom: none;
+    border-radius: 15px;
+    z-index: 2;
+    /* border: 1px solid green; */
+}
+
+.menuList {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: 85%;
+    /* border: 1px solid blue; */
+    margin-top: 6px;
+}
+
+li {
+    /* padding-right: 40px; */
+    cursor: pointer;
+   /*  border: 1px solid red; */
+}
+
+li:hover {
+    font-weight: bold;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.644);
+    border-top: 1px solid rgba(128, 128, 128, 0.644);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 64px;
+}
+
+.thumbNail {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.userName {
+    display: block;
+    height: 40px;
+    padding-top: 20px;
+    font-family: arial;
+    font-weight: bold;
+}
+
+.image {
+    width: 100%;
+}
+
+.iconContainer2 {
+    display: flex;
+    flex-direction: row;
+    height: 35px;
+}
+
+.commentContainer {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+}
+
+.userCommentContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    /*  border: 2px solid green; */
+}
+
+.user {
+    display: inline-block;
+    justify-content: left;
+    width: auto;
+    font-weight: bold;
+}
+
+.comment {
+    display: inline-block;
+    width: auto;
+    padding-left: 5px;
+}
+
+.commentUser {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    padding-left: 10px;
+    padding-bottom: 4px;
+}
+
+.timeStamp {
+    margin-right: auto;
+    margin-left: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    color: gray;
+    padding-bottom: 10px;
+}
+
+.likes {
+    margin-right: auto;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.addCommentContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid rgba(128, 128, 128, 0.705);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.705);
+}
+
+.addComment2 {
+    display: flex;
+    margin-left: 10px;
+    width: 400px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.visible {
+    display: flex;
+}
+
+div.button {
+    background-image: url("./icons/sprites.png");
+    height: 30px;
+    display: inline-block;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+div#commentDots {
+    background-image: url("./icons/sprites.png");
+      /* border: 1px solid blue;  */
+    margin-left: auto;
+    margin-right: 20px;
+    width: 18px;
+    background-position: 190px 68px;
+    height: 20px;
+}
+
+a.button {
+    height: 30px;
+    background-image: url("./icons/sprites.png");
+   /*  text-indent: -9999px; */
+    display: inline-block;
+}
+
+/* likes heart */
+div#postIcon1 {
+    width: 28px;
+    margin-left: 10px;
+    background-position: -456px 441px;
+}
+
+/* bubble */
+div#postIcon2 {
+    width: 32px;
+    margin-left: 10px;
+    background-position: 214px 44px;
+}
+
+/* compass */
+div#icon1 {
+    width: 32px;
+    background-position: -456px 362px;
+}
+
+/* search heart */
+div#icon2 {
+    width: 24px;
+    background-position: -457px 284px;
+}
+
+/* profile */
+div#icon3 {
+    width: 24px;
+    height: 28px;
+    background-position: -457px 180px;
+}
+
+div#titleText {
+    margin-left: 16px;
+    width: 178px;
+    height: 52px;
+    background-position: 386px 323px;
+}
+
+/* comment heart small */
+div#commentIcon {
+    width: 24px;
+    background-position: -34px 40px;
+    height: auto;
+}
+
+div#camera {
+    width: 28px;
+    background-position: -456px 388px;
+    height: 28px;
+    margin-left: 10px;
+    margin-top: 8px;
+}

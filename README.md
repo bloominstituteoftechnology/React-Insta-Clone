@@ -4,7 +4,8 @@
 
 - The purpose of this project is to continue building on your knowledge of React that you have gained thus far.
 
-  - Here, you'll be implementing a lot of the same concepts that you have been in previous projects, in a very similar fashion.
+  - 
+  Here, you'll be implementing a lot of the same concepts that you have been in previous projects, in a very similar fashion.
   - The main difference this time around is that you'll be using the `create-react-app (CRA)` utility to generate your React project for you.
   - Don't worry about all of the extra files that you may not understand which will be present inside your React application that you will build with CRA.
   - The overall structure of the project remains exactly the same as what you worked with in Todo-React.
