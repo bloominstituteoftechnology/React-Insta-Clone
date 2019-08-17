@@ -1,0 +1,50 @@
+.postContainer {
+    width: 640px;
+}
+
+.outerPostContainer {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.post {
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin: 100px 0;
+    background-color: white;
+}
+
+.header {
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.thumbnail {
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 17px;
+}
+
+.username {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.likes {
+    font-weight: 500;
+    margin: 10px;
+}
+
+.footerIcons {
+    margin: 10px;
+    width: 8%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.likeButton {
+    border: none;
+    background-color: white;
+}

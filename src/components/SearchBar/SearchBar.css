@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+
+
+
+.searchBarIcons {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.instaclone {
+    border: none;
+    background: none;
+}
+
+.instaclone:hover {
+    cursor: pointer;
+}
+
+input {
+    height: 20px;
+    text-align: center;
+    width: 200px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
