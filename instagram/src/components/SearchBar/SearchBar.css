@@ -1,0 +1,59 @@
+.searchLogo{
+    display:flex;
+    justify-content: space-around;
+    margin-top:20px;
+}
+.logo{
+    display:flex;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-logo{
+    background: url('../../images/ezgif.com-gif-maker.png') no-repeat;
+    background-color: #fafafa;
+    background-position-x: 65px;
+    background-position-y: center;
+    text-align: center;
+    background-size:10px;
+    border: .5px solid #dadada;
+    border-radius: 5px;
+	width: 200px;
+    height: 20px;
+    left:0px;
+}
+.insta{
+    background: url('../../images/ezgif.com-crop.png') no-repeat ;
+    background-size: 25px;
+    background-position-x: 25px;
+	width: 56px;
+	height: 56px;
+}
+.instagram{
+    background: url('../../images/instagram.png') no-repeat;
+    background-position-x: 5px;
+    width:105px;
+    height: 50px;
+}
+.divider{
+    font-size: 20px;
+    transform: scale(1, 1.2);
+}
+.explore{
+    background: url('../../images/explore.png') no-repeat;
+    width:50px;
+    width: 50px;
+}
+.heart{
+    background: url('../../images/heart.png') no-repeat;
+    width:50px;
+    height:50px;
+}
+.profile{
+    background: url('../../images/profile.png') no-repeat;
+    width:50px;
+    width: 50px;
+}

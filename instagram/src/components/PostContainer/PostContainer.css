@@ -1,0 +1,102 @@
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.post-header{
+    display:flex;
+    justify-content: flex-start;
+    width:45%;
+    border:.5px solid #fafafa;
+}
+.user-icon{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    width: 50px;
+    height:50px;
+    margin-left: 10px;
+    margin-top:5px;
+}
+
+.user-name{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+}
+
+.profile-pic{
+    border-radius: 50%;
+    width:40px;
+    height: 40px;
+}
+.main-image{
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
+.main-image img{
+    width:45%;
+}
+.post-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border:1px solid #dadada;
+    width:45%;
+    margin-bottom:50px;
+}
+.social-icons{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+}
+.social-icons > .post-icons{
+    display: flex;
+    justify-content: flex-start;
+    width:100%;
+    margin-top:20px;
+    padding-left: 10px;
+}
+.likes{
+    margin-top:10px;
+    display:flex;
+    justify-content: flex-start;
+    width:100%;
+    padding-left: 10px;
+}
+.likes > .likes-container{
+    display: flex;
+    justify-content: flex-start;
+    width:100%;
+}
+.post-icons > .heart{
+    background: url('../../images/like.svg') no-repeat;
+    width:25px;
+    height: 25px;
+    margin-right:10px;
+}
+
+.post-icons > .chat{
+    background: url('../../images/chat.png') no-repeat;
+    background-size: 20px;
+    width: 30px;
+    height: 30px;
+}
+.post-content > .comments{
+    display:flex;
+    justify-content: center;
+    width:100%;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.post-content > .comments > .comments-container{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:100%;
+}
