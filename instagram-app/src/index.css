@@ -1,10 +1,47 @@
+/* global reset*/
 *{
   margin: 0;
-  line-height: 1.4;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+*:link,
+*:visited,
+.link{
+  text-decoration: none;
+  color: rgb(201, 201, 201);
+  background-color: transparent;
+}
+
+*:active,
+*:hover,
+.link{
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+html,body{box-sizing: border-box; scroll-behavior: smooth;}
+
+button:focus {outline:0;}
+input:focus{outline: 0;}
+
+/* end of gloabal reset */
+
 body {
-  font-size: 62.5%;
+  margin: 0;
+  line-height: 1.4;
+  font-size: 62.5%; 
+  font-family: 'Lora', serif;
+  overflow-x: hidden;
+  
 }
 
