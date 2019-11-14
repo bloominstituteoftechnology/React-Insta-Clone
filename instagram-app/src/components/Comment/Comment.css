@@ -1,0 +1,28 @@
+.comment__container{
+    margin: 1rem 1rem;
+}
+
+.comment-form{
+    width: 100%;
+    position: relative;
+}
+
+.comment-input{
+    width: 100%;
+    height: 50px;
+    border: .5px solid rgb(189, 189, 189);
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+
+.comment-form .btn{
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    border: none;
+    padding: .5rem;
+    color: rgb(30, 173, 255);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}

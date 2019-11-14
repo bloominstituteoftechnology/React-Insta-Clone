@@ -1,0 +1,7 @@
+.App{
+    background-color: rgb(245, 245, 245);
+    height: 100%;
+    width: 100%;
+    min-width: min-content;
+    min-height: fit-content;
+}
