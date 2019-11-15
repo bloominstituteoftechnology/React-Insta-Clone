@@ -18,10 +18,18 @@
     margin-right: 1.2rem;
 }
 
+@media screen and (max-width: 840px){
+    .header-logo i {
+        display: none;
+    }
+}
+
 .header-logo--text{
     display: inline-block;
     font-size: 1.5rem;
     position: relative;
+    font-family: 'Pattaya', sans-serif;
+    font-weight: 300;
 }
 
 .header-logo--text::before{
@@ -33,6 +41,7 @@
     height: 100%;
     background-color: black;
 }
+
 
 .search{
     grid-column: 3 / 3;

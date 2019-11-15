@@ -8,29 +8,31 @@ export default class Comment extends Component {
         super(props);
         this.state = {
             comments: props.comment,
-            newComments: {
-                        id: 0,
-                        username: "unknownsub",
-                        text: ""
-                        }
+            // newComments: {
+            // id: 0,
+            // username: "unknownsub",
+            // text: ""
+            // }
+            comment: ""
             
         }
     }
 
     changeHandler = (e) => {
-        this.setState({newComments: {
-            id: nextId(),
-            username: "unknownsub",
-            text: e.target.value
-        } })
+        this.setState({ comment: e.target.value })
     }
 
     submitCommentHandler = (e) => {
         e.preventDefault()
-        this.state.newComments.text === "" ? alert('comment is empty') :
+        let newComments = {
+            id: nextId(),
+            username: "unknownsub",
+            text: this.state.comment
+        }
+        this.state.comment === "" ? alert('comment is empty') :
         this.setState({
-            comments: [...this.state.comments, {...this.state.newComments}],
-            newComments: {text: ""}
+            comments: [...this.state.comments, newComments],
+            comment: ""
         })
         
     }
@@ -50,7 +52,7 @@ export default class Comment extends Component {
                 })}
                 </div>
                 <form className="comment-form" onSubmit={this.submitCommentHandler}>
-                <input className="comment-input" type="text" value={this.state.newComments.text} onChange={this.changeHandler} placeholder="Add a Comment...."/>
+                <input className="comment-input" type="text" value={this.state.comment} onChange={this.changeHandler} placeholder="Add a Comment...."/>
                 <input className="btn" type="submit" value="Post"/>
                 </form>
                 

@@ -1,5 +1,5 @@
 .App{
-    background-color: rgb(245, 245, 245);
+    max-width: 100%;
     height: 100%;
     width: 100%;
     min-width: min-content;

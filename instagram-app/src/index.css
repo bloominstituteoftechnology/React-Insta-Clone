@@ -42,8 +42,7 @@ body {
   line-height: 1.4;
   font-size: 62.5%; 
   font-family: 'Lora', serif;
-  overflow-x: hidden;
-  
+  overflow-x: hidden; 
 }
 
 p{
