@@ -1,0 +1,13 @@
+
+
+.username {
+    font-size: 17px;
+    margin-left: 10px;
+    margin-right: 9px;
+    margin-top: 15px;
+}
+
+.comment {
+    display: flex;
+    font-size: 16px;
+}
