@@ -4,4 +4,6 @@
     width: 100%;
     min-width: min-content;
     min-height: fit-content;
+    background-color: whitesmoke;
+    min-height: 100vh;
 }

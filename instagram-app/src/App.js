@@ -1,7 +1,11 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import dummyData from './dummy-data';
 import Header from './components/Header/Header';
 import PostContainer from './components/PostContainer/PostContainer'
+import LoginForm from './components/LoginForm/LoginForm'
+import SignupForm from './components/SignupForm/SignupForm'
+
 
 
 import './App.css';
@@ -31,8 +35,16 @@ render() {
   })
   return (
     <div className="App">
-      <Header handleChange={this.handleChange}/>
-      <PostContainer posts={search} />
+      <Router>
+        <Switch>
+          <Route exact path="/" component={LoginForm}/>
+          <Route exact path="/signup" component={SignupForm}/>
+          <Route exact path="/home">
+            <Header handleChange={this.handleChange}/>
+            <PostContainer posts={search} />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   
   );
