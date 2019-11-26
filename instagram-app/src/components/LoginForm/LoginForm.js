@@ -25,12 +25,13 @@ const LoginForm = () => {
         let truthyFalsey, getUserInfo, results, check;
         getUserInfo = localStorage.getItem("users");
         results = JSON.parse(getUserInfo);
+        console.log(results)
         check = results.map(el => {
             return el.username === user.username && el.password === user.password;
         });
         // console.log(typeof(check))
          truthyFalsey = check[0]
-         console.log(truthyFalsey === true)
+        //  console.log(truthyFalsey === true)
          setIsAuth(truthyFalsey)
     }
     
@@ -43,7 +44,7 @@ const LoginForm = () => {
 
     return(
         <>
-        {isAuth ? <Redirect  to="/home"/>: null}
+        {isAuth ? <Redirect  to="/home"/> : null}
         <div className="login__form-container">
             <form className="login-form" onSubmit={handleSubmitLog}>
                 <h1>Instagram</h1>
