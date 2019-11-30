@@ -2,6 +2,10 @@ import React from 'react'
 import './Header.css'
 
 const Header = (props) => {
+    const handleChange = (e) => {
+        let value = e.target.value
+        window.location.href = value
+    }
     return (
         <div className="header__container">
             <div className="header-logo">
@@ -12,7 +16,12 @@ const Header = (props) => {
             <div className="header-icons">
                 <i className="far fa-compass"></i>
                 <i className="far fa-heart"></i>
-                <i className="far fa-user"></i>
+                <i className="far fa-user">
+                    <select onChange={handleChange} className="user-select">
+                    <option className="user-logout" name="logout" value="/home">user</option>
+                    <option className="user-logout" name="logout" value="/">logout</option>
+                    </select>
+                </i>
             </div>
         </div>
     )

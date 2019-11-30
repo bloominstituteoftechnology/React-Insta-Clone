@@ -37,7 +37,7 @@ const LoginForm = () => {
     
      login = isAuth ? <Link to="/home">
     <input className="input-btn" type="submit" value="Login"/>
-    </Link> : <input className="input-btn" type="submit" value="Login"/>
+    </Link> : <input className="input-btn" type="submit" value="Login" disabled={isAuth}/>
 
     
 
@@ -55,6 +55,9 @@ const LoginForm = () => {
                  <div>
                  {login}
                  </div>
+                 <span className="error-msg">
+                     {!isAuth ? "please enter a correct username or password" : null}
+                 </span>
                 <p className="login-text">Dont have an account? 
                 <a className="signup-link link" href="/signup">Sign up</a>
                 </p>

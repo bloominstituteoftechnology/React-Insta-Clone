@@ -4,6 +4,7 @@ import './SignupForm.css'
 
 const SignupForm = () => {
     let allUsers = [];
+    let signup;
     const [user, setUser] = useState(()=> {
         let localData = localStorage.getItem("users")
         return localData ? JSON.parse(localData) : {username: "", password: ""}
@@ -33,17 +34,18 @@ const SignupForm = () => {
 
         if(user){
             setChar({checkUser, checkPassword})
+            return false
         }
 
-    }
+        return true
 
+    }
 
     const handleChange = (e) => {
         setUser({
             ...user,
             [e.target.name]: e.target.value
         });
-        console.log(validate ? true : false)
         validate()
     };
     
@@ -52,6 +54,9 @@ const SignupForm = () => {
         validate()
     }
 
+    signup = (user.username.length < 5 || user.password.length < 8 ? <input className="input-btn" type="submit" 
+    value="Sign up"/> : <Link to="/"><input className="input-btn" type="submit" 
+    value="Sign up"/></Link>)
 
     return(
         <div className="signup__form-container">
@@ -62,8 +67,7 @@ const SignupForm = () => {
                 <span className="error-msg">{char.checkUser}</span>
                 <input className="input-field" name="password"  type="password" placeholder="password..." onChange={handleChange} required/>
                 <span className="error-msg">{char.checkPassword}</span>
-                <Link to="/"><input className="input-btn" type="submit" 
-                value="Sign up"/></Link>
+                {signup}
                 <p className="login-text">Already have an account? 
                 <a className="login-link link" href="/">Login</a>
                 </p>

@@ -16,6 +16,7 @@
 .header-logo i {
     font-size: 1.5rem;
     margin-right: 1.2rem;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 840px){
@@ -68,4 +69,20 @@
 
 .header-icons i {
     margin: 0 1rem;
+    cursor: pointer;
 }
+
+.user-select{
+    border: .6px solid black;
+    width: 20%;
+    cursor: pointer;
+    margin: .2rem;
+    font-family: 'Lora', serif;
+    outline: 0;
+}
+
+.user-logout{
+    font-size: 1rem;
+    font-weight: bold;
+}
+

@@ -71,3 +71,8 @@
 .or{
     margin: .5rem 0;
 }
+
+.error-msg{
+    color: red;
+    font-weight: bold;
+}
