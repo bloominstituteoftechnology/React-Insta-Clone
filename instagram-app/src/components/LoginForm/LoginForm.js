@@ -10,7 +10,9 @@ const LoginForm = () => {
     });
 
     const [isAuth, setIsAuth] = useState(false);
-    // const [char, setChar] = useState("")
+    const [char, setChar] = useState({
+        err: ""
+    })
 
     const handleChangeLog = (e) => {
         setUser({
@@ -25,22 +27,20 @@ const LoginForm = () => {
         let truthyFalsey, getUserInfo, results, check;
         getUserInfo = localStorage.getItem("users");
         results = JSON.parse(getUserInfo);
-        console.log(results)
-        check = results.map(el => {
+        // console.log(results)
+        check = results.map((el) => {
             return el.username === user.username && el.password === user.password;
         });
-        // console.log(typeof(check))
+        // console.log(check)
          truthyFalsey = check[0]
         //  console.log(truthyFalsey === true)
          setIsAuth(truthyFalsey)
+         !isAuth ? setChar({...char, err: "username or password is incorrect"}) : setChar({...char, err: ""})
     }
     
      login = isAuth ? <Link to="/home">
     <input className="input-btn" type="submit" value="Login"/>
     </Link> : <input className="input-btn" type="submit" value="Login" disabled={isAuth}/>
-
-    
-
 
     return(
         <>
@@ -55,9 +55,7 @@ const LoginForm = () => {
                  <div>
                  {login}
                  </div>
-                 <span className="error-msg">
-                     {!isAuth ? "please enter a correct username or password" : null}
-                 </span>
+                 <span className="error-msg">{char.err}</span>
                 <p className="login-text">Dont have an account? 
                 <a className="signup-link link" href="/signup">Sign up</a>
                 </p>
