@@ -1,4 +1,0 @@
-[build]
-base = "instagram-app/"
-publish = "instagram-app/build/"
-command = "npm run build"
