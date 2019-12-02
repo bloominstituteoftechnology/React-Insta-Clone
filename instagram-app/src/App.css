@@ -1,0 +1,9 @@
+.App{
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    min-width: min-content;
+    min-height: fit-content;
+    background-color: whitesmoke;
+    min-height: 100vh;
+}
