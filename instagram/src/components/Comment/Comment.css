@@ -1,0 +1,16 @@
+.Comment {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.Comment .username {
+	margin-right: 4px;
+}
+
+#delete-comment {
+	background-position: -258px -436px;
+	width: 14px;
+	height: 14px;
+	padding: 0;
+}

@@ -1,0 +1,89 @@
+.CommentSection {
+	padding: 0 16px;
+}
+
+.actions {
+	margin-left: -8px;
+}
+
+.actions .sprite-glyph {
+	padding: 0;
+	margin: 8px;
+}
+
+#like {
+	background-position: -26px -92px;
+	width: 24px;
+	height: 22px;
+}
+
+#comment {
+	background-position: -26px -65px;
+	width: 24px;
+	height: 24px;
+}
+
+.likes {
+	font-weight: 500;
+	text-decoration: inherit;
+	color: inherit;
+}
+
+.comments {
+	margin-top: 10px;
+}
+
+.time {
+	font-size: 1rem;
+	text-decoration: inherit;
+	color: #999999;
+}
+
+.response {
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid #efefef;
+	margin-top: 10px;
+	padding: 16px 0;
+}
+
+/* .add-comment textarea {
+width: 544px;
+height: 18px;
+max-height: 80px;
+color: inherit;
+border: none;
+resize: none;
+outline: none;
+padding: 0;
+} */
+
+/* .fake-textarea {
+	width: 544px;
+	min-height: 18px;
+	max-height: 80px;
+	outline: none;
+	overflow: auto;
+} */
+
+.comment-input {
+	width: 544px;
+	height: 18px;
+	max-height: 80px;
+	padding: none;
+	border: none;
+	outline: none;
+	overflow: auto;
+}
+
+[contenteditable='true']:empty::before {
+	content: attr(placeholder);
+}
+
+#options {
+	align-self: center;
+	background-position: 1px -116px;
+	width: 25px;
+	height: 25px;
+	margin-right: -5px;
+}

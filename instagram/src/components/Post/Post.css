@@ -1,0 +1,35 @@
+.Post {
+	width: 100%;
+	max-width: 602px;
+	background: white;
+	border: 1px solid #e6e6e6;
+	border-radius: 3px;
+	margin-bottom: 60px;
+}
+
+.author {
+	display: flex;
+	align-items: center;
+	height: 60px;
+	padding: 0 16px;
+}
+
+.thumbnail {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+.thumbnail img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+.author .username {
+	margin-left: 10px;
+}
+
+.post-image {
+	width: 100%;
+}
