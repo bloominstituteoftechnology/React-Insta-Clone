@@ -1,0 +1,135 @@
+.main-container{
+
+    .post-container{
+        width: @width;
+        margin: 20px 0;
+        display: flex;
+        flex-flow: row wrap;
+      
+
+        .user-header{
+            width: @width;
+            padding: 20px 25px;
+            display: flex;
+            flex-flow: columns wrap;
+        
+            .usr-header-text{
+                margin-left: 20px;
+                font-weight: bold;
+                font-size: 1em;
+                align-self: center;
+            }
+
+            .thumbnail-img{
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+            }
+        }
+
+        .post-image{
+            width: @width;
+            display: flex;
+            justify-content: center;
+
+            img{
+                width: @width;
+                height: @width;     
+            }
+        }
+
+        .likes-container{
+            width: @width;
+            margin-top: 20px;
+            padding: 10px 25px;
+            display: flex;
+            flex-flow: row wrap;
+
+            .img-like-box{
+                width: @width; 
+
+                .like-img{
+                    width: 30px;
+                    height: 30px;
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
+            }
+
+            .likes{
+                width: @width;
+                margin-top: 10px;
+                font-weight: bold;
+            }
+        }
+
+        .comment-box{
+            width: @width;
+            display: flex;
+            flex-flow: row wrap;
+
+            .comment-container{
+                width: @width;
+                padding: 0 25px;
+                display: flex;
+                flex-flow: row wrap;
+    
+                .comment{
+                    width: @width;
+                    margin: 5px 0;
+                }
+    
+                .comment-usr{
+                    font-weight: bold;
+                }
+                 
+                .comment-text{
+                    width: @width;
+                    margin-left: 10px;
+                    line-height: 1.2rem;
+                }
+            }
+
+            .add-comment-container{
+                width: @width;
+                margin-top: 20px;
+                padding: 0 25px;
+                display: flex;
+                flex-flow: row wrap;
+
+                .form-box{
+                    width: @width;
+                    border-top: 1px solid #bdc3c7;;
+                    padding: 20px 0;
+
+                    .add-comment{
+                        width: @width;
+                        padding: 20px 0px;
+                        font-size: 1rem;
+                        border: 0px;
+                        outline: 0;
+                    }
+
+                    .add-comment::placeholder{
+                        margin-left: 30px;
+                        color: #bdc3c7;
+                    }
+                }
+            }
+    
+        }
+
+        .timestamp-container{
+            width: @width;
+            margin-top: 20px;
+            padding: 0 25px;
+            display: flex; 
+           
+
+            .timestamp{
+                font-size: 1rem;
+                color: #bdc3c7;
+            }
+        }
+    }
+}
