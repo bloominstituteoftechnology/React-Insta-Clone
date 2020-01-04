@@ -31,6 +31,7 @@ class Login extends Component {
     });
   };
   handleLogin = e => {
+    e.preventDefault();
     let username = this.state.username;
     localStorage.setItem("username", username);
     window.location.reload();
