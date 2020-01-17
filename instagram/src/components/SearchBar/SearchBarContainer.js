@@ -1,16 +1,18 @@
-import React from 'react';
-import IGLogo from '../../assets/iglogo.png';
-import './SearchBar.css';
+import React from "react";
+import "./SearchBar.css";
 
-const SearchBar = props => {
+const SearchBar = () => {
   return (
     <div className="search-bar-wrapper">
       <div className="image-wrapper">
-        <img alt="instagram logo" src={IGLogo} className="logo-image" />
+        <i className="fab fa-instagram" />
       </div>
-      <div>
-        <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
-      </div>
+      <form className="search-form">
+        <input
+          type="text"
+          placeholder="Search"
+        />
+      </form>
       <div className="social-wrapper">
         <div className="social">
           <i className="far fa-compass" />

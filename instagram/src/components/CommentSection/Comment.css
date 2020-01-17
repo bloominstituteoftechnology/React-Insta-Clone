@@ -3,13 +3,24 @@
   padding: 2px;
   margin-left: 4px;
 }
-
 .comment {
-  font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
 }
-
+.comment-form  {
+  margin: 10px 0;
+  width: 100%;
+}
+.comment-form input {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  border: none;
+  border-top: 1px solid #efefef;
+  color: #999;
+}
 .user {
-  font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
+  margin-left: 5px;
+  color: black;
+  font-weight: bold;
 }

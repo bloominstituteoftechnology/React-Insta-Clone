@@ -1,12 +1,20 @@
 .search-bar-wrapper {
   border-bottom: 1px solid #3333;
-  height: 80px;
-  line-height: 70px;
+  height: 60px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
   background: #ffffff;
 }
-
+.search-form {
+  width: 150px;
+  font-size: 14px;
+}
+.search-form input {
+  text-align: center;
+  color: #262626;
+  height: 25px;
+}
 .image-wrapper {
   height: 50px;
 }
