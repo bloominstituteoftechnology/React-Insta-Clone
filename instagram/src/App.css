@@ -1,0 +1,59 @@
+/* DEFAULT STYLES */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  min-height: 1vh;
+  display: flex;
+  flex-direction: row; 
+    /* flex-direction: column;  */
+
+  /* align-items: center;
+  align-items: left; */
+  justify-content: flex-start;
+  /* background-color: hsl(0, 15%, 95%); */
+  /* font-size: 20pt; */
+  color: black;
+}
+
+.App-header-row {
+  /* min-height: 15vh; */
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* MY STYLES */
+
+.Logo-type {
+  font-size: 4rem;
+  margin: 0;
+  border-left: 1px solid grey;
+  padding-left: 5px;
+}
+
+.Logo-container {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Grand-Hotel', cursive;
+}

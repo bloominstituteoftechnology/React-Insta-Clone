@@ -1,0 +1,131 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.Post-user-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font: size 10pt;
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+.Post-thumbnail {
+  width: 20px;
+  height: 20px;
+}
+
+/* .Post-image-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width:  400px; 
+  height:  400px;
+  margin: 2rem;
+}  */
+.Post-image {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 399px;
+  height: 399px;
+  margin-left: 2rem;
+}
+
+.Icon-row {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left: 1rem;
+}
+
+.Stats-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  margin-left: 2rem;
+}
+
+.Comments {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  /* font-family: ; */
+  font: size 16pt;
+  /* align-content: left; */
+  text-align: left;
+  margin-left: 2rem;
+  /* margin-top: 1rem; */
+  margin-bottom: 1.5rem;
+}
+
+.Timestamp {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  /* font-family: ; */
+  font-size: 8pt;
+  text-align: left;
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+.AddComment {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  margin: 2rem;
+}
+.Separator {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* margin-left: 15px; */
+}
+
+/* ICONS */
+.fa-heart {
+  display: flex;
+  font-size: 1.1rem;
+  padding-left: 20px;
+  justify-content: left;
+}
+
+.fa-comment {
+  display: flex;
+  font-size: 1.1rem;
+  padding-left: 28px;
+  justify-content: left;
+}
+
+.Icon-heart {
+  /* image-resolution:  */
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: 5px;
+  width: 30px;   
+}
+
+.Icon-comment {
+  /* image-resolution:  */
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  padding: 1px;
+  width: 4rem; 
+  align-items: flex-start;  
+}
+
+.color {
+  color: red;
+}
