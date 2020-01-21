@@ -1,0 +1,19 @@
+.social {
+  width: 50px;
+}
+
+.fa-instagram {
+  margin-left: 10px;
+}
+
+.input-field-search {
+  background-image: url("../../assets/search.png");
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position-x: 38%;
+  background-position-y: 3px;
+  text-align: center;
+  height: 1.7rem;
+  width: 90%;
+}
+
