@@ -1,0 +1,291 @@
+/* Your Code Goes Here */
+/*
+.width-100 {
+  width: 100%;
+}
+
+.border-bottom-grey {
+  border-bottom: 1px solid @lambda-times-color-lightgrey;
+}
+
+.flex(@jc: none, @ai: none, @dir: row) {
+  display: flex;
+  justify-content: @jc;
+  align-items: @ai;
+  flex-direction: @dir;
+}
+
+*/
+/*------------------------------------*\
+RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0b1 | 201101 
+NOTE:WORK IN PROGRESS
+USE WITH CAUTION AND TEST WITH ABANDON */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: ’’;
+  content: none;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+*:focus {
+  outline: none;
+}
+h1 {
+  font-size: 4rem;
+}
+/*
+
+ .character-container{
+	width: 400px;
+	margin: 0 auto;
+}
+
+*/
+.feed-container {
+  width: 800px;
+  padding: 0 5%;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .feed-container {
+    width: 600px;
+  }
+}
+.navbar {
+  height: 75px;
+  background: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.098);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .searchbar {
+  height: 28px;
+  width: 215px;
+  border: 1px solid rgba(219, 219, 219);
+  border-radius: 3px;
+  -webkit-appearance: none;
+  font-size: 14px;
+  text-align: center;
+  background: #fafafa;
+  color: #999999;
+  font-family: helvetica neue, FontAwesome;
+}
+.navbar .searchbar ::placeholder {
+  color: #999999;
+}
+.post-container {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(219, 219, 219);
+  border-radius: 3px;
+  margin: 20px 0;
+}
+.post-container .post-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.post-container .post-header .profile-image {
+  border-radius: 50%;
+  border: 1px solid rgba(219, 219, 219);
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+.post-container .post-header .profile-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.post-container .post-image {
+  width: 100%;
+}
+.post-container .post-footer {
+  padding: 15px 30px;
+}
+.post-container .post-footer .footer-icons-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+.post-container .post-footer .footer-icons-container .footer-icon {
+  font-size: 2rem;
+  font-family: helvetica neue, FontAwesome;
+  margin-right: 15px;
+  border: none;
+}
+.post-container .post-footer .footer-icons-container .footer-icon:hover {
+  cursor: pointer;
+}
+.post-container .post-footer .footer-likes {
+  font-size: 1.8rem;
+}
+.post-container .post-footer .post-comments-container .comment {
+  margin-top: 15px;
+  display: flex;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+.post-container .post-footer .post-comments-container .comment .comment-source {
+  font-weight: bold;
+  margin-right: 4px;
+}
+.post-container .post-footer .time-since-post {
+  border-bottom: 1px solid rgba(219, 219, 219);
+  color: #999999;
+  font-size: 1.2rem;
+  margin: 15px 0;
+  font-family: helvetica neue, FontAwesome;
+  padding-bottom: 5px;
+}
+.post-container .post-footer .add-comment-more-options-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.post-container .post-footer .add-comment-more-options-container .comment-input-box {
+  border: none;
+  height: 40px;
+  width: 98%;
+  font-size: 1.6rem;
+}
+.post-container .post-footer .add-comment-more-options-container .more-options-icon {
+  font-family: helvetica neue, FontAwesome;
+  font-size: 2.6rem;
+  width: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

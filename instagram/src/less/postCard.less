@@ -1,0 +1,104 @@
+.post-container {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(219, 219, 219);
+  border-radius: 3px;
+  margin: 20px 0;
+
+  .post-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .profile-image {
+      border-radius: 50%;
+      border: 1px solid rgba(219, 219, 219);
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+    }
+
+    .profile-name {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
+
+  .post-image {
+    width: 100%;
+  }
+
+  .post-footer {
+    padding: 15px 30px;
+
+    .footer-icons-container {
+      display: flex;
+      margin-bottom: 10px;
+
+      .footer-icon {
+        font-size: 2rem;
+        font-family: helvetica neue, FontAwesome;
+        margin-right: 15px;
+        border: none;
+      }
+
+      .footer-icon:hover {
+        cursor: pointer;
+      }
+    }
+
+    .footer-likes {
+      font-size: 1.8rem;
+    }
+
+    .post-comments-container {
+
+      .comment{
+        margin-top: 15px;
+        display: flex;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+
+        .comment-source{
+          font-weight: bold;
+          margin-right: 4px;
+        }
+
+        .comment-text{
+        }
+      }
+    }
+
+    .time-since-post {
+      border-bottom: 1px solid rgba(219, 219, 219);
+      color: rgba(153, 153, 153, 1);
+      font-size: 1.2rem;
+      margin: 15px 0;
+      font-family: helvetica neue, FontAwesome;
+      padding-bottom: 5px;
+    }
+
+    .add-comment-more-options-container { 
+      display: flex;
+      justify-content: flex-start;
+
+      .comment-input-box {
+        border: none;
+        height: 40px;
+        width: 98%;
+        font-size: 1.6rem;
+      }
+
+      .more-options-icon {
+        font-family: helvetica neue, FontAwesome;
+        font-size: 2.6rem;
+        width: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+  }
+}
+
