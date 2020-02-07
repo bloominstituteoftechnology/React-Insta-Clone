@@ -1,0 +1,57 @@
+body {
+
+max-width: 900px;
+}
+
+.post-container {
+
+
+    border: 3px solid pink;
+}
+
+
+
+
+
+.post-container header img{
+
+    display: flex;
+    float: left;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 9rem;
+    border: 2px dotted blueviolet;
+}
+.post-container img {
+
+    height: 27rem;
+    width: 29rem;
+    border: 2px solid lightseagreen;
+}
+
+.post-container header h3 {
+
+    display: flex;
+    padding: 3px;
+    width: 4rem;
+    font-size: 0.7rem;
+    border: 2px dotted lightblue;
+}
+
+
+header {
+
+    width: 27rem;
+    height: 3rem;
+    border: 2px dashed hotpink;
+}
+
+
+.likebar {
+
+    margin: 7px;
+    width: 4rem;
+    font-size: 0.6rem;
+    font-weight: bold;
+    border: 3px solid yellow;
+}
