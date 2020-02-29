@@ -1,0 +1,105 @@
+.login--container {
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+.login__main {
+  display: flex;
+  justify-content: center;
+}
+
+.login__main__img {
+  position: relative;
+}
+
+#screenshot {
+  position: absolute;
+  top: 100px;
+  left: 151px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form-container form {
+  margin: 8px 0;
+}
+
+.form-container p {
+  font-size: 1.8rem;
+  margin: 12px 0;
+}
+
+.app-icons {
+  display: flex;
+}
+
+.app-icons img {
+  height: 40px;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+
+.app-icons img:last-child {
+  margin-left: 12px;
+  border-radius: 5px;
+}
+
+.form__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.form__footer p {
+  margin: 0;
+}
+
+.fa-facebook-square {
+  color: #3b5998;
+  margin-right: 7px;
+}
+
+#fb-login {
+  font-size: 1.4rem;
+
+  cursor: pointer;
+  color: #385185;
+  font-weight: 500;
+}
+
+#fb-login i {
+  font-size: 2rem;
+}
+
+@media(max-width: 891px) {
+  .login--container {
+    height: 100%;
+  }
+
+  .login__main__img {
+    display: none;
+  }
+
+  .login__main {
+    height: 80%;
+  }
+}
+
+@media(max-width: 742px) {
+  .login {
+    width: 80%;
+  }
+}
+
+@media(max-width: 432px) {
+  .app-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

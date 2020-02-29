@@ -1,0 +1,18 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.App:nth-child(1) {
+  margin-top: 70px;
+}
+
+.load {
+  text-align: center;
+  margin-top: 20%;
+  font-size: 7.2rem;
+  letter-spacing: 7px;
+}

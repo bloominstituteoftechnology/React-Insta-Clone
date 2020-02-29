@@ -1,0 +1,82 @@
+.post__comments {
+  font-size: 1.6rem;
+  padding: 2% 5%;
+}
+
+.post__comments p {
+  position: relative;
+}
+
+.post__comments p span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  cursor: pointer;
+}
+
+.post__comments__interaction {
+  width: 100%;
+  max-width: 150px;
+
+  font-weight: 500;
+}
+
+.post__comments__interaction img {
+  margin-right: 5%;
+  max-height: 25px;
+  cursor: pointer;
+}
+
+
+.post__comments__interaction p {
+  margin: 0;
+  padding: 0;
+}
+
+.post__comments__time {
+  font-size: 1.3rem;
+  opacity: .6;
+}
+
+.post__comments__add {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding-top: 10px;
+}
+
+.post__comments__add input {
+  border: none;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+.post__comments__add input:focus {
+  outline: none;
+}
+
+.post__comments__add {
+  cursor: pointer;
+}
+
+.comment-like img {
+  height: 15px;
+  width: 15px;
+}
+
+.modal-container__btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-container__btn:focus {
+  outline: none;
+}
+
+.modal-content {
+  top: 25vh;
+}

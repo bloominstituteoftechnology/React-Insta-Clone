@@ -1,0 +1,13 @@
+.posts-page:nth-child(1) {
+  margin-top: 108px;
+}
+
+.post__thumbnail {
+  width: 100%;
+}
+
+#spinner {
+  position: fixed;
+  top: 38vh;
+  left: 33vw;
+}
