@@ -1,0 +1,16 @@
+.post{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    color: blue;
+    height: auto;
+}
+
+.profilepicture{
+    max-width: 20px;
+}
+
+.post{
+    width: 400px;
+    height: 400px;
+}
