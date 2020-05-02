@@ -1,0 +1,9 @@
+.container {
+  box-sizing: border-box;
+  max-width: 604px;
+  margin: 0 auto;
+}
+
+html {
+  font-size: 62.5%;
+}

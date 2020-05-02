@@ -1,0 +1,44 @@
+.search-bar-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.camera {
+  height: 15px;
+  width: 15px;
+  margin: 12px;
+}
+
+.instagram {
+  height: 20px;
+  width: auto;
+  border-left: 1px solid black;
+  margin-top: 9px;
+  padding-left: 12px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  margin-right: 10px;
+}
+
+.search-input {
+  text-align: center;
+}
+
+.search-bar-left-icons-container {
+  display: flex;
+}
+
+.search-bar-left-icons {
+  height: 20px;
+  width: auto;
+  margin: 3px;
+  margin-top: 8px;
+}
