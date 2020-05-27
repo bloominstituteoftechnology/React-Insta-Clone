@@ -1,0 +1,41 @@
+.search-bar {
+
+    position: relative;
+    padding-bottom: 20px;
+    margin: 0 280px;
+
+
+}
+
+.search {
+    display: flex;
+    align-content: center;
+    padding: 10px;
+
+
+}
+
+
+
+.insta {
+    font-family: 'Oleo Script', cursive;
+    font-size: 2rem;
+    position: absolute;
+    top: 5px;
+
+}
+
+.form {
+    position: absolute;
+    left: 30%;
+    padding: 8px 20px;
+    text-align: center;
+    width: 400px;
+    border: 2px solid #ccc;
+    outline: none;
+}
+
+.left-icon {
+    right: 20px;
+    position: absolute;
+}
