@@ -1,0 +1,3 @@
+ command = "npm run build"
+  publish="./instagram"
+  base = "./instagram"
