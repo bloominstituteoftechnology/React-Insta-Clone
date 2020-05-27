@@ -27,10 +27,14 @@ const CommentIcons = styled.div`
     display: flex;
     max-width: 75px;
     justify-content: space-between;
+    > i {
+        &:hover{
+            cursor: pointer;
+        }
+    }
 `
 const Likes = styled.div`
     font-size: 1.2rem;
-        
 `
 
 
