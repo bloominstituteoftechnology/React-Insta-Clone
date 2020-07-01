@@ -1,0 +1,14 @@
+.App {
+  width: 900px;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
