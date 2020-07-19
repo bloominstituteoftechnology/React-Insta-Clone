@@ -1,0 +1,53 @@
+.comment-text {
+  text-align: left;
+  padding: 3px 10px;
+  margin-left: 4px;
+}
+
+.comment-input {
+  padding: 7px 0 10px 7px;
+  font-size: 14px;
+  width: 95%;
+  margin: 10px 0 10px 0;
+  outline: none;
+  border: none;
+  padding: 10px 0 0 10px;
+}
+
+/* input:focus {
+  border: 2px solid #3897f0;
+} */
+
+.comment {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.user {
+  font-weight: 600;
+  font-size: 14px;
+  color: #003569;
+}
+
+.like-icon {
+  font-size: 20px;
+  padding: 10px 0 10px 10px;
+  margin: 10px 0 10px 0;
+  cursor: pointer;
+}
+
+.likes {
+    font-weight: 600;
+    font-size: 14px;
+    color: #003569;
+    padding: 10px;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.neg-10-margin-bottom {
+    margin-bottom: -10px;
+}
