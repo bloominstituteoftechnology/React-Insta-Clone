@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const PostHeaderClass = styled.div`
   display: flex;
+  padding: 1%;
 `;
 const PostThumbWrapper = styled.div`
   height: 50px;
@@ -13,13 +14,13 @@ const PostThumb = styled.img`
   border-radius: 50%;
 `;
 
-const PostHeader = props => {
+const PostHeader = (props) => {
   return (
     <PostHeaderClass>
       <PostThumbWrapper>
         <PostThumb
-          alt="post header"
-          className="post-thumb"
+          alt='post header'
+          className='post-thumb'
           src={props.thumbnailUrl}
         />
       </PostThumbWrapper>
