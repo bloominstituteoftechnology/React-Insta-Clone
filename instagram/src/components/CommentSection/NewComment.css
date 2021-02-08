@@ -1,0 +1,11 @@
+.comment-section {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+   .comment-section input {
+    border: 0px;
+    font-size: 14px;
+    padding: 10px 15px;
+    width: 90%;
+  }
