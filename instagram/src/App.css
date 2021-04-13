@@ -1,0 +1,12 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 10px auto;
+  align-items: center;
+  background: #fff;
+}
+
+
+
+
