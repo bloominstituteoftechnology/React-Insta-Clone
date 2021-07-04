@@ -1,0 +1,19 @@
+.App{
+  max-width:800px;
+  width:100%;
+  margin: 0 auto;
+}
+.fa-instagram{
+  font-size:25px;
+
+}
+.fa-compass, .fa-user, .fa-heart, .fa-comment{
+  padding-left:20px;
+  font-size:25px;
+}
+
+/*post*/
+.post-container{
+  margin-top:60px;
+  
+}
