@@ -1,0 +1,17 @@
+.container-style{
+    display:flex;
+ 
+    width: 250px;
+}
+.username-style{
+    
+    font-size: 10px;
+    margin-right:4px;
+   
+}
+.text-style{
+    display:flex;
+    flex-flow: wrap;
+    font-size: 10px;
+  
+}
