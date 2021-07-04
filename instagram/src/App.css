@@ -1,0 +1,25 @@
+p{
+  margin: 0;
+}
+
+.red{
+  color: red;
+}
+/* .hide{
+  display:none;
+} */
+.logout-menu{
+  right: 0;
+  top: 70px;
+  text-align: center;
+}
+
+.ig-logo{
+  width: 50%;
+}
+.w-30{
+  width: 30%;
+}
+.w-90{
+  width: 90%;
+}
