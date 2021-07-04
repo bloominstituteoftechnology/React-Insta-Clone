@@ -1,0 +1,45 @@
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    height: 75px;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 10px;
+}
+
+.instagram{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.instagramTitle {
+    display: block;
+    width: 150px;
+    height: 40px;
+    padding-left: 10px;
+}
+
+.fa-instagram {
+    font-size: 32px;
+    border-right: 1px solid grey;
+    padding-right: 15px;
+}
+
+.search {
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.icons {
+    font-size: 32px;
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+

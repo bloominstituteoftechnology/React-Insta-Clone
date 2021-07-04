@@ -1,0 +1,14 @@
+.comment {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.commentUser {
+    display: inline;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.commentText {
+    display: inline;
+}

@@ -1,0 +1,13 @@
+
+.far{
+    font-size: 26px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.commentContainer {
+    display: flex;
+    flex-direction: column;
+    width: 584px;
+    border-bottom: 1px solid lightgray;
+}

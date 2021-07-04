@@ -1,0 +1,11 @@
+.App {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
+.posts {
+  width: 100%;
+}
