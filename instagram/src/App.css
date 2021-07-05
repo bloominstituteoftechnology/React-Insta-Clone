@@ -1,0 +1,14 @@
+.App {
+  width: 600px;
+  margin: auto;
+}
+
+.search {
+  margin: auto;
+}
+
+.desktop {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
