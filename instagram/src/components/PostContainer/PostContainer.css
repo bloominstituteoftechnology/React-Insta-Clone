@@ -1,0 +1,15 @@
+
+.icons{
+  margin-bottom: 3px;
+}
+
+.icons i{
+  margin-top: 2.6%;
+  margin-left: 3.6%;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.color-red{
+  color: red;
+}
