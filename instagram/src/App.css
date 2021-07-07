@@ -1,0 +1,11 @@
+@import "./components/SearchBar/SearchBar.css";
+@import "./components/PostContainer/Post.css";
+@import "./components/CommentSection/Comments.css";
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: #e3e0cf;
+}
