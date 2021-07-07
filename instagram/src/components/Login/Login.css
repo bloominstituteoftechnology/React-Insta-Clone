@@ -1,0 +1,54 @@
+.login-form-container {
+	padding-top: 50px;
+
+	align-items: center;
+}
+
+.login-title-row {
+	display: flex;
+	justify-content: center;
+}
+
+.ig-logo-icon {
+	display: flex;
+	font-size: 200px;
+	padding-left: 50px;
+}
+
+
+.login-form {
+	width: 500px;
+	height: 200px;
+	margin: 0 auto;
+	box-shadow: 10px 10px 8px #3A2E39;
+	background: gray;
+  margin-top: 10px;
+
+}
+
+.login-header {
+	display: flex;
+	width: 600px;
+	font-size: 50px;
+	font-weight: bold;
+	color: #084c61;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.login-desc {
+	font-size: 25px;
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+	padding-bottom: 10pm
+}
+
+.input-wrapper {
+	margin: 0 auto;
+	width: 400px;
+}
+
+.login-txt {
+	text-align: center;
+}
