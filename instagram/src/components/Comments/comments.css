@@ -1,0 +1,22 @@
+.comments {
+  box-sizing: border-box;
+  text-align: left;
+  padding: 0 0.8rem;
+}
+
+.comments span {
+  font-weight: 600;
+}
+
+.singleComment {
+  margin: 5px 0;
+}
+
+.comments input {
+  padding: 15px 0;
+  border: none;
+  border-top: 1px solid rgb(194, 194, 194);
+  width: 100%;
+  outline: none;
+  font-size: 0.8rem;
+}

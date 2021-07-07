@@ -1,0 +1,69 @@
+/* .searchBar {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+
+/*.sbLogo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 11%;
+} */
+
+/* .searchBarInput {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 150%;
+  height: 20px;
+  border-radius: 2px;
+  border: 1px solid rgb(182, 182, 182);
+  outline: none;
+} */
+
+/* .searchBarIcons {
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  padding-right: 1rem;
+} */
+
+/* .searchBarIcons li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: lighter;
+  cursor: pointer;
+} */
+
+/* .searchBarIcons li:hover {
+  color: rgb(179, 37, 37);
+  text-decoration: underline;
+} */
+
+/* .sbLogo hr {
+  height: 30px;
+  width: 1px;
+} */
+
+.fa-instagram {
+  font-size: 2.4rem;
+  padding: 0 1rem;
+}
+
+.fa-hooli {
+  font-size: 3.2rem;
+  padding: 0 1rem;
+}
+.fa-aviato {
+  font-size: 3.2rem;
+  padding: 0 1rem;
+}
