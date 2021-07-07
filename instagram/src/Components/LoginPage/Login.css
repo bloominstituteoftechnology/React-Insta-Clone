@@ -1,0 +1,38 @@
+
+.login {
+    background-image: url('./loginBackground.jpg'); 
+    background-size: cover; 
+    height: 100vh; 
+    margin-top: none;  
+    padding-top: 10%; 
+}
+.form-components{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto; 
+    width: 25%; 
+    padding: 40px; 
+    border: 5px solid black;  
+    background-color: white; 
+    opacity: 0.7;
+    border-radius: 10px; 
+}
+
+.form-components:hover {
+    opacity: 0.9;
+}
+
+.loginLogo {
+    display: flex; 
+    align-items: center; 
+}
+
+.loginInput {
+    margin-bottom: 10px; 
+}
+
+.loginLogo {
+    margin-bottom: 10px; 
+}

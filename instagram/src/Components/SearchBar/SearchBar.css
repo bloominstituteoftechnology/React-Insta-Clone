@@ -1,0 +1,16 @@
+
+.search-input {
+    text-align: center;
+    border: 1px solid lightgrey; 
+} 
+
+.nav-icons .far {
+    margin-right: 25px; 
+}
+
+.instaLogo {
+    padding-right: 15px; 
+    border-right: 1px solid lightgrey; 
+    margin-right: 15px; 
+    width: 95%; 
+}
