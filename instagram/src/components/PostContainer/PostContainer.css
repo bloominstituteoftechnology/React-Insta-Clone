@@ -1,0 +1,37 @@
+.cardDiv {
+    display: flex;
+    justify-content: center;
+}
+  
+.cardClass {
+  max-width: 50%;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.philzImg img {
+  border-radius: 100px;
+  width: 40px;
+}
+
+.likes {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.likesAmt {
+  justify-content: flex-start;
+}
+
+.timeStamp {
+  font-size: 0.8em;
+  color: lightgray;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-left: 18px;
+}

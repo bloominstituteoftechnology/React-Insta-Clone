@@ -1,0 +1,10 @@
+.commentBody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+  
+.commentUsername {
+  margin-left: 0px;
+  padding-right: 10px;
+}

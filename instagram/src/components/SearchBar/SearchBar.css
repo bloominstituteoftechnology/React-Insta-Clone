@@ -1,0 +1,16 @@
+.sticky {
+  position: fixed;
+  margin-bottom: 50px;
+  border-bottom: 0.1px solid lightgray;
+}
+
+.navBrandItems {
+  display: flex;
+  align-items: center;
+}
+
+.navTitle {
+  margin-left: 20px;
+  font-family: 'Courier New';
+  font-size: 2em;
+}
