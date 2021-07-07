@@ -1,0 +1,20 @@
+
+
+.posts-container-wrapper {
+    height: 50%;
+    width: 35%;
+    min-width:400px;
+    margin: 5px auto;
+}
+
+
+
+
+
+.post-thumb{
+    height: 100%;
+    border-radius: 50%;
+}
+.like-section{
+    display: flex;
+}
