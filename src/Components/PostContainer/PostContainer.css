@@ -1,0 +1,61 @@
+.postwrapper {
+    width: 60%;
+    margin: 50px;
+}
+
+.postwrapper .card {
+    margin: 50px 0px;
+}
+
+.profilePic{
+    border-radius: 50%;
+    margin:2px;
+    box-sizing:border-box;
+    height:75px;
+    width:75px;
+    
+    
+}
+.userhandle{
+    font-weight:bold;
+    
+}
+.profileAndUsername{
+    display:flex;
+    height: 120px;
+    width: 250px;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.postImg{
+    width:100%;
+}
+.numberOfLikes{
+    font-weight: bold;
+    margin: 1.3rem;
+}
+.like{
+    display: inline;
+    max-block-size: 2rem;
+    margin: 1.3rem;
+}
+.comment{
+    display: inline;
+    max-block-size: 3rem;
+    margin: 1rem;
+}
+
+.timestamp{
+    margin:1.3rem;
+}
+
+.comment {
+    display:flex;
+    margin: 14px;
+}
+
+.reactionIcons {
+    display:flex;
+}
+

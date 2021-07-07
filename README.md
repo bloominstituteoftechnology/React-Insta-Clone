@@ -1,4 +1,10 @@
-# React-Insta-Clone
+# React-InstaClone
+
+### Deployment
+
+Client: [React-InstaClone](https://react-instaclone.netlify.com)
+
+-- Note: this project did not include responsiveness. Responsiveness is a TODO
 
 ## Introduction
 
@@ -47,12 +53,12 @@
 - You are free to leverage the Bootstrap library for this project for the purposes of theming and styling. I recommend the awesome [reactstrap](https://reactstrap.github.io/) library, which is a library of Bootstrap components that have been implemented using React, so they're really easy to just drop straight into React projects.
 - In addition to Bootstrap for theming, you'll want to add your own styles via CSS. To keep things organized, have the CSS file that corresponds with a component live in the same directory as the component file.
 
----
+[Instagram Account Icon](./src/assets/person.png)
 
 Your search bar header should look something like this:
 ![search bar](/assets/ig_search_bar.png)
 
----
+Background: **#FAFAFA**
 
 Your post container should look something like this:
 ![insta post](/assets/ig_post.png)

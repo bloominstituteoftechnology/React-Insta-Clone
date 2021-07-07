@@ -1,0 +1,22 @@
+
+.icons {
+    height: 60px;
+    display:flex;
+    align-items: center;
+}
+.like {
+    height: 30px;
+    margin: 0px 10px;
+}
+
+.compass {
+    height: 30px;
+    margin: 0px 10px;
+
+}
+
+.account {
+    height: 30px;
+    margin: 0px 10px;
+
+}

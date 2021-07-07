@@ -1,0 +1,65 @@
+.account-sidebar {
+    width: 40%;
+    margin: 100px 50px;
+}
+
+.account-info {
+    width: 100%;
+    display:flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.account-info img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 90px;
+    height: 90px;
+}
+
+.account-info h3 {
+    font-weight: bold;
+}
+
+.account-info p {
+    color: gray;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.stories-card {
+    background-color: white;
+    border: 1px solid #d2d2d2;
+    width: 50%;
+    height: 400px;
+    margin: 30px 0px;
+    border-radius: 3px;
+}
+
+.suggestions-card {
+    background-color: white;
+    border: 1px solid #d2d2d2;
+    width: 50%;
+    height: 200px;
+    margin: 30px 0px;
+    border-radius: 3px;
+}
+
+.footer-information {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    color: gray;
+
+}
+
+.footer-information a {
+    width: auto;
+    margin: 0px 10px 0px 0px;
+    color: gray;
+}
+
+.footer-information p {
+    margin: 30px 0px;
+}
