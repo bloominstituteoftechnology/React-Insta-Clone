@@ -1,0 +1,27 @@
+.comments {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.commentUserName {
+    font-weight: 700;
+}
+
+.commentContainer {
+    margin-bottom: 10px;
+}
+
+.footer {
+    padding: 30px;
+    text-align: left;
+}
+
+.footer input {
+    border: 0 solid;
+    text-align: left;
+    
+}
+
+.likeButton {
+    text-align: left;
+}
