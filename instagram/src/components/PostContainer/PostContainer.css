@@ -1,0 +1,45 @@
+.post {
+  margin: 0 5%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid lightgray;
+}
+
+.postheader {
+  display: flex;
+  align-items: center;
+  margin: 20px 5%;
+  width: 100%;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 10%;
+}
+
+.user-name {
+  margin-left: 3%;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.imgpost {
+  margin: 0 1%;
+}
+
+.icons-likes-comments {
+  margin: 0 5%;
+}
+
+.icons-comment {
+  display: flex;
+  align-items: center;
+}
+.icons-c {
+  padding: 10px 2% 10px 0;
+  font-size: 2rem;
+}
+
+.likes p {
+  font-size: 1.8rem;
+  font-weight: bold;
+}

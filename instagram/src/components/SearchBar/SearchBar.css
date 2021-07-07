@@ -1,0 +1,39 @@
+.insta-header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 20px 5% 20px 5%;
+  justify-content: space-between;
+}
+
+.cam-logo {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+
+.instacam {
+  width: 40%;
+}
+
+.instalogo {
+  width: 60%;
+}
+
+.insta-header input {
+  width: 30%;
+  margin: 40px 0%;
+  justify-content: center;
+}
+
+.all-icons {
+  display: flex;
+  width: 20%;
+  align-items: center;
+  margin: 0 2%;
+}
+
+.icons {
+  padding: 0 5%;
+  font-size: 2.6rem;
+}
