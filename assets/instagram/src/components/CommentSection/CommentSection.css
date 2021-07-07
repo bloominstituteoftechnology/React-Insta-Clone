@@ -1,0 +1,21 @@
+.comment-section-cont{
+
+}
+
+.comment-box{
+    display: flex;
+    align-items: center;
+    margin: 10px 0 10px 0;;
+    padding: 0;
+}
+
+.username-comment{
+    margin: 0 5px 0 0;
+    padding: 0;
+}
+
+.username-text{
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
