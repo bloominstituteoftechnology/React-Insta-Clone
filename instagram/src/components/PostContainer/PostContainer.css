@@ -1,0 +1,18 @@
+p {
+    margin: 8px 0;
+}
+
+.fa-heart, .fa-comment {
+    cursor: pointer;
+    font-size: 2.3rem;
+    font-stretch: expanded;
+}
+
+.fa-comment {
+    margin-left: 15px;
+    transform: scaleX(-1)
+}
+
+.fas {
+    color: red;
+}
