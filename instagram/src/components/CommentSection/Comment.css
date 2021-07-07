@@ -1,0 +1,8 @@
+
+  .options{
+  background: url('../SearchBar/imgs/download.png') no-repeat -77px -444px;
+	width: 14px;
+  height: 4px;
+  margin-top: 2%;
+  cursor: pointer;
+  }
