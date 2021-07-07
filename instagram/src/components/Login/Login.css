@@ -1,0 +1,21 @@
+.input-style{
+	width: 200px;
+	height: 30px;
+	border: 1px solid black;
+	margin-right: 4%;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 0.9rem;
+}
+
+.button-style{
+	margin-left: 2%;
+	width: 100px;
+	height: 30px;
+	border: 1px solid chocolate;
+	font-size: 0.8rem;
+}
+
+.form-container{
+	margin: 20% 30%;
+}
