@@ -1,0 +1,43 @@
+.searchBar-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background-color: white
+}
+
+.searchBar-title {
+    display: flex;
+    align-items: center;
+}
+
+.fab {
+    font-size: 1.8rem;
+}
+
+.searchBar-title p {
+    font-size: 2rem;
+    transform: scale(.5, 1);
+    padding: 0 10px;
+}
+
+.instagram-title {
+    height: 40px;
+}
+
+.searchBar-text-form {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.search-button {
+    display: none;
+}
+
+.far {
+    padding: 0 10px;
+    font-size: 1.4rem;
+    color: #333333;
+}

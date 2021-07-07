@@ -1,0 +1,8 @@
+.main-container {
+  width:100%;
+  max-width: 880px;
+  margin: auto;
+  font-size: 62.5%;
+  display: flex;
+  flex-direction: column;
+}
