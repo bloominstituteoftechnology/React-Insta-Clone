@@ -17,7 +17,7 @@
 
 ### Description (Day II)
 
-- For this part of the project you are going to use React's lifecycle methods to get data and to render the components. Then you will use functions passed as props to build out the functionality more.
+- For this part of the project you are going to use React's lifecycle methods to get data and to render the components.  Then you will use functions passed as props to build out the functionality more.
 - As data comes into the component, you will set it to the component's state, then pass it down to the child components.
 - Add the functionality to add a comment to any of the posts. Since there is no login page or anything of that sort, hard code a static username.
 - Implement the ability to like a post by clicking on a heart icon and having the number of likes increment accordingly.
