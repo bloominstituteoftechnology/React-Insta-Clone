@@ -1,0 +1,20 @@
+.container {
+    align-items: left;
+}
+
+.postHeader {
+
+    display: flex;
+    margin-left: 80px;
+    margin-top: 10px;
+    border: 1px solid lightgray;
+    height: 147px;
+    width: 641px;
+    box-shadow: 0 0 3px #ccc;
+}
+
+.user{
+    margin-left: 10px;
+}
+
+    
