@@ -1,0 +1,18 @@
+.comments-username {
+	font-weight: 700;
+}
+
+.comments {
+	margin: 0 10px;
+}
+
+.comments-username {
+	margin-right: 5px;
+}
+.likes-post {
+	margin-left: 10px;
+}
+
+.time-stamp {
+	margin-left: 10px;
+}
