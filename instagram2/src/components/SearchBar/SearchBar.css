@@ -1,0 +1,41 @@
+.search-bar-container {
+    display: flex;
+    border: 1px solid darkgray;
+    height: 80px;
+    line-height: 70px;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.image-container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.instagram {
+    font-family: cursive;
+    font-style: bold;
+    border-left: 2px solid black;
+    padding: 15px;
+}
+
+.search-bar {
+    text-align: center;
+}
+
+.icon-container {
+    display: flex;
+    align-content: flex-end;
+
+}
+
+.icon-button {
+    height: 20px;
+    width: 20px;
+}
