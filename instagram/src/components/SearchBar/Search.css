@@ -1,0 +1,39 @@
+
+.searchContainer {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  width: 24px;
+  height: 24px;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+}
+
+.logo img {
+  padding-right: 10px;
+  border-right: 1px solid black;
+}
+
+input {
+  width: 200px;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+.searchContainer .icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
