@@ -1,0 +1,16 @@
+.header {
+margin-top: 108px;
+padding-left: 15px;
+padding-bottom: 10px;
+
+}
+.header img {
+  width: 5%;
+  border-radius: 50%;
+}
+
+
+
+.main-post {
+  width: 100%;
+}
