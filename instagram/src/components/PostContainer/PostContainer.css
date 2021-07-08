@@ -1,0 +1,16 @@
+.post-container{
+    display: flex;
+    width: 100%;
+    height: auto;  
+    flex-direction: column; 
+        
+}
+.container{
+    justify-content: center;
+    border: 1px red black;
+    margin: 20px 50px;
+}
+ .post-img{
+        width: 50%;
+        height: auto;
+    }
