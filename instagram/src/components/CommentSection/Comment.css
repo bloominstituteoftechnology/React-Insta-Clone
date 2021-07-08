@@ -1,0 +1,14 @@
+.comment-container {
+    display: flex;
+    margin-left: 10px;
+}
+
+.comm-user {
+    font-weight: 600;
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.comm-text {
+    font-weight: 400;
+}
