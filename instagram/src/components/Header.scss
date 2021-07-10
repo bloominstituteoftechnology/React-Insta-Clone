@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #E6E6E6;
+
+  .container {
+    display: flex;
+    justify-content: space-evenly;
+
+
+    .navbar-brand {
+      .navbar-item {
+        .logoContent {
+          content: url(../instagram-for-project.png);
+          margin-top: 10px;
+          width: 37.87%;
+        }
+
+        .vr {
+          width: 1px;
+          border-left: 1px solid black;
+          margin: 0 30px;
+          padding: 18px 0;
+        }
+      }
+    }
+  }
+}
